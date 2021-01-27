@@ -1,3 +1,104 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .d1 {
+    font-family: "TheMATTER";
+    font-size: 80px;
+    @media screen and (max-width: 767px) {
+      font-size: 48px;
+    }
+  }
+  .d2 {
+    font-family: "TheMATTER";
+    font-size: 60px;
+    @media screen and (max-width: 767px) {
+      font-size: 36px;
+    }
+  }
+  .d3 {
+    font-family: "TheMATTER";
+    font-size: 40px;
+    @media screen and (max-width: 767px) {
+      font-size: 28px;
+    }
+  }
+  .d4 {
+    font-family: "TheMATTER";
+    font-size: 30px;
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+  .d5 {
+    font-family: "TheMATTER";
+    font-size: 24px;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .h1 {
+    font-family: "NotoSansThaiUI";
+    font-size: 80px;
+    @media screen and (max-width: 767px) {
+      font-size: 48px;
+    }
+  }
+  .h2 {
+    font-family: "NotoSansThaiUI";
+    font-size: 42px;
+    @media screen and (max-width: 767px) {
+      font-size: 28px;
+    }
+  }
+  .h3 {
+    font-family: "NotoSansThaiUI";
+    font-size: 24px;
+    @media screen and (max-width: 767px) {
+      font-size: 22px;
+    }
+  }
+  .h4 {
+    font-family: "NotoSansThaiUI";
+    font-size: 20px;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .p1 {
+    font-family: "NotoSansThaiUI";
+    font-size: 18px;
+  }
+  .p2 {
+    font-family: "NotoSansThaiUI";
+    font-size: 14px;
+  }
+  .p3 {
+    font-family: "NotoSansThaiUI";
+    font-size: 12px;
+  }
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @font-face {
+    font-family: "NotoSansThaiUI";
+    src: url("../assets/fonts/NotoSansThaiUI-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "NotoSansThaiUI";
+    src: url("../assets/fonts/NotoSansThaiUI-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "TheMATTER";
+    src: url("../assets/fonts/TheMATTER-Bold.otf");
+    font-weight: 700;
+    font-style: normal;
+  }
+}
