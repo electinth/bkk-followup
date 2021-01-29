@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../styles/Dashboard.module.css";
 import Layout from "../layouts/layout";
 import Link from "next/link";
 
@@ -50,15 +49,8 @@ export default function Intro_Dashboard() {
         </div>
         <div className="flex-1 overflow-auto" id="intro-dashboard-right">
           {category.map((cat, index) => (
-            <Link
-              href={"/dashboard?location=" + cat.name}
-              key={index}
-              query={"test"}
-            >
-              <div
-                className={styles.card_cat}
-                style={{ backgroundColor: cat.color }}
-              >
+            <Link href={"/dashboard?location=" + cat.name} key={index}>
+              <div className="card_cat_intro" style={{ backgroundColor: cat.color }}>
                 {cat.name === "ขยะมูลฝอย" ? (
                   <div className="d4">ปริมาณขยะมูลฝอย</div>
                 ) : (
