@@ -186,7 +186,7 @@ const dashboard = () => {
             </div>
             <div
               id="ranking"
-              className="py-3 mt-3 card_cat_detail"
+              className="pt-3 mt-3 card_cat_detail"
               style={{ backgroundColor: selected_theme.color }}
             >
               <div className="flex justify-center rounded-t text-white-default p2">
@@ -226,6 +226,67 @@ const dashboard = () => {
                   <div></div>
                 </div>
               </div>
+              <div className="flex justify-center py-2 mt-3 font-bold rounded-b text-white-default bg-black-default p1">
+                ดูการจัดอันดับทั้งหมด
+              </div>
+            </div>
+            <div id="budget compare" className="flex flex-row mt-3 ">
+              <div id="budget" className="flex-1 mr-3 card_cat_detail">
+                <div
+                  className="flex justify-center py-1 rounded-t text-white-default p2"
+                  style={{ backgroundColor: selected_theme.color }}
+                >
+                  งบประมาณที่ใช้ไป
+                </div>
+                <span className="flex flex-col items-center py-3 font-bold leading-snug">
+                  <p className="p2">ในปี 2555-2562 กทม. ใช้เงินงบประมาณ</p>
+                  <p
+                    className="h5"
+                    style={{ color: selected_theme.text_color }}
+                  >
+                    94,887 ล้านบาท{" "}
+                  </p>
+                  <p className="p2">ในการรักษาความสะอาดและจัดการขยะมูลฝอย</p>
+                </span>
+                <div className="flex justify-center">donut chart</div>
+                <p className="px-4 mt-3 font-bold text-center p1">
+                  งบประมาณใช้ไปเพื่อจัดการขยะมูลฝอย และรักษาความสะอาดในแต่ละปี
+                </p>
+                <div className="flex justify-center py-3">bar chart</div>
+                <div className="flex justify-center py-2 mt-3 font-bold rounded-b text-white-default bg-black-default p1">
+                  เกี่ยวกับงบประมาณกทม
+                </div>
+              </div>
+              <div id="compare" className="flex-1 card_cat_detail">
+                <div
+                  className="flex justify-center px-5 py-1 text-center rounded-t text-white-default p2"
+                  style={{ backgroundColor: selected_theme.color }}
+                >
+                  เปรียบเทียบสัดส่วนขยะมูลฝอยต่อประชากร 1 คน ต่อวันแต่ละกลุ่มเขต
+                </div>
+                <div className="flex items-center mx-3 my-3 font-bold rounded card_cat_detail ">
+                  <div
+                    className="flex-1 py-4 rounded-l p2 text-white-default"
+                    style={{ backgroundColor: selected_theme.color }}
+                  >
+                    ทุกเขตใน กรุงเทพมหานคร
+                  </div>
+                  <div
+                    className="flex items-baseline flex-1 pl-2"
+                    style={{ color: selected_theme.text_color }}
+                  >
+                    <div className="h4">1.798</div>
+                    <div className="ml-1 p2">กก./คน/วัน</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="note" className="px-2 py-3 mt-3 card_cat_detail">
+              <p className="font-bold h4">หมายเหตุ</p>
+              <p className="p3">
+                ที่มาข้อมูล: สํานักยุทธศาสตร์และประเมินผล และสำนักงบประมาณ
+                กรุงเทพมหานคร{" "}
+              </p>
             </div>
           </div>
         </div>
