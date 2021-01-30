@@ -257,7 +257,11 @@ const dashboard = () => {
                   เกี่ยวกับงบประมาณกทม
                 </div>
               </div>
-              <div id="compare" className="flex-1 card_cat_detail">
+              <div
+                id="compare"
+                className="flex-1 card_cat_detail "
+                style={{ height: "fit-content" }}
+              >
                 <div
                   className="flex justify-center px-5 py-1 text-center rounded-t text-white-default p2"
                   style={{ backgroundColor: selected_theme.color }}
