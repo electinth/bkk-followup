@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import Layout from "../layouts/layout";
 import { useRouter } from "next/router";
-import Category_Manu from "../components/dashboard_category_manu";
+import Category_Manu from "../components/dashboard-category-manu";
+import DropDown from "../components/dropdown";
+import Ranking from "../components/dashboard-ranking";
+import Compare from "../components/dashboard-compare";
+import Map from "../components/dashboard-map";
+import TimeLine from "../components/dashboard-timeline";
+
 import _ from "lodash";
 
 const dashboard = () => {
@@ -47,14 +53,29 @@ const dashboard = () => {
       value: "0.729",
     },
   ];
+  const filter_by_group = [
+    {
+      filter_by: "เขตพื้นที่ทั้งหมด",
+      img: "../assets/images/by_all.svg",
+    },
+    { filter_by: "เขตพื้นที่ธุรกิจ", img: "../assets/images/by_business.svg" },
+    {
+      filter_by: "เขตพื้นที่ท่องเที่ยวและวัฒนธรรม",
+      img: "../assets/images/by_culture.svg",
+    },
+    {
+      filter_by: "เขตพื้นที่อยู่อาศัย",
+      img: "../assets/images/by_residence.svg",
+    },
+    { filter_by: "เขตพื้นที่ชานเมือง", img: "../assets/images/by_suburb.svg" },
+  ];
   const router = useRouter();
-
+  const [checked, SET_CHECKED] = useState(null);
   let selected_theme = _.find(category, function (cat) {
     return cat.name === router.query.location;
   });
 
   if (selected_theme != null) {
-    console.log("dashboard");
     return (
       <Layout id="dashboard">
         <div
@@ -62,7 +83,33 @@ const dashboard = () => {
           className="absolute top-0 bottom-0 left-0 right-0 flex overflow-hidden"
           style={{ paddingTop: "60px" }}
         >
-          <div className="flex-1 bg-pink-light">1</div>
+          <div className="flex-1 bg-black-default" id="dashboard-left">
+            <div
+              className="flex justify-center py-4"
+              style={{
+                height: "fit-content",
+                backgroundColor: selected_theme.color,
+              }}
+            >
+              <div className="py-2 mr-6 font-bold text-white-default h4 ">
+                สำรวจตาม
+              </div>
+              <DropDown
+                filter={filter_by_group}
+                checked={checked}
+                SET_CHECKED={SET_CHECKED}
+                type="group"
+              />
+              <DropDown
+                filter={filter_by_group}
+                checked={checked}
+                SET_CHECKED={SET_CHECKED}
+                type="zone"
+              />
+            </div>
+            <TimeLine />
+            <Map />
+          </div>
           <div
             id="dashboard-right"
             className="flex flex-col flex-1 px-5 py-5 overflow-auto"
@@ -70,7 +117,7 @@ const dashboard = () => {
             <Category_Manu category={category} />
             <div
               id="card-title"
-              className="flex justify-center py-6 mt-3 text-center text-white-default card_cat_detail"
+              className="flex justify-center py-6 mt-6 text-center text-white-default card_cat_detail"
               style={{ backgroundColor: selected_theme.color }}
             >
               <span>
@@ -79,31 +126,36 @@ const dashboard = () => {
                 <p className="h4">ภาพรวมย้อนหลัง 8 ปี (2555-2562)</p>
               </span>
             </div>
-            <div
-              id="good-to-know"
-              className="flex flex-col justify-center mt-3 text-center card_cat_detail"
-            >
+            {checked === null || checked === "เขตพื้นที่ทั้งหมด" ? (
               <div
-                id="gtk-header"
-                className="py-1 rounded-t text-white-default p2"
-                style={{ backgroundColor: selected_theme.color }}
+                id="good-to-know"
+                className="flex flex-col justify-center mt-3 text-center card_cat_detail"
               >
-                ข้อควรรู้
+                <div
+                  id="gtk-header"
+                  className="py-1 rounded-t text-white-default p2"
+                  style={{ backgroundColor: selected_theme.color }}
+                >
+                  ข้อควรรู้
+                </div>
+                <span className="my-4 ">
+                  <p className="px-32 font-bold leading-tight h3">
+                    เมื่อรายได้ค่าเก็บขยะคิดเป็นเพียง 5%
+                    ของค่าใช้จ่ายในการเก็บขยะ..
+                  </p>
+                  <p className="px-5 mt-3 leading-tight p2">
+                    รู้หรือไม่? กทม.
+                    ใช้งบประมาณในการรักษาความสะอาดและจัดการขยะมูลฝอยในแต่ละปีไม่ต่ำกว่า
+                    10,000 ล้านบาท แต่มีรายได้มาชดเชยภาระตรงนี้เพียงปีละประมาณ
+                    500 ล้านซึ่งคิดเป็นแค่ 5% เท่านั้น และนับวัน
+                    ปริมาณขยะก็ยังคงเพิ่มขึ้นอย่างต่อเนื่อง
+                  </p>
+                </span>
               </div>
-              <span className="my-4 ">
-                <p className="px-32 font-bold leading-tight h3">
-                  เมื่อรายได้ค่าเก็บขยะคิดเป็นเพียง 5%
-                  ของค่าใช้จ่ายในการเก็บขยะ..
-                </p>
-                <p className="px-5 mt-3 leading-tight p2">
-                  รู้หรือไม่? กทม.
-                  ใช้งบประมาณในการรักษาความสะอาดและจัดการขยะมูลฝอยในแต่ละปีไม่ต่ำกว่า
-                  10,000 ล้านบาท แต่มีรายได้มาชดเชยภาระตรงนี้เพียงปีละประมาณ 500
-                  ล้านซึ่งคิดเป็นแค่ 5% เท่านั้น และนับวัน
-                  ปริมาณขยะก็ยังคงเพิ่มขึ้นอย่างต่อเนื่อง
-                </p>
-              </span>
-            </div>
+            ) : (
+              ""
+            )}
+
             <div id="AVG" className="flex mt-3">
               <div className="flex-1 mr-3 card_cat_detail" id="AVG-left">
                 <div
@@ -184,52 +236,17 @@ const dashboard = () => {
                 <div className="flex justify-center mt-3">GRAPH</div>
               </div>
             </div>
-            <div
-              id="ranking"
-              className="pt-3 mt-3 card_cat_detail"
-              style={{ backgroundColor: selected_theme.color }}
-            >
-              <div className="flex justify-center rounded-t text-white-default p2">
-                การจัดอันดับแต่ละเขต
-              </div>
-              <div className="flex justify-center mt-3 text-white-default h4">
-                เรียงตามเขตที่มีขยะมูลฝอยน้อยที่สุด-มากที่สุด
-              </div>
-              <div id="less-most" className="flex mt-5">
-                <div className="flex-1 px-2">
-                  <div className="font-bold p1 text-white-default">
-                    3 เขตขยะน้อยที่สุด
-                  </div>
-                  {mock_ranking.map((rank, index) => (
-                    <div
-                      key={index}
-                      className="flex px-3 py-3 my-2 font-bold rounded bg-white-default p2"
-                    >
-                      <div className="flex flex-row flex-1">
-                        <div className="mr-2">{index + 1}</div>
-                        <p>{rank.name}</p>
-                      </div>
-                      <div
-                        className="flex flex-row flex-1"
-                        style={{ color: selected_theme.text_color }}
-                      >
-                        <div>{rank.value}</div>
-                        <div className="ml-2"> กก./คน/วัน</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex-1 px-2">
-                  <div className="font-bold p1 text-white-default">
-                    3 เขตขยะมากที่สุด
-                  </div>
-                  <div></div>
-                </div>
-              </div>
-              <div className="flex justify-center py-2 mt-3 font-bold rounded-b text-white-default bg-black-default p1">
-                ดูการจัดอันดับทั้งหมด
-              </div>
-            </div>
+            {checked === null || checked === "เขตพื้นที่ทั้งหมด" ? (
+              <Ranking
+                id="ranking"
+                ranking_data={mock_ranking}
+                selected_theme={selected_theme}
+                checked={checked}
+              />
+            ) : (
+              ""
+            )}
+
             <div id="budget compare" className="flex flex-row mt-3 ">
               <div id="budget" className="flex-1 mr-3 card_cat_detail">
                 <div
@@ -257,33 +274,20 @@ const dashboard = () => {
                   เกี่ยวกับงบประมาณกทม
                 </div>
               </div>
-              <div
-                id="compare"
-                className="flex-1 card_cat_detail "
-                style={{ height: "fit-content" }}
-              >
-                <div
-                  className="flex justify-center px-5 py-1 text-center rounded-t text-white-default p2"
-                  style={{ backgroundColor: selected_theme.color }}
-                >
-                  เปรียบเทียบสัดส่วนขยะมูลฝอยต่อประชากร 1 คน ต่อวันแต่ละกลุ่มเขต
-                </div>
-                <div className="flex items-center mx-3 my-3 font-bold rounded card_cat_detail ">
-                  <div
-                    className="flex-1 py-4 rounded-l p2 text-white-default"
-                    style={{ backgroundColor: selected_theme.color }}
-                  >
-                    ทุกเขตใน กรุงเทพมหานคร
-                  </div>
-                  <div
-                    className="flex items-baseline flex-1 pl-2"
-                    style={{ color: selected_theme.text_color }}
-                  >
-                    <div className="h4">1.798</div>
-                    <div className="ml-1 p2">กก./คน/วัน</div>
-                  </div>
-                </div>
-              </div>
+              {checked === null || checked === "เขตพื้นที่ทั้งหมด" ? (
+                <Compare
+                  id="compare"
+                  selected_theme={selected_theme}
+                  checked={checked}
+                />
+              ) : (
+                <Ranking
+                  id="ranking"
+                  ranking_data={mock_ranking}
+                  selected_theme={selected_theme}
+                  checked={checked}
+                />
+              )}
             </div>
             <div id="note" className="px-2 py-3 mt-3 card_cat_detail">
               <p className="font-bold h4">หมายเหตุ</p>

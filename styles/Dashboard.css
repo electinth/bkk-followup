@@ -12,8 +12,155 @@
     padding-left: 39px;
     cursor: pointer;
   }
-  .card_cat_detail {
+  .card_cat_detail,
+  .card_cat_ranking {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
   }
+  .card_cat_ranking {
+    height: fit-content;
+  }
+  .check {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  /* Hide the browser's default checkbox */
+  .check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 19px;
+    width: 19px;
+    border: 2px solid black;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  /* .check:hover input ~ .checkmark {
+    background-color: #ccc;
+  } */
+
+  /* When the checkbox is checked, add a blue background */
+  .check input:checked ~ .checkmark {
+    background-color: #000000;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .check input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .check .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 7px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .timeline {
+    /* counter-reset: test 20; */
+    position: relative;
+  }
+
+  .timeline li {
+    list-style: none;
+    float: left;
+    width: 11%;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* ul:nth-child(1) {
+    color: #4caf50;
+  } */
+
+  .timeline li:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto 10px auto;
+    background: black;
+    color: #000;
+    /* transition: all ease-in-out 0.3s; */
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+  }
+
+  .timeline li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    top: 5px;
+    left: -50%;
+    z-index: 1;
+    /* transition: all ease-in-out 0.3s; */
+  }
+
+  .timeline li:first-child:after {
+    content: none;
+  }
+  .timeline li.active-tl {
+    color: #555555;
+  }
+  .timeline li.active-tl:before {
+    background: white;
+    color: #f1f1f1;
+  }
+  .text-selected {
+    color: black;
+    background: white;
+    /* transition: all ease-in-out 0.3s; */
+  }
+  .text {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0 3px;
+    margin: auto;
+    cursor: pointer;
+  }
+  /* .timeline-li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  /* .timeline li.active-tl + li:after {
+    background: #4caf50;
+  } */
 }

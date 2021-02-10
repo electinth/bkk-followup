@@ -11,7 +11,7 @@ export default function header() {
       <Link href="/">
         <a className=" text-pink-default">Home</a>
       </Link>
-      <Link href="/intro_dashboard">
+      <Link href="/intro-dashboard">
         <a className=" text-blueGray-default">dashboard</a>
       </Link>
     </div>
