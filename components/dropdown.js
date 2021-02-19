@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import arrow from "../assets/images/arrow.svg";
+import React, { useState, useEffect, useRef } from 'react';
+import arrow from '../assets/images/arrow.svg';
 
 const dropdown = ({ filter, type, checked, SET_CHECKED }) => {
   const [dropdown_state, SET_DROPDOWN_STATE] = useState(false);
@@ -11,9 +11,9 @@ const dropdown = ({ filter, type, checked, SET_CHECKED }) => {
   };
 
   const closeMenu = (e) => {
-    if (dropdown_state && e.target.id != "options") {
+    if (dropdown_state && e.target.id != 'options') {
       SET_DROPDOWN_STATE(false);
-      document.removeEventListener("click", closeMenu);
+      document.removeEventListener('click', closeMenu);
     }
   };
 
@@ -22,7 +22,7 @@ const dropdown = ({ filter, type, checked, SET_CHECKED }) => {
   };
 
   useEffect(() => {
-    document.addEventListener("click", closeMenu);
+    document.addEventListener('click', closeMenu);
   }, [dropdown_state]);
 
   return (
@@ -36,7 +36,7 @@ const dropdown = ({ filter, type, checked, SET_CHECKED }) => {
         <div
           id="arrow-wrpper"
           className="absolute right-0 flex justify-center pr-3"
-          style={{ top: "50%", transform: "translateY(-50%)" }}
+          style={{ top: '50%', transform: 'translateY(-50%)' }}
         >
           {dropdown_state ? (
             <img src={arrow} alt="arrow" className="transform rotate-180" />
@@ -47,10 +47,10 @@ const dropdown = ({ filter, type, checked, SET_CHECKED }) => {
       </div>
       {dropdown_state ? (
         <div
-          className="absolute bottom-auto flex flex-col w-full p-3 mt-1 rounded bg-white-default"
+          className="absolute bottom-auto z-20 flex flex-col w-full p-3 mt-1 rounded bg-white-default"
           style={{
-            border: "1px solid #eee",
-            boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.15)",
+            border: '1px solid #eee',
+            boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.15)',
           }}
           ref={dropdown_menu_ref}
           id="options"

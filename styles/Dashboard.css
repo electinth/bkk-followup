@@ -60,7 +60,7 @@
 
   /* Create the checkmark/indicator (hidden when not checked) */
   .checkmark:after {
-    content: "";
+    content: '';
     position: absolute;
     display: none;
   }
@@ -102,7 +102,7 @@
   } */
 
   .timeline li:before {
-    content: "";
+    content: '';
     width: 10px;
     height: 10px;
     border: 1px solid #ffffff;
@@ -120,7 +120,7 @@
   }
 
   .timeline li:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 1px;
@@ -163,4 +163,28 @@
   /* .timeline li.active-tl + li:after {
     background: #4caf50;
   } */
+
+  .tool_tip_wrapper {
+    width: 183px;
+    /* height: 120px; */
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .tooltip_header {
+    width: 100%;
+    padding: 5px 12px;
+    flex: 1;
+    color: white;
+  }
+  .tooltip_body {
+    flex: 1;
+    background: white;
+    padding: 5px 12px;
+  }
+  .tooltip_footer {
+    background: white;
+    padding: 5px 12px;
+  }
 }

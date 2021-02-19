@@ -1,76 +1,79 @@
-import React, { useState } from "react";
-import Layout from "../layouts/layout";
-import { useRouter } from "next/router";
-import Category_Manu from "../components/dashboard-category-manu";
-import DropDown from "../components/dropdown";
-import Ranking from "../components/dashboard-ranking";
-import Compare from "../components/dashboard-compare";
-import Map from "../components/dashboard-map";
-import TimeLine from "../components/dashboard-timeline";
+import React, { useState } from 'react';
+import Layout from '../layouts/layout';
+import { useRouter } from 'next/router';
+import Category_Manu from '../components/dashboard-category-manu';
+import DropDown from '../components/dropdown';
+import Ranking from '../components/dashboard-ranking';
+import Compare from '../components/dashboard-compare';
+import Map from '../components/dashboard-map';
+import TimeLine from '../components/dashboard-timeline';
+import InfoMap from '../components/dashboard-info-map';
+import MiniMap from '../components/dashboard-minimap';
 
-import _ from "lodash";
+import _ from 'lodash';
 
 const dashboard = () => {
   const category = [
     {
-      name: "น้ำท่วมถนน",
-      color: "#1570FF",
-      text_color: "#0F52BB",
+      name: 'น้ำท่วมถนน',
+      color: '#1570FF',
+      text_color: '#0F52BB',
     },
     {
-      name: "พื้นที่สีเขียว",
-      color: "#00C853",
-      text_color: "#007832",
+      name: 'พื้นที่สีเขียว',
+      color: '#00C853',
+      text_color: '#007832',
     },
     {
-      name: "มลพิษในคลอง",
-      color: "#FF9E0D",
-      text_color: "#CC7E0A",
+      name: 'มลพิษในคลอง',
+      color: '#FF9E0D',
+      text_color: '#CC7E0A',
     },
     {
-      name: "ขยะมูลฝอย",
-      color: "#DF3A6B",
-      text_color: "#B22E56",
+      name: 'ขยะมูลฝอย',
+      color: '#DF3A6B',
+      text_color: '#B22E56',
     },
 
     {
-      name: "ฝุ่นควันเกินมาตรฐาน",
-      color: "#476A8B",
-      text_color: "#344E66",
+      name: 'ฝุ่นควันเกินมาตรฐาน',
+      color: '#476A8B',
+      text_color: '#344E66',
     },
   ];
   const mock_ranking = [
     {
-      name: "หนองจอก",
-      value: "0.729",
+      name: 'หนองจอก',
+      value: '0.729',
     },
     {
-      name: "หนองจอก",
-      value: "0.729",
+      name: 'หนองจอก',
+      value: '0.729',
     },
     {
-      name: "หนองจอก",
-      value: "0.729",
+      name: 'หนองจอก',
+      value: '0.729',
     },
   ];
   const filter_by_group = [
     {
-      filter_by: "เขตพื้นที่ทั้งหมด",
-      img: "../assets/images/by_all.svg",
+      filter_by: 'เขตพื้นที่ทั้งหมด',
+      img: '../assets/images/by_all.svg',
     },
-    { filter_by: "เขตพื้นที่ธุรกิจ", img: "../assets/images/by_business.svg" },
+    { filter_by: 'เขตพื้นที่ธุรกิจ', img: '../assets/images/by_business.svg' },
     {
-      filter_by: "เขตพื้นที่ท่องเที่ยวและวัฒนธรรม",
-      img: "../assets/images/by_culture.svg",
+      filter_by: 'เขตพื้นที่ท่องเที่ยวและวัฒนธรรม',
+      img: '../assets/images/by_culture.svg',
     },
     {
-      filter_by: "เขตพื้นที่อยู่อาศัย",
-      img: "../assets/images/by_residence.svg",
+      filter_by: 'เขตพื้นที่อยู่อาศัย',
+      img: '../assets/images/by_residence.svg',
     },
-    { filter_by: "เขตพื้นที่ชานเมือง", img: "../assets/images/by_suburb.svg" },
+    { filter_by: 'เขตพื้นที่ชานเมือง', img: '../assets/images/by_suburb.svg' },
   ];
   const router = useRouter();
   const [checked, SET_CHECKED] = useState(null);
+  const [selected_year, SET_SELECTED_YEAR] = useState(55);
   let selected_theme = _.find(category, function (cat) {
     return cat.name === router.query.location;
   });
@@ -81,13 +84,16 @@ const dashboard = () => {
         <div
           id="dashboard-wrapper"
           className="absolute top-0 bottom-0 left-0 right-0 flex overflow-hidden"
-          style={{ paddingTop: "60px" }}
+          style={{ paddingTop: '60px' }}
         >
-          <div className="flex-1 bg-black-default" id="dashboard-left">
+          <div
+            className="flex flex-col flex-1 bg-black-default"
+            id="dashboard-left"
+          >
             <div
               className="flex justify-center py-4"
               style={{
-                height: "fit-content",
+                height: 'fit-content',
                 backgroundColor: selected_theme.color,
               }}
             >
@@ -107,8 +113,18 @@ const dashboard = () => {
                 type="zone"
               />
             </div>
-            <TimeLine />
-            <Map />
+            <TimeLine
+              selected_year={selected_year}
+              SET_SELECTED_YEAR={SET_SELECTED_YEAR}
+            />
+            <Map
+              selected_year={selected_year}
+              selected_theme={selected_theme.color}
+            />
+            <div className="flex">
+              <InfoMap selected_theme={selected_theme.color} />
+              <MiniMap />
+            </div>
           </div>
           <div
             id="dashboard-right"
@@ -126,7 +142,7 @@ const dashboard = () => {
                 <p className="h4">ภาพรวมย้อนหลัง 8 ปี (2555-2562)</p>
               </span>
             </div>
-            {checked === null || checked === "เขตพื้นที่ทั้งหมด" ? (
+            {checked === null || checked === 'เขตพื้นที่ทั้งหมด' ? (
               <div
                 id="good-to-know"
                 className="flex flex-col justify-center mt-3 text-center card_cat_detail"
@@ -153,7 +169,7 @@ const dashboard = () => {
                 </span>
               </div>
             ) : (
-              ""
+              ''
             )}
 
             <div id="AVG" className="flex mt-3">
@@ -236,7 +252,7 @@ const dashboard = () => {
                 <div className="flex justify-center mt-3">GRAPH</div>
               </div>
             </div>
-            {checked === null || checked === "เขตพื้นที่ทั้งหมด" ? (
+            {checked === null || checked === 'เขตพื้นที่ทั้งหมด' ? (
               <Ranking
                 id="ranking"
                 ranking_data={mock_ranking}
@@ -244,7 +260,7 @@ const dashboard = () => {
                 checked={checked}
               />
             ) : (
-              ""
+              ''
             )}
 
             <div id="budget compare" className="flex flex-row mt-3 ">
@@ -261,7 +277,7 @@ const dashboard = () => {
                     className="h5"
                     style={{ color: selected_theme.text_color }}
                   >
-                    94,887 ล้านบาท{" "}
+                    94,887 ล้านบาท{' '}
                   </p>
                   <p className="p2">ในการรักษาความสะอาดและจัดการขยะมูลฝอย</p>
                 </span>
@@ -274,7 +290,7 @@ const dashboard = () => {
                   เกี่ยวกับงบประมาณกทม
                 </div>
               </div>
-              {checked === null || checked === "เขตพื้นที่ทั้งหมด" ? (
+              {checked === null || checked === 'เขตพื้นที่ทั้งหมด' ? (
                 <Compare
                   id="compare"
                   selected_theme={selected_theme}
@@ -293,7 +309,7 @@ const dashboard = () => {
               <p className="font-bold h4">หมายเหตุ</p>
               <p className="p3">
                 ที่มาข้อมูล: สํานักยุทธศาสตร์และประเมินผล และสำนักงบประมาณ
-                กรุงเทพมหานคร{" "}
+                กรุงเทพมหานคร{' '}
               </p>
             </div>
           </div>
