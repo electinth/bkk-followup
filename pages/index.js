@@ -1,13 +1,16 @@
-import styles from "../styles/Home.module.css";
-import Layout from "../layouts/layout";
-import DashboardLineChart from "../components/dashboard-line-chart";
+import Layout from "layouts/layout";
+import Intro from "components/Home/Intro";
+import Main from "components/Home/Main";
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
-  return (
-    <Layout>
-      <div className="text-center">
-        <DashboardLineChart />
-      </div>
-    </Layout>
-  );
+  const [start_intro, startIntro] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      startIntro(true);
+    }, 0);
+  }, []);
+
+  return <Layout>{start_intro ? <Main /> : <Intro />}</Layout>;
 }

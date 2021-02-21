@@ -66,7 +66,7 @@
       font-size: 18px;
     }
   }
-  .h5{
+  .h5 {
     font-family: "NotoSansThaiUI";
     font-size: 36px;
   }
@@ -89,19 +89,19 @@
   }
   @font-face {
     font-family: "NotoSansThaiUI";
-    src: url("../assets/fonts/NotoSansThaiUI-Bold.ttf");
+    src: url("assets/fonts/NotoSansThaiUI-Bold.ttf");
     font-weight: 700;
     font-style: normal;
   }
   @font-face {
     font-family: "NotoSansThaiUI";
-    src: url("../assets/fonts/NotoSansThaiUI-Regular.ttf");
+    src: url("assets/fonts/NotoSansThaiUI-Regular.ttf");
     font-weight: 400;
     font-style: normal;
   }
   @font-face {
     font-family: "TheMATTER";
-    src: url("../assets/fonts/TheMATTER-Bold.otf");
+    src: url("assets/fonts/TheMATTER-Bold.otf");
     font-weight: 700;
     font-style: normal;
   }
