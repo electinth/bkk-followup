@@ -1,0 +1,12 @@
+.intro-page {
+  transition: 0.8s;
+}
+.intro-page.hide-intro {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.page-swiper {
+  .swiper-slide {
+    display: flex;
+  }
+}
