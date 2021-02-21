@@ -904,6 +904,10 @@
   dependencies:
     "anymatch" "~3.1.1"
     "braces" "~3.0.2"
+<<<<<<< HEAD
+=======
+    "fsevents" "~2.1.2"
+>>>>>>> feature/line-chart
     "glob-parent" "~5.1.0"
     "is-binary-path" "~2.1.0"
     "is-glob" "~4.0.1"
@@ -1852,6 +1856,7 @@
   "resolved" "https://registry.npmjs.org/figgy-pudding/-/figgy-pudding-3.5.2.tgz"
   "version" "3.5.2"
 
+<<<<<<< HEAD
 "file-loader@^6.0.0":
   "integrity" "sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw=="
   "resolved" "https://registry.npmjs.org/file-loader/-/file-loader-6.2.0.tgz"
@@ -1860,6 +1865,8 @@
     "loader-utils" "^2.0.0"
     "schema-utils" "^3.0.0"
 
+=======
+>>>>>>> feature/line-chart
 "file-uri-to-path@1.0.0":
   "integrity" "sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw=="
   "resolved" "https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz"
@@ -2690,6 +2697,7 @@
     "bn.js" "^4.0.0"
     "brorand" "^1.0.1"
 
+<<<<<<< HEAD
 "mime-db@1.45.0":
   "integrity" "sha512-CkqLUxUk15hofLoLyljJSrukZi8mAtgd+yE5uO4tqRZsdsAJKv0O+rFMhVDRJgozy+yG6md5KwuXhD4ocIoP+w=="
   "resolved" "https://registry.npmjs.org/mime-db/-/mime-db-1.45.0.tgz"
@@ -2702,6 +2710,8 @@
   dependencies:
     "mime-db" "1.45.0"
 
+=======
+>>>>>>> feature/line-chart
 "mimic-response@^2.0.0":
   "integrity" "sha512-wXqjST+SLt7R009ySCglWBCFpjUygmCIfD790/kVbiGmUgfYGuB14PiTd5DwVxSV4NcYHjzMkoj5LjQZwTQLEA=="
   "resolved" "https://registry.npmjs.org/mimic-response/-/mimic-response-2.1.0.tgz"
@@ -2841,6 +2851,7 @@
   "resolved" "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   "version" "2.6.2"
 
+<<<<<<< HEAD
 "next-images@^1.7.0":
   "integrity" "sha512-7sTjSajbaYStlkl0pYNSUBJD0t6XpH5uE2b9XGrSO9Fh+XLaq10aHP7reEA2f1lBH6D4KTKjFy4S3lNQNVX/lA=="
   "resolved" "https://registry.npmjs.org/next-images/-/next-images-1.7.0.tgz"
@@ -2849,6 +2860,8 @@
     "file-loader" "^6.0.0"
     "url-loader" "^4.0.0"
 
+=======
+>>>>>>> feature/line-chart
 "next-tick@~1.0.0":
   "integrity" "sha1-yobR/ogoFpsBICCOPchCS524NCw="
   "resolved" "https://registry.npmjs.org/next-tick/-/next-tick-1.0.0.tgz"
@@ -2897,6 +2910,10 @@
     "resolve-url-loader" "3.1.2"
     "sass-loader" "10.0.5"
     "schema-utils" "2.7.1"
+<<<<<<< HEAD
+=======
+    "sharp" "0.26.3"
+>>>>>>> feature/line-chart
     "stream-browserify" "3.0.0"
     "style-loader" "1.2.1"
     "styled-jsx" "3.3.2"
@@ -3555,7 +3572,11 @@
     "minimist" "^1.2.0"
     "strip-json-comments" "~2.0.1"
 
+<<<<<<< HEAD
 "react-dom@^17.0.1":
+=======
+"react-dom@17.0.1":
+>>>>>>> feature/line-chart
   "integrity" "sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.1.tgz"
   "version" "17.0.1"
@@ -4446,6 +4467,7 @@
   "resolved" "https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.0.tgz"
   "version" "1.0.0"
 
+<<<<<<< HEAD
 "topojson-client@3", "topojson-client@3.0.0":
   "integrity" "sha1-H5kpOnfvQqRI0DKoGqmCtz82DS8="
   "resolved" "https://registry.npmjs.org/topojson-client/-/topojson-client-3.0.0.tgz"
@@ -4477,6 +4499,8 @@
     "topojson-server" "3.0.0"
     "topojson-simplify" "3.0.2"
 
+=======
+>>>>>>> feature/line-chart
 "tr46@^1.0.1":
   "integrity" "sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk="
   "resolved" "https://registry.npmjs.org/tr46/-/tr46-1.0.1.tgz"
@@ -4595,6 +4619,7 @@
   "resolved" "https://registry.npmjs.org/urix/-/urix-0.1.0.tgz"
   "version" "0.1.0"
 
+<<<<<<< HEAD
 "url-loader@^4.0.0":
   "integrity" "sha512-3BTV812+AVHHOJQO8O5MkWgZ5aosP7GnROJwvzLS9hWDj00lZ6Z0wNak423Lp9PBZN05N+Jk/N5Si8jRAlGyWA=="
   "resolved" "https://registry.npmjs.org/url-loader/-/url-loader-4.1.1.tgz"
@@ -4604,6 +4629,8 @@
     "mime-types" "^2.1.27"
     "schema-utils" "^3.0.0"
 
+=======
+>>>>>>> feature/line-chart
 "url@^0.11.0":
   "integrity" "sha1-ODjpfPxgUh63PFJajlW/3Z4uKPE="
   "resolved" "https://registry.npmjs.org/url/-/url-0.11.0.tgz"
@@ -4652,6 +4679,7 @@
   "integrity" "sha512-nCFfBIPKr5Sh61s4LPpy1Wtfi0HE8isJ3d2Yb5/Ppw2P2B/3eVSEBjKfN0fmHJSK14+31KwMKmcrzs2GM4P0Ww=="
   "resolved" "https://registry.npmjs.org/watchpack-chokidar2/-/watchpack-chokidar2-2.0.1.tgz"
   "version" "2.0.1"
+<<<<<<< HEAD
   dependencies:
     "chokidar" "^2.1.8"
 
@@ -4663,6 +4691,20 @@
     "chokidar" "^3.4.1"
     "graceful-fs" "^4.1.2"
     "neo-async" "^2.5.0"
+=======
+  dependencies:
+    "chokidar" "^2.1.8"
+
+"watchpack@^1.7.4":
+  "integrity" "sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ=="
+  "resolved" "https://registry.npmjs.org/watchpack/-/watchpack-1.7.5.tgz"
+  "version" "1.7.5"
+  dependencies:
+    "chokidar" "^3.4.1"
+    "graceful-fs" "^4.1.2"
+    "neo-async" "^2.5.0"
+    "watchpack-chokidar2" "^2.0.1"
+>>>>>>> feature/line-chart
   optionalDependencies:
     "watchpack-chokidar2" "^2.0.1"
 
