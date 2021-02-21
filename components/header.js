@@ -5,7 +5,7 @@ export default function header() {
   return (
     <div
       id="header"
-      className="sticky z-10 bg-white-default"
+      className="sticky z-10 shadow-xl bg-white-default"
       style={{ height: '60px' }}
     >
       <Link href="/">

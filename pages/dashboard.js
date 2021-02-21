@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import Layout from '../layouts/layout';
+import Layout from 'layouts/layout';
 import { useRouter } from 'next/router';
-import Category_Manu from '../components/dashboard-category-manu';
-import DropDown from '../components/dropdown';
-import Ranking from '../components/dashboard-ranking';
-import Compare from '../components/dashboard-compare';
-import Map from '../components/dashboard-map';
-import TimeLine from '../components/dashboard-timeline';
-import InfoMap from '../components/dashboard-info-map';
-import MiniMap from '../components/dashboard-minimap';
-import selectData from '../components/util/select-data';
+import Category_Manu from 'components/dashboard-category-manu';
+import DropDown from 'components/dropdown';
+import Ranking from 'components/dashboard-ranking';
+import Compare from 'components/dashboard-compare';
+import Map from 'components/dashboard-map';
+import TimeLine from 'components/dashboard-timeline';
+import InfoMap from 'components/dashboard-info-map';
+import MiniMap from 'components/dashboard-minimap';
+import selectData from 'components/util/select-data';
 
 import _ from 'lodash';
 
@@ -59,18 +59,18 @@ const dashboard = () => {
   const filter_by_group = [
     {
       filter_by: 'เขตพื้นที่ทั้งหมด',
-      img: '../assets/images/by_all.svg',
+      img: 'assets/images/by_all.svg',
     },
-    { filter_by: 'เขตพื้นที่ธุรกิจ', img: '../assets/images/by_business.svg' },
+    { filter_by: 'เขตพื้นที่ธุรกิจ', img: 'assets/images/by_business.svg' },
     {
       filter_by: 'เขตพื้นที่ท่องเที่ยวและวัฒนธรรม',
-      img: '../assets/images/by_culture.svg',
+      img: 'assets/images/by_culture.svg',
     },
     {
       filter_by: 'เขตพื้นที่อยู่อาศัย',
-      img: '../assets/images/by_residence.svg',
+      img: 'assets/images/by_residence.svg',
     },
-    { filter_by: 'เขตพื้นที่ชานเมือง', img: '../assets/images/by_suburb.svg' },
+    { filter_by: 'เขตพื้นที่ชานเมือง', img: 'assets/images/by_suburb.svg' },
   ];
 
   const router = useRouter();

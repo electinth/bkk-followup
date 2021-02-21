@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import * as d3 from 'd3';
-const topo_district = require('../assets/images/district.topojson.json');
-const topojson = require('topojson');
+import React, { useEffect } from "react";
+import * as d3 from "d3";
+import * as topojson from "topojson-client";
+const topo_district = require("assets/images/district.topojson.json");
 
 const mini_map = ({
   selected_tooltip,
