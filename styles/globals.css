@@ -87,6 +87,7 @@
   html {
     scroll-behavior: smooth;
     overflow: hidden;
+    outline: none;
   }
   @font-face {
     font-family: "NotoSansThaiUI";

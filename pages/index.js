@@ -13,19 +13,18 @@ export default function Home() {
     mousewheel: true,
     slidesPerView: 1,
     speed: 500,
+    initialSlide: 0,
     onSlideChange: () => console.log("slide change"),
     onSwiper: (swiper) => console.log(swiper),
   };
+
+  useEffect(() => {}, []);
 
   return (
     <Layout>
       <Intro />
 
-      <Swiper
-        {...swiper_options}
-        className="page-swiper inset-0 z-20"
-        style={{ position: "absolute !important" }}
-      >
+      <Swiper {...swiper_options} className="page-swiper h-full">
         <SwiperSlide>
           <Main />
         </SwiperSlide>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import intro_bg from "assets/images/intro-bg.png";
 import fb_share from "assets/images/fb_share.svg";
 import twitter_share from "assets/images/twitter_share.svg";
@@ -25,11 +26,9 @@ export default function Intro() {
       }`}
       onClick={() => hideIntro(true)}
     >
-      <img
-        src={intro_bg}
-        alt={intro_bg}
-        className="fixed inset-0 h-full object-cover mx-auto"
-      />
+      <div className="fixed inset-0 h-full mx-auto opacity-60">
+        <Image layout="fill" objectFit="cover" src={intro_bg} alt={intro_bg} />
+      </div>
 
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-2 gap-5 text-white-default">
@@ -53,21 +52,31 @@ export default function Intro() {
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="social ml-4 cursor-pointer"
               >
-                <img src={fb_share} alt={fb_share} />
+                <Image width={40} height={40} src={fb_share} alt={fb_share} />
               </FacebookShareButton>
 
               <TwitterShareButton
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="social ml-4 cursor-pointer"
               >
-                <img src={twitter_share} alt={twitter_share} />
+                <Image
+                  width={40}
+                  height={40}
+                  src={twitter_share}
+                  alt={twitter_share}
+                />
               </TwitterShareButton>
 
               <LineShareButton
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="social ml-4 cursor-pointer"
               >
-                <img src={line_share} alt={line_share} />
+                <Image
+                  width={40}
+                  height={40}
+                  src={line_share}
+                  alt={line_share}
+                />
               </LineShareButton>
             </div>
           </div>
