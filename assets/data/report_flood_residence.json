@@ -1,0 +1,197 @@
+{
+  "value": 174,
+  "valuePerYear": {
+    "2555": 64,
+    "2556": 89,
+    "2557": 189,
+    "2558": 453,
+    "2559": 354,
+    "2560": 765,
+    "2561": 265,
+    "2562": 174
+  },
+  "minimumPoint": {
+    "districtId": 26,
+    "districtName": "บึงกุ่ม",
+    "year": 2555,
+    "value": 1
+  },
+  "maximumPoint": {
+    "districtId": 49,
+    "districtName": "หลักสี่",
+    "year": 2560,
+    "value": 376
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 4908482500,
+      "focused": 216427400
+    },
+    "2556": {
+      "all": 4981462200,
+      "focused": 234408300
+    },
+    "2557": {
+      "all": 4981462200,
+      "focused": 234408300
+    },
+    "2558": {
+      "all": 5150126360,
+      "focused": 389638400
+    },
+    "2559": {
+      "all": 5265285900,
+      "focused": 484544100
+    },
+    "2560": {
+      "all": 5488774200,
+      "focused": 314813300
+    },
+    "2561": {
+      "all": 5066597100,
+      "focused": 278841400
+    },
+    "2562": {
+      "all": 5098737500,
+      "focused": 291386000
+    }
+  },
+  "budgetOverall": {
+    "all": 40940927960,
+    "focused": 2444467200
+  },
+  "rankings": [
+    {
+      "ranked": 1,
+      "districtId": 22,
+      "districtName": "บางนา",
+      "value": 52
+    },
+    {
+      "ranked": 2,
+      "districtId": 49,
+      "districtName": "หลักสี่",
+      "value": 51
+    },
+    {
+      "ranked": 3,
+      "districtId": 42,
+      "districtName": "สวนหลวง",
+      "value": 35
+    },
+    {
+      "ranked": 4,
+      "districtId": 28,
+      "districtName": "ประเวศ",
+      "value": 15
+    },
+    {
+      "ranked": 5,
+      "districtId": 46,
+      "districtName": "สายไหม",
+      "value": 8
+    },
+    {
+      "ranked": 6,
+      "districtId": 26,
+      "districtName": "บึงกุ่ม",
+      "value": 6
+    },
+    {
+      "ranked": 7,
+      "districtId": 16,
+      "districtName": "บางกะปิ",
+      "value": 5
+    },
+    {
+      "ranked": 8,
+      "districtId": 40,
+      "districtName": "วังทองหลาง",
+      "value": 2
+    }
+  ],
+  "benchmarks": [
+    {
+      "zoneId": "all",
+      "areaName": "ทุกเขตในกรุงเทพมหานคร",
+      "value": 575
+    },
+    {
+      "zoneId": "residence",
+      "areaName": "ทุกเขตพื้นที่อยู่อาศัย",
+      "value": 174
+    },
+    {
+      "zoneId": "suburban",
+      "areaName": "ทุกเขตพื้นที่อยู่อาศัยชานเมือง",
+      "value": 13
+    },
+    {
+      "zoneId": "tourism-and-cultural",
+      "areaName": "พื้นที่อนุรักษ์ศิลปวัฒนธรรมและส่งเสริมการท่องเที่ยว",
+      "value": 98
+    },
+    {
+      "zoneId": "business",
+      "areaName": "พื้นที่ศูนย์กลางธุรกิจและพาณิชยกรรม",
+      "value": 290
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนรามคำแหง",
+      "description": "ช่วงหน้ามหาวิทยาลัยรามคำแหง"
+    },
+    {
+      "name": "ถนนศรีนครินทร์",
+      "description": "จากแยกลำสาลีถึงถนนกรุงเทพกรีฑา"
+    },
+    {
+      "name": "ถนนแจ้งวัฒนะ",
+      "description": "บริเวณหน้ามหาวิทยาลัยราชภัฏพระนคร"
+    },
+    {
+      "name": "ถนนพหลโยธิน",
+      "description": "บริเวณวงเวียนหลักสี่ หน้า สน.บางเขน"
+    },
+    {
+      "name": "ถนนศรีนครินทร์",
+      "description": "บริเวณหน้าวัดศรีเอี่ยม"
+    },
+    {
+      "name": "ถนนสุขุมวิท",
+      "description": "จากแยกบางนา ถึงสุดเขต กทม."
+    },
+    {
+      "name": "ถนนลาดพร้าว",
+      "description": "จากแยกประดิษฐ์มนูธรรม ถึงคลองจั่น"
+    },
+    {
+      "name": "ถนนพัฒนาการ",
+      "description": "จากแยกศรีนครินทร์ถึงคลองบ้านป่า"
+    },
+    {
+      "name": "ถนนรามคำแหง",
+      "description": "ช่วงซอย 1 ถึงซอย 5"
+    },
+    {
+      "name": "ถนนกรุงเทพกรีฑา",
+      "description": "จากถนนศรีนครินทร์ถึงคลองทับช้างล่าง"
+    },
+    {
+      "name": "ถนนแจ้งวัฒนะ",
+      "description": "ช่วงจากคลองประปา ถึงคลองเปรมประชากร"
+    },
+    {
+      "name": "ถนนงามวงศ์วาน",
+      "description": "ปากซอยชินเขต (บริเวณหน้าตลาดพงษ์เพชร)"
+    }
+  ],
+  "meanFloodLevel": 34.7,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 22,
+    "districtName": "บางนา",
+    "year": 2560,
+    "value": 34.7
+  }
+}

@@ -9,6 +9,7 @@ import Map from '../components/dashboard-map';
 import TimeLine from '../components/dashboard-timeline';
 import InfoMap from '../components/dashboard-info-map';
 import MiniMap from '../components/dashboard-minimap';
+import selectData from '../components/util/select-data';
 
 import _ from 'lodash';
 
@@ -71,14 +72,19 @@ const dashboard = () => {
     },
     { filter_by: 'เขตพื้นที่ชานเมือง', img: '../assets/images/by_suburb.svg' },
   ];
+
   const router = useRouter();
   const [checked, SET_CHECKED] = useState(null);
   const [selected_year, SET_SELECTED_YEAR] = useState(55);
-  let selected_theme = _.find(category, function (cat) {
+  const [selected_tooltip, SET_SELECTED_TOOLTIP] = useState();
+
+  let selected_theme = _.find(category, (cat) => {
     return cat.name === router.query.location;
   });
 
   if (selected_theme != null) {
+    console.log(selectData(selected_theme.name));
+
     return (
       <Layout id="dashboard">
         <div
@@ -120,10 +126,16 @@ const dashboard = () => {
             <Map
               selected_year={selected_year}
               selected_theme={selected_theme.color}
+              selected_tooltip={selected_tooltip}
+              SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
             />
             <div className="flex">
               <InfoMap selected_theme={selected_theme.color} />
-              <MiniMap />
+              <MiniMap
+                selected_tooltip={selected_tooltip}
+                SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
+                selected_theme={selected_theme.color}
+              />
             </div>
           </div>
           <div

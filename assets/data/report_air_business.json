@@ -1,0 +1,84 @@
+{
+  "value": 92,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": 97,
+    "2562": 92
+  },
+  "minimumPoint": {
+    "districtId": 35,
+    "districtName": "ยานนาวา",
+    "year": 2561,
+    "value": 0
+  },
+  "maximumPoint": {
+    "districtId": 30,
+    "districtName": "พญาไท",
+    "year": 2561,
+    "value": 97
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "rankings": [
+    {
+      "ranked": 1,
+      "districtId": 27,
+      "districtName": "ปทุมวัน",
+      "value": 92
+    },
+    {
+      "ranked": 2,
+      "districtId": 8,
+      "districtName": "ดินแดง",
+      "value": 91
+    },
+    {
+      "ranked": 3,
+      "districtId": 30,
+      "districtName": "พญาไท",
+      "value": 70
+    },
+    {
+      "ranked": 4,
+      "districtId": 35,
+      "districtName": "ยานนาวา",
+      "value": 59
+    }
+  ],
+  "benchmarks": [
+    {
+      "zoneId": "all",
+      "areaName": "ทุกเขตในกรุงเทพมหานคร",
+      "value": 104
+    },
+    {
+      "zoneId": "residence",
+      "areaName": "ทุกเขตพื้นที่อยู่อาศัย",
+      "value": 94
+    },
+    {
+      "zoneId": "suburban",
+      "areaName": "ทุกเขตพื้นที่อยู่อาศัยชานเมือง",
+      "value": 104
+    },
+    {
+      "zoneId": "tourism-and-cultural",
+      "areaName": "พื้นที่อนุรักษ์ศิลปวัฒนธรรมและส่งเสริมการท่องเที่ยว",
+      "value": 84
+    },
+    {
+      "zoneId": "business",
+      "areaName": "พื้นที่ศูนย์กลางธุรกิจและพาณิชยกรรม",
+      "value": 92
+    }
+  ],
+  "sampling": null
+}

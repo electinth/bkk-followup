@@ -1,0 +1,137 @@
+{
+  "value": 19.06,
+  "valuePerYear": {
+    "2555": 18.12,
+    "2556": 18,
+    "2557": 18,
+    "2558": 20.67,
+    "2559": 21.91,
+    "2560": 18.16,
+    "2561": 18.16,
+    "2562": 19.06
+  },
+  "minimumPoint": {
+    "districtId": 36,
+    "districtName": "ราชเทวี",
+    "year": 2561,
+    "value": 6
+  },
+  "maximumPoint": {
+    "districtId": 27,
+    "districtName": "ปทุมวัน",
+    "year": 2556,
+    "value": 42.46
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "rankings": [
+    {
+      "ranked": 1,
+      "districtId": 27,
+      "districtName": "ปทุมวัน",
+      "value": 35.14
+    },
+    {
+      "ranked": 2,
+      "districtId": 1,
+      "districtName": "คลองเตย",
+      "value": 31.05
+    },
+    {
+      "ranked": 3,
+      "districtId": 8,
+      "districtName": "ดินแดง",
+      "value": 28.29
+    },
+    {
+      "ranked": 4,
+      "districtId": 25,
+      "districtName": "บางรัก",
+      "value": 26.06
+    },
+    {
+      "ranked": 5,
+      "districtId": 45,
+      "districtName": "สาทร",
+      "value": 19.45
+    },
+    {
+      "ranked": 6,
+      "districtId": 50,
+      "districtName": "ห้วยขวาง",
+      "value": 17.78
+    },
+    {
+      "ranked": 7,
+      "districtId": 41,
+      "districtName": "วัฒนา",
+      "value": 16.46
+    },
+    {
+      "ranked": 8,
+      "districtId": 5,
+      "districtName": "จตุจักร",
+      "value": 16.23
+    },
+    {
+      "ranked": 9,
+      "districtId": 19,
+      "districtName": "บางคอแหลม",
+      "value": 11.97
+    },
+    {
+      "ranked": 10,
+      "districtId": 21,
+      "districtName": "บางซื่อ",
+      "value": 10.4
+    },
+    {
+      "ranked": 11,
+      "districtId": 35,
+      "districtName": "ยานนาวา",
+      "value": 9.59
+    },
+    {
+      "ranked": 12,
+      "districtId": 36,
+      "districtName": "ราชเทวี",
+      "value": 9.58
+    },
+    {
+      "ranked": 13,
+      "districtId": 30,
+      "districtName": "พญาไท",
+      "value": 9.04
+    }
+  ],
+  "benchmarks": [
+    {
+      "zoneId": "all",
+      "areaName": "ทุกเขตในกรุงเทพมหานคร",
+      "value": 13.26
+    },
+    {
+      "zoneId": "residence",
+      "areaName": "ทุกเขตพื้นที่อยู่อาศัย",
+      "value": 15.27
+    },
+    {
+      "zoneId": "suburban",
+      "areaName": "ทุกเขตพื้นที่อยู่อาศัยชานเมือง",
+      "value": 8.3
+    },
+    {
+      "zoneId": "tourism-and-cultural",
+      "areaName": "พื้นที่อนุรักษ์ศิลปวัฒนธรรมและส่งเสริมการท่องเที่ยว",
+      "value": 10.68
+    },
+    {
+      "zoneId": "business",
+      "areaName": "พื้นที่ศูนย์กลางธุรกิจและพาณิชยกรรม",
+      "value": 19.06
+    }
+  ]
+}

@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
 const ranking = ({ ranking_data, selected_theme, checked }) => {
   return (
     <div
       id="ranking_wrapper"
       className={
-        checked === null || checked === "เขตพื้นที่ทั้งหมด"
-          ? "card_cat_detail pt-3 mt-3"
-          : "flex-1 card_cat_ranking card_cat_detail pt-3"
+        checked === null || checked === 'เขตพื้นที่ทั้งหมด'
+          ? 'card_cat_detail pt-3 mt-3'
+          : 'flex-1 card_cat_ranking card_cat_detail pt-3'
       }
       style={{ backgroundColor: selected_theme.color }}
     >
-      {checked === null || checked === "เขตพื้นที่ทั้งหมด" ? (
+      {checked === null || checked === 'เขตพื้นที่ทั้งหมด' ? (
         <div id="ranking_default">
           <div className="flex justify-center rounded-t text-white-default p2">
             การจัดอันดับแต่ละเขต

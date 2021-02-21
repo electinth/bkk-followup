@@ -164,11 +164,10 @@
     background: #4caf50;
   } */
 
-  .tool_tip_wrapper {
+  .tool_tip_detail_wrapper {
     width: 183px;
-    /* height: 120px; */
+    z-index: 10;
     position: absolute;
-
     display: flex;
     flex-direction: column;
   }

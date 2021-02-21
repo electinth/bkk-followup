@@ -47,7 +47,7 @@ const info_map = ({ selected_theme }) => {
       .style('stroke', 'white')
       .style('stroke-linecap', 'round')
       .style('stroke-dasharray', '5 4');
-  }, []);
+  }, [selected_theme]);
 
   d3.select('.info-circle0').style('fill', selected_theme);
 

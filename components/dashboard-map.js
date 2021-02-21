@@ -1,70 +1,41 @@
 import React from 'react';
 import * as d3 from 'd3';
 
-const map = ({ selected_year, selected_theme }) => {
-  const toolTip = (d) => {
-    d3.select(`.${d.dist}`).style('stroke-width', 1).style('stroke', 'white');
-    d3.select(`.เขต${d.dist}`).style('fill', 'white');
+const map = ({
+  selected_year,
+  selected_theme,
+  selected_tooltip,
+  SET_SELECTED_TOOLTIP,
+}) => {
+  d3.select('.tool_tip_wrapper').remove();
 
-    d3.select('#maps')
-      .append('div')
-      .attr('class', 'tool_tip_wrapper rounded-lg');
-
-    d3.select('.tool_tip_wrapper ')
-      .append('div')
-      .attr('class', 'tooltip_header rounded-t-lg flex p3 font-bold')
-      .style('background', selected_theme);
-
-    d3.select('.tooltip_header')
-      .append('div')
-      .attr('class', 'tooltip_h_left flex-1')
-      .append('div')
-      .text(`เขต${d.dist}`)
-      .append('div')
-      .text(`ปี 25${selected_year}`);
-
-    d3.select('.tooltip_header')
-      .append('div')
-      .attr('class', 'tooltip_h_right')
-      .text(`x`);
-
-    d3.select('.tool_tip_wrapper')
-      .append('div')
-      .attr('class', 'tooltip_body  flex leading-4 font-bold');
-
-    d3.select('.tooltip_body')
-      .append('div')
-      .attr('class', 'tooltip_b_left p3 flex-1')
-      .append('div')
-      .text(`ปริมาณ`)
-      .append('div')
-      .text(`ขยะมูลฝอย`);
-
-    d3.select('.tooltip_body')
-      .append('div')
-      .attr('class', 'tooltip_b_right flex text-right flex-1 justify-end')
-      .style('color', selected_theme)
-      .append('div')
-      .attr('class', 'tooltip_number p2')
-      .text(`2.085 `)
-      .append('div')
-      .attr('class', 'tooltip_unit p3')
-      .text(`กก./คน/วัน`);
-
-    d3.select('.tool_tip_wrapper')
-      .append('div')
-      .attr('class', 'tooltip_footer rounded-b-lg flex p3  justify-center')
-      .text(`สูงกว่าค่าเฉลี่ย`);
-  };
-  const click = (d) => {
-    toolTip(d);
+  const actived_tool_tip = (name) => {
+    d3.select(`.rect${name}`).style('stroke-width', 1).style('stroke', 'white');
+    d3.select(`.minimap${name}`).style('fill', 'white');
+    d3.select(`.tooltip${name}`).style('visibility', 'visible');
   };
 
-  const mouseover = (d) => {};
-  const mouseout = () => {
-    // d3.selectAll(`.group_circle`).style('stroke', 'none');
-    // d3.selectAll(`.minimap`).style('fill', 'black');
-    // d3.selectAll('.tool_tip_wrapper').remove();
+  const disable_tool_tip = (name) => {
+    d3.select(`.rect${name}`).style('stroke', 'none');
+    d3.select(`.minimap${name}`).style('fill', 'black');
+    d3.select(`.tooltip${name}`).style('visibility', 'hidden');
+  };
+
+  const click = (e, d) => {
+    SET_SELECTED_TOOLTIP(d.dist);
+    actived_tool_tip(d.dist);
+    if (d.dist === selected_tooltip) {
+      disable_tool_tip(d.dist);
+    }
+  };
+
+  const mouseover = (e, d) => {
+    actived_tool_tip(d.dist);
+  };
+  const mouseout = (d) => {
+    if (selected_tooltip != d.dist) {
+      disable_tool_tip(d.dist);
+    }
   };
 
   const box_width = 50;
@@ -101,31 +72,32 @@ const map = ({ selected_year, selected_theme }) => {
       .join((enter) => {
         let group = enter
           .append('g')
-          .attr('transform', (d) => `translate(${cx(d)}, ${cy(d)})`)
-          .style('cursor', 'pointer')
-          .on('mouseover', (_, d) => mouseover(d))
-          .on('mouseout', mouseout)
-          .on('click', click);
+          .attr('transform', (d) => `translate(${cx(d)}, ${cy(d)})`);
 
-        group.append('title').text((d) => `${d.dist} ${+d[data_key]}`);
+        // group.append('title').text((d) => `${d.dist} ${+d[data_key]}`);
 
         group
           .append('rect')
-          .attr('class', (d) => `group_circle ${d.dist}`)
+          .attr('class', (d) => `group_circle rect${d.dist}`)
           .attr('width', '50')
           .attr('height', '50')
           .attr('x', '-25')
           .attr('y', '-25')
-          .attr('stroke', 'none');
+          .style('cursor', 'pointer')
+          .on('mouseover', (e, d) => mouseover(e, d))
+          .on('mouseout', (_, d) => mouseout(d))
+          .on('click', (e, d) => click(e, d));
 
         group
           .append('circle')
           .attr('r', (d) => r_scale(+d[data_key]))
+          .style('pointer-events', 'none')
           .style('fill', (d) => {
             let value = +d[data_key];
             if (value === ref) return colors[1];
             return value > ref ? colors[0] : colors[2];
           });
+
         group
           .append('circle')
           .attr('r', r_scale(ref))
@@ -133,7 +105,75 @@ const map = ({ selected_year, selected_theme }) => {
           .style('stroke-width', 1)
           .style('stroke', 'white')
           .style('stroke-linecap', 'round')
-          .style('stroke-dasharray', '5 4');
+          .style('stroke-dasharray', '5 4')
+          .style('pointer-events', 'none');
+
+        d3.select('#maps')
+          .append('div')
+          .attr('class', 'tool_tip_wrapper')
+          .selectAll('div')
+          .data(data)
+          .join((enter) => {
+            let tooltip = enter
+              .append('div')
+              .attr(
+                'class',
+                (d) => `tool_tip_detail_wrapper rounded-lg tooltip${d.dist}`
+              )
+              .style('top', (d) => cy(d) - 50 + 'px')
+              .style('left', (d) => cx(d) + 40 + 'px')
+              .style('visibility', 'hidden');
+
+            tooltip
+              .append('div')
+              .attr('class', 'tooltip_header rounded-t-lg flex p3 font-bold')
+              .style('background', selected_theme)
+              .append('div')
+              .attr('class', 'tooltip_h_left flex-1')
+              .append('div')
+              .text((d) => `เขต${d.dist}`)
+              .append('div')
+              .text((d) => `ปี 25${selected_year}`);
+
+            d3.select('.tooltip_header')
+              .append('div')
+              .attr('class', 'tooltip_h_right')
+              .text(`x`);
+
+            tooltip
+              .append('div')
+              .attr('class', 'tooltip_body  flex leading-4 font-bold');
+
+            d3.selectAll('.tooltip_body')
+              .append('div')
+              .attr('class', 'tooltip_b_left p3 flex-1')
+              .append('div')
+              .text((d) => `ปริมาณ`)
+              .append('div')
+              .text((d) => `ขยะมูลฝอย`);
+
+            d3.selectAll('.tooltip_body')
+              .append('div')
+              .attr(
+                'class',
+                'tooltip_b_right flex text-right flex-1 justify-end'
+              )
+              .style('color', selected_theme)
+              .append('div')
+              .attr('class', 'tooltip_number p2')
+              .text((d) => `2.085 `)
+              .append('div')
+              .attr('class', 'tooltip_unit p3')
+              .text((d) => `กก./คน/วัน`);
+
+            tooltip
+              .append('div')
+              .attr(
+                'class',
+                'tooltip_footer rounded-b-lg flex p3  justify-center'
+              )
+              .text(`สูงกว่าค่าเฉลี่ย`);
+          });
       });
   };
 

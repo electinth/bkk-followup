@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "name": "คลองเตย",
+    "districtType": "business",
+    "areaSize": 12.99,
+    "minimumPopulationDensity": 7792,
+    "maximumPopluationDensity": 8389
+  },
+  {
+    "id": 2,
+    "name": "คลองสาน",
+    "districtType": "tourism-and-cultural",
+    "areaSize": 6.05,
+    "minimumPopulationDensity": 11766,
+    "maximumPopluationDensity": 12618
+  },
+  {
+    "id": 3,
+    "name": "คลองสามวา",
+    "districtType": "suburban",
+    "areaSize": 110.69,
+    "minimumPopulationDensity": 1533,
+    "maximumPopluationDensity": 1826
+  },
+  {
+    "id": 4,
+    "name": "คันนายาว",
+    "districtType": "residence",
+    "areaSize": 25.98,
+    "minimumPopulationDensity": 3405,
+    "maximumPopluationDensity": 3741
+  },
+  {
+    "id": 5,
+    "name": "จตุจักร",
+    "districtType": "business",
+    "areaSize": 32.91,
+    "minimumPopulationDensity": 4738,
+    "maximumPopluationDensity": 4891
+  },
+  {
+    "id": 6,
+    "name": "จอมทอง",
+    "districtType": "suburban",
+    "areaSize": 26.27,
+    "minimumPopulationDensity": 5715,
+    "maximumPopluationDensity": 6014
+  },
+  {
+    "id": 7,
+    "name": "ดอนเมือง",
+    "districtType": "residence",
+    "areaSize": 36.8,
+    "minimumPopulationDensity": 4528,
+    "maximumPopluationDensity": 4620
+  },
+  {
+    "id": 8,
+    "name": "ดินแดง",
+    "districtType": "business",
+    "areaSize": 8.35,
+    "minimumPopulationDensity": 14263,
+    "maximumPopluationDensity": 15586
+  },
+  {
+    "id": 9,
+    "name": "ดุสิต",
+    "districtType": "tourism-and-cultural",
+    "areaSize": 10.67,
+    "minimumPopulationDensity": 8417,
+    "maximumPopluationDensity": 10124
+  },
+  {
+    "id": 10,
+    "name": "ตลิ่งชัน",
+    "districtType": "suburban",
+    "areaSize": 29.48,
+    "minimumPopulationDensity": 3554,
+    "maximumPopluationDensity": 3614
+  },
+  {
+    "id": 11,
+    "name": "ทวีวัฒนา",
+    "districtType": "suburban",
+    "areaSize": 50.22,
+    "minimumPopulationDensity": 1519,
+    "maximumPopluationDensity": 1564
+  },
+  {
+    "id": 12,
+    "name": "ทุ่งครุ",
+    "districtType": "suburban",
+    "areaSize": 30.74,
+    "minimumPopulationDensity": 3790,
+    "maximumPopluationDensity": 4003
+  },
+  {
+    "id": 13,
+    "name": "ธนบุรี",
+    "districtType": "tourism-and-cultural",
+    "areaSize": 8.55,
+    "minimumPopulationDensity": 12402,
+    "maximumPopluationDensity": 13992
+  },
+  {
+    "id": 14,
+    "name": "บางกอกน้อย",
+    "districtType": "tourism-and-cultural",
+    "areaSize": 11.94,
+    "minimumPopulationDensity": 9020,
+    "maximumPopluationDensity": 9875
+  },
+  {
+    "id": 15,
+    "name": "บางกอกใหญ่",
+    "districtType": "tourism-and-cultural",
+    "areaSize": 6.18,
+    "minimumPopulationDensity": 10704,
+    "maximumPopluationDensity": 11689
+  },
+  {
+    "id": 16,
+    "name": "บางกะปิ",
+    "districtType": "residence",
+    "areaSize": 28.52,
+    "minimumPopulationDensity": 5122,
+    "maximumPopluationDensity": 5227
+  },
+  {
+    "id": 17,
+    "name": "บางขุนเทียน",
+    "districtType": "suburban",
+    "areaSize": 120.69,
+    "minimumPopulationDensity": 1373,
+    "maximumPopluationDensity": 1540
+  },
+  {
+    "id": 18,
+    "name": "บางเขน",
+    "districtType": "residence",
+    "areaSize": 42.12,
+    "minimumPopulationDensity": 4487,
+    "maximumPopluationDensity": 4542
+  },
+  {
+    "id": 19,
+    "name": "บางคอแหลม",
+    "districtType": "business",
+    "areaSize": 10.92,
+    "minimumPopulationDensity": 7957,
+    "maximumPopluationDensity": 8688
+  },
+  {
+    "id": 20,
+    "name": "บางแค",
+    "districtType": "suburban",
+    "areaSize": 44.46,
+    "minimumPopulationDensity": 4314,
+    "maximumPopluationDensity": 4352
+  },
+  {
+    "id": 21,
+    "name": "บางซื่อ",
+    "districtType": "business",
+    "areaSize": 11.55,
+    "minimumPopulationDensity": 10853,
+    "maximumPopluationDensity": 11448
+  },
+  {
+    "id": 22,
+    "name": "บางนา",
+    "districtType": "residence",
+    "areaSize": 18.79,
+    "minimumPopulationDensity": 4796,
+    "maximumPopluationDensity": 5101
+  },
+  {
+    "id": 23,
+    "name": "บางบอน",
+    "districtType": "suburban",
+    "areaSize": 34.75,
+    "minimumPopulationDensity": 3026,
+    "maximumPopluationDensity": 3091
+  },
+  {
+    "id": 24,
+    "name": "บางพลัด",
+    "districtType": "tourism-and-cultural",
+    "areaSize": 11.36,
+    "minimumPopulationDensity": 7999,
+    "maximumPopluationDensity": 8728
+  },
+  {
+    "id": 25,
+    "name": "บางรัก",
+    "districtType": "business",
+    "areaSize": 5.54,
+    "minimumPopulationDensity": 8329,
+    "maximumPopluationDensity": 8712
+  },
+  {
+    "id": 26,
+    "name": "บึงกุ่ม",
+    "districtType": "residence",
+    "areaSize": 24.31,
+    "minimumPopulationDensity": 5851,
+    "maximumPopluationDensity": 5998
+  },
+  {
+    "id": 27,
+    "name": "ปทุมวัน",
+    "districtType": "business",
+    "areaSize": 8.37,
+    "minimumPopulationDensity": 5626,
+    "maximumPopluationDensity": 6442
+  },
+  {
+    "id": 28,
+    "name": "ประเวศ",
+    "districtType": "residence",
+    "areaSize": 52.49,
+    "minimumPopulationDensity": 3064,
+    "maximumPopluationDensity": 3444
+  },
+  {
+    "id": 29,
+    "name": "ป้อมปราบศัตรูพ่าย",
+    "districtType": "tourism-and-cultural",
+    "areaSize": 1.93,
+    "minimumPopulationDensity": 22519,
+    "maximumPopluationDensity": 26375
+  },
+  {
+    "id": 30,
+    "name": "พญาไท",
+    "districtType": "business",
+    "areaSize": 9.6,
+    "minimumPopulationDensity": 7227,
+    "maximumPopluationDensity": 7613
+  },
+  {
+    "id": 31,
+    "name": "พระโขนง",
+    "districtType": "residence",
+    "areaSize": 13.99,
+    "minimumPopulationDensity": 6362,
+    "maximumPopluationDensity": 6681
+  },
+  {
+    "id": 32,
+    "name": "พระนคร",
+    "districtType": "tourism-and-cultural",
+    "areaSize": 5.54,
+    "minimumPopulationDensity": 8617,
+    "maximumPopluationDensity": 10446
+  },
+  {
+    "id": 33,
+    "name": "ภาษีเจริญ",
+    "districtType": "suburban",
+    "areaSize": 17.83,
+    "minimumPopulationDensity": 7064,
+    "maximumPopluationDensity": 7278
+  },
+  {
+    "id": 34,
+    "name": "มีนบุรี",
+    "districtType": "suburban",
+    "areaSize": 63.65,
+    "minimumPopulationDensity": 2157,
+    "maximumPopluationDensity": 2240
+  },
+  {
+    "id": 35,
+    "name": "ยานนาวา",
+    "districtType": "business",
+    "areaSize": 16.66,
+    "minimumPopulationDensity": 4670,
+    "maximumPopluationDensity": 4893
+  },
+  {
+    "id": 36,
+    "name": "ราชเทวี",
+    "districtType": "business",
+    "areaSize": 7.13,
+    "minimumPopulationDensity": 10097,
+    "maximumPopluationDensity": 10355
+  },
+  {
+    "id": 37,
+    "name": "ราษฎร์บูรณะ",
+    "districtType": "suburban",
+    "areaSize": 15.78,
+    "minimumPopulationDensity": 5101,
+    "maximumPopluationDensity": 5490
+  },
+  {
+    "id": 38,
+    "name": "ลาดกระบัง",
+    "districtType": "suburban",
+    "areaSize": 123.86,
+    "minimumPopulationDensity": 1319,
+    "maximumPopluationDensity": 1435
+  },
+  {
+    "id": 39,
+    "name": "ลาดพร้าว",
+    "districtType": "residence",
+    "areaSize": 22.16,
+    "minimumPopulationDensity": 5352,
+    "maximumPopluationDensity": 5526
+  },
+  {
+    "id": 40,
+    "name": "วังทองหลาง",
+    "districtType": "residence",
+    "areaSize": 19.27,
+    "minimumPopulationDensity": 5692,
+    "maximumPopluationDensity": 5959
+  },
+  {
+    "id": 41,
+    "name": "วัฒนา",
+    "districtType": "business",
+    "areaSize": 12.57,
+    "minimumPopulationDensity": 6507,
+    "maximumPopluationDensity": 6942
+  },
+  {
+    "id": 42,
+    "name": "สวนหลวง",
+    "districtType": "residence",
+    "areaSize": 23.68,
+    "minimumPopulationDensity": 4887,
+    "maximumPopluationDensity": 5239
+  },
+  {
+    "id": 43,
+    "name": "สะพานสูง",
+    "districtType": "residence",
+    "areaSize": 28.12,
+    "minimumPopulationDensity": 3197,
+    "maximumPopluationDensity": 3416
+  },
+  {
+    "id": 44,
+    "name": "สัมพันธวงศ์",
+    "districtType": "tourism-and-cultural",
+    "areaSize": 1.42,
+    "minimumPopulationDensity": 15864,
+    "maximumPopluationDensity": 19369
+  },
+  {
+    "id": 45,
+    "name": "สาทร",
+    "districtType": "business",
+    "areaSize": 9.33,
+    "minimumPopulationDensity": 8339,
+    "maximumPopluationDensity": 9119
+  },
+  {
+    "id": 46,
+    "name": "สายไหม",
+    "districtType": "residence",
+    "areaSize": 44.62,
+    "minimumPopulationDensity": 4217,
+    "maximumPopluationDensity": 4624
+  },
+  {
+    "id": 47,
+    "name": "หนองแขม",
+    "districtType": "suburban",
+    "areaSize": 35.83,
+    "minimumPopulationDensity": 4195,
+    "maximumPopluationDensity": 4364
+  },
+  {
+    "id": 48,
+    "name": "หนองจอก",
+    "districtType": "suburban",
+    "areaSize": 236.26,
+    "minimumPopulationDensity": 665,
+    "maximumPopluationDensity": 745
+  },
+  {
+    "id": 49,
+    "name": "หลักสี่",
+    "districtType": "residence",
+    "areaSize": 22.84,
+    "minimumPopulationDensity": 4566,
+    "maximumPopluationDensity": 4810
+  },
+  {
+    "id": 50,
+    "name": "ห้วยขวาง",
+    "districtType": "business",
+    "areaSize": 15.03,
+    "minimumPopulationDensity": 5202,
+    "maximumPopluationDensity": 5610
+  }
+]

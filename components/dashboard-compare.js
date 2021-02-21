@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const compare = ({ selected_theme }) => {
   return (
-    <div className="flex-1 card_cat_detail " style={{ height: "fit-content" }}>
+    <div className="flex-1 card_cat_detail " style={{ height: 'fit-content' }}>
       <div
         className="flex justify-center px-5 py-1 text-center rounded-t text-white-default p2"
         style={{ backgroundColor: selected_theme.color }}

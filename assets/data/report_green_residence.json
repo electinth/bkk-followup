@@ -1,0 +1,177 @@
+{
+  "value": 7.86,
+  "valuePerYear": {
+    "2555": 5.83,
+    "2556": 6.22,
+    "2557": 6.93,
+    "2558": 7.3,
+    "2559": 7.37,
+    "2560": 7.37,
+    "2561": 7.37,
+    "2562": 7.86
+  },
+  "minimumPoint": {
+    "districtId": 40,
+    "districtName": "วังทองหลาง",
+    "year": 2555,
+    "value": 1.06
+  },
+  "maximumPoint": {
+    "districtId": 4,
+    "districtName": "คันนายาว",
+    "year": 2562,
+    "value": 25.22
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 4908482500,
+      "focused": 234580300
+    },
+    "2556": {
+      "all": 4981462200,
+      "focused": 270049400
+    },
+    "2557": {
+      "all": 4981462200,
+      "focused": 270049400
+    },
+    "2558": {
+      "all": 5150126360,
+      "focused": 307977700
+    },
+    "2559": {
+      "all": 5265285900,
+      "focused": 484544100
+    },
+    "2560": {
+      "all": 5488774200,
+      "focused": 314813300
+    },
+    "2561": {
+      "all": 5066597100,
+      "focused": 278841400
+    },
+    "2562": {
+      "all": 5098737500,
+      "focused": 325546300
+    }
+  },
+  "budgetOverall": {
+    "all": 40940927960,
+    "focused": 2486401900
+  },
+  "rankings": [
+    {
+      "ranked": 1,
+      "districtId": 4,
+      "districtName": "คันนายาว",
+      "value": 25.22
+    },
+    {
+      "ranked": 2,
+      "districtId": 49,
+      "districtName": "หลักสี่",
+      "value": 17.55
+    },
+    {
+      "ranked": 3,
+      "districtId": 28,
+      "districtName": "ประเวศ",
+      "value": 16.76
+    },
+    {
+      "ranked": 4,
+      "districtId": 42,
+      "districtName": "สวนหลวง",
+      "value": 5.65
+    },
+    {
+      "ranked": 5,
+      "districtId": 26,
+      "districtName": "บึงกุ่ม",
+      "value": 5.63
+    },
+    {
+      "ranked": 6,
+      "districtId": 16,
+      "districtName": "บางกะปิ",
+      "value": 5.56
+    },
+    {
+      "ranked": 7,
+      "districtId": 18,
+      "districtName": "บางเขน",
+      "value": 5.46
+    },
+    {
+      "ranked": 8,
+      "districtId": 39,
+      "districtName": "ลาดพร้าว",
+      "value": 5.34
+    },
+    {
+      "ranked": 9,
+      "districtId": 43,
+      "districtName": "สะพานสูง",
+      "value": 4.93
+    },
+    {
+      "ranked": 10,
+      "districtId": 22,
+      "districtName": "บางนา",
+      "value": 4.54
+    },
+    {
+      "ranked": 11,
+      "districtId": 46,
+      "districtName": "สายไหม",
+      "value": 4.39
+    },
+    {
+      "ranked": 12,
+      "districtId": 7,
+      "districtName": "ดอนเมือง",
+      "value": 3.93
+    },
+    {
+      "ranked": 13,
+      "districtId": 31,
+      "districtName": "พระโขนง",
+      "value": 3.28
+    },
+    {
+      "ranked": 14,
+      "districtId": 40,
+      "districtName": "วังทองหลาง",
+      "value": 1.75
+    }
+  ],
+  "benchmarks": [
+    {
+      "zoneId": "all",
+      "areaName": "ทุกเขตในกรุงเทพมหานคร",
+      "value": 7.07
+    },
+    {
+      "zoneId": "residence",
+      "areaName": "ทุกเขตพื้นที่อยู่อาศัย",
+      "value": 7.86
+    },
+    {
+      "zoneId": "suburban",
+      "areaName": "ทุกเขตพื้นที่อยู่อาศัยชานเมือง",
+      "value": 7.76
+    },
+    {
+      "zoneId": "tourism-and-cultural",
+      "areaName": "พื้นที่อนุรักษ์ศิลปวัฒนธรรมและส่งเสริมการท่องเที่ยว",
+      "value": 5.84
+    },
+    {
+      "zoneId": "business",
+      "areaName": "พื้นที่ศูนย์กลางธุรกิจและพาณิชยกรรม",
+      "value": 6.34
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.7
+}
