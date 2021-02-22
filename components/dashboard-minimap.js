@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
-const topo_district = require("assets/images/district.topojson.json");
+import topo_district from "assets/data/district.topojson.json";
 
 const mini_map = ({
   selected_tooltip,
@@ -10,20 +10,20 @@ const mini_map = ({
 }) => {
   const active_tool_tip = (name) => {
     d3.selectAll(`.rect${name}`)
-      .style('stroke-width', 1)
-      .style('stroke', 'white');
-    d3.selectAll(`.minimap${name}`).style('fill', 'white');
-    d3.selectAll(`.tooltip${name}`).style('visibility', 'visible');
+      .style("stroke-width", 1)
+      .style("stroke", "white");
+    d3.selectAll(`.minimap${name}`).style("fill", "white");
+    d3.selectAll(`.tooltip${name}`).style("visibility", "visible");
   };
 
   const disable_tool_tip = (name) => {
-    d3.selectAll(`.rect${name}`).style('stroke', 'none');
-    d3.selectAll(`.minimap${name}`).style('fill', 'black');
-    d3.selectAll(`.tooltip${name}`).style('visibility', 'hidden');
+    d3.selectAll(`.rect${name}`).style("stroke", "none");
+    d3.selectAll(`.minimap${name}`).style("fill", "black");
+    d3.selectAll(`.tooltip${name}`).style("visibility", "hidden");
   };
 
   const click = (name) => {
-    d3.select('.minimap').remove();
+    d3.select(".minimap").remove();
     SET_SELECTED_TOOLTIP(name.substring(3));
     setTimeout(() => {
       active_tool_tip(name.substring(3));
@@ -56,28 +56,28 @@ const mini_map = ({
   );
   useEffect(() => {
     let svg_map = d3
-      .select('#map')
-      .append('svg')
-      .style('position', 'absolute')
-      .style('top', '-50%')
-      .attr('width', width)
-      .attr('height', height);
+      .select("#map")
+      .append("svg")
+      .style("position", "absolute")
+      .style("top", "-50%")
+      .attr("width", width)
+      .attr("height", height);
 
     svg_map
       .selectAll()
       .data(geojson.features)
       .enter()
-      .append('g')
-      .style('cursor', 'pointer')
-      .on('mouseover', (_, d) => mouseover(d.properties.dname))
-      .on('mouseout', (_, d) => mouseout(d.properties.dname))
-      .on('click', (_, d) => click(d.properties.dname))
-      .append('path')
-      .attr('d', path)
-      .attr('class', (d) => `minimap minimap${d.properties.dname.substring(3)}`)
+      .append("g")
+      .style("cursor", "pointer")
+      .on("mouseover", (_, d) => mouseover(d.properties.dname))
+      .on("mouseout", (_, d) => mouseout(d.properties.dname))
+      .on("click", (_, d) => click(d.properties.dname))
+      .append("path")
+      .attr("d", path)
+      .attr("class", (d) => `minimap minimap${d.properties.dname.substring(3)}`)
 
-      .style('stroke-width', 1)
-      .style('stroke', 'white');
+      .style("stroke-width", 1)
+      .style("stroke", "white");
   }, [selected_theme]);
   return (
     <div
