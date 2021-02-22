@@ -10,6 +10,10 @@ import TimeLine from 'components/dashboard-timeline';
 import InfoMap from 'components/dashboard-info-map';
 import MiniMap from 'components/dashboard-minimap';
 import selectData from 'components/util/select-data';
+import Knowledge from 'components/util/knowledge';
+import BOD from 'components/util/BOD';
+import Standard from 'components/util/standard';
+import AVG from 'components/util/AVG';
 
 import _ from 'lodash';
 
@@ -75,15 +79,38 @@ const dashboard = () => {
 
   const router = useRouter();
   const [checked, SET_CHECKED] = useState(null);
+  const [district, SET_DISTRICT] = useState(null);
   const [selected_year, SET_SELECTED_YEAR] = useState(55);
   const [selected_tooltip, SET_SELECTED_TOOLTIP] = useState();
 
   let selected_theme = _.find(category, (cat) => {
     return cat.name === router.query.location;
   });
-
+  let selectedData, data;
   if (selected_theme != null) {
-    console.log(selectData(selected_theme.name));
+    selectedData = selectData(selected_theme.name);
+    let rankings;
+    if (checked === null || checked === 'เขตพื้นที่ทั้งหมด') {
+      rankings = selectedData.all.rankings;
+      data = selectedData.all;
+    } else if (checked === 'เขตพื้นที่ธุรกิจ') {
+      rankings = selectedData.report_business.rankings;
+      data = selectedData.report_business;
+    } else if (checked === 'เขตพื้นที่ท่องเที่ยวและวัฒนธรรม') {
+      rankings = selectedData.report_tourism.rankings;
+      data = selectedData.report_tourism;
+    } else if (checked === 'เขตพื้นที่อยู่อาศัย') {
+      rankings = selectedData.report_residence.rankings;
+      data = selectedData.report_residence;
+    } else if (checked === 'เขตพื้นที่ชานเมือง') {
+      rankings = selectedData.report_suburban.rankings;
+      data = selectedData.report_suburban;
+    }
+    let districtName = _.map(rankings, (rank) => {
+      return { filter_by: _.get(rank, 'districtName') };
+    });
+
+    console.log(data);
 
     return (
       <Layout id="dashboard">
@@ -113,9 +140,9 @@ const dashboard = () => {
                 type="group"
               />
               <DropDown
-                filter={filter_by_group}
-                checked={checked}
-                SET_CHECKED={SET_CHECKED}
+                filter={districtName}
+                district={district}
+                SET_DISTRICT={SET_DISTRICT}
                 type="zone"
               />
             </div>
@@ -150,7 +177,11 @@ const dashboard = () => {
             >
               <span>
                 <p className="d4">สถานการณ์{selected_theme.name}</p>
-                <p className="h3">กรุงเทพมหานคร</p>
+                <p className="h3">
+                  {checked === null || checked === 'เขตพื้นที่ทั้งหมด'
+                    ? 'กรุงเทพมหานคร'
+                    : checked}
+                </p>
                 <p className="h4">ภาพรวมย้อนหลัง 8 ปี (2555-2562)</p>
               </span>
             </div>
@@ -166,89 +197,24 @@ const dashboard = () => {
                 >
                   ข้อควรรู้
                 </div>
-                <span className="my-4 ">
-                  <p className="px-32 font-bold leading-tight h3">
-                    เมื่อรายได้ค่าเก็บขยะคิดเป็นเพียง 5%
-                    ของค่าใช้จ่ายในการเก็บขยะ..
-                  </p>
-                  <p className="px-5 mt-3 leading-tight p2">
-                    รู้หรือไม่? กทม.
-                    ใช้งบประมาณในการรักษาความสะอาดและจัดการขยะมูลฝอยในแต่ละปีไม่ต่ำกว่า
-                    10,000 ล้านบาท แต่มีรายได้มาชดเชยภาระตรงนี้เพียงปีละประมาณ
-                    500 ล้านซึ่งคิดเป็นแค่ 5% เท่านั้น และนับวัน
-                    ปริมาณขยะก็ยังคงเพิ่มขึ้นอย่างต่อเนื่อง
-                  </p>
-                </span>
+                <Knowledge selected={selected_theme} />
               </div>
             ) : (
               ''
             )}
+            {selected_theme.name === 'พื้นที่สีเขียว' ? (
+              <Standard selected_theme={selected_theme} />
+            ) : (
+              ''
+            )}
 
-            <div id="AVG" className="flex mt-3">
-              <div className="flex-1 mr-3 card_cat_detail" id="AVG-left">
-                <div
-                  className="flex justify-center py-1 rounded-t text-white-default p2"
-                  style={{ backgroundColor: selected_theme.color }}
-                >
-                  ค่าเฉลี่ย
-                </div>
-                <div className="px-2 py-3">
-                  <p className="font-bold leading-tight h4">
-                    จำนวนขยะมูลฝอยต่อประชากรต่อคนโดยเฉลี่ย
-                  </p>
-                  <p
-                    style={{ color: selected_theme.text_color }}
-                    className="font-bold h5"
-                  >
-                    1.80
-                  </p>
-                  <p
-                    style={{ color: selected_theme.text_color }}
-                    className="font-bold h3"
-                  >
-                    กก./คน/วัน
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col flex-1 " id="AVG-right">
-                <div className="flex-1 card_cat_detail">
-                  <div
-                    className="flex justify-center py-1 rounded-t text-white-default p2"
-                    style={{ backgroundColor: selected_theme.color }}
-                  >
-                    เขตที่ขยะน้อยที่สุด
-                  </div>
-                  <div className="px-2 py-3 leading-tight">
-                    <p className="font-bold h4">เขตหนองจอก ปี 2555 </p>
-                    <span
-                      className="flex flex-row font-bold h4"
-                      style={{ color: selected_theme.text_color }}
-                    >
-                      <p>0.67</p>
-                      <p className="pl-2"> กก./คน/วัน</p>
-                    </span>
-                  </div>
-                </div>
-                <div className="flex-1 mt-3 card_cat_detail">
-                  <div
-                    className="flex justify-center py-1 rounded-t text-white-default p2"
-                    style={{ backgroundColor: selected_theme.color }}
-                  >
-                    เขตที่ขยะมากที่สุด
-                  </div>
-                  <div className="px-2 py-3 leading-tight">
-                    <p className="font-bold h4">เขตปทุมวัน ปี 2562 </p>
-                    <span
-                      className="flex flex-row font-bold h4"
-                      style={{ color: selected_theme.text_color }}
-                    >
-                      <p>6.53</p>
-                      <p className="pl-2"> กก./คน/วัน</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {selected_theme.name === 'มลพิษในคลอง' ? (
+              <BOD selected_theme={selected_theme} />
+            ) : (
+              ''
+            )}
+
+            <AVG selected_theme={selected_theme} />
             <div id="graph-trend" className="mt-3 card_cat_detail">
               <div
                 className="flex justify-center py-1 rounded-t text-white-default p2"

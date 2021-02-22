@@ -7,8 +7,6 @@ const map = ({
   selected_tooltip,
   SET_SELECTED_TOOLTIP,
 }) => {
-  d3.select('.tool_tip_wrapper').remove();
-
   const actived_tool_tip = (name) => {
     d3.select(`.rect${name}`).style('stroke-width', 1).style('stroke', 'white');
     d3.select(`.minimap${name}`).style('fill', 'white');
@@ -22,6 +20,7 @@ const map = ({
   };
 
   const click = (e, d) => {
+    d3.selectAll('.tool_tip_detail_wrapper').style('visibility', 'hidden');
     SET_SELECTED_TOOLTIP(d.dist);
     actived_tool_tip(d.dist);
     if (d.dist === selected_tooltip) {
@@ -124,10 +123,12 @@ const map = ({
               .style('left', (d) => cx(d) + 40 + 'px')
               .style('visibility', 'hidden');
 
-            tooltip
+            let header = tooltip
               .append('div')
               .attr('class', 'tooltip_header rounded-t-lg flex p3 font-bold')
-              .style('background', selected_theme)
+              .style('background', selected_theme);
+
+            header
               .append('div')
               .attr('class', 'tooltip_h_left flex-1')
               .append('div')
@@ -135,16 +136,16 @@ const map = ({
               .append('div')
               .text((d) => `ปี 25${selected_year}`);
 
-            d3.select('.tooltip_header')
+            header
               .append('div')
               .attr('class', 'tooltip_h_right')
-              .text(`x`);
+              .text((d) => `x`);
 
-            tooltip
+            let body = tooltip
               .append('div')
               .attr('class', 'tooltip_body  flex leading-4 font-bold');
 
-            d3.selectAll('.tooltip_body')
+            body
               .append('div')
               .attr('class', 'tooltip_b_left p3 flex-1')
               .append('div')
@@ -152,7 +153,7 @@ const map = ({
               .append('div')
               .text((d) => `ขยะมูลฝอย`);
 
-            d3.selectAll('.tooltip_body')
+            body
               .append('div')
               .attr(
                 'class',
