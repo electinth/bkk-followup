@@ -1,94 +1,101 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base!important;
+@tailwind components!important;
+@tailwind utilities!important;
 
 @layer utilities {
-  .d1 {
-    font-family: "TheMATTER";
-    font-size: 80px;
+  * {
+    font-family: "NotoSansThaiUI" !important;
+  }
+  html {
+    scroll-behavior: smooth !important;
+    overflow: hidden !important;
+    outline: none !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 700 !important;
+  }
+  /* h1 {
+    font-size: 80px !important;
+    font-weight: 700 !important;
     @media screen and (max-width: 767px) {
-      font-size: 48px;
+      font-size: 48px !important;
+    }
+  }
+  h2 {
+    font-size: 42px !important;
+    font-weight: 700 !important;
+    @media screen and (max-width: 767px) {
+      font-size: 28px !important;
+    }
+  }
+  h3 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    @media screen and (max-width: 767px) {
+      font-size: 22px !important;
+    }
+  }
+  h4 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    @media screen and (max-width: 767px) {
+      font-size: 18px !important;
+    }
+  }
+  h5 {
+    font-weight: 700 !important;
+    font-size: 36px !important;
+  } */
+  .d1 {
+    font-family: "TheMATTER" !important;
+    font-size: 80px !important;
+    @media screen and (max-width: 767px) {
+      font-size: 48px !important;
     }
   }
   .d2 {
-    font-family: "TheMATTER";
-    font-size: 60px;
+    font-family: "TheMATTER" !important;
+    font-size: 60px !important;
     @media screen and (max-width: 767px) {
-      font-size: 36px;
+      font-size: 36px !important;
     }
   }
   .d3 {
-    font-family: "TheMATTER";
-    font-size: 40px;
+    font-family: "TheMATTER" !important;
+    font-size: 40px !important;
     @media screen and (max-width: 767px) {
-      font-size: 28px;
+      font-size: 28px !important;
     }
   }
   .d4 {
-    font-family: "TheMATTER";
-    font-size: 30px;
+    font-family: "TheMATTER" !important;
+    font-size: 30px !important;
     @media screen and (max-width: 767px) {
-      font-size: 24px;
+      font-size: 24px !important;
     }
   }
   .d5 {
-    font-family: "TheMATTER";
-    font-size: 24px;
+    font-family: "TheMATTER" !important;
+    font-size: 24px !important;
     @media screen and (max-width: 767px) {
-      font-size: 18px;
+      font-size: 18px !important;
     }
-  }
-  .h1 {
-    font-family: "NotoSansThaiUI";
-    font-size: 80px;
-    @media screen and (max-width: 767px) {
-      font-size: 48px;
-    }
-  }
-  .h2 {
-    font-family: "NotoSansThaiUI";
-    font-size: 42px;
-    @media screen and (max-width: 767px) {
-      font-size: 28px;
-    }
-  }
-  .h3 {
-    font-family: "NotoSansThaiUI";
-    font-size: 24px;
-    @media screen and (max-width: 767px) {
-      font-size: 22px;
-    }
-  }
-  .h4 {
-    font-family: "NotoSansThaiUI";
-    font-size: 20px;
-    @media screen and (max-width: 767px) {
-      font-size: 18px;
-    }
-  }
-  .h5 {
-    font-family: "NotoSansThaiUI";
-    font-size: 36px;
   }
   .p1 {
-    font-family: "NotoSansThaiUI";
-    font-size: 18px;
+    font-size: 18px !important;
   }
   .p2 {
-    font-family: "NotoSansThaiUI";
-    font-size: 14px;
+    font-size: 14px !important;
   }
   .p3 {
-    font-family: "NotoSansThaiUI";
-    font-size: 12px;
+    font-size: 12px !important;
   }
 }
 @layer base {
-  html {
-    scroll-behavior: smooth;
-    overflow: hidden;
-    outline: none;
-  }
   @font-face {
     font-family: "NotoSansThaiUI";
     src: url("assets/fonts/NotoSansThaiUI-Bold.ttf");
@@ -107,4 +114,19 @@
     font-weight: 700;
     font-style: normal;
   }
+}
+
+.fade-enter {
+  opacity: 0 !important;
+}
+.fade-enter-active {
+  opacity: 1 !important;
+  transition: opacity 0.4s !important;
+}
+.fade-exit {
+  opacity: 1 !important;
+}
+.fade-exit-active {
+  opacity: 0 !important;
+  transition: opacity 0.4s !important;
 }
