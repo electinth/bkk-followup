@@ -1,7 +1,18 @@
-.intro-page {
-  transition: 0.8s;
-}
 .intro-page.hide-intro {
+  transition: 0.8s;
   opacity: 0;
   transform: translateY(-100%);
+}
+
+.budget-page-three {
+  .box {
+    .tooltip {
+      display: none;
+    }
+  }
+  .box:hover {
+    .tooltip {
+      display: block;
+    }
+  }
 }

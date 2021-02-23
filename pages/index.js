@@ -4,6 +4,7 @@ import Intro from "components/Home/Intro";
 import Main from "components/Home/Main";
 import BudgetPageOne from "components/Home/BudgetPageOne";
 import BudgetPageTwo from "components/Home/BudgetPageTwo";
+import BudgetPageThree from "components/Home/BudgetPageThree";
 import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import SwiperCore, { Mousewheel } from "swiper";
@@ -100,6 +101,15 @@ export default function Home() {
         classNames="fade"
       >
         <BudgetPageTwo active_index={active_index} />
+      </CSSTransition>
+
+      <CSSTransition
+        in={[5, 6].includes(active_index)}
+        timeout={400}
+        unmountOnExit
+        classNames="fade"
+      >
+        <BudgetPageThree active_index={active_index} />
       </CSSTransition>
     </Layout>
   );
