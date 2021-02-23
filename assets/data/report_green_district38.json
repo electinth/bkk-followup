@@ -1,0 +1,107 @@
+{
+  "value": 2.83,
+  "valuePerYear": {
+    "2555": 3.06,
+    "2556": 3.03,
+    "2557": 3.03,
+    "2558": 2.56,
+    "2559": 2.39,
+    "2560": 2.27,
+    "2561": 2.77,
+    "2562": 2.83
+  },
+  "minimumPoint": {
+    "value": 2.27,
+    "year": 2560,
+    "districtId": 38,
+    "districtName": "ลาดกระบัง"
+  },
+  "maximumPoint": {
+    "value": 3.06,
+    "year": 2555,
+    "districtId": 38,
+    "districtName": "ลาดกระบัง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 456215400,
+      "focused": 33246300
+    },
+    "2556": {
+      "all": 547592700,
+      "focused": 36213600
+    },
+    "2557": {
+      "all": 547592700,
+      "focused": 36213600
+    },
+    "2558": {
+      "all": 574783800,
+      "focused": 39745300
+    },
+    "2559": {
+      "all": 573081100,
+      "focused": 22062200
+    },
+    "2560": {
+      "all": 603230000,
+      "focused": 20422900
+    },
+    "2561": {
+      "all": 562301840,
+      "focused": 22735600
+    },
+    "2562": {
+      "all": 571562000,
+      "focused": 38751000
+    }
+  },
+  "budgetOverall": {
+    "all": 4436359540,
+    "focused": 249390500
+  },
+  "ranked": 42,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": 3.06
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": 3.03
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": 3.03
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 2.83
+    },
+    {
+      "ranked": 5,
+      "year": 2561,
+      "value": 2.77
+    },
+    {
+      "ranked": 6,
+      "year": 2558,
+      "value": 2.56
+    },
+    {
+      "ranked": 7,
+      "year": 2559,
+      "value": 2.39
+    },
+    {
+      "ranked": 8,
+      "year": 2560,
+      "value": 2.27
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.45
+}

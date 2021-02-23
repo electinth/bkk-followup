@@ -1,0 +1,73 @@
+{
+  "value": 10.4,
+  "valuePerYear": {
+    "2555": 8,
+    "2556": 8,
+    "2557": 8,
+    "2558": 11.58,
+    "2559": 15.09,
+    "2560": 9.03,
+    "2561": 11.3,
+    "2562": 10.4
+  },
+  "minimumPoint": {
+    "value": 8,
+    "year": 2555,
+    "districtId": 21,
+    "districtName": "บางซื่อ"
+  },
+  "maximumPoint": {
+    "value": 15.09,
+    "year": 2559,
+    "districtId": 21,
+    "districtName": "บางซื่อ"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 27,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 15.09
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 11.58
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 11.3
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 10.4
+    },
+    {
+      "ranked": 5,
+      "year": 2560,
+      "value": 9.03
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 8
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 8
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 8
+    }
+  ]
+}

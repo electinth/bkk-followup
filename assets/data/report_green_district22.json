@@ -1,0 +1,107 @@
+{
+  "value": 4.54,
+  "valuePerYear": {
+    "2555": 2.67,
+    "2556": 3,
+    "2557": 3,
+    "2558": 3.5,
+    "2559": 4.07,
+    "2560": 4.24,
+    "2561": 4.53,
+    "2562": 4.54
+  },
+  "minimumPoint": {
+    "value": 2.67,
+    "year": 2555,
+    "districtId": 22,
+    "districtName": "บางนา"
+  },
+  "maximumPoint": {
+    "value": 4.54,
+    "year": 2562,
+    "districtId": 22,
+    "districtName": "บางนา"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 347345600,
+      "focused": 14690900
+    },
+    "2556": {
+      "all": 313274000,
+      "focused": 15924700
+    },
+    "2557": {
+      "all": 313274000,
+      "focused": 15924700
+    },
+    "2558": {
+      "all": 283943900,
+      "focused": 16398300
+    },
+    "2559": {
+      "all": 301135500,
+      "focused": 8624100
+    },
+    "2560": {
+      "all": 303022500,
+      "focused": 8056000
+    },
+    "2561": {
+      "all": 301494840,
+      "focused": 7575800
+    },
+    "2562": {
+      "all": 306260000,
+      "focused": 18850400
+    }
+  },
+  "budgetOverall": {
+    "all": 2469750340,
+    "focused": 106044900
+  },
+  "ranked": 30,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 4.54
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 4.53
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 4.24
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 4.07
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 3.5
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 3
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 3
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 2.67
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.11
+}

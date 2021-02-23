@@ -1,0 +1,73 @@
+{
+  "value": 15.17,
+  "valuePerYear": {
+    "2555": 15.75,
+    "2556": 17.58,
+    "2557": 17.58,
+    "2558": 20.08,
+    "2559": 24.3,
+    "2560": 19.92,
+    "2561": 15,
+    "2562": 15.17
+  },
+  "minimumPoint": {
+    "value": 15,
+    "year": 2561,
+    "districtId": 39,
+    "districtName": "ลาดพร้าว"
+  },
+  "maximumPoint": {
+    "value": 24.3,
+    "year": 2559,
+    "districtId": 39,
+    "districtName": "ลาดพร้าว"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 17,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 24.3
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 20.08
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 19.92
+    },
+    {
+      "ranked": 4,
+      "year": 2556,
+      "value": 17.58
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 17.58
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 15.75
+    },
+    {
+      "ranked": 7,
+      "year": 2562,
+      "value": 15.17
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 15
+    }
+  ]
+}

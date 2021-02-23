@@ -1,0 +1,73 @@
+{
+  "value": 7.14,
+  "valuePerYear": {
+    "2555": 11.81,
+    "2556": 8.06,
+    "2557": 8.06,
+    "2558": 13.94,
+    "2559": 13,
+    "2560": 9.14,
+    "2561": 11.67,
+    "2562": 7.14
+  },
+  "minimumPoint": {
+    "value": 7.14,
+    "year": 2562,
+    "districtId": 29,
+    "districtName": "ป้อมปราบศัตรูพ่าย"
+  },
+  "maximumPoint": {
+    "value": 13.94,
+    "year": 2558,
+    "districtId": 29,
+    "districtName": "ป้อมปราบศัตรูพ่าย"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 37,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 13.94
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 13
+    },
+    {
+      "ranked": 3,
+      "year": 2555,
+      "value": 11.81
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 11.67
+    },
+    {
+      "ranked": 5,
+      "year": 2560,
+      "value": 9.14
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 8.06
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 8.06
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": 7.14
+    }
+  ]
+}

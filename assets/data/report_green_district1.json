@@ -1,0 +1,107 @@
+{
+  "value": 8.01,
+  "valuePerYear": {
+    "2555": 5.06,
+    "2556": 5.17,
+    "2557": 5.17,
+    "2558": 5.49,
+    "2559": 5.73,
+    "2560": 6.81,
+    "2561": 7.72,
+    "2562": 8.01
+  },
+  "minimumPoint": {
+    "value": 5.06,
+    "year": 2555,
+    "districtId": 1,
+    "districtName": "คลองเตย"
+  },
+  "maximumPoint": {
+    "value": 8.01,
+    "year": 2562,
+    "districtId": 1,
+    "districtName": "คลองเตย"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 316050200,
+      "focused": 18778100
+    },
+    "2556": {
+      "all": 374677000,
+      "focused": 20405100
+    },
+    "2557": {
+      "all": 374677000,
+      "focused": 20405100
+    },
+    "2558": {
+      "all": 366675600,
+      "focused": 23812300
+    },
+    "2559": {
+      "all": 367858500,
+      "focused": 11620400
+    },
+    "2560": {
+      "all": 384299000,
+      "focused": 12650400
+    },
+    "2561": {
+      "all": 396138840,
+      "focused": 9788700
+    },
+    "2562": {
+      "all": 380510000,
+      "focused": 24165900
+    }
+  },
+  "budgetOverall": {
+    "all": 2960886140,
+    "focused": 141626000
+  },
+  "ranked": 14,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 8.01
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 7.72
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 6.81
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 5.73
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 5.49
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 5.17
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 5.17
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 5.06
+    }
+  ],
+  "publicGreenSpacePerCapita": 3
+}

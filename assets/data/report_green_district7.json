@@ -1,0 +1,107 @@
+{
+  "value": 3.93,
+  "valuePerYear": {
+    "2555": 3.95,
+    "2556": 3.98,
+    "2557": 3.98,
+    "2558": 3.33,
+    "2559": 3.32,
+    "2560": 3.72,
+    "2561": 3.94,
+    "2562": 3.93
+  },
+  "minimumPoint": {
+    "value": 3.32,
+    "year": 2559,
+    "districtId": 7,
+    "districtName": "ดอนเมือง"
+  },
+  "maximumPoint": {
+    "value": 3.98,
+    "year": 2556,
+    "districtId": 7,
+    "districtName": "ดอนเมือง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 381527200,
+      "focused": 19989200
+    },
+    "2556": {
+      "all": 402426500,
+      "focused": 23294100
+    },
+    "2557": {
+      "all": 402426500,
+      "focused": 23294100
+    },
+    "2558": {
+      "all": 390811900,
+      "focused": 27328200
+    },
+    "2559": {
+      "all": 373235100,
+      "focused": 8587500
+    },
+    "2560": {
+      "all": 392931000,
+      "focused": 18222200
+    },
+    "2561": {
+      "all": 376344840,
+      "focused": 13742800
+    },
+    "2562": {
+      "all": 389048000,
+      "focused": 25541400
+    }
+  },
+  "budgetOverall": {
+    "all": 3108751040,
+    "focused": 159999500
+  },
+  "ranked": 35,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2556,
+      "value": 3.98
+    },
+    {
+      "ranked": 2,
+      "year": 2557,
+      "value": 3.98
+    },
+    {
+      "ranked": 3,
+      "year": 2555,
+      "value": 3.95
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 3.94
+    },
+    {
+      "ranked": 5,
+      "year": 2562,
+      "value": 3.93
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": 3.72
+    },
+    {
+      "ranked": 7,
+      "year": 2558,
+      "value": 3.33
+    },
+    {
+      "ranked": 8,
+      "year": 2559,
+      "value": 3.32
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.16
+}

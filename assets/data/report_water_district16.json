@@ -1,0 +1,73 @@
+{
+  "value": 11.6,
+  "valuePerYear": {
+    "2555": 9.56,
+    "2556": 9.44,
+    "2557": 9.44,
+    "2558": 16.19,
+    "2559": 15.13,
+    "2560": 14.35,
+    "2561": 8.17,
+    "2562": 11.6
+  },
+  "minimumPoint": {
+    "value": 8.17,
+    "year": 2561,
+    "districtId": 16,
+    "districtName": "บางกะปิ"
+  },
+  "maximumPoint": {
+    "value": 16.19,
+    "year": 2558,
+    "districtId": 16,
+    "districtName": "บางกะปิ"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 26,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 16.19
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 15.13
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 14.35
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 11.6
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 9.56
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 9.44
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 9.44
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 8.17
+    }
+  ]
+}

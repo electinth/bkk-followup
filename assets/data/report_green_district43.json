@@ -1,0 +1,107 @@
+{
+  "value": 4.93,
+  "valuePerYear": {
+    "2555": 3.58,
+    "2556": 3.66,
+    "2557": 3.66,
+    "2558": 6.51,
+    "2559": 4.02,
+    "2560": 4.18,
+    "2561": 4.42,
+    "2562": 4.93
+  },
+  "minimumPoint": {
+    "value": 3.58,
+    "year": 2555,
+    "districtId": 43,
+    "districtName": "สะพานสูง"
+  },
+  "maximumPoint": {
+    "value": 6.51,
+    "year": 2558,
+    "districtId": 43,
+    "districtName": "สะพานสูง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 308790100,
+      "focused": 15091800
+    },
+    "2556": {
+      "all": 292846900,
+      "focused": 17129100
+    },
+    "2557": {
+      "all": 292846900,
+      "focused": 17129100
+    },
+    "2558": {
+      "all": 327210760,
+      "focused": 22207400
+    },
+    "2559": {
+      "all": 289570600,
+      "focused": 20007300
+    },
+    "2560": {
+      "all": 316165000,
+      "focused": 13715500
+    },
+    "2561": {
+      "all": 312579840,
+      "focused": 27314600
+    },
+    "2562": {
+      "all": 316401000,
+      "focused": 26423400
+    }
+  },
+  "budgetOverall": {
+    "all": 2456411100,
+    "focused": 159018200
+  },
+  "ranked": 28,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 6.51
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 4.93
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 4.42
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 4.18
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": 4.02
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 3.66
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 3.66
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 3.58
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.05
+}

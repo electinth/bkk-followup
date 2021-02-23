@@ -1,0 +1,123 @@
+{
+  "value": 51,
+  "valuePerYear": {
+    "2555": 25,
+    "2556": 66,
+    "2557": 30,
+    "2558": 22,
+    "2559": 177,
+    "2560": 376,
+    "2561": 59,
+    "2562": 51
+  },
+  "minimumPoint": {
+    "value": 22,
+    "year": 2558,
+    "districtId": 49,
+    "districtName": "หลักสี่"
+  },
+  "maximumPoint": {
+    "value": 376,
+    "year": 2560,
+    "districtId": 49,
+    "districtName": "หลักสี่"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 301620500,
+      "focused": 8616900
+    },
+    "2556": {
+      "all": 319733400,
+      "focused": 21841000
+    },
+    "2557": {
+      "all": 319733400,
+      "focused": 21841000
+    },
+    "2558": {
+      "all": 370061000,
+      "focused": 10350600
+    },
+    "2559": {
+      "all": 300038100,
+      "focused": 6876200
+    },
+    "2560": {
+      "all": 332257000,
+      "focused": 10691700
+    },
+    "2561": {
+      "all": 335513840,
+      "focused": 10852600
+    },
+    "2562": {
+      "all": 338958000,
+      "focused": 13383000
+    }
+  },
+  "budgetOverall": {
+    "all": 2617915240,
+    "focused": 104453000
+  },
+  "ranked": 4,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2560,
+      "value": 376
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 177
+    },
+    {
+      "ranked": 3,
+      "year": 2556,
+      "value": 66
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 59
+    },
+    {
+      "ranked": 5,
+      "year": 2562,
+      "value": 51
+    },
+    {
+      "ranked": 6,
+      "year": 2557,
+      "value": 30
+    },
+    {
+      "ranked": 7,
+      "year": 2555,
+      "value": 25
+    },
+    {
+      "ranked": 8,
+      "year": 2558,
+      "value": 22
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนแจ้งวัฒนะ",
+      "description": "ช่วงจากคลองประปา ถึงคลองเปรมประชากร"
+    },
+    {
+      "name": "ถนนงามวงศ์วาน",
+      "description": "ปากซอยชินเขต (บริเวณหน้าตลาดพงษ์เพชร)"
+    }
+  ],
+  "meanFloodLevel": 34.5,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.7,
+    "year": 2559,
+    "districtId": 49,
+    "districtName": "หลักสี่"
+  }
+}

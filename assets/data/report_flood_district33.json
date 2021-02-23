@@ -1,0 +1,113 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 33,
+    "districtName": "ภาษีเจริญ"
+  },
+  "maximumPoint": {
+    "districtId": 33,
+    "districtName": "ภาษีเจริญ"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 329978600,
+      "focused": 9015800
+    },
+    "2556": {
+      "all": 388163000,
+      "focused": 10842500
+    },
+    "2557": {
+      "all": 388163000,
+      "focused": 10842500
+    },
+    "2558": {
+      "all": 338690100,
+      "focused": 14962400
+    },
+    "2559": {
+      "all": 316565100,
+      "focused": 17337900
+    },
+    "2560": {
+      "all": 354456000,
+      "focused": 15497600
+    },
+    "2561": {
+      "all": 361792840,
+      "focused": 14034600
+    },
+    "2562": {
+      "all": 378914000,
+      "focused": 17014400
+    }
+  },
+  "budgetOverall": {
+    "all": 2856722640,
+    "focused": 109547700
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนเพชรเกษม",
+      "description": "จากหน้าตลาดบางแค ถึงคลองบางหว้า"
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 33,
+    "districtName": "ภาษีเจริญ"
+  }
+}

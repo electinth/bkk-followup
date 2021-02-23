@@ -1,0 +1,113 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 17,
+    "districtName": "บางขุนเทียน"
+  },
+  "maximumPoint": {
+    "districtId": 17,
+    "districtName": "บางขุนเทียน"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 513643800,
+      "focused": 15061100
+    },
+    "2556": {
+      "all": 505763400,
+      "focused": 18449400
+    },
+    "2557": {
+      "all": 505763400,
+      "focused": 18449400
+    },
+    "2558": {
+      "all": 565980900,
+      "focused": 24450500
+    },
+    "2559": {
+      "all": 523141500,
+      "focused": 16212500
+    },
+    "2560": {
+      "all": 568627000,
+      "focused": 16664200
+    },
+    "2561": {
+      "all": 499436840,
+      "focused": 17493800
+    },
+    "2562": {
+      "all": 552423000,
+      "focused": 19327600
+    }
+  },
+  "budgetOverall": {
+    "all": 4234779840,
+    "focused": 146108500
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนบางขุนเทียน ชายทะเล",
+      "description": "ช่วงจากถนนพระรามที่ 2 ถึงคลองสะแกงาม"
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 17,
+    "districtName": "บางขุนเทียน"
+  }
+}

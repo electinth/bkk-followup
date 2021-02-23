@@ -1,0 +1,119 @@
+{
+  "value": 8,
+  "valuePerYear": {
+    "2555": 1,
+    "2556": 11,
+    "2557": 4,
+    "2558": 6,
+    "2559": null,
+    "2560": 7,
+    "2561": 5,
+    "2562": 8
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2555,
+    "districtId": 50,
+    "districtName": "ห้วยขวาง"
+  },
+  "maximumPoint": {
+    "value": 11,
+    "year": 2556,
+    "districtId": 50,
+    "districtName": "ห้วยขวาง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 290675000,
+      "focused": 15635800
+    },
+    "2556": {
+      "all": 312859600,
+      "focused": 14592300
+    },
+    "2557": {
+      "all": 312859600,
+      "focused": 14592300
+    },
+    "2558": {
+      "all": 320055800,
+      "focused": 17275500
+    },
+    "2559": {
+      "all": 318754500,
+      "focused": 14405900
+    },
+    "2560": {
+      "all": 337698200,
+      "focused": 16096700
+    },
+    "2561": {
+      "all": 339700840,
+      "focused": 18468200
+    },
+    "2562": {
+      "all": 344432000,
+      "focused": 19370300
+    }
+  },
+  "budgetOverall": {
+    "all": 2577035540,
+    "focused": 130437000
+  },
+  "ranked": 18,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2556,
+      "value": 11
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 8
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 7
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": 6
+    },
+    {
+      "ranked": 5,
+      "year": 2561,
+      "value": 5
+    },
+    {
+      "ranked": 6,
+      "year": 2557,
+      "value": 4
+    },
+    {
+      "ranked": 7,
+      "year": 2555,
+      "value": 1
+    },
+    {
+      "ranked": 8,
+      "year": 2559,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนเพชรบุรี",
+      "description": "จากแยกอโศก ถึงคลองบางกะปิ"
+    }
+  ],
+  "meanFloodLevel": 34.5,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.7,
+    "year": 2560,
+    "districtId": 50,
+    "districtName": "ห้วยขวาง"
+  }
+}

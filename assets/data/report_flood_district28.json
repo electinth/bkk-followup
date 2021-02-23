@@ -1,0 +1,113 @@
+{
+  "value": 15,
+  "valuePerYear": {
+    "2555": 8,
+    "2556": null,
+    "2557": 3,
+    "2558": 8,
+    "2559": 12,
+    "2560": 20,
+    "2561": 13,
+    "2562": 15
+  },
+  "minimumPoint": {
+    "value": 3,
+    "year": 2557,
+    "districtId": 28,
+    "districtName": "ประเวศ"
+  },
+  "maximumPoint": {
+    "value": 20,
+    "year": 2560,
+    "districtId": 28,
+    "districtName": "ประเวศ"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 407315500,
+      "focused": 13667900
+    },
+    "2556": {
+      "all": 433494100,
+      "focused": 27539300
+    },
+    "2557": {
+      "all": 433494100,
+      "focused": 27539300
+    },
+    "2558": {
+      "all": 461429900,
+      "focused": 30408200
+    },
+    "2559": {
+      "all": 455338300,
+      "focused": 20818900
+    },
+    "2560": {
+      "all": 472246000,
+      "focused": 28628300
+    },
+    "2561": {
+      "all": 461650780,
+      "focused": 22973400
+    },
+    "2562": {
+      "all": 467180000,
+      "focused": 22154800
+    }
+  },
+  "budgetOverall": {
+    "all": 3592148680,
+    "focused": 193730100
+  },
+  "ranked": 12,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2560,
+      "value": 20
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 15
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 13
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 12
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 8
+    },
+    {
+      "ranked": 6,
+      "year": 2558,
+      "value": 8
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 3
+    },
+    {
+      "ranked": 8,
+      "year": 2556,
+      "value": null
+    }
+  ],
+  "meanFloodLevel": 34.7,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.7,
+    "year": 2562,
+    "districtId": 28,
+    "districtName": "ประเวศ"
+  }
+}

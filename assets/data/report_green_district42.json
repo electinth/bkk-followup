@@ -1,0 +1,107 @@
+{
+  "value": 5.65,
+  "valuePerYear": {
+    "2555": 5,
+    "2556": 5.01,
+    "2557": 5.01,
+    "2558": 5.21,
+    "2559": 5.56,
+    "2560": 5.54,
+    "2561": 5.64,
+    "2562": 5.65
+  },
+  "minimumPoint": {
+    "value": 5,
+    "year": 2555,
+    "districtId": 42,
+    "districtName": "สวนหลวง"
+  },
+  "maximumPoint": {
+    "value": 5.65,
+    "year": 2562,
+    "districtId": 42,
+    "districtName": "สวนหลวง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 353131000,
+      "focused": 17822300
+    },
+    "2556": {
+      "all": 360495000,
+      "focused": 19593000
+    },
+    "2557": {
+      "all": 360495000,
+      "focused": 19593000
+    },
+    "2558": {
+      "all": 360000500,
+      "focused": 20277000
+    },
+    "2559": {
+      "all": 367824500,
+      "focused": 15741600
+    },
+    "2560": {
+      "all": 398562000,
+      "focused": 16675200
+    },
+    "2561": {
+      "all": 391483840,
+      "focused": 17183600
+    },
+    "2562": {
+      "all": 375879000,
+      "focused": 22777600
+    }
+  },
+  "budgetOverall": {
+    "all": 2967870840,
+    "focused": 149663300
+  },
+  "ranked": 20,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 5.65
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 5.64
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 5.56
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 5.54
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 5.21
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 5.01
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 5.01
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 5
+    }
+  ],
+  "publicGreenSpacePerCapita": 0
+}

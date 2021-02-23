@@ -1,0 +1,73 @@
+{
+  "value": 6.46,
+  "valuePerYear": {
+    "2555": 8.42,
+    "2556": 9.29,
+    "2557": 9.29,
+    "2558": 11.04,
+    "2559": 12.9,
+    "2560": 7.21,
+    "2561": 10.5,
+    "2562": 6.46
+  },
+  "minimumPoint": {
+    "value": 6.46,
+    "year": 2562,
+    "districtId": 44,
+    "districtName": "สัมพันธวงศ์"
+  },
+  "maximumPoint": {
+    "value": 12.9,
+    "year": 2559,
+    "districtId": 44,
+    "districtName": "สัมพันธวงศ์"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 42,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 12.9
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 11.04
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 10.5
+    },
+    {
+      "ranked": 4,
+      "year": 2556,
+      "value": 9.29
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 9.29
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 8.42
+    },
+    {
+      "ranked": 7,
+      "year": 2560,
+      "value": 7.21
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": 6.46
+    }
+  ]
+}

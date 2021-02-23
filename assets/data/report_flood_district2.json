@@ -1,0 +1,119 @@
+{
+  "value": 2,
+  "valuePerYear": {
+    "2555": 5,
+    "2556": 4,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": 3,
+    "2562": 2
+  },
+  "minimumPoint": {
+    "value": 2,
+    "year": 2562,
+    "districtId": 2,
+    "districtName": "คลองสาน"
+  },
+  "maximumPoint": {
+    "value": 5,
+    "year": 2555,
+    "districtId": 2,
+    "districtName": "คลองสาน"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 313100900,
+      "focused": 9803800
+    },
+    "2556": {
+      "all": 287535300,
+      "focused": 7195400
+    },
+    "2557": {
+      "all": 287535300,
+      "focused": 7195400
+    },
+    "2558": {
+      "all": 281895400,
+      "focused": 8774700
+    },
+    "2559": {
+      "all": 306976600,
+      "focused": 9167500
+    },
+    "2560": {
+      "all": 315456500,
+      "focused": 10361100
+    },
+    "2561": {
+      "all": 299691940,
+      "focused": 11654900
+    },
+    "2562": {
+      "all": 305188000,
+      "focused": 12221800
+    }
+  },
+  "budgetOverall": {
+    "all": 2397379940,
+    "focused": 76374600
+  },
+  "ranked": 24,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": 5
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": 4
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 3
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 2
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2560,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนลาดหญ้า",
+      "description": "จากวงเวียนใหญ่ถึงหน้าโรบินสัน"
+    }
+  ],
+  "meanFloodLevel": 8.9,
+  "meanFloodLevelMaximumPoint": {
+    "value": 33.5,
+    "year": 2556,
+    "districtId": 2,
+    "districtName": "คลองสาน"
+  }
+}

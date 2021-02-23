@@ -1,0 +1,107 @@
+{
+  "value": 6.95,
+  "valuePerYear": {
+    "2555": 5.68,
+    "2556": 5.89,
+    "2557": 5.89,
+    "2558": 5.93,
+    "2559": 6.16,
+    "2560": 6.39,
+    "2561": 6.83,
+    "2562": 6.95
+  },
+  "minimumPoint": {
+    "value": 5.68,
+    "year": 2555,
+    "districtId": 35,
+    "districtName": "ยานนาวา"
+  },
+  "maximumPoint": {
+    "value": 6.95,
+    "year": 2562,
+    "districtId": 35,
+    "districtName": "ยานนาวา"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 289872400,
+      "focused": 13883100
+    },
+    "2556": {
+      "all": 286014900,
+      "focused": 15205200
+    },
+    "2557": {
+      "all": 286014900,
+      "focused": 15205200
+    },
+    "2558": {
+      "all": 282417600,
+      "focused": 15463000
+    },
+    "2559": {
+      "all": 301565600,
+      "focused": 38147100
+    },
+    "2560": {
+      "all": 297246000,
+      "focused": 19051400
+    },
+    "2561": {
+      "all": 294778840,
+      "focused": 19601700
+    },
+    "2562": {
+      "all": 290675000,
+      "focused": 19477400
+    }
+  },
+  "budgetOverall": {
+    "all": 2328585240,
+    "focused": 156034100
+  },
+  "ranked": 15,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 6.95
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 6.83
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 6.39
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 6.16
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 5.93
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 5.89
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 5.89
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 5.68
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.01
+}

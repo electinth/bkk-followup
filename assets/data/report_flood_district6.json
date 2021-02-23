@@ -1,0 +1,119 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": 11,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": 2,
+    "2561": 6,
+    "2562": null
+  },
+  "minimumPoint": {
+    "value": 2,
+    "year": 2560,
+    "districtId": 6,
+    "districtName": "จอมทอง"
+  },
+  "maximumPoint": {
+    "value": 11,
+    "year": 2556,
+    "districtId": 6,
+    "districtName": "จอมทอง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 431947600,
+      "focused": 52895200
+    },
+    "2556": {
+      "all": 430018800,
+      "focused": 12705600
+    },
+    "2557": {
+      "all": 430018800,
+      "focused": 12705600
+    },
+    "2558": {
+      "all": 433937700,
+      "focused": 28958100
+    },
+    "2559": {
+      "all": 427280600,
+      "focused": 17085200
+    },
+    "2560": {
+      "all": 436246000,
+      "focused": 34574200
+    },
+    "2561": {
+      "all": 395992440,
+      "focused": 17319500
+    },
+    "2562": {
+      "all": 373745200,
+      "focused": 22176100
+    }
+  },
+  "budgetOverall": {
+    "all": 3359187140,
+    "focused": 198419500
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2556,
+      "value": 11
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 6
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 2
+    },
+    {
+      "ranked": 4,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนจอมทอง",
+      "description": "บริเวณแยกวุฒากาศ"
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "value": 30.5,
+    "year": 2561,
+    "districtId": 6,
+    "districtName": "จอมทอง"
+  }
+}

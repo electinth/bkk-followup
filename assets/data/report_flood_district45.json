@@ -1,0 +1,135 @@
+{
+  "value": 20,
+  "valuePerYear": {
+    "2555": 11,
+    "2556": 10,
+    "2557": 9,
+    "2558": 13,
+    "2559": 6,
+    "2560": 16,
+    "2561": 12,
+    "2562": 20
+  },
+  "minimumPoint": {
+    "value": 6,
+    "year": 2559,
+    "districtId": 45,
+    "districtName": "สาทร"
+  },
+  "maximumPoint": {
+    "value": 20,
+    "year": 2562,
+    "districtId": 45,
+    "districtName": "สาทร"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 264170900,
+      "focused": 9518200
+    },
+    "2556": {
+      "all": 263908000,
+      "focused": 9284000
+    },
+    "2557": {
+      "all": 263908000,
+      "focused": 9284000
+    },
+    "2558": {
+      "all": 244740600,
+      "focused": 9412700
+    },
+    "2559": {
+      "all": 240519500,
+      "focused": 9766900
+    },
+    "2560": {
+      "all": 253835900,
+      "focused": 11478800
+    },
+    "2561": {
+      "all": 285535840,
+      "focused": 10723200
+    },
+    "2562": {
+      "all": 280869000,
+      "focused": 11212200
+    }
+  },
+  "budgetOverall": {
+    "all": 2097487740,
+    "focused": 80680000
+  },
+  "ranked": 8,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 20
+    },
+    {
+      "ranked": 2,
+      "year": 2560,
+      "value": 16
+    },
+    {
+      "ranked": 3,
+      "year": 2558,
+      "value": 13
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 12
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 11
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 10
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 9
+    },
+    {
+      "ranked": 8,
+      "year": 2559,
+      "value": 6
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนเซนต์หลุยส์ 3",
+      "description": "บริเวณแยกถนนจันทน์"
+    },
+    {
+      "name": "ถนนนางลิ้นจี่",
+      "description": "บริเวณแยกตัดถนนจันทน์"
+    },
+    {
+      "name": "ถนนจันทน์",
+      "description": "ช่วงจากซอยบำเพ็ญกุศล ถึงที่ทำการไแรษณีย์ยานนาวา"
+    },
+    {
+      "name": "ถนนสวนพลู",
+      "description": "ช่วงจากถนนสาทรใต้ ถึงถนนนางลิ้นจี่"
+    },
+    {
+      "name": "ถนนสาธุประดิษฐ์",
+      "description": "บริเวณแยกตัดถนนจันทน์"
+    }
+  ],
+  "meanFloodLevel": 28.1,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.4,
+    "year": 2558,
+    "districtId": 45,
+    "districtName": "สาทร"
+  }
+}

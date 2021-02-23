@@ -1,0 +1,107 @@
+{
+  "value": 13.21,
+  "valuePerYear": {
+    "2555": 3.36,
+    "2556": 3.41,
+    "2557": 3.41,
+    "2558": 3.62,
+    "2559": 3.67,
+    "2560": 12.28,
+    "2561": 12.5,
+    "2562": 13.21
+  },
+  "minimumPoint": {
+    "value": 3.36,
+    "year": 2555,
+    "districtId": 9,
+    "districtName": "ดุสิต"
+  },
+  "maximumPoint": {
+    "value": 13.21,
+    "year": 2562,
+    "districtId": 9,
+    "districtName": "ดุสิต"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 338799800,
+      "focused": 15307300
+    },
+    "2556": {
+      "all": 341459500,
+      "focused": 17623200
+    },
+    "2557": {
+      "all": 341459500,
+      "focused": 17623200
+    },
+    "2558": {
+      "all": 362137900,
+      "focused": 17944800
+    },
+    "2559": {
+      "all": 364854500,
+      "focused": 8848900
+    },
+    "2560": {
+      "all": 370767000,
+      "focused": 12394000
+    },
+    "2561": {
+      "all": 375901840,
+      "focused": 9845800
+    },
+    "2562": {
+      "all": 368957000,
+      "focused": 21428900
+    }
+  },
+  "budgetOverall": {
+    "all": 2864337040,
+    "focused": 121016100
+  },
+  "ranked": 9,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 13.21
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 12.5
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 12.28
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 3.67
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 3.62
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 3.41
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 3.41
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 3.36
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.29
+}

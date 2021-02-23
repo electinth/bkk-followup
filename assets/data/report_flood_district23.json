@@ -1,0 +1,119 @@
+{
+  "value": 7,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": 7,
+    "2559": null,
+    "2560": 14,
+    "2561": 9,
+    "2562": 7
+  },
+  "minimumPoint": {
+    "value": 7,
+    "year": 2558,
+    "districtId": 23,
+    "districtName": "บางบอน"
+  },
+  "maximumPoint": {
+    "value": 14,
+    "year": 2560,
+    "districtId": 23,
+    "districtName": "บางบอน"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 367449200,
+      "focused": 10830000
+    },
+    "2556": {
+      "all": 376547000,
+      "focused": 16873500
+    },
+    "2557": {
+      "all": 376547000,
+      "focused": 16873500
+    },
+    "2558": {
+      "all": 318168600,
+      "focused": 12739200
+    },
+    "2559": {
+      "all": 361793100,
+      "focused": 12763800
+    },
+    "2560": {
+      "all": 326827600,
+      "focused": 13297600
+    },
+    "2561": {
+      "all": 339805840,
+      "focused": 13589500
+    },
+    "2562": {
+      "all": 357892000,
+      "focused": 14980000
+    }
+  },
+  "budgetOverall": {
+    "all": 2825030340,
+    "focused": 111947100
+  },
+  "ranked": 19,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2560,
+      "value": 14
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 9
+    },
+    {
+      "ranked": 3,
+      "year": 2558,
+      "value": 7
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 7
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2559,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนเอกชัย",
+      "description": "บริเวณปากซอยเอกชัย 56 (หน้าบริษัทเครื่องดื่มกระทิงแดง)"
+    }
+  ],
+  "meanFloodLevel": 29.5,
+  "meanFloodLevelMaximumPoint": {
+    "value": 29.5,
+    "year": 2562,
+    "districtId": 23,
+    "districtName": "บางบอน"
+  }
+}

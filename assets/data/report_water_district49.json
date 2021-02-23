@@ -1,0 +1,73 @@
+{
+  "value": 12.58,
+  "valuePerYear": {
+    "2555": 11.71,
+    "2556": 10.08,
+    "2557": 10.08,
+    "2558": 13.13,
+    "2559": 16.7,
+    "2560": 12.46,
+    "2561": 10,
+    "2562": 12.58
+  },
+  "minimumPoint": {
+    "value": 10,
+    "year": 2561,
+    "districtId": 49,
+    "districtName": "หลักสี่"
+  },
+  "maximumPoint": {
+    "value": 16.7,
+    "year": 2559,
+    "districtId": 49,
+    "districtName": "หลักสี่"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 22,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 16.7
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 13.13
+    },
+    {
+      "ranked": 3,
+      "year": 2562,
+      "value": 12.58
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 12.46
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 11.71
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 10.08
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 10.08
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 10
+    }
+  ]
+}

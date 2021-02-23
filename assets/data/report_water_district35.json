@@ -1,0 +1,73 @@
+{
+  "value": 9.59,
+  "valuePerYear": {
+    "2555": 9.75,
+    "2556": 10.22,
+    "2557": 10.22,
+    "2558": 12.9,
+    "2559": 8.69,
+    "2560": 8.99,
+    "2561": 6.38,
+    "2562": 9.59
+  },
+  "minimumPoint": {
+    "value": 6.38,
+    "year": 2561,
+    "districtId": 35,
+    "districtName": "ยานนาวา"
+  },
+  "maximumPoint": {
+    "value": 12.9,
+    "year": 2558,
+    "districtId": 35,
+    "districtName": "ยานนาวา"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 31,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 12.9
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": 10.22
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": 10.22
+    },
+    {
+      "ranked": 4,
+      "year": 2555,
+      "value": 9.75
+    },
+    {
+      "ranked": 5,
+      "year": 2562,
+      "value": 9.59
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": 8.99
+    },
+    {
+      "ranked": 7,
+      "year": 2559,
+      "value": 8.69
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 6.38
+    }
+  ]
+}

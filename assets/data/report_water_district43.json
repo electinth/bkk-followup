@@ -1,0 +1,73 @@
+{
+  "value": 9.84,
+  "valuePerYear": {
+    "2555": 8.38,
+    "2556": 6.25,
+    "2557": 6.25,
+    "2558": 12.88,
+    "2559": 12.56,
+    "2560": 10.94,
+    "2561": 8.2,
+    "2562": 9.84
+  },
+  "minimumPoint": {
+    "value": 6.25,
+    "year": 2556,
+    "districtId": 43,
+    "districtName": "สะพานสูง"
+  },
+  "maximumPoint": {
+    "value": 12.88,
+    "year": 2558,
+    "districtId": 43,
+    "districtName": "สะพานสูง"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 29,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 12.88
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 12.56
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 10.94
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 9.84
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 8.38
+    },
+    {
+      "ranked": 6,
+      "year": 2561,
+      "value": 8.2
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 6.25
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 6.25
+    }
+  ]
+}

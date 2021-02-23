@@ -1,0 +1,73 @@
+{
+  "value": 16.46,
+  "valuePerYear": {
+    "2555": 12.42,
+    "2556": 10.21,
+    "2557": 10.21,
+    "2558": 24.88,
+    "2559": 21.5,
+    "2560": 15.67,
+    "2561": 14.5,
+    "2562": 16.46
+  },
+  "minimumPoint": {
+    "value": 10.21,
+    "year": 2556,
+    "districtId": 41,
+    "districtName": "วัฒนา"
+  },
+  "maximumPoint": {
+    "value": 24.88,
+    "year": 2558,
+    "districtId": 41,
+    "districtName": "วัฒนา"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 13,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 24.88
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 21.5
+    },
+    {
+      "ranked": 3,
+      "year": 2562,
+      "value": 16.46
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 15.67
+    },
+    {
+      "ranked": 5,
+      "year": 2561,
+      "value": 14.5
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 12.42
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 10.21
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 10.21
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "value": 35.14,
+  "valuePerYear": {
+    "2555": 21.48,
+    "2556": 42.46,
+    "2557": 42.46,
+    "2558": 28.78,
+    "2559": 36.66,
+    "2560": 25.33,
+    "2561": 18.5,
+    "2562": 35.14
+  },
+  "minimumPoint": {
+    "value": 18.5,
+    "year": 2561,
+    "districtId": 27,
+    "districtName": "ปทุมวัน"
+  },
+  "maximumPoint": {
+    "value": 42.46,
+    "year": 2556,
+    "districtId": 27,
+    "districtName": "ปทุมวัน"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 1,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2556,
+      "value": 42.46
+    },
+    {
+      "ranked": 2,
+      "year": 2557,
+      "value": 42.46
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 36.66
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 35.14
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 28.78
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": 25.33
+    },
+    {
+      "ranked": 7,
+      "year": 2555,
+      "value": 21.48
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 18.5
+    }
+  ]
+}

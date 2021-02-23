@@ -8,6 +8,7 @@ const dropdown = ({
   SET_CHECKED,
   district,
   SET_DISTRICT,
+  SET_STATE_DROPDOWN,
 }) => {
   const [dropdown_state, SET_DROPDOWN_STATE] = useState(false);
   const dropdown_menu_ref = useRef(null);
@@ -24,9 +25,13 @@ const dropdown = ({
   };
 
   const handleOptionChange = (e) => {
+    SET_STATE_DROPDOWN(type);
     if (type === 'group') {
       SET_CHECKED(e.target.value);
+      SET_DROPDOWN_STATE(false);
+      SET_DISTRICT(null);
     } else {
+      SET_DROPDOWN_STATE(false);
       SET_DISTRICT(e.target.value);
     }
   };

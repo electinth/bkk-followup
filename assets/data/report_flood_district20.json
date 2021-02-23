@@ -1,0 +1,123 @@
+{
+  "value": 6,
+  "valuePerYear": {
+    "2555": 60,
+    "2556": 6,
+    "2557": 28,
+    "2558": 1,
+    "2559": 9,
+    "2560": 34,
+    "2561": 24,
+    "2562": 6
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2558,
+    "districtId": 20,
+    "districtName": "บางแค"
+  },
+  "maximumPoint": {
+    "value": 60,
+    "year": 2555,
+    "districtId": 20,
+    "districtName": "บางแค"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 380585800,
+      "focused": 14537800
+    },
+    "2556": {
+      "all": 435414600,
+      "focused": 10607200
+    },
+    "2557": {
+      "all": 435414600,
+      "focused": 10607200
+    },
+    "2558": {
+      "all": 464471200,
+      "focused": 19227800
+    },
+    "2559": {
+      "all": 438940500,
+      "focused": 14236100
+    },
+    "2560": {
+      "all": 494555700,
+      "focused": 15057900
+    },
+    "2561": {
+      "all": 448589840,
+      "focused": 21709400
+    },
+    "2562": {
+      "all": 453852000,
+      "focused": 35134500
+    }
+  },
+  "budgetOverall": {
+    "all": 3551824240,
+    "focused": 141117900
+  },
+  "ranked": 20,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": 60
+    },
+    {
+      "ranked": 2,
+      "year": 2560,
+      "value": 34
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": 28
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 24
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": 9
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 6
+    },
+    {
+      "ranked": 7,
+      "year": 2562,
+      "value": 6
+    },
+    {
+      "ranked": 8,
+      "year": 2558,
+      "value": 1
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนเพชรเกษม",
+      "description": "ช่วงจากคลองทวีวัฒนา ถึงคลองราชมนตรี"
+    },
+    {
+      "name": "ถนนหมู่บ้านเศรษฐกิจ",
+      "description": "ช่วงจากถนนเพชรเกษม ถึงวงเวียนกาญจนาภิเษก"
+    }
+  ],
+  "meanFloodLevel": 34.3,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.4,
+    "year": 2559,
+    "districtId": 20,
+    "districtName": "บางแค"
+  }
+}

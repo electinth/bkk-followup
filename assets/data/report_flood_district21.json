@@ -1,0 +1,119 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": 13,
+    "2556": 10,
+    "2557": 14,
+    "2558": 16,
+    "2559": null,
+    "2560": 129,
+    "2561": 1,
+    "2562": null
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2561,
+    "districtId": 21,
+    "districtName": "บางซื่อ"
+  },
+  "maximumPoint": {
+    "value": 129,
+    "year": 2560,
+    "districtId": 21,
+    "districtName": "บางซื่อ"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 299700300,
+      "focused": 17344200
+    },
+    "2556": {
+      "all": 339375400,
+      "focused": 26155700
+    },
+    "2557": {
+      "all": 339375400,
+      "focused": 26155700
+    },
+    "2558": {
+      "all": 301421000,
+      "focused": 9349600
+    },
+    "2559": {
+      "all": 325661500,
+      "focused": 27416500
+    },
+    "2560": {
+      "all": 323687000,
+      "focused": 23178200
+    },
+    "2561": {
+      "all": 326862840,
+      "focused": 21341100
+    },
+    "2562": {
+      "all": 336021000,
+      "focused": 35812300
+    }
+  },
+  "budgetOverall": {
+    "all": 2592104440,
+    "focused": 186753300
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2560,
+      "value": 129
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 16
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": 14
+    },
+    {
+      "ranked": 4,
+      "year": 2555,
+      "value": 13
+    },
+    {
+      "ranked": 5,
+      "year": 2556,
+      "value": 10
+    },
+    {
+      "ranked": 6,
+      "year": 2561,
+      "value": 1
+    },
+    {
+      "ranked": 7,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนประชาราษฎร์สาย 2",
+      "description": "บริเวณแยกเตาปูน"
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.7,
+    "year": 2555,
+    "districtId": 21,
+    "districtName": "บางซื่อ"
+  }
+}

@@ -16,7 +16,7 @@ import Standard from 'components/Dashboard/util/standard';
 import AVG from 'components/Dashboard/util/AVG';
 import LocationWater from 'components/Dashboard/util/location-water';
 import ListRanking from 'components/Dashboard/dashboard-list-ranking';
-
+import DistrictData from 'components/Dashboard/util/district';
 import _ from 'lodash';
 
 const dashboard = () => {
@@ -70,6 +70,7 @@ const dashboard = () => {
   const [district, SET_DISTRICT] = useState(null);
   const [selected_year, SET_SELECTED_YEAR] = useState(55);
   const [selected_tooltip, SET_SELECTED_TOOLTIP] = useState();
+  const [state_dropdown, SET_STATE_DROPDOWN] = useState();
 
   let selected_theme = _.find(category, (cat) => {
     return cat.name === router.query.location;
@@ -97,9 +98,14 @@ const dashboard = () => {
     let districtName = _.map(rankings, (rank) => {
       return { filter_by: _.get(rank, 'districtName') };
     });
+    let district_data;
+    if (district && state_dropdown === 'zone') {
+      let districtID = _.filter(rankings, (r) => {
+        return r.districtName === district;
+      })[0];
 
-    console.log(data);
-
+      district_data = DistrictData(districtID, selected_theme);
+    }
     return (
       <Layout id="dashboard">
         <div
@@ -125,12 +131,15 @@ const dashboard = () => {
                 checked={checked}
                 SET_CHECKED={SET_CHECKED}
                 type="group"
+                SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                SET_DISTRICT={SET_DISTRICT}
               />
               <DropDown
                 filter={districtName}
                 district={district}
                 SET_DISTRICT={SET_DISTRICT}
                 type="zone"
+                SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
               />
             </div>
             <TimeLine
@@ -164,11 +173,16 @@ const dashboard = () => {
             >
               <span>
                 <p className="d4">สถานการณ์{selected_theme.name}</p>
-                <p className="h3">
-                  {checked === null || checked === 'เขตพื้นที่ทั้งหมด'
-                    ? 'กรุงเทพมหานคร'
-                    : checked}
-                </p>
+                {district != null ? (
+                  <p className="h3">{district}</p>
+                ) : (
+                  <p className="h3">
+                    {checked === null || checked === 'เขตพื้นที่ทั้งหมด'
+                      ? 'กรุงเทพมหานคร'
+                      : checked}
+                  </p>
+                )}
+
                 <p className="h4">ภาพรวมย้อนหลัง 8 ปี (2555-2562)</p>
               </span>
             </div>

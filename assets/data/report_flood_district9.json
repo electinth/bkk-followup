@@ -1,0 +1,127 @@
+{
+  "value": 62,
+  "valuePerYear": {
+    "2555": 83,
+    "2556": 45,
+    "2557": 76,
+    "2558": 138,
+    "2559": 138,
+    "2560": 100,
+    "2561": 107,
+    "2562": 62
+  },
+  "minimumPoint": {
+    "value": 45,
+    "year": 2556,
+    "districtId": 9,
+    "districtName": "ดุสิต"
+  },
+  "maximumPoint": {
+    "value": 138,
+    "year": 2558,
+    "districtId": 9,
+    "districtName": "ดุสิต"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 338799800,
+      "focused": 8062300
+    },
+    "2556": {
+      "all": 341459500,
+      "focused": 8780300
+    },
+    "2557": {
+      "all": 341459500,
+      "focused": 8780300
+    },
+    "2558": {
+      "all": 362137900,
+      "focused": 8845000
+    },
+    "2559": {
+      "all": 364854500,
+      "focused": 8848900
+    },
+    "2560": {
+      "all": 370767000,
+      "focused": 12394000
+    },
+    "2561": {
+      "all": 375901840,
+      "focused": 9845800
+    },
+    "2562": {
+      "all": 368957000,
+      "focused": 10229800
+    }
+  },
+  "budgetOverall": {
+    "all": 2864337040,
+    "focused": 75786400
+  },
+  "ranked": 2,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 138
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 138
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 107
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 100
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 83
+    },
+    {
+      "ranked": 6,
+      "year": 2557,
+      "value": 76
+    },
+    {
+      "ranked": 7,
+      "year": 2562,
+      "value": 62
+    },
+    {
+      "ranked": 8,
+      "year": 2556,
+      "value": 45
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนนครไชยศรี",
+      "description": "บริเวณหน้าตลาดศรีย่าน"
+    },
+    {
+      "name": "ถนนศรีอยุธยา",
+      "description": "บริเวณหน้าพระราชวังดุสิต"
+    },
+    {
+      "name": "ถนนราชวิถี",
+      "description": "บริเวณหน้าราชภัฎสวนดุสิตและเชิงสะพานกรุงธน"
+    }
+  ],
+  "meanFloodLevel": 29.6,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.7,
+    "year": 2558,
+    "districtId": 9,
+    "districtName": "ดุสิต"
+  }
+}

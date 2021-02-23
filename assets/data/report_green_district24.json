@@ -1,0 +1,107 @@
+{
+  "value": 2.68,
+  "valuePerYear": {
+    "2555": 1.89,
+    "2556": 2.04,
+    "2557": 2.04,
+    "2558": 2.2,
+    "2559": 2.02,
+    "2560": 2.15,
+    "2561": 2.51,
+    "2562": 2.68
+  },
+  "minimumPoint": {
+    "value": 1.89,
+    "year": 2555,
+    "districtId": 24,
+    "districtName": "บางพลัด"
+  },
+  "maximumPoint": {
+    "value": 2.68,
+    "year": 2562,
+    "districtId": 24,
+    "districtName": "บางพลัด"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 279963300,
+      "focused": 9919800
+    },
+    "2556": {
+      "all": 289107800,
+      "focused": 10494000
+    },
+    "2557": {
+      "all": 289107800,
+      "focused": 10494000
+    },
+    "2558": {
+      "all": 298344300,
+      "focused": 12474500
+    },
+    "2559": {
+      "all": 313443600,
+      "focused": 26438000
+    },
+    "2560": {
+      "all": 326300300,
+      "focused": 21156400
+    },
+    "2561": {
+      "all": 312289840,
+      "focused": 16459200
+    },
+    "2562": {
+      "all": 302111700,
+      "focused": 13057800
+    }
+  },
+  "budgetOverall": {
+    "all": 2410668640,
+    "focused": 120493700
+  },
+  "ranked": 45,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 2.68
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 2.51
+    },
+    {
+      "ranked": 3,
+      "year": 2558,
+      "value": 2.2
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 2.15
+    },
+    {
+      "ranked": 5,
+      "year": 2556,
+      "value": 2.04
+    },
+    {
+      "ranked": 6,
+      "year": 2557,
+      "value": 2.04
+    },
+    {
+      "ranked": 7,
+      "year": 2559,
+      "value": 2.02
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 1.89
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.12
+}

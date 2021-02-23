@@ -1,0 +1,107 @@
+{
+  "value": 5.67,
+  "valuePerYear": {
+    "2555": 6.38,
+    "2556": 7.11,
+    "2557": 7.11,
+    "2558": 8.66,
+    "2559": 8.84,
+    "2560": 4.59,
+    "2561": 5.37,
+    "2562": 5.67
+  },
+  "minimumPoint": {
+    "value": 4.59,
+    "year": 2560,
+    "districtId": 34,
+    "districtName": "มีนบุรี"
+  },
+  "maximumPoint": {
+    "value": 8.84,
+    "year": 2559,
+    "districtId": 34,
+    "districtName": "มีนบุรี"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 383759100,
+      "focused": 21003200
+    },
+    "2556": {
+      "all": 410133000,
+      "focused": 22951600
+    },
+    "2557": {
+      "all": 410133000,
+      "focused": 22951600
+    },
+    "2558": {
+      "all": 459847900,
+      "focused": 24698700
+    },
+    "2559": {
+      "all": 442656300,
+      "focused": 30514900
+    },
+    "2560": {
+      "all": 442360500,
+      "focused": 19490100
+    },
+    "2561": {
+      "all": 457559040,
+      "focused": 28759600
+    },
+    "2562": {
+      "all": 479303600,
+      "focused": 26698400
+    }
+  },
+  "budgetOverall": {
+    "all": 3485752440,
+    "focused": 197068100
+  },
+  "ranked": 18,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 8.84
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 8.66
+    },
+    {
+      "ranked": 3,
+      "year": 2556,
+      "value": 7.11
+    },
+    {
+      "ranked": 4,
+      "year": 2557,
+      "value": 7.11
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 6.38
+    },
+    {
+      "ranked": 6,
+      "year": 2562,
+      "value": 5.67
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": 5.37
+    },
+    {
+      "ranked": 8,
+      "year": 2560,
+      "value": 4.59
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.29
+}

@@ -1,0 +1,113 @@
+{
+  "value": 8,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": 50,
+    "2558": 3,
+    "2559": 34,
+    "2560": 21,
+    "2561": 8,
+    "2562": 8
+  },
+  "minimumPoint": {
+    "value": 3,
+    "year": 2558,
+    "districtId": 46,
+    "districtName": "สายไหม"
+  },
+  "maximumPoint": {
+    "value": 50,
+    "year": 2557,
+    "districtId": 46,
+    "districtName": "สายไหม"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 481257400,
+      "focused": 12319000
+    },
+    "2556": {
+      "all": 489250600,
+      "focused": 12572600
+    },
+    "2557": {
+      "all": 489250600,
+      "focused": 12572600
+    },
+    "2558": {
+      "all": 442730300,
+      "focused": 12048600
+    },
+    "2559": {
+      "all": 463938200,
+      "focused": 76178800
+    },
+    "2560": {
+      "all": 417003100,
+      "focused": 26447300
+    },
+    "2561": {
+      "all": 407499840,
+      "focused": 34020100
+    },
+    "2562": {
+      "all": 396065000,
+      "focused": 31987300
+    }
+  },
+  "budgetOverall": {
+    "all": 3586995040,
+    "focused": 218146300
+  },
+  "ranked": 17,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2557,
+      "value": 50
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 34
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 21
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 8
+    },
+    {
+      "ranked": 5,
+      "year": 2562,
+      "value": 8
+    },
+    {
+      "ranked": 6,
+      "year": 2558,
+      "value": 3
+    },
+    {
+      "ranked": 7,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2556,
+      "value": null
+    }
+  ],
+  "meanFloodLevel": 34.4,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.6,
+    "year": 2560,
+    "districtId": 46,
+    "districtName": "สายไหม"
+  }
+}

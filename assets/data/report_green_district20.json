@@ -1,0 +1,107 @@
+{
+  "value": 4.54,
+  "valuePerYear": {
+    "2555": 1.26,
+    "2556": 1.33,
+    "2557": 1.33,
+    "2558": 1.76,
+    "2559": 2,
+    "2560": 1.95,
+    "2561": 3.85,
+    "2562": 4.54
+  },
+  "minimumPoint": {
+    "value": 1.26,
+    "year": 2555,
+    "districtId": 20,
+    "districtName": "บางแค"
+  },
+  "maximumPoint": {
+    "value": 4.54,
+    "year": 2562,
+    "districtId": 20,
+    "districtName": "บางแค"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 380585800,
+      "focused": 34308600
+    },
+    "2556": {
+      "all": 435414600,
+      "focused": 37144200
+    },
+    "2557": {
+      "all": 435414600,
+      "focused": 37144200
+    },
+    "2558": {
+      "all": 464471200,
+      "focused": 42003800
+    },
+    "2559": {
+      "all": 438940500,
+      "focused": 14236100
+    },
+    "2560": {
+      "all": 494555700,
+      "focused": 15057900
+    },
+    "2561": {
+      "all": 448589840,
+      "focused": 21709400
+    },
+    "2562": {
+      "all": 453852000,
+      "focused": 37338200
+    }
+  },
+  "budgetOverall": {
+    "all": 3551824240,
+    "focused": 238942400
+  },
+  "ranked": 29,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 4.54
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 3.85
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 2
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 1.95
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 1.76
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 1.33
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 1.33
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 1.26
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.22
+}

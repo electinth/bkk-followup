@@ -1,0 +1,107 @@
+{
+  "value": 1.99,
+  "valuePerYear": {
+    "2555": 1.4,
+    "2556": 1.52,
+    "2557": 1.52,
+    "2558": 1.89,
+    "2559": 1.89,
+    "2560": 1.9,
+    "2561": 1.96,
+    "2562": 1.99
+  },
+  "minimumPoint": {
+    "value": 1.4,
+    "year": 2555,
+    "districtId": 8,
+    "districtName": "ดินแดง"
+  },
+  "maximumPoint": {
+    "value": 1.99,
+    "year": 2562,
+    "districtId": 8,
+    "districtName": "ดินแดง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 303425500,
+      "focused": 14961800
+    },
+    "2556": {
+      "all": 326728800,
+      "focused": 15137600
+    },
+    "2557": {
+      "all": 326728800,
+      "focused": 15137600
+    },
+    "2558": {
+      "all": 332717600,
+      "focused": 17703200
+    },
+    "2559": {
+      "all": 324443100,
+      "focused": 9990000
+    },
+    "2560": {
+      "all": 343839000,
+      "focused": 9418900
+    },
+    "2561": {
+      "all": 319227840,
+      "focused": 10248800
+    },
+    "2562": {
+      "all": 402064000,
+      "focused": 18463300
+    }
+  },
+  "budgetOverall": {
+    "all": 2679174640,
+    "focused": 111061200
+  },
+  "ranked": 47,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 1.99
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 1.96
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 1.9
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": 1.89
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": 1.89
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 1.52
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 1.52
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 1.4
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.2
+}

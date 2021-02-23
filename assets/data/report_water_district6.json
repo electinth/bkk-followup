@@ -1,0 +1,73 @@
+{
+  "value": 6.74,
+  "valuePerYear": {
+    "2555": 6.35,
+    "2556": 7.09,
+    "2557": 7.09,
+    "2558": 8.5,
+    "2559": 8.92,
+    "2560": 7.88,
+    "2561": 5.5,
+    "2562": 6.74
+  },
+  "minimumPoint": {
+    "value": 5.5,
+    "year": 2561,
+    "districtId": 6,
+    "districtName": "จอมทอง"
+  },
+  "maximumPoint": {
+    "value": 8.92,
+    "year": 2559,
+    "districtId": 6,
+    "districtName": "จอมทอง"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 41,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 8.92
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 8.5
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 7.88
+    },
+    {
+      "ranked": 4,
+      "year": 2556,
+      "value": 7.09
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 7.09
+    },
+    {
+      "ranked": 6,
+      "year": 2562,
+      "value": 6.74
+    },
+    {
+      "ranked": 7,
+      "year": 2555,
+      "value": 6.35
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 5.5
+    }
+  ]
+}

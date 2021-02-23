@@ -1,0 +1,73 @@
+{
+  "value": 6.79,
+  "valuePerYear": {
+    "2555": 5.33,
+    "2556": 4.59,
+    "2557": 4.59,
+    "2558": 7.11,
+    "2559": 10.37,
+    "2560": 5.71,
+    "2561": 7,
+    "2562": 6.79
+  },
+  "minimumPoint": {
+    "value": 4.59,
+    "year": 2556,
+    "districtId": 47,
+    "districtName": "หนองแขม"
+  },
+  "maximumPoint": {
+    "value": 10.37,
+    "year": 2559,
+    "districtId": 47,
+    "districtName": "หนองแขม"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 40,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 10.37
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 7.11
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 7
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 6.79
+    },
+    {
+      "ranked": 5,
+      "year": 2560,
+      "value": 5.71
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 5.33
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 4.59
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 4.59
+    }
+  ]
+}

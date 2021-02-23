@@ -1,0 +1,113 @@
+{
+  "value": 8,
+  "valuePerYear": {
+    "2555": 14,
+    "2556": 3,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": 148,
+    "2561": 16,
+    "2562": 8
+  },
+  "minimumPoint": {
+    "value": 3,
+    "year": 2556,
+    "districtId": 25,
+    "districtName": "บางรัก"
+  },
+  "maximumPoint": {
+    "value": 148,
+    "year": 2560,
+    "districtId": 25,
+    "districtName": "บางรัก"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 218173500,
+      "focused": 5021300
+    },
+    "2556": {
+      "all": 229626500,
+      "focused": 5018000
+    },
+    "2557": {
+      "all": 229626500,
+      "focused": 5018000
+    },
+    "2558": {
+      "all": 226734300,
+      "focused": 5247000
+    },
+    "2559": {
+      "all": 226799600,
+      "focused": 5751300
+    },
+    "2560": {
+      "all": 247999000,
+      "focused": 5921500
+    },
+    "2561": {
+      "all": 238054840,
+      "focused": 5779600
+    },
+    "2562": {
+      "all": 240883000,
+      "focused": 5721000
+    }
+  },
+  "budgetOverall": {
+    "all": 1857897240,
+    "focused": 43477700
+  },
+  "ranked": 16,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2560,
+      "value": 148
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 16
+    },
+    {
+      "ranked": 3,
+      "year": 2555,
+      "value": 14
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 8
+    },
+    {
+      "ranked": 5,
+      "year": 2556,
+      "value": 3
+    },
+    {
+      "ranked": 6,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2559,
+      "value": null
+    }
+  ],
+  "meanFloodLevel": 21.9,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.7,
+    "year": 2561,
+    "districtId": 25,
+    "districtName": "บางรัก"
+  }
+}

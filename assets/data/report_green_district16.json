@@ -1,0 +1,107 @@
+{
+  "value": 5.56,
+  "valuePerYear": {
+    "2555": 4.35,
+    "2556": 4.98,
+    "2557": 4.98,
+    "2558": 5.17,
+    "2559": 5.35,
+    "2560": 5.28,
+    "2561": 5.52,
+    "2562": 5.56
+  },
+  "minimumPoint": {
+    "value": 4.35,
+    "year": 2555,
+    "districtId": 16,
+    "districtName": "บางกะปิ"
+  },
+  "maximumPoint": {
+    "value": 5.56,
+    "year": 2562,
+    "districtId": 16,
+    "districtName": "บางกะปิ"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 369940900,
+      "focused": 19615900
+    },
+    "2556": {
+      "all": 449155000,
+      "focused": 24664800
+    },
+    "2557": {
+      "all": 449155000,
+      "focused": 24664800
+    },
+    "2558": {
+      "all": 436345300,
+      "focused": 27423400
+    },
+    "2559": {
+      "all": 482109600,
+      "focused": 15871100
+    },
+    "2560": {
+      "all": 508582500,
+      "focused": 16042800
+    },
+    "2561": {
+      "all": 482509840,
+      "focused": 16643100
+    },
+    "2562": {
+      "all": 495298000,
+      "focused": 29794800
+    }
+  },
+  "budgetOverall": {
+    "all": 3673096140,
+    "focused": 174720700
+  },
+  "ranked": 22,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 5.56
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 5.52
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 5.35
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 5.28
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 5.17
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 4.98
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 4.98
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 4.35
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.67
+}

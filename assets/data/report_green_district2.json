@@ -1,0 +1,107 @@
+{
+  "value": 3.37,
+  "valuePerYear": {
+    "2555": 2.66,
+    "2556": 2.74,
+    "2557": 2.74,
+    "2558": 2.91,
+    "2559": 3.06,
+    "2560": 3.08,
+    "2561": 3.32,
+    "2562": 3.37
+  },
+  "minimumPoint": {
+    "value": 2.66,
+    "year": 2555,
+    "districtId": 2,
+    "districtName": "คลองสาน"
+  },
+  "maximumPoint": {
+    "value": 3.37,
+    "year": 2562,
+    "districtId": 2,
+    "districtName": "คลองสาน"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 313100900,
+      "focused": 13033700
+    },
+    "2556": {
+      "all": 287535300,
+      "focused": 14938800
+    },
+    "2557": {
+      "all": 287535300,
+      "focused": 14938800
+    },
+    "2558": {
+      "all": 281895400,
+      "focused": 17143500
+    },
+    "2559": {
+      "all": 306976600,
+      "focused": 9167500
+    },
+    "2560": {
+      "all": 315456500,
+      "focused": 10361100
+    },
+    "2561": {
+      "all": 299691940,
+      "focused": 11654900
+    },
+    "2562": {
+      "all": 305188000,
+      "focused": 20144400
+    }
+  },
+  "budgetOverall": {
+    "all": 2397379940,
+    "focused": 111382700
+  },
+  "ranked": 36,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 3.37
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 3.32
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 3.08
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 3.06
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 2.91
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 2.74
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 2.74
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 2.66
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.7
+}

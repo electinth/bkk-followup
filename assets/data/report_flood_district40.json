@@ -1,0 +1,119 @@
+{
+  "value": 2,
+  "valuePerYear": {
+    "2555": 8,
+    "2556": 14,
+    "2557": 4,
+    "2558": 10,
+    "2559": 1,
+    "2560": 4,
+    "2561": 5,
+    "2562": 2
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2559,
+    "districtId": 40,
+    "districtName": "วังทองหลาง"
+  },
+  "maximumPoint": {
+    "value": 14,
+    "year": 2556,
+    "districtId": 40,
+    "districtName": "วังทองหลาง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 302517600,
+      "focused": 13095000
+    },
+    "2556": {
+      "all": 286956600,
+      "focused": 12979400
+    },
+    "2557": {
+      "all": 286956600,
+      "focused": 12979400
+    },
+    "2558": {
+      "all": 351007200,
+      "focused": 12703200
+    },
+    "2559": {
+      "all": 381680600,
+      "focused": 12548900
+    },
+    "2560": {
+      "all": 577339000,
+      "focused": 16770300
+    },
+    "2561": {
+      "all": 310851840,
+      "focused": 15976000
+    },
+    "2562": {
+      "all": 344320000,
+      "focused": 18034200
+    }
+  },
+  "budgetOverall": {
+    "all": 2841629440,
+    "focused": 115086400
+  },
+  "ranked": 25,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2556,
+      "value": 14
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 10
+    },
+    {
+      "ranked": 3,
+      "year": 2555,
+      "value": 8
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 5
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 4
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": 4
+    },
+    {
+      "ranked": 7,
+      "year": 2562,
+      "value": 2
+    },
+    {
+      "ranked": 8,
+      "year": 2559,
+      "value": 1
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนลาดพร้าว",
+      "description": "จากแยกประดิษฐ์มนูธรรม ถึงคลองจั่น"
+    }
+  ],
+  "meanFloodLevel": 30.5,
+  "meanFloodLevelMaximumPoint": {
+    "value": 30.5,
+    "year": 2562,
+    "districtId": 40,
+    "districtName": "วังทองหลาง"
+  }
+}

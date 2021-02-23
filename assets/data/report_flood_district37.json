@@ -1,0 +1,107 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 37,
+    "districtName": "ราษฎร์บูรณะ"
+  },
+  "maximumPoint": {
+    "districtId": 37,
+    "districtName": "ราษฎร์บูรณะ"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 278109300,
+      "focused": 23767200
+    },
+    "2556": {
+      "all": 319588800,
+      "focused": 43524000
+    },
+    "2557": {
+      "all": 319588800,
+      "focused": 43524000
+    },
+    "2558": {
+      "all": 289986300,
+      "focused": 11791000
+    },
+    "2559": {
+      "all": 297592600,
+      "focused": 23516400
+    },
+    "2560": {
+      "all": 304568000,
+      "focused": 13042400
+    },
+    "2561": {
+      "all": 308224840,
+      "focused": 18583700
+    },
+    "2562": {
+      "all": 290051100,
+      "focused": 22489500
+    }
+  },
+  "budgetOverall": {
+    "all": 2407709740,
+    "focused": 200238200
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 37,
+    "districtName": "ราษฎร์บูรณะ"
+  }
+}

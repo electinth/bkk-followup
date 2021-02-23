@@ -1,0 +1,73 @@
+{
+  "value": 14.78,
+  "valuePerYear": {
+    "2555": 6.85,
+    "2556": 7.25,
+    "2557": 7.25,
+    "2558": 10.25,
+    "2559": 18.88,
+    "2560": 16.9,
+    "2561": 19.67,
+    "2562": 14.78
+  },
+  "minimumPoint": {
+    "value": 6.85,
+    "year": 2555,
+    "districtId": 2,
+    "districtName": "คลองสาน"
+  },
+  "maximumPoint": {
+    "value": 19.67,
+    "year": 2561,
+    "districtId": 2,
+    "districtName": "คลองสาน"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 18,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 19.67
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 18.88
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 16.9
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 14.78
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 10.25
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 7.25
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 7.25
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 6.85
+    }
+  ]
+}

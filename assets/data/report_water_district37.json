@@ -1,0 +1,73 @@
+{
+  "value": 10.36,
+  "valuePerYear": {
+    "2555": 6.87,
+    "2556": 7.59,
+    "2557": 7.59,
+    "2558": 8.39,
+    "2559": 9.99,
+    "2560": 11.36,
+    "2561": 10.67,
+    "2562": 10.36
+  },
+  "minimumPoint": {
+    "value": 6.87,
+    "year": 2555,
+    "districtId": 37,
+    "districtName": "ราษฎร์บูรณะ"
+  },
+  "maximumPoint": {
+    "value": 11.36,
+    "year": 2560,
+    "districtId": 37,
+    "districtName": "ราษฎร์บูรณะ"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 28,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2560,
+      "value": 11.36
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 10.67
+    },
+    {
+      "ranked": 3,
+      "year": 2562,
+      "value": 10.36
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 9.99
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 8.39
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 7.59
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 7.59
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 6.87
+    }
+  ]
+}

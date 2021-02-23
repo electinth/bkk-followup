@@ -1,0 +1,107 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 11,
+    "districtName": "ทวีวัฒนา"
+  },
+  "maximumPoint": {
+    "districtId": 11,
+    "districtName": "ทวีวัฒนา"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 309756100,
+      "focused": 8563000
+    },
+    "2556": {
+      "all": 292293400,
+      "focused": 9345600
+    },
+    "2557": {
+      "all": 292293400,
+      "focused": 9345600
+    },
+    "2558": {
+      "all": 306422800,
+      "focused": 9902300
+    },
+    "2559": {
+      "all": 319478100,
+      "focused": 9706200
+    },
+    "2560": {
+      "all": 340005100,
+      "focused": 14520100
+    },
+    "2561": {
+      "all": 348560840,
+      "focused": 10565800
+    },
+    "2562": {
+      "all": 359861400,
+      "focused": 11689800
+    }
+  },
+  "budgetOverall": {
+    "all": 2568671140,
+    "focused": 83638400
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 11,
+    "districtName": "ทวีวัฒนา"
+  }
+}

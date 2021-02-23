@@ -1,0 +1,107 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 35,
+    "districtName": "ยานนาวา"
+  },
+  "maximumPoint": {
+    "districtId": 35,
+    "districtName": "ยานนาวา"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 289872400,
+      "focused": 9575300
+    },
+    "2556": {
+      "all": 286014900,
+      "focused": 16173000
+    },
+    "2557": {
+      "all": 286014900,
+      "focused": 16173000
+    },
+    "2558": {
+      "all": 282417600,
+      "focused": 9626700
+    },
+    "2559": {
+      "all": 301565600,
+      "focused": 38147100
+    },
+    "2560": {
+      "all": 297246000,
+      "focused": 19051400
+    },
+    "2561": {
+      "all": 294778840,
+      "focused": 19601700
+    },
+    "2562": {
+      "all": 290675000,
+      "focused": 13554700
+    }
+  },
+  "budgetOverall": {
+    "all": 2328585240,
+    "focused": 141902900
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 35,
+    "districtName": "ยานนาวา"
+  }
+}

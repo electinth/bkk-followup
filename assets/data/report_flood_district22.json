@@ -1,0 +1,123 @@
+{
+  "value": 52,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": 13,
+    "2558": 335,
+    "2559": 79,
+    "2560": 293,
+    "2561": 90,
+    "2562": 52
+  },
+  "minimumPoint": {
+    "value": 13,
+    "year": 2557,
+    "districtId": 22,
+    "districtName": "บางนา"
+  },
+  "maximumPoint": {
+    "value": 335,
+    "year": 2558,
+    "districtId": 22,
+    "districtName": "บางนา"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 347345600,
+      "focused": 6302000
+    },
+    "2556": {
+      "all": 313274000,
+      "focused": 6994900
+    },
+    "2557": {
+      "all": 313274000,
+      "focused": 6994900
+    },
+    "2558": {
+      "all": 283943900,
+      "focused": 8085500
+    },
+    "2559": {
+      "all": 301135500,
+      "focused": 8624100
+    },
+    "2560": {
+      "all": 303022500,
+      "focused": 8056000
+    },
+    "2561": {
+      "all": 301494840,
+      "focused": 7575800
+    },
+    "2562": {
+      "all": 306260000,
+      "focused": 8255400
+    }
+  },
+  "budgetOverall": {
+    "all": 2469750340,
+    "focused": 60888600
+  },
+  "ranked": 3,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 335
+    },
+    {
+      "ranked": 2,
+      "year": 2560,
+      "value": 293
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 90
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 79
+    },
+    {
+      "ranked": 5,
+      "year": 2562,
+      "value": 52
+    },
+    {
+      "ranked": 6,
+      "year": 2557,
+      "value": 13
+    },
+    {
+      "ranked": 7,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2556,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนศรีนครินทร์",
+      "description": "บริเวณหน้าวัดศรีเอี่ยม"
+    },
+    {
+      "name": "ถนนสุขุมวิท",
+      "description": "จากแยกบางนา ถึงสุดเขต กทม."
+    }
+  ],
+  "meanFloodLevel": 33.6,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.7,
+    "year": 2560,
+    "districtId": 22,
+    "districtName": "บางนา"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "value": 17,
+  "valuePerYear": {
+    "2555": 13,
+    "2556": 8,
+    "2557": 114,
+    "2558": 24,
+    "2559": 1,
+    "2560": 3,
+    "2561": 15,
+    "2562": 17
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2559,
+    "districtId": 29,
+    "districtName": "ป้อมปราบศัตรูพ่าย"
+  },
+  "maximumPoint": {
+    "value": 114,
+    "year": 2557,
+    "districtId": 29,
+    "districtName": "ป้อมปราบศัตรูพ่าย"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 234699500,
+      "focused": 4055000
+    },
+    "2556": {
+      "all": 269861500,
+      "focused": 4687700
+    },
+    "2557": {
+      "all": 269861500,
+      "focused": 4687700
+    },
+    "2558": {
+      "all": 225196800,
+      "focused": 4703700
+    },
+    "2559": {
+      "all": 228731400,
+      "focused": 5406000
+    },
+    "2560": {
+      "all": 239259000,
+      "focused": 5151700
+    },
+    "2561": {
+      "all": 234582740,
+      "focused": 6450700
+    },
+    "2562": {
+      "all": 235993800,
+      "focused": 5669300
+    }
+  },
+  "budgetOverall": {
+    "all": 1938186240,
+    "focused": 40811800
+  },
+  "ranked": 10,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2557,
+      "value": 114
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 24
+    },
+    {
+      "ranked": 3,
+      "year": 2562,
+      "value": 17
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 15
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 13
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 8
+    },
+    {
+      "ranked": 7,
+      "year": 2560,
+      "value": 3
+    },
+    {
+      "ranked": 8,
+      "year": 2559,
+      "value": 1
+    }
+  ],
+  "meanFloodLevel": 14.3,
+  "meanFloodLevelMaximumPoint": {
+    "value": 29.6,
+    "year": 2561,
+    "districtId": 29,
+    "districtName": "ป้อมปราบศัตรูพ่าย"
+  }
+}

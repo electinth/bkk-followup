@@ -1,0 +1,107 @@
+{
+  "value": 3.98,
+  "valuePerYear": {
+    "2555": 2.37,
+    "2556": 2.32,
+    "2557": 2.32,
+    "2558": 3.67,
+    "2559": 3.88,
+    "2560": 3.91,
+    "2561": 4.07,
+    "2562": 3.98
+  },
+  "minimumPoint": {
+    "value": 2.32,
+    "year": 2556,
+    "districtId": 3,
+    "districtName": "คลองสามวา"
+  },
+  "maximumPoint": {
+    "value": 4.07,
+    "year": 2561,
+    "districtId": 3,
+    "districtName": "คลองสามวา"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 442043100,
+      "focused": 17244700
+    },
+    "2556": {
+      "all": 420765800,
+      "focused": 17758200
+    },
+    "2557": {
+      "all": 420765800,
+      "focused": 17758200
+    },
+    "2558": {
+      "all": 408296900,
+      "focused": 19426300
+    },
+    "2559": {
+      "all": 405332100,
+      "focused": 15504700
+    },
+    "2560": {
+      "all": 430366000,
+      "focused": 17210800
+    },
+    "2561": {
+      "all": 446196840,
+      "focused": 16267300
+    },
+    "2562": {
+      "all": 485297000,
+      "focused": 25015900
+    }
+  },
+  "budgetOverall": {
+    "all": 3459063540,
+    "focused": 146186100
+  },
+  "ranked": 34,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 4.07
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 3.98
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 3.91
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 3.88
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 3.67
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 2.37
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 2.32
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 2.32
+    }
+  ],
+  "publicGreenSpacePerCapita": 0
+}

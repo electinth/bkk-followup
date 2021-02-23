@@ -1,0 +1,107 @@
+{
+  "value": 16.76,
+  "valuePerYear": {
+    "2555": 15.41,
+    "2556": 17.14,
+    "2557": 17.14,
+    "2558": 16.73,
+    "2559": 16.98,
+    "2560": 17.03,
+    "2561": 16.99,
+    "2562": 16.76
+  },
+  "minimumPoint": {
+    "value": 15.41,
+    "year": 2555,
+    "districtId": 28,
+    "districtName": "ประเวศ"
+  },
+  "maximumPoint": {
+    "value": 17.14,
+    "year": 2556,
+    "districtId": 28,
+    "districtName": "ประเวศ"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 407315500,
+      "focused": 21955500
+    },
+    "2556": {
+      "all": 433494100,
+      "focused": 22959800
+    },
+    "2557": {
+      "all": 433494100,
+      "focused": 22959800
+    },
+    "2558": {
+      "all": 461429900,
+      "focused": 26533900
+    },
+    "2559": {
+      "all": 455338300,
+      "focused": 20818900
+    },
+    "2560": {
+      "all": 472246000,
+      "focused": 28628300
+    },
+    "2561": {
+      "all": 461650780,
+      "focused": 22973400
+    },
+    "2562": {
+      "all": 467180000,
+      "focused": 29575800
+    }
+  },
+  "budgetOverall": {
+    "all": 3592148680,
+    "focused": 196405400
+  },
+  "ranked": 6,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2556,
+      "value": 17.14
+    },
+    {
+      "ranked": 2,
+      "year": 2557,
+      "value": 17.14
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 17.03
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 16.99
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": 16.98
+    },
+    {
+      "ranked": 6,
+      "year": 2562,
+      "value": 16.76
+    },
+    {
+      "ranked": 7,
+      "year": 2558,
+      "value": 16.73
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 15.41
+    }
+  ],
+  "publicGreenSpacePerCapita": 5.04
+}
