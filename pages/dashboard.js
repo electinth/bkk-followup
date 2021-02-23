@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import Layout from 'layouts/layout';
 import { useRouter } from 'next/router';
-import Category_Manu from 'components/dashboard-category-manu';
-import DropDown from 'components/dropdown';
-import Ranking from 'components/dashboard-ranking';
-import Compare from 'components/dashboard-compare';
-import Map from 'components/dashboard-map';
-import TimeLine from 'components/dashboard-timeline';
-import InfoMap from 'components/dashboard-info-map';
-import MiniMap from 'components/dashboard-minimap';
-import selectData from 'components/util/select-data';
-import Knowledge from 'components/util/knowledge';
-import BOD from 'components/util/BOD';
-import Standard from 'components/util/standard';
-import AVG from 'components/util/AVG';
+import Category_Manu from 'components/Dashboard/dashboard-category-manu';
+import DropDown from 'components/Dashboard/dropdown';
+import Ranking from 'components/Dashboard/dashboard-ranking';
+import Compare from 'components/Dashboard/dashboard-compare';
+import Map from 'components/Dashboard/dashboard-map';
+import TimeLine from 'components/Dashboard/dashboard-timeline';
+import InfoMap from 'components/Dashboard/dashboard-info-map';
+import MiniMap from 'components/Dashboard/dashboard-minimap';
+import selectData from 'components/Dashboard/util/select-data';
+import Knowledge from 'components/Dashboard/util/knowledge';
+import BOD from 'components/Dashboard/util/BOD';
+import Standard from 'components/Dashboard/util/standard';
+import AVG from 'components/Dashboard/util/AVG';
+import LocationWater from 'components/Dashboard/util/location-water';
+import ListRanking from 'components/Dashboard/dashboard-list-ranking';
 
 import _ from 'lodash';
 
@@ -44,20 +46,6 @@ const dashboard = () => {
       name: 'ฝุ่นควันเกินมาตรฐาน',
       color: '#476A8B',
       text_color: '#344E66',
-    },
-  ];
-  const mock_ranking = [
-    {
-      name: 'หนองจอก',
-      value: '0.729',
-    },
-    {
-      name: 'หนองจอก',
-      value: '0.729',
-    },
-    {
-      name: 'หนองจอก',
-      value: '0.729',
     },
   ];
   const filter_by_group = [
@@ -117,7 +105,6 @@ const dashboard = () => {
         <div
           id="dashboard-wrapper"
           className="absolute top-0 bottom-0 left-0 right-0 flex overflow-hidden"
-          style={{ paddingTop: '60px' }}
         >
           <div
             className="flex flex-col flex-1 bg-black-default"
@@ -214,7 +201,17 @@ const dashboard = () => {
               ''
             )}
 
-            <AVG selected_theme={selected_theme} />
+            <AVG
+              selected_theme={selected_theme}
+              data={data}
+              checked={checked}
+            />
+            {selected_theme.name === 'น้ำท่วมถนน' ? (
+              <LocationWater selected_theme={selected_theme} />
+            ) : (
+              ''
+            )}
+
             <div id="graph-trend" className="mt-3 card_cat_detail">
               <div
                 className="flex justify-center py-1 rounded-t text-white-default p2"
@@ -233,16 +230,16 @@ const dashboard = () => {
             {checked === null || checked === 'เขตพื้นที่ทั้งหมด' ? (
               <Ranking
                 id="ranking"
-                ranking_data={mock_ranking}
                 selected_theme={selected_theme}
                 checked={checked}
+                rankings={rankings}
               />
             ) : (
               ''
             )}
 
             <div id="budget compare" className="flex flex-row mt-3 ">
-              <div id="budget" className="flex-1 mr-3 card_cat_detail">
+              <div id="budget" className="relative flex-1 mr-3 card_cat_detail">
                 <div
                   className="flex justify-center py-1 rounded-t text-white-default p2"
                   style={{ backgroundColor: selected_theme.color }}
@@ -255,7 +252,7 @@ const dashboard = () => {
                     className="h5"
                     style={{ color: selected_theme.text_color }}
                   >
-                    94,887 ล้านบาท{' '}
+                    94,887 ล้านบาท
                   </p>
                   <p className="p2">ในการรักษาความสะอาดและจัดการขยะมูลฝอย</p>
                 </span>
@@ -264,7 +261,7 @@ const dashboard = () => {
                   งบประมาณใช้ไปเพื่อจัดการขยะมูลฝอย และรักษาความสะอาดในแต่ละปี
                 </p>
                 <div className="flex justify-center py-3">bar chart</div>
-                <div className="flex justify-center py-2 mt-3 font-bold rounded-b text-white-default bg-black-default p1">
+                <div className="absolute bottom-0 flex justify-center w-full py-2 mt-3 font-bold rounded-b text-white-default bg-black-default p1">
                   เกี่ยวกับงบประมาณกทม
                 </div>
               </div>
@@ -273,13 +270,13 @@ const dashboard = () => {
                   id="compare"
                   selected_theme={selected_theme}
                   checked={checked}
+                  data={data.benchmarks}
                 />
               ) : (
-                <Ranking
-                  id="ranking"
-                  ranking_data={mock_ranking}
+                <ListRanking
+                  id="list-ranking"
                   selected_theme={selected_theme}
-                  checked={checked}
+                  data={data.rankings}
                 />
               )}
             </div>
