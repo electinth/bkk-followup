@@ -1,7 +1,44 @@
-.intro-page {
-  transition: 0.8s;
-}
 .intro-page.hide-intro {
+  transition: 0.8s;
   opacity: 0;
   transform: translateY(-100%);
+}
+
+.budget-page-three {
+  .box {
+    .tooltip {
+      display: none;
+    }
+  }
+  .box:hover {
+    background: rgba(255, 255, 255, 0.9) !important;
+    .tooltip {
+      display: block;
+    }
+  }
+}
+
+.budget-page-four {
+  .legends {
+    li:hover {
+      background: rgba(255, 255, 255, 0.9) !important;
+    }
+  }
+  .box {
+    .value {
+      display: none;
+    }
+  }
+  .box.is-hover {
+    background: rgba(255, 255, 255, 0.9) !important;
+    .value {
+      display: block;
+    }
+  }
+}
+
+.responsibility-page-three {
+  .scroll-list {
+    scroll-behavior: smooth;
+  }
 }

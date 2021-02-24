@@ -9,7 +9,7 @@ export default function BudgetPageOne(props) {
 
   return (
     <div
-      className="budget-page-one bg-green-default fixed z-10 inset-x-0 bottom-0 flex items-center pointer-events-none"
+      className="budget-page-one bg-green-default fixed z-10 inset-0 flex items-center pointer-events-none"
       style={{ top: "60px" }}
     >
       <div className="container mx-auto">
