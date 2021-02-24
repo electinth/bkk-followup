@@ -1,0 +1,73 @@
+{
+  "value": 28.29,
+  "valuePerYear": {
+    "2555": 20.36,
+    "2556": 21.26,
+    "2557": 21.26,
+    "2558": 29.25,
+    "2559": 31.12,
+    "2560": 27.85,
+    "2561": 31.83,
+    "2562": 28.29
+  },
+  "minimumPoint": {
+    "value": 20.36,
+    "year": 2555,
+    "districtId": 8,
+    "districtName": "ดินแดง"
+  },
+  "maximumPoint": {
+    "value": 31.83,
+    "year": 2561,
+    "districtId": 8,
+    "districtName": "ดินแดง"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 3,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 31.83
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 31.12
+    },
+    {
+      "ranked": 3,
+      "year": 2558,
+      "value": 29.25
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 28.29
+    },
+    {
+      "ranked": 5,
+      "year": 2560,
+      "value": 27.85
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 21.26
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 21.26
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 20.36
+    }
+  ]
+}

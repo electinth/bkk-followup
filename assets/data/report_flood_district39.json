@@ -1,0 +1,107 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 39,
+    "districtName": "ลาดพร้าว"
+  },
+  "maximumPoint": {
+    "districtId": 39,
+    "districtName": "ลาดพร้าว"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 334558300,
+      "focused": 26001400
+    },
+    "2556": {
+      "all": 341989000,
+      "focused": 28965200
+    },
+    "2557": {
+      "all": 341989000,
+      "focused": 28965200
+    },
+    "2558": {
+      "all": 378647700,
+      "focused": 25789900
+    },
+    "2559": {
+      "all": 355466700,
+      "focused": 25931300
+    },
+    "2560": {
+      "all": 376622000,
+      "focused": 35424200
+    },
+    "2561": {
+      "all": 381996840,
+      "focused": 27860100
+    },
+    "2562": {
+      "all": 375002000,
+      "focused": 27643500
+    }
+  },
+  "budgetOverall": {
+    "all": 2886271540,
+    "focused": 226580800
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 39,
+    "districtName": "ลาดพร้าว"
+  }
+}

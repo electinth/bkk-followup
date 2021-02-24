@@ -1,0 +1,123 @@
+{
+  "value": 35,
+  "valuePerYear": {
+    "2555": 7,
+    "2556": null,
+    "2557": 1,
+    "2558": 20,
+    "2559": 30,
+    "2560": 30,
+    "2561": 36,
+    "2562": 35
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2557,
+    "districtId": 42,
+    "districtName": "สวนหลวง"
+  },
+  "maximumPoint": {
+    "value": 36,
+    "year": 2561,
+    "districtId": 42,
+    "districtName": "สวนหลวง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 353131000,
+      "focused": 12479600
+    },
+    "2556": {
+      "all": 360495000,
+      "focused": 16212900
+    },
+    "2557": {
+      "all": 360495000,
+      "focused": 16212900
+    },
+    "2558": {
+      "all": 360000500,
+      "focused": 34060400
+    },
+    "2559": {
+      "all": 367824500,
+      "focused": 15741600
+    },
+    "2560": {
+      "all": 398562000,
+      "focused": 16675200
+    },
+    "2561": {
+      "all": 391483840,
+      "focused": 17183600
+    },
+    "2562": {
+      "all": 375879000,
+      "focused": 18390700
+    }
+  },
+  "budgetOverall": {
+    "all": 2967870840,
+    "focused": 146956900
+  },
+  "ranked": 5,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 36
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 35
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 30
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 30
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 20
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 7
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 1
+    },
+    {
+      "ranked": 8,
+      "year": 2556,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนพัฒนาการ",
+      "description": "จากแยกศรีนครินทร์ถึงคลองบ้านป่า"
+    },
+    {
+      "name": "ถนนรามคำแหง",
+      "description": "ช่วงซอย 1 ถึงซอย 5"
+    }
+  ],
+  "meanFloodLevel": 34.6,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.6,
+    "year": 2562,
+    "districtId": 42,
+    "districtName": "สวนหลวง"
+  }
+}

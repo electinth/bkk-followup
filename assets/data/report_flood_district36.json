@@ -1,0 +1,143 @@
+{
+  "value": 19,
+  "valuePerYear": {
+    "2555": 99,
+    "2556": 55,
+    "2557": 45,
+    "2558": 191,
+    "2559": 11,
+    "2560": 83,
+    "2561": 13,
+    "2562": 19
+  },
+  "minimumPoint": {
+    "value": 11,
+    "year": 2559,
+    "districtId": 36,
+    "districtName": "ราชเทวี"
+  },
+  "maximumPoint": {
+    "value": 191,
+    "year": 2558,
+    "districtId": 36,
+    "districtName": "ราชเทวี"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 320766600,
+      "focused": 5028300
+    },
+    "2556": {
+      "all": 307427400,
+      "focused": 19905000
+    },
+    "2557": {
+      "all": 307427400,
+      "focused": 19905000
+    },
+    "2558": {
+      "all": 324018100,
+      "focused": 5089700
+    },
+    "2559": {
+      "all": 322218800,
+      "focused": 5404100
+    },
+    "2560": {
+      "all": 328294800,
+      "focused": 5684500
+    },
+    "2561": {
+      "all": 321463840,
+      "focused": 5642500
+    },
+    "2562": {
+      "all": 358945000,
+      "focused": 6178200
+    }
+  },
+  "budgetOverall": {
+    "all": 2590561940,
+    "focused": 72837300
+  },
+  "ranked": 9,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 191
+    },
+    {
+      "ranked": 2,
+      "year": 2555,
+      "value": 99
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 83
+    },
+    {
+      "ranked": 4,
+      "year": 2556,
+      "value": 55
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 45
+    },
+    {
+      "ranked": 6,
+      "year": 2562,
+      "value": 19
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": 13
+    },
+    {
+      "ranked": 8,
+      "year": 2559,
+      "value": 11
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนเพชรบุรี",
+      "description": "จากแยกอโศก ถึงแยกมิตรสัมพันธ์"
+    },
+    {
+      "name": "ถนนนิคมมักกะสัน",
+      "description": "จากถนนราชปรารภ ถึงซอยจารุรัตน์"
+    },
+    {
+      "name": "ถนนพระราม 6",
+      "description": "จากหน้าตลาดประแจจีน ถึงแยกศรีอยุธยา"
+    },
+    {
+      "name": "ถนนราชปรารภ",
+      "description": "จากประตูน้ำ ถึงแยกดินแดง"
+    },
+    {
+      "name": "ถนนศรีอยุธยา",
+      "description": "จากหน้าวังสวนผักกาด ถึงแยกพญาไท"
+    },
+    {
+      "name": "ถนนพญาไท",
+      "description": "บริเวณหน้ากรมปศุสัตว์"
+    },
+    {
+      "name": "ถนนศรีอยุธยา",
+      "description": "บริเวณหน้า สน.พญาไท"
+    }
+  ],
+  "meanFloodLevel": 34.2,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.7,
+    "year": 2560,
+    "districtId": 36,
+    "districtName": "ราชเทวี"
+  }
+}

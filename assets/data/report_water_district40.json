@@ -1,0 +1,73 @@
+{
+  "value": 11.72,
+  "valuePerYear": {
+    "2555": 9.08,
+    "2556": 7.73,
+    "2557": 7.73,
+    "2558": 12.47,
+    "2559": 17.85,
+    "2560": 17.13,
+    "2561": 12.63,
+    "2562": 11.72
+  },
+  "minimumPoint": {
+    "value": 7.73,
+    "year": 2556,
+    "districtId": 40,
+    "districtName": "วังทองหลาง"
+  },
+  "maximumPoint": {
+    "value": 17.85,
+    "year": 2559,
+    "districtId": 40,
+    "districtName": "วังทองหลาง"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 25,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 17.85
+    },
+    {
+      "ranked": 2,
+      "year": 2560,
+      "value": 17.13
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 12.63
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": 12.47
+    },
+    {
+      "ranked": 5,
+      "year": 2562,
+      "value": 11.72
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 9.08
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 7.73
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 7.73
+    }
+  ]
+}

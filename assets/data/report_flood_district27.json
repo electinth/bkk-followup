@@ -1,0 +1,113 @@
+{
+  "value": 9,
+  "valuePerYear": {
+    "2555": 9,
+    "2556": 18,
+    "2557": 19,
+    "2558": 3,
+    "2559": 7,
+    "2560": 2,
+    "2561": 54,
+    "2562": 9
+  },
+  "minimumPoint": {
+    "value": 2,
+    "year": 2560,
+    "districtId": 27,
+    "districtName": "ปทุมวัน"
+  },
+  "maximumPoint": {
+    "value": 54,
+    "year": 2561,
+    "districtId": 27,
+    "districtName": "ปทุมวัน"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 319075000,
+      "focused": 4987500
+    },
+    "2556": {
+      "all": 293335000,
+      "focused": 5051600
+    },
+    "2557": {
+      "all": 293335000,
+      "focused": 5051600
+    },
+    "2558": {
+      "all": 342122300,
+      "focused": 5145700
+    },
+    "2559": {
+      "all": 324257100,
+      "focused": 6080500
+    },
+    "2560": {
+      "all": 331560000,
+      "focused": 5819700
+    },
+    "2561": {
+      "all": 319166840,
+      "focused": 5335900
+    },
+    "2562": {
+      "all": 336891000,
+      "focused": 6867600
+    }
+  },
+  "budgetOverall": {
+    "all": 2559742240,
+    "focused": 44340100
+  },
+  "ranked": 15,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 54
+    },
+    {
+      "ranked": 2,
+      "year": 2557,
+      "value": 19
+    },
+    {
+      "ranked": 3,
+      "year": 2556,
+      "value": 18
+    },
+    {
+      "ranked": 4,
+      "year": 2555,
+      "value": 9
+    },
+    {
+      "ranked": 5,
+      "year": 2562,
+      "value": 9
+    },
+    {
+      "ranked": 6,
+      "year": 2559,
+      "value": 7
+    },
+    {
+      "ranked": 7,
+      "year": 2558,
+      "value": 3
+    },
+    {
+      "ranked": 8,
+      "year": 2560,
+      "value": 2
+    }
+  ],
+  "meanFloodLevel": 31.3,
+  "meanFloodLevelMaximumPoint": {
+    "value": 33,
+    "year": 2559,
+    "districtId": 27,
+    "districtName": "ปทุมวัน"
+  }
+}

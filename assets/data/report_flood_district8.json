@@ -1,0 +1,135 @@
+{
+  "value": 16,
+  "valuePerYear": {
+    "2555": 27,
+    "2556": 29,
+    "2557": 22,
+    "2558": 173,
+    "2559": 26,
+    "2560": 24,
+    "2561": 48,
+    "2562": 16
+  },
+  "minimumPoint": {
+    "value": 16,
+    "year": 2562,
+    "districtId": 8,
+    "districtName": "ดินแดง"
+  },
+  "maximumPoint": {
+    "value": 173,
+    "year": 2558,
+    "districtId": 8,
+    "districtName": "ดินแดง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 303425500,
+      "focused": 8577500
+    },
+    "2556": {
+      "all": 326728800,
+      "focused": 9968800
+    },
+    "2557": {
+      "all": 326728800,
+      "focused": 9968800
+    },
+    "2558": {
+      "all": 332717600,
+      "focused": 9781600
+    },
+    "2559": {
+      "all": 324443100,
+      "focused": 9990000
+    },
+    "2560": {
+      "all": 343839000,
+      "focused": 9418900
+    },
+    "2561": {
+      "all": 319227840,
+      "focused": 10248800
+    },
+    "2562": {
+      "all": 402064000,
+      "focused": 11899900
+    }
+  },
+  "budgetOverall": {
+    "all": 2679174640,
+    "focused": 79854300
+  },
+  "ranked": 11,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 173
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 48
+    },
+    {
+      "ranked": 3,
+      "year": 2556,
+      "value": 29
+    },
+    {
+      "ranked": 4,
+      "year": 2555,
+      "value": 27
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": 26
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": 24
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 22
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": 16
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนดินแดง",
+      "description": "ช่วงซอยสุทธิพร 2 และแยกประชาสงเคราะห์"
+    },
+    {
+      "name": "ถนนประชาสงเคราะห์",
+      "description": "จากวงเวียนหอนาฬิกา ถึงถนนประชาราษฎร์บ้าเพ็ญ"
+    },
+    {
+      "name": "ถนนประชาสุข",
+      "description": "ตลอดสาย"
+    },
+    {
+      "name": "-ถนนรัชดาภิเษก",
+      "description": "จากแยกพระราม 9 ถึงแยกห้วยขวาง"
+    },
+    {
+      "name": "ถนนวิภาวดีรังสิต",
+      "description": "บริเวณหน้ากรมทหารราบที่ 1 มหาดเล็กรักษาพระองค์"
+    }
+  ],
+  "meanFloodLevel": 34.5,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.6,
+    "year": 2560,
+    "districtId": 8,
+    "districtName": "ดินแดง"
+  }
+}

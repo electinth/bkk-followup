@@ -1,0 +1,73 @@
+{
+  "value": 5.06,
+  "valuePerYear": {
+    "2555": 5.6,
+    "2556": 6.08,
+    "2557": 6.08,
+    "2558": 6.67,
+    "2559": 4.8,
+    "2560": 4.28,
+    "2561": 4.33,
+    "2562": 5.06
+  },
+  "minimumPoint": {
+    "value": 4.28,
+    "year": 2560,
+    "districtId": 10,
+    "districtName": "ตลิ่งชัน"
+  },
+  "maximumPoint": {
+    "value": 6.67,
+    "year": 2558,
+    "districtId": 10,
+    "districtName": "ตลิ่งชัน"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 48,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 6.67
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": 6.08
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": 6.08
+    },
+    {
+      "ranked": 4,
+      "year": 2555,
+      "value": 5.6
+    },
+    {
+      "ranked": 5,
+      "year": 2562,
+      "value": 5.06
+    },
+    {
+      "ranked": 6,
+      "year": 2559,
+      "value": 4.8
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": 4.33
+    },
+    {
+      "ranked": 8,
+      "year": 2560,
+      "value": 4.28
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "value": 3.25,
+  "valuePerYear": {
+    "2555": 2.24,
+    "2556": 2.45,
+    "2557": 2.45,
+    "2558": 2.7,
+    "2559": 2.83,
+    "2560": 2.89,
+    "2561": 3.21,
+    "2562": 3.25
+  },
+  "minimumPoint": {
+    "value": 2.24,
+    "year": 2555,
+    "districtId": 25,
+    "districtName": "บางรัก"
+  },
+  "maximumPoint": {
+    "value": 3.25,
+    "year": 2562,
+    "districtId": 25,
+    "districtName": "บางรัก"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 218173500,
+      "focused": 7517600
+    },
+    "2556": {
+      "all": 229626500,
+      "focused": 8585100
+    },
+    "2557": {
+      "all": 229626500,
+      "focused": 8585100
+    },
+    "2558": {
+      "all": 226734300,
+      "focused": 8638000
+    },
+    "2559": {
+      "all": 226799600,
+      "focused": 5751300
+    },
+    "2560": {
+      "all": 247999000,
+      "focused": 5921500
+    },
+    "2561": {
+      "all": 238054840,
+      "focused": 5779600
+    },
+    "2562": {
+      "all": 240883000,
+      "focused": 12235800
+    }
+  },
+  "budgetOverall": {
+    "all": 1857897240,
+    "focused": 63014000
+  },
+  "ranked": 38,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 3.25
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 3.21
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 2.89
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 2.83
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 2.7
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 2.45
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 2.45
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 2.24
+    }
+  ],
+  "publicGreenSpacePerCapita": 0
+}

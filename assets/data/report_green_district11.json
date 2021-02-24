@@ -1,0 +1,107 @@
+{
+  "value": 20.2,
+  "valuePerYear": {
+    "2555": 13.26,
+    "2556": 13.99,
+    "2557": 13.99,
+    "2558": 17.83,
+    "2559": 11.39,
+    "2560": 15.51,
+    "2561": 20.17,
+    "2562": 20.2
+  },
+  "minimumPoint": {
+    "value": 11.39,
+    "year": 2559,
+    "districtId": 11,
+    "districtName": "ทวีวัฒนา"
+  },
+  "maximumPoint": {
+    "value": 20.2,
+    "year": 2562,
+    "districtId": 11,
+    "districtName": "ทวีวัฒนา"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 309756100,
+      "focused": 22244300
+    },
+    "2556": {
+      "all": 292293400,
+      "focused": 23006000
+    },
+    "2557": {
+      "all": 292293400,
+      "focused": 23006000
+    },
+    "2558": {
+      "all": 306422800,
+      "focused": 22510000
+    },
+    "2559": {
+      "all": 319478100,
+      "focused": 9706200
+    },
+    "2560": {
+      "all": 340005100,
+      "focused": 14520100
+    },
+    "2561": {
+      "all": 348560840,
+      "focused": 10565800
+    },
+    "2562": {
+      "all": 359861400,
+      "focused": 35338100
+    }
+  },
+  "budgetOverall": {
+    "all": 2568671140,
+    "focused": 160896500
+  },
+  "ranked": 2,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 20.2
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 20.17
+    },
+    {
+      "ranked": 3,
+      "year": 2558,
+      "value": 17.83
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 15.51
+    },
+    {
+      "ranked": 5,
+      "year": 2556,
+      "value": 13.99
+    },
+    {
+      "ranked": 6,
+      "year": 2557,
+      "value": 13.99
+    },
+    {
+      "ranked": 7,
+      "year": 2555,
+      "value": 13.26
+    },
+    {
+      "ranked": 8,
+      "year": 2559,
+      "value": 11.39
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.03
+}

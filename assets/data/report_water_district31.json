@@ -1,0 +1,73 @@
+{
+  "value": 21.15,
+  "valuePerYear": {
+    "2555": 20.1,
+    "2556": 15.83,
+    "2557": 15.83,
+    "2558": 20.33,
+    "2559": 20.85,
+    "2560": 19.4,
+    "2561": 20.75,
+    "2562": 21.15
+  },
+  "minimumPoint": {
+    "value": 15.83,
+    "year": 2556,
+    "districtId": 31,
+    "districtName": "พระโขนง"
+  },
+  "maximumPoint": {
+    "value": 21.15,
+    "year": 2562,
+    "districtId": 31,
+    "districtName": "พระโขนง"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 7,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 21.15
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 20.85
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 20.75
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": 20.33
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 20.1
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": 19.4
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 15.83
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 15.83
+    }
+  ]
+}

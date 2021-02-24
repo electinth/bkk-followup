@@ -1,0 +1,113 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 12,
+    "districtName": "ทุ่งครุ"
+  },
+  "maximumPoint": {
+    "districtId": 12,
+    "districtName": "ทุ่งครุ"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 308629000,
+      "focused": 8153600
+    },
+    "2556": {
+      "all": 300314100,
+      "focused": 20393600
+    },
+    "2557": {
+      "all": 300314100,
+      "focused": 20393600
+    },
+    "2558": {
+      "all": 346020800,
+      "focused": 14224100
+    },
+    "2559": {
+      "all": 312637500,
+      "focused": 9359100
+    },
+    "2560": {
+      "all": 348560900,
+      "focused": 10344300
+    },
+    "2561": {
+      "all": 365299840,
+      "focused": 12230600
+    },
+    "2562": {
+      "all": 369575000,
+      "focused": 10994300
+    }
+  },
+  "budgetOverall": {
+    "all": 2651351240,
+    "focused": 106093200
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนประชาอุทิศ",
+      "description": "จากคลองรางตรง ถึงคลองรางจาก"
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 12,
+    "districtName": "ทุ่งครุ"
+  }
+}

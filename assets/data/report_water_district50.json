@@ -1,0 +1,73 @@
+{
+  "value": 17.78,
+  "valuePerYear": {
+    "2555": 18.71,
+    "2556": 15.84,
+    "2557": 15.84,
+    "2558": 20.98,
+    "2559": 22.58,
+    "2560": 16.98,
+    "2561": 13.38,
+    "2562": 17.78
+  },
+  "minimumPoint": {
+    "value": 13.38,
+    "year": 2561,
+    "districtId": 50,
+    "districtName": "ห้วยขวาง"
+  },
+  "maximumPoint": {
+    "value": 22.58,
+    "year": 2559,
+    "districtId": 50,
+    "districtName": "ห้วยขวาง"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 11,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 22.58
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 20.98
+    },
+    {
+      "ranked": 3,
+      "year": 2555,
+      "value": 18.71
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 17.78
+    },
+    {
+      "ranked": 5,
+      "year": 2560,
+      "value": 16.98
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 15.84
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 15.84
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 13.38
+    }
+  ]
+}

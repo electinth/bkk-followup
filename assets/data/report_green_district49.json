@@ -1,0 +1,107 @@
+{
+  "value": 17.55,
+  "valuePerYear": {
+    "2555": 16.58,
+    "2556": 16.7,
+    "2557": 16.7,
+    "2558": 17.15,
+    "2559": 17.34,
+    "2560": 17.15,
+    "2561": 17.5,
+    "2562": 17.55
+  },
+  "minimumPoint": {
+    "value": 16.58,
+    "year": 2555,
+    "districtId": 49,
+    "districtName": "หลักสี่"
+  },
+  "maximumPoint": {
+    "value": 17.55,
+    "year": 2562,
+    "districtId": 49,
+    "districtName": "หลักสี่"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 301620500,
+      "focused": 17020700
+    },
+    "2556": {
+      "all": 319733400,
+      "focused": 17555600
+    },
+    "2557": {
+      "all": 319733400,
+      "focused": 17555600
+    },
+    "2558": {
+      "all": 370061000,
+      "focused": 31683500
+    },
+    "2559": {
+      "all": 300038100,
+      "focused": 6876200
+    },
+    "2560": {
+      "all": 332257000,
+      "focused": 10691700
+    },
+    "2561": {
+      "all": 335513840,
+      "focused": 10852600
+    },
+    "2562": {
+      "all": 338958000,
+      "focused": 21319900
+    }
+  },
+  "budgetOverall": {
+    "all": 2617915240,
+    "focused": 133555800
+  },
+  "ranked": 5,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 17.55
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 17.5
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 17.34
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": 17.15
+    },
+    {
+      "ranked": 5,
+      "year": 2560,
+      "value": 17.15
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 16.7
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 16.7
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 16.58
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.12
+}

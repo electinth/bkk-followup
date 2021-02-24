@@ -1,0 +1,107 @@
+{
+  "value": 9.39,
+  "valuePerYear": {
+    "2555": 6.26,
+    "2556": 6.24,
+    "2557": 6.24,
+    "2558": 8.76,
+    "2559": 9.36,
+    "2560": 9.08,
+    "2561": 9.47,
+    "2562": 9.39
+  },
+  "minimumPoint": {
+    "value": 6.24,
+    "year": 2556,
+    "districtId": 36,
+    "districtName": "ราชเทวี"
+  },
+  "maximumPoint": {
+    "value": 9.47,
+    "year": 2561,
+    "districtId": 36,
+    "districtName": "ราชเทวี"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 320766600,
+      "focused": 23209600
+    },
+    "2556": {
+      "all": 307427400,
+      "focused": 23953400
+    },
+    "2557": {
+      "all": 307427400,
+      "focused": 23953400
+    },
+    "2558": {
+      "all": 324018100,
+      "focused": 26811100
+    },
+    "2559": {
+      "all": 322218800,
+      "focused": 5404100
+    },
+    "2560": {
+      "all": 328294800,
+      "focused": 5684500
+    },
+    "2561": {
+      "all": 321463840,
+      "focused": 5642500
+    },
+    "2562": {
+      "all": 358945000,
+      "focused": 36259400
+    }
+  },
+  "budgetOverall": {
+    "all": 2590561940,
+    "focused": 150918000
+  },
+  "ranked": 11,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 9.47
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 9.39
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 9.36
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 9.08
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 8.76
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 6.26
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 6.24
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 6.24
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.6
+}

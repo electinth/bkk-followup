@@ -1,0 +1,113 @@
+{
+  "value": 6,
+  "valuePerYear": {
+    "2555": 1,
+    "2556": 9,
+    "2557": 8,
+    "2558": 15,
+    "2559": 11,
+    "2560": 7,
+    "2561": 47,
+    "2562": 6
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2555,
+    "districtId": 26,
+    "districtName": "บึงกุ่ม"
+  },
+  "maximumPoint": {
+    "value": 47,
+    "year": 2561,
+    "districtId": 26,
+    "districtName": "บึงกุ่ม"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 339766700,
+      "focused": 50000000
+    },
+    "2556": {
+      "all": 318237800,
+      "focused": 12134600
+    },
+    "2557": {
+      "all": 318237800,
+      "focused": 12134600
+    },
+    "2558": {
+      "all": 450382700,
+      "focused": 134983700
+    },
+    "2559": {
+      "all": 546951100,
+      "focused": 228240900
+    },
+    "2560": {
+      "all": 398313000,
+      "focused": 59890000
+    },
+    "2561": {
+      "all": 357998840,
+      "focused": 19249500
+    },
+    "2562": {
+      "all": 346746000,
+      "focused": 21486500
+    }
+  },
+  "budgetOverall": {
+    "all": 3076633940,
+    "focused": 538119800
+  },
+  "ranked": 21,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 47
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 15
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 11
+    },
+    {
+      "ranked": 4,
+      "year": 2556,
+      "value": 9
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 8
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": 7
+    },
+    {
+      "ranked": 7,
+      "year": 2562,
+      "value": 6
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 1
+    }
+  ],
+  "meanFloodLevel": 33.2,
+  "meanFloodLevelMaximumPoint": {
+    "value": 33.2,
+    "year": 2562,
+    "districtId": 26,
+    "districtName": "บึงกุ่ม"
+  }
+}

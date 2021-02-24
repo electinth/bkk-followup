@@ -1,0 +1,107 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 7,
+    "districtName": "ดอนเมือง"
+  },
+  "maximumPoint": {
+    "districtId": 7,
+    "districtName": "ดอนเมือง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 381527200,
+      "focused": 9875100
+    },
+    "2556": {
+      "all": 402426500,
+      "focused": 10297900
+    },
+    "2557": {
+      "all": 402426500,
+      "focused": 10297900
+    },
+    "2558": {
+      "all": 390811900,
+      "focused": 10219100
+    },
+    "2559": {
+      "all": 373235100,
+      "focused": 8587500
+    },
+    "2560": {
+      "all": 392931000,
+      "focused": 18222200
+    },
+    "2561": {
+      "all": 376344840,
+      "focused": 13742800
+    },
+    "2562": {
+      "all": 389048000,
+      "focused": 14257100
+    }
+  },
+  "budgetOverall": {
+    "all": 3108751040,
+    "focused": 95499600
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 7,
+    "districtName": "ดอนเมือง"
+  }
+}

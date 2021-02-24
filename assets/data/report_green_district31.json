@@ -1,0 +1,107 @@
+{
+  "value": 3.28,
+  "valuePerYear": {
+    "2555": 2.64,
+    "2556": 2.78,
+    "2557": 2.78,
+    "2558": 2.98,
+    "2559": 3.06,
+    "2560": 3.13,
+    "2561": 3.23,
+    "2562": 3.28
+  },
+  "minimumPoint": {
+    "value": 2.64,
+    "year": 2555,
+    "districtId": 31,
+    "districtName": "พระโขนง"
+  },
+  "maximumPoint": {
+    "value": 3.28,
+    "year": 2562,
+    "districtId": 31,
+    "districtName": "พระโขนง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 275017700,
+      "focused": 14793100
+    },
+    "2556": {
+      "all": 299120000,
+      "focused": 19445000
+    },
+    "2557": {
+      "all": 299120000,
+      "focused": 19445000
+    },
+    "2558": {
+      "all": 288689500,
+      "focused": 20330300
+    },
+    "2559": {
+      "all": 278897500,
+      "focused": 13728800
+    },
+    "2560": {
+      "all": 309729000,
+      "focused": 14413900
+    },
+    "2561": {
+      "all": 274974840,
+      "focused": 14273500
+    },
+    "2562": {
+      "all": 277170000,
+      "focused": 19378400
+    }
+  },
+  "budgetOverall": {
+    "all": 2302718540,
+    "focused": 135808000
+  },
+  "ranked": 37,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 3.28
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 3.23
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 3.13
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 3.06
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 2.98
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 2.78
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 2.78
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 2.64
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.14
+}

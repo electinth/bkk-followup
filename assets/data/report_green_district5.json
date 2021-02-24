@@ -1,0 +1,107 @@
+{
+  "value": 13.5,
+  "valuePerYear": {
+    "2555": 10.85,
+    "2556": 10.98,
+    "2557": 10.98,
+    "2558": 11.03,
+    "2559": 13.15,
+    "2560": 13.38,
+    "2561": 13.56,
+    "2562": 13.5
+  },
+  "minimumPoint": {
+    "value": 10.85,
+    "year": 2555,
+    "districtId": 5,
+    "districtName": "จตุจักร"
+  },
+  "maximumPoint": {
+    "value": 13.56,
+    "year": 2561,
+    "districtId": 5,
+    "districtName": "จตุจักร"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 457222000,
+      "focused": 23259500
+    },
+    "2556": {
+      "all": 539599200,
+      "focused": 25006800
+    },
+    "2557": {
+      "all": 539599200,
+      "focused": 25006800
+    },
+    "2558": {
+      "all": 545380000,
+      "focused": 28016300
+    },
+    "2559": {
+      "all": 500367500,
+      "focused": 15678300
+    },
+    "2560": {
+      "all": 534968000,
+      "focused": 16753400
+    },
+    "2561": {
+      "all": 502145840,
+      "focused": 17695200
+    },
+    "2562": {
+      "all": 540198000,
+      "focused": 30581700
+    }
+  },
+  "budgetOverall": {
+    "all": 4159479740,
+    "focused": 181998000
+  },
+  "ranked": 7,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 13.56
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 13.5
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 13.38
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 13.15
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 11.03
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 10.98
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 10.98
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 10.85
+    }
+  ],
+  "publicGreenSpacePerCapita": 7.67
+}

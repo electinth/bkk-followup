@@ -1,0 +1,107 @@
+{
+  "value": 2.73,
+  "valuePerYear": {
+    "2555": 1.94,
+    "2556": 2,
+    "2557": 2,
+    "2558": 2.14,
+    "2559": 2.42,
+    "2560": 2.65,
+    "2561": 2.69,
+    "2562": 2.73
+  },
+  "minimumPoint": {
+    "value": 1.94,
+    "year": 2555,
+    "districtId": 30,
+    "districtName": "พญาไท"
+  },
+  "maximumPoint": {
+    "value": 2.73,
+    "year": 2562,
+    "districtId": 30,
+    "districtName": "พญาไท"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 292937300,
+      "focused": 14449200
+    },
+    "2556": {
+      "all": 283882000,
+      "focused": 23362700
+    },
+    "2557": {
+      "all": 283882000,
+      "focused": 23362700
+    },
+    "2558": {
+      "all": 275719800,
+      "focused": 19211700
+    },
+    "2559": {
+      "all": 296528900,
+      "focused": 13702900
+    },
+    "2560": {
+      "all": 339709200,
+      "focused": 13177800
+    },
+    "2561": {
+      "all": 322168840,
+      "focused": 13395600
+    },
+    "2562": {
+      "all": 305422000,
+      "focused": 21966700
+    }
+  },
+  "budgetOverall": {
+    "all": 2400250040,
+    "focused": 142629300
+  },
+  "ranked": 44,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 2.73
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 2.69
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 2.65
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 2.42
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 2.14
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 2
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 2
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 1.94
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.34
+}

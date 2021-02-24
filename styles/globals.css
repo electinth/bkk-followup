@@ -1,6 +1,6 @@
-@tailwind base!important;
-@tailwind components!important;
-@tailwind utilities!important;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer utilities {
   * {
@@ -85,6 +85,10 @@
       font-size: 18px;
     }
   }
+  .h5 {
+    font-family: "NotoSansThaiUI";
+    font-size: 36px;
+  }
   .p1 {
     font-size: 18px;
   }
@@ -96,6 +100,11 @@
   }
 }
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+    outline: none;
+  }
   @font-face {
     font-family: "NotoSansThaiUI";
     src: url("assets/fonts/NotoSansThaiUI-Bold.ttf");

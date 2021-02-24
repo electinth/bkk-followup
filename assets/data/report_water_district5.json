@@ -1,0 +1,73 @@
+{
+  "value": 16.23,
+  "valuePerYear": {
+    "2555": 16.98,
+    "2556": 12.85,
+    "2557": 12.85,
+    "2558": 18.29,
+    "2559": 18.74,
+    "2560": 12.4,
+    "2561": 16.86,
+    "2562": 16.23
+  },
+  "minimumPoint": {
+    "value": 12.4,
+    "year": 2560,
+    "districtId": 5,
+    "districtName": "จตุจักร"
+  },
+  "maximumPoint": {
+    "value": 18.74,
+    "year": 2559,
+    "districtId": 5,
+    "districtName": "จตุจักร"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 16,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 18.74
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 18.29
+    },
+    {
+      "ranked": 3,
+      "year": 2555,
+      "value": 16.98
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 16.86
+    },
+    {
+      "ranked": 5,
+      "year": 2562,
+      "value": 16.23
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 12.85
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 12.85
+    },
+    {
+      "ranked": 8,
+      "year": 2560,
+      "value": 12.4
+    }
+  ]
+}

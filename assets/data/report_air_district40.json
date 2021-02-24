@@ -1,0 +1,77 @@
+{
+  "value": 94,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": 90,
+    "2562": 94
+  },
+  "minimumPoint": {
+    "value": 90,
+    "year": 2561,
+    "districtId": 40,
+    "districtName": "วังทองหลาง"
+  },
+  "maximumPoint": {
+    "value": 94,
+    "year": 2562,
+    "districtId": 40,
+    "districtName": "วังทองหลาง"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 2,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 94
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 90
+    },
+    {
+      "ranked": 3,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2560,
+      "value": null
+    }
+  ],
+  "sampling": {
+    "count": 60,
+    "aboveThresholdCount": 49
+  }
+}

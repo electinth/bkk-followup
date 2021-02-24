@@ -1,0 +1,119 @@
+{
+  "value": 1,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": 12,
+    "2561": 1,
+    "2562": 1
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2561,
+    "districtId": 32,
+    "districtName": "พระนคร"
+  },
+  "maximumPoint": {
+    "value": 12,
+    "year": 2560,
+    "districtId": 32,
+    "districtName": "พระนคร"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 405674500,
+      "focused": 8120900
+    },
+    "2556": {
+      "all": 414630600,
+      "focused": 7444500
+    },
+    "2557": {
+      "all": 414630600,
+      "focused": 7444500
+    },
+    "2558": {
+      "all": 371239600,
+      "focused": 7406000
+    },
+    "2559": {
+      "all": 381094800,
+      "focused": 7609900
+    },
+    "2560": {
+      "all": 411554000,
+      "focused": 7460400
+    },
+    "2561": {
+      "all": 396661840,
+      "focused": 7862600
+    },
+    "2562": {
+      "all": 403744000,
+      "focused": 8120700
+    }
+  },
+  "budgetOverall": {
+    "all": 3199229940,
+    "focused": 61469500
+  },
+  "ranked": 26,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2560,
+      "value": 12
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 1
+    },
+    {
+      "ranked": 3,
+      "year": 2562,
+      "value": 1
+    },
+    {
+      "ranked": 4,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2559,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนสนามไชย",
+      "description": "จากซอยเศรษฐการ ถึงถนนท้ายวังและรอบสนามหลวง"
+    }
+  ],
+  "meanFloodLevel": 17.9,
+  "meanFloodLevelMaximumPoint": {
+    "value": 17.9,
+    "year": 2562,
+    "districtId": 32,
+    "districtName": "พระนคร"
+  }
+}

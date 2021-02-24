@@ -1,0 +1,73 @@
+{
+  "value": 7,
+  "valuePerYear": {
+    "2555": 10.95,
+    "2556": 7.22,
+    "2557": 7.22,
+    "2558": 11.49,
+    "2559": 10.17,
+    "2560": 6.53,
+    "2561": 6.45,
+    "2562": 7
+  },
+  "minimumPoint": {
+    "value": 6.45,
+    "year": 2561,
+    "districtId": 9,
+    "districtName": "ดุสิต"
+  },
+  "maximumPoint": {
+    "value": 11.49,
+    "year": 2558,
+    "districtId": 9,
+    "districtName": "ดุสิต"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 38,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 11.49
+    },
+    {
+      "ranked": 2,
+      "year": 2555,
+      "value": 10.95
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 10.17
+    },
+    {
+      "ranked": 4,
+      "year": 2556,
+      "value": 7.22
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 7.22
+    },
+    {
+      "ranked": 6,
+      "year": 2562,
+      "value": 7
+    },
+    {
+      "ranked": 7,
+      "year": 2560,
+      "value": 6.53
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 6.45
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "value": 24,
+  "valuePerYear": {
+    "2555": 54,
+    "2556": 14,
+    "2557": 39,
+    "2558": 66,
+    "2559": 54,
+    "2560": 34,
+    "2561": 12,
+    "2562": 24
+  },
+  "minimumPoint": {
+    "value": 12,
+    "year": 2561,
+    "districtId": 30,
+    "districtName": "พญาไท"
+  },
+  "maximumPoint": {
+    "value": 66,
+    "year": 2558,
+    "districtId": 30,
+    "districtName": "พญาไท"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 292937300,
+      "focused": 9754300
+    },
+    "2556": {
+      "all": 283882000,
+      "focused": 9276700
+    },
+    "2557": {
+      "all": 283882000,
+      "focused": 9276700
+    },
+    "2558": {
+      "all": 275719800,
+      "focused": 12635500
+    },
+    "2559": {
+      "all": 296528900,
+      "focused": 13702900
+    },
+    "2560": {
+      "all": 339709200,
+      "focused": 13177800
+    },
+    "2561": {
+      "all": 322168840,
+      "focused": 13395600
+    },
+    "2562": {
+      "all": 305422000,
+      "focused": 17615900
+    }
+  },
+  "budgetOverall": {
+    "all": 2400250040,
+    "focused": 98835400
+  },
+  "ranked": 7,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 66
+    },
+    {
+      "ranked": 2,
+      "year": 2555,
+      "value": 54
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 54
+    },
+    {
+      "ranked": 4,
+      "year": 2557,
+      "value": 39
+    },
+    {
+      "ranked": 5,
+      "year": 2560,
+      "value": 34
+    },
+    {
+      "ranked": 6,
+      "year": 2562,
+      "value": 24
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 14
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 12
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนประดิพัทธ์",
+      "description": "บริเวณแยกสะพานควาย"
+    },
+    {
+      "name": "ถนนพหลโยธิน",
+      "description": "จากคลองสามเสน ถึงคลองบางซื่อ"
+    },
+    {
+      "name": "ถนนพระราม 6",
+      "description": "บริเวณช่วงทางด่วน"
+    },
+    {
+      "name": "ถนนสุทธิสารวินิจฉัย",
+      "description": "ตลอดสาย"
+    },
+    {
+      "name": "ถนนวิภาวดีรังสิต",
+      "description": "จากแยกสุทธิสาร ถึงคลองบางซื่อ"
+    }
+  ],
+  "meanFloodLevel": 34,
+  "meanFloodLevelMaximumPoint": {
+    "value": 34.7,
+    "year": 2558,
+    "districtId": 30,
+    "districtName": "พญาไท"
+  }
+}

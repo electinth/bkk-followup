@@ -1,0 +1,107 @@
+{
+  "value": 1.75,
+  "valuePerYear": {
+    "2555": 1.06,
+    "2556": 1.13,
+    "2557": 1.13,
+    "2558": 1.41,
+    "2559": 1.53,
+    "2560": 1.6,
+    "2561": 1.73,
+    "2562": 1.75
+  },
+  "minimumPoint": {
+    "value": 1.06,
+    "year": 2555,
+    "districtId": 40,
+    "districtName": "วังทองหลาง"
+  },
+  "maximumPoint": {
+    "value": 1.75,
+    "year": 2562,
+    "districtId": 40,
+    "districtName": "วังทองหลาง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 302517600,
+      "focused": 16089600
+    },
+    "2556": {
+      "all": 286956600,
+      "focused": 16475400
+    },
+    "2557": {
+      "all": 286956600,
+      "focused": 16475400
+    },
+    "2558": {
+      "all": 351007200,
+      "focused": 16887800
+    },
+    "2559": {
+      "all": 381680600,
+      "focused": 12548900
+    },
+    "2560": {
+      "all": 577339000,
+      "focused": 16770300
+    },
+    "2561": {
+      "all": 310851840,
+      "focused": 15976000
+    },
+    "2562": {
+      "all": 344320000,
+      "focused": 20407500
+    }
+  },
+  "budgetOverall": {
+    "all": 2841629440,
+    "focused": 131630900
+  },
+  "ranked": 49,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 1.75
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 1.73
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 1.6
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 1.53
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 1.41
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 1.13
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 1.13
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 1.06
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.01
+}

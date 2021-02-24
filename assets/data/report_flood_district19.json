@@ -1,0 +1,113 @@
+{
+  "value": 34,
+  "valuePerYear": {
+    "2555": null,
+    "2556": 14,
+    "2557": 22,
+    "2558": 12,
+    "2559": 1,
+    "2560": null,
+    "2561": 13,
+    "2562": 34
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2559,
+    "districtId": 19,
+    "districtName": "บางคอแหลม"
+  },
+  "maximumPoint": {
+    "value": 34,
+    "year": 2562,
+    "districtId": 19,
+    "districtName": "บางคอแหลม"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 289631400,
+      "focused": 20368500
+    },
+    "2556": {
+      "all": 301839000,
+      "focused": 22271400
+    },
+    "2557": {
+      "all": 301839000,
+      "focused": 22271400
+    },
+    "2558": {
+      "all": 280141100,
+      "focused": 9153000
+    },
+    "2559": {
+      "all": 295204600,
+      "focused": 21269800
+    },
+    "2560": {
+      "all": 305808000,
+      "focused": 21694700
+    },
+    "2561": {
+      "all": 300214840,
+      "focused": 33356000
+    },
+    "2562": {
+      "all": 284845000,
+      "focused": 13302600
+    }
+  },
+  "budgetOverall": {
+    "all": 2359522940,
+    "focused": 163687400
+  },
+  "ranked": 6,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 34
+    },
+    {
+      "ranked": 2,
+      "year": 2557,
+      "value": 22
+    },
+    {
+      "ranked": 3,
+      "year": 2556,
+      "value": 14
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 13
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 12
+    },
+    {
+      "ranked": 6,
+      "year": 2559,
+      "value": 1
+    },
+    {
+      "ranked": 7,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2560,
+      "value": null
+    }
+  ],
+  "meanFloodLevel": 29.1,
+  "meanFloodLevelMaximumPoint": {
+    "value": 30.8,
+    "year": 2561,
+    "districtId": 19,
+    "districtName": "บางคอแหลม"
+  }
+}

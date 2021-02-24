@@ -1,0 +1,117 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 34,
+    "districtName": "มีนบุรี"
+  },
+  "maximumPoint": {
+    "districtId": 34,
+    "districtName": "มีนบุรี"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 383759100,
+      "focused": 16777300
+    },
+    "2556": {
+      "all": 410133000,
+      "focused": 21508900
+    },
+    "2557": {
+      "all": 410133000,
+      "focused": 21508900
+    },
+    "2558": {
+      "all": 459847900,
+      "focused": 22037600
+    },
+    "2559": {
+      "all": 442656300,
+      "focused": 30514900
+    },
+    "2560": {
+      "all": 442360500,
+      "focused": 19490100
+    },
+    "2561": {
+      "all": 457559040,
+      "focused": 28759600
+    },
+    "2562": {
+      "all": 479303600,
+      "focused": 26881800
+    }
+  },
+  "budgetOverall": {
+    "all": 3485752440,
+    "focused": 187479100
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนสุวินทวงศ์",
+      "description": "จากหน้าการไฟฟ้ามีนบุรีถึงแยกราษฎร์อุทิศ"
+    },
+    {
+      "name": "ถนนสุวินทวงศ์",
+      "description": "ช่วงจากคลองสามวา ถึงคลองแสนแสบ"
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 34,
+    "districtName": "มีนบุรี"
+  }
+}

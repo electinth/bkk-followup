@@ -1,0 +1,73 @@
+{
+  "value": 9.73,
+  "valuePerYear": {
+    "2555": 7.06,
+    "2556": 6.91,
+    "2557": 6.91,
+    "2558": 9.7,
+    "2559": 11.01,
+    "2560": 8.58,
+    "2561": 8.67,
+    "2562": 9.73
+  },
+  "minimumPoint": {
+    "value": 6.91,
+    "year": 2556,
+    "districtId": 14,
+    "districtName": "บางกอกน้อย"
+  },
+  "maximumPoint": {
+    "value": 11.01,
+    "year": 2559,
+    "districtId": 14,
+    "districtName": "บางกอกน้อย"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 30,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 11.01
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 9.73
+    },
+    {
+      "ranked": 3,
+      "year": 2558,
+      "value": 9.7
+    },
+    {
+      "ranked": 4,
+      "year": 2561,
+      "value": 8.67
+    },
+    {
+      "ranked": 5,
+      "year": 2560,
+      "value": 8.58
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 7.06
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 6.91
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 6.91
+    }
+  ]
+}

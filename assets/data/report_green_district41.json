@@ -1,0 +1,107 @@
+{
+  "value": 1.67,
+  "valuePerYear": {
+    "2555": 1.03,
+    "2556": 1.1,
+    "2557": 1.1,
+    "2558": 1.32,
+    "2559": 1.51,
+    "2560": 1.51,
+    "2561": 1.68,
+    "2562": 1.67
+  },
+  "minimumPoint": {
+    "value": 1.03,
+    "year": 2555,
+    "districtId": 41,
+    "districtName": "วัฒนา"
+  },
+  "maximumPoint": {
+    "value": 1.68,
+    "year": 2561,
+    "districtId": 41,
+    "districtName": "วัฒนา"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 294702500,
+      "focused": 8434100
+    },
+    "2556": {
+      "all": 304874600,
+      "focused": 9213300
+    },
+    "2557": {
+      "all": 304874600,
+      "focused": 9213300
+    },
+    "2558": {
+      "all": 289145900,
+      "focused": 9920000
+    },
+    "2559": {
+      "all": 315368500,
+      "focused": 8612400
+    },
+    "2560": {
+      "all": 327999800,
+      "focused": 8979800
+    },
+    "2561": {
+      "all": 339603840,
+      "focused": 9312100
+    },
+    "2562": {
+      "all": 331243700,
+      "focused": 14316800
+    }
+  },
+  "budgetOverall": {
+    "all": 2507813440,
+    "focused": 78001800
+  },
+  "ranked": 50,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 1.68
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 1.67
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 1.51
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 1.51
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 1.32
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 1.1
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 1.1
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 1.03
+    }
+  ],
+  "publicGreenSpacePerCapita": 0
+}

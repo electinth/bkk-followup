@@ -1,0 +1,127 @@
+{
+  "value": 1,
+  "valuePerYear": {
+    "2555": 16,
+    "2556": 81,
+    "2557": 5,
+    "2558": 11,
+    "2559": 4,
+    "2560": 1,
+    "2561": 15,
+    "2562": 1
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2560,
+    "districtId": 41,
+    "districtName": "วัฒนา"
+  },
+  "maximumPoint": {
+    "value": 81,
+    "year": 2556,
+    "districtId": 41,
+    "districtName": "วัฒนา"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 294702500,
+      "focused": 7376400
+    },
+    "2556": {
+      "all": 304874600,
+      "focused": 8528100
+    },
+    "2557": {
+      "all": 304874600,
+      "focused": 8528100
+    },
+    "2558": {
+      "all": 289145900,
+      "focused": 10678200
+    },
+    "2559": {
+      "all": 315368500,
+      "focused": 8612400
+    },
+    "2560": {
+      "all": 327999800,
+      "focused": 8979800
+    },
+    "2561": {
+      "all": 339603840,
+      "focused": 9312100
+    },
+    "2562": {
+      "all": 331243700,
+      "focused": 9698800
+    }
+  },
+  "budgetOverall": {
+    "all": 2507813440,
+    "focused": 71713900
+  },
+  "ranked": 27,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2556,
+      "value": 81
+    },
+    {
+      "ranked": 2,
+      "year": 2555,
+      "value": 16
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 15
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": 11
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 5
+    },
+    {
+      "ranked": 6,
+      "year": 2559,
+      "value": 4
+    },
+    {
+      "ranked": 7,
+      "year": 2560,
+      "value": 1
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": 1
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนสุขุมวิท",
+      "description": "จากแยกอโศก ถึงสุขุมวิท 71"
+    },
+    {
+      "name": "ถนนเอกมัย",
+      "description": "จากปากซอยสุขุมวิท 63 ถึงคลองแสนแสบ"
+    },
+    {
+      "name": "ถนนอโศกมนตรี",
+      "description": "บริเวณหน้าตึกแกรมมี่"
+    }
+  ],
+  "meanFloodLevel": 29.5,
+  "meanFloodLevelMaximumPoint": {
+    "value": 33.9,
+    "year": 2558,
+    "districtId": 41,
+    "districtName": "วัฒนา"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "value": 1.94,
+  "valuePerYear": {
+    "2555": 1.51,
+    "2556": 1.56,
+    "2557": 1.56,
+    "2558": 1.63,
+    "2559": 1.76,
+    "2560": 1.81,
+    "2561": 1.95,
+    "2562": 1.94
+  },
+  "minimumPoint": {
+    "value": 1.51,
+    "year": 2555,
+    "districtId": 21,
+    "districtName": "บางซื่อ"
+  },
+  "maximumPoint": {
+    "value": 1.95,
+    "year": 2561,
+    "districtId": 21,
+    "districtName": "บางซื่อ"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 299700300,
+      "focused": 12421300
+    },
+    "2556": {
+      "all": 339375400,
+      "focused": 15320000
+    },
+    "2557": {
+      "all": 339375400,
+      "focused": 15320000
+    },
+    "2558": {
+      "all": 301421000,
+      "focused": 14099300
+    },
+    "2559": {
+      "all": 325661500,
+      "focused": 27416500
+    },
+    "2560": {
+      "all": 323687000,
+      "focused": 23178200
+    },
+    "2561": {
+      "all": 326862840,
+      "focused": 21341100
+    },
+    "2562": {
+      "all": 336021000,
+      "focused": 17065700
+    }
+  },
+  "budgetOverall": {
+    "all": 2592104440,
+    "focused": 146162100
+  },
+  "ranked": 48,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 1.95
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 1.94
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 1.81
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 1.76
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 1.63
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 1.56
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 1.56
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 1.51
+    }
+  ],
+  "publicGreenSpacePerCapita": 0
+}

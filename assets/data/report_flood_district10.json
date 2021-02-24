@@ -1,0 +1,117 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 10,
+    "districtName": "ตลิ่งชัน"
+  },
+  "maximumPoint": {
+    "districtId": 10,
+    "districtName": "ตลิ่งชัน"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 274313100,
+      "focused": 8098500
+    },
+    "2556": {
+      "all": 335303500,
+      "focused": 42596100
+    },
+    "2557": {
+      "all": 335303500,
+      "focused": 42596100
+    },
+    "2558": {
+      "all": 321967300,
+      "focused": 9582600
+    },
+    "2559": {
+      "all": 314596100,
+      "focused": 10131700
+    },
+    "2560": {
+      "all": 350198000,
+      "focused": 10130000
+    },
+    "2561": {
+      "all": 345354840,
+      "focused": 18771700
+    },
+    "2562": {
+      "all": 349026000,
+      "focused": 34917700
+    }
+  },
+  "budgetOverall": {
+    "all": 2626062340,
+    "focused": 176824400
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนฉิมพลี",
+      "description": "จากอู่สง่า ถึงถนนบรมราชชนนี"
+    },
+    {
+      "name": "ถนนเลียบทางรถไฟสายใต้ฝั่งขาออก",
+      "description": "บริเวณวงเวียนชัยพฤกษ์"
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 10,
+    "districtName": "ตลิ่งชัน"
+  }
+}

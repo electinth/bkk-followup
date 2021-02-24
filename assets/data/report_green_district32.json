@@ -1,0 +1,107 @@
+{
+  "value": 13.17,
+  "valuePerYear": {
+    "2555": 9.74,
+    "2556": 10,
+    "2557": 10,
+    "2558": 10.86,
+    "2559": 11.54,
+    "2560": 12.25,
+    "2561": 12.46,
+    "2562": 13.17
+  },
+  "minimumPoint": {
+    "value": 9.74,
+    "year": 2555,
+    "districtId": 32,
+    "districtName": "พระนคร"
+  },
+  "maximumPoint": {
+    "value": 13.17,
+    "year": 2562,
+    "districtId": 32,
+    "districtName": "พระนคร"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 405674500,
+      "focused": 33282300
+    },
+    "2556": {
+      "all": 414630600,
+      "focused": 34647200
+    },
+    "2557": {
+      "all": 414630600,
+      "focused": 34647200
+    },
+    "2558": {
+      "all": 371239600,
+      "focused": 24618700
+    },
+    "2559": {
+      "all": 381094800,
+      "focused": 7609900
+    },
+    "2560": {
+      "all": 411554000,
+      "focused": 7460400
+    },
+    "2561": {
+      "all": 396661840,
+      "focused": 7862600
+    },
+    "2562": {
+      "all": 403744000,
+      "focused": 27781600
+    }
+  },
+  "budgetOverall": {
+    "all": 3199229940,
+    "focused": 177909900
+  },
+  "ranked": 10,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 13.17
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 12.46
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 12.25
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 11.54
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 10.86
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 10
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 10
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 9.74
+    }
+  ],
+  "publicGreenSpacePerCapita": 4.28
+}

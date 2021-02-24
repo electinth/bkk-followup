@@ -1,0 +1,107 @@
+{
+  "value": 6.08,
+  "valuePerYear": {
+    "2555": 1.39,
+    "2556": 1.52,
+    "2557": 1.52,
+    "2558": 12.3,
+    "2559": 5.49,
+    "2560": 5.59,
+    "2561": 5.78,
+    "2562": 6.08
+  },
+  "minimumPoint": {
+    "value": 1.39,
+    "year": 2555,
+    "districtId": 44,
+    "districtName": "สัมพันธวงศ์"
+  },
+  "maximumPoint": {
+    "value": 12.3,
+    "year": 2558,
+    "districtId": 44,
+    "districtName": "สัมพันธวงศ์"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 198834600,
+      "focused": 6047100
+    },
+    "2556": {
+      "all": 206330000,
+      "focused": 5435600
+    },
+    "2557": {
+      "all": 206330000,
+      "focused": 5435600
+    },
+    "2558": {
+      "all": 217841200,
+      "focused": 5568200
+    },
+    "2559": {
+      "all": 197059600,
+      "focused": 5128400
+    },
+    "2560": {
+      "all": 195928000,
+      "focused": 5221800
+    },
+    "2561": {
+      "all": 199662740,
+      "focused": 5358200
+    },
+    "2562": {
+      "all": 196045300,
+      "focused": 6599300
+    }
+  },
+  "budgetOverall": {
+    "all": 1618031440,
+    "focused": 44794200
+  },
+  "ranked": 16,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2558,
+      "value": 12.3
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 6.08
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 5.78
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 5.59
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": 5.49
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 1.52
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 1.52
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 1.39
+    }
+  ],
+  "publicGreenSpacePerCapita": 0
+}

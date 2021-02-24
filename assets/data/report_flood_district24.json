@@ -1,0 +1,107 @@
+{
+  "value": null,
+  "valuePerYear": {
+    "2555": null,
+    "2556": null,
+    "2557": null,
+    "2558": null,
+    "2559": null,
+    "2560": null,
+    "2561": null,
+    "2562": null
+  },
+  "minimumPoint": {
+    "districtId": 24,
+    "districtName": "บางพลัด"
+  },
+  "maximumPoint": {
+    "districtId": 24,
+    "districtName": "บางพลัด"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 279963300,
+      "focused": 16900400
+    },
+    "2556": {
+      "all": 289107800,
+      "focused": 21729700
+    },
+    "2557": {
+      "all": 289107800,
+      "focused": 21729700
+    },
+    "2558": {
+      "all": 298344300,
+      "focused": 10923700
+    },
+    "2559": {
+      "all": 313443600,
+      "focused": 26438000
+    },
+    "2560": {
+      "all": 326300300,
+      "focused": 21156400
+    },
+    "2561": {
+      "all": 312289840,
+      "focused": 16459200
+    },
+    "2562": {
+      "all": 302111700,
+      "focused": 24931800
+    }
+  },
+  "budgetOverall": {
+    "all": 2410668640,
+    "focused": 160268900
+  },
+  "ranked": null,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": null
+    },
+    {
+      "ranked": 2,
+      "year": 2556,
+      "value": null
+    },
+    {
+      "ranked": 3,
+      "year": 2557,
+      "value": null
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": null
+    },
+    {
+      "ranked": 5,
+      "year": 2559,
+      "value": null
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": null
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": null
+    },
+    {
+      "ranked": 8,
+      "year": 2562,
+      "value": null
+    }
+  ],
+  "meanFloodLevel": null,
+  "meanFloodLevelMaximumPoint": {
+    "districtId": 24,
+    "districtName": "บางพลัด"
+  }
+}

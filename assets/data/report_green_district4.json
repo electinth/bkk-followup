@@ -1,0 +1,107 @@
+{
+  "value": 25.22,
+  "valuePerYear": {
+    "2555": 9.39,
+    "2556": 11.14,
+    "2557": 11.14,
+    "2558": 21.6,
+    "2559": 22.64,
+    "2560": 22.35,
+    "2561": 24.95,
+    "2562": 25.22
+  },
+  "minimumPoint": {
+    "value": 9.39,
+    "year": 2555,
+    "districtId": 4,
+    "districtName": "คันนายาว"
+  },
+  "maximumPoint": {
+    "value": 25.22,
+    "year": 2562,
+    "districtId": 4,
+    "districtName": "คันนายาว"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 309730000,
+      "focused": 15456700
+    },
+    "2556": {
+      "all": 266988000,
+      "focused": 21253400
+    },
+    "2557": {
+      "all": 266988000,
+      "focused": 21253400
+    },
+    "2558": {
+      "all": 254206300,
+      "focused": 22463600
+    },
+    "2559": {
+      "all": 273378500,
+      "focused": 14573600
+    },
+    "2560": {
+      "all": 285347600,
+      "focused": 14748100
+    },
+    "2561": {
+      "all": 278136840,
+      "focused": 21098000
+    },
+    "2562": {
+      "all": 280056500,
+      "focused": 27797100
+    }
+  },
+  "budgetOverall": {
+    "all": 2214831740,
+    "focused": 158643900
+  },
+  "ranked": 1,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 25.22
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 24.95
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 22.64
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 22.35
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 21.6
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 11.14
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 11.14
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 9.39
+    }
+  ],
+  "publicGreenSpacePerCapita": 0
+}

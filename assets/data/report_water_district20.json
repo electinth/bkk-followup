@@ -1,0 +1,73 @@
+{
+  "value": 7.29,
+  "valuePerYear": {
+    "2555": 7.44,
+    "2556": 7.23,
+    "2557": 7.23,
+    "2558": 10.75,
+    "2559": 12.65,
+    "2560": 6.79,
+    "2561": 7,
+    "2562": 7.29
+  },
+  "minimumPoint": {
+    "value": 6.79,
+    "year": 2560,
+    "districtId": 20,
+    "districtName": "บางแค"
+  },
+  "maximumPoint": {
+    "value": 12.65,
+    "year": 2559,
+    "districtId": 20,
+    "districtName": "บางแค"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 36,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 12.65
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 10.75
+    },
+    {
+      "ranked": 3,
+      "year": 2555,
+      "value": 7.44
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 7.29
+    },
+    {
+      "ranked": 5,
+      "year": 2556,
+      "value": 7.23
+    },
+    {
+      "ranked": 6,
+      "year": 2557,
+      "value": 7.23
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": 7
+    },
+    {
+      "ranked": 8,
+      "year": 2560,
+      "value": 6.79
+    }
+  ]
+}

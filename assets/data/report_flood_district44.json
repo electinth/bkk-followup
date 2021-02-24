@@ -1,0 +1,123 @@
+{
+  "value": 4,
+  "valuePerYear": {
+    "2555": 3,
+    "2556": 15,
+    "2557": 1,
+    "2558": 6,
+    "2559": 13,
+    "2560": 1,
+    "2561": 1,
+    "2562": 4
+  },
+  "minimumPoint": {
+    "value": 1,
+    "year": 2557,
+    "districtId": 44,
+    "districtName": "สัมพันธวงศ์"
+  },
+  "maximumPoint": {
+    "value": 15,
+    "year": 2556,
+    "districtId": 44,
+    "districtName": "สัมพันธวงศ์"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 198834600,
+      "focused": 3836400
+    },
+    "2556": {
+      "all": 206330000,
+      "focused": 4594200
+    },
+    "2557": {
+      "all": 206330000,
+      "focused": 4594200
+    },
+    "2558": {
+      "all": 217841200,
+      "focused": 4839600
+    },
+    "2559": {
+      "all": 197059600,
+      "focused": 5128400
+    },
+    "2560": {
+      "all": 195928000,
+      "focused": 5221800
+    },
+    "2561": {
+      "all": 199662740,
+      "focused": 5358200
+    },
+    "2562": {
+      "all": 196045300,
+      "focused": 5996800
+    }
+  },
+  "budgetOverall": {
+    "all": 1618031440,
+    "focused": 39569600
+  },
+  "ranked": 23,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2556,
+      "value": 15
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 13
+    },
+    {
+      "ranked": 3,
+      "year": 2558,
+      "value": 6
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 4
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 3
+    },
+    {
+      "ranked": 6,
+      "year": 2557,
+      "value": 1
+    },
+    {
+      "ranked": 7,
+      "year": 2560,
+      "value": 1
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 1
+    }
+  ],
+  "floodHotspots": [
+    {
+      "name": "ถนนเจริญกรุง",
+      "description": "จากถนนแปลงนาม ถึงแยกหมอมี"
+    },
+    {
+      "name": "ถนนเยาวราชฝั่งเหนือ",
+      "description": "จากถนนทรงสวัสดิ์ถึงถนนราชวงศ์"
+    }
+  ],
+  "meanFloodLevel": 13.2,
+  "meanFloodLevelMaximumPoint": {
+    "value": 28.8,
+    "year": 2561,
+    "districtId": 44,
+    "districtName": "สัมพันธวงศ์"
+  }
+}

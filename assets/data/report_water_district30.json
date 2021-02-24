@@ -1,0 +1,73 @@
+{
+  "value": 9.04,
+  "valuePerYear": {
+    "2555": 18.88,
+    "2556": 13.33,
+    "2557": 13.33,
+    "2558": 14.71,
+    "2559": 19.65,
+    "2560": 11.61,
+    "2561": 8,
+    "2562": 9.04
+  },
+  "minimumPoint": {
+    "value": 8,
+    "year": 2561,
+    "districtId": 30,
+    "districtName": "พญาไท"
+  },
+  "maximumPoint": {
+    "value": 19.65,
+    "year": 2559,
+    "districtId": 30,
+    "districtName": "พญาไท"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 33,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 19.65
+    },
+    {
+      "ranked": 2,
+      "year": 2555,
+      "value": 18.88
+    },
+    {
+      "ranked": 3,
+      "year": 2558,
+      "value": 14.71
+    },
+    {
+      "ranked": 4,
+      "year": 2556,
+      "value": 13.33
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 13.33
+    },
+    {
+      "ranked": 6,
+      "year": 2560,
+      "value": 11.61
+    },
+    {
+      "ranked": 7,
+      "year": 2562,
+      "value": 9.04
+    },
+    {
+      "ranked": 8,
+      "year": 2561,
+      "value": 8
+    }
+  ]
+}

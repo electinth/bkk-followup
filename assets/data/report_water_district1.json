@@ -1,0 +1,73 @@
+{
+  "value": 31.05,
+  "valuePerYear": {
+    "2555": 36.12,
+    "2556": 25.57,
+    "2557": 25.57,
+    "2558": 29.6,
+    "2559": 32.53,
+    "2560": 32.02,
+    "2561": 30.14,
+    "2562": 31.05
+  },
+  "minimumPoint": {
+    "value": 25.57,
+    "year": 2556,
+    "districtId": 1,
+    "districtName": "คลองเตย"
+  },
+  "maximumPoint": {
+    "value": 36.12,
+    "year": 2555,
+    "districtId": 1,
+    "districtName": "คลองเตย"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 2,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2555,
+      "value": 36.12
+    },
+    {
+      "ranked": 2,
+      "year": 2559,
+      "value": 32.53
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 32.02
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 31.05
+    },
+    {
+      "ranked": 5,
+      "year": 2561,
+      "value": 30.14
+    },
+    {
+      "ranked": 6,
+      "year": 2558,
+      "value": 29.6
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 25.57
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 25.57
+    }
+  ]
+}

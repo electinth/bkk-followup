@@ -1,0 +1,107 @@
+{
+  "value": 5.16,
+  "valuePerYear": {
+    "2555": 4.63,
+    "2556": 4.78,
+    "2557": 4.78,
+    "2558": 4.34,
+    "2559": 4.62,
+    "2560": 4.93,
+    "2561": 5.16,
+    "2562": 5.16
+  },
+  "minimumPoint": {
+    "value": 4.34,
+    "year": 2558,
+    "districtId": 47,
+    "districtName": "หนองแขม"
+  },
+  "maximumPoint": {
+    "value": 5.16,
+    "year": 2561,
+    "districtId": 47,
+    "districtName": "หนองแขม"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 407635400,
+      "focused": 26369700
+    },
+    "2556": {
+      "all": 391026000,
+      "focused": 28418900
+    },
+    "2557": {
+      "all": 391026000,
+      "focused": 28418900
+    },
+    "2558": {
+      "all": 461082800,
+      "focused": 23180500
+    },
+    "2559": {
+      "all": 421736500,
+      "focused": 15102700
+    },
+    "2560": {
+      "all": 434254000,
+      "focused": 15818500
+    },
+    "2561": {
+      "all": 405669840,
+      "focused": 15482700
+    },
+    "2562": {
+      "all": 395899000,
+      "focused": 34738100
+    }
+  },
+  "budgetOverall": {
+    "all": 3308329540,
+    "focused": 187530000
+  },
+  "ranked": 27,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 5.16
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 5.16
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 4.93
+    },
+    {
+      "ranked": 4,
+      "year": 2556,
+      "value": 4.78
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 4.78
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 4.63
+    },
+    {
+      "ranked": 7,
+      "year": 2559,
+      "value": 4.62
+    },
+    {
+      "ranked": 8,
+      "year": 2558,
+      "value": 4.34
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.07
+}

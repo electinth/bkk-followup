@@ -1,0 +1,107 @@
+{
+  "value": 19.21,
+  "valuePerYear": {
+    "2555": 13,
+    "2556": 13.59,
+    "2557": 13.59,
+    "2558": 14.94,
+    "2559": 15.65,
+    "2560": 16.06,
+    "2561": 18.54,
+    "2562": 19.21
+  },
+  "minimumPoint": {
+    "value": 13,
+    "year": 2555,
+    "districtId": 27,
+    "districtName": "ปทุมวัน"
+  },
+  "maximumPoint": {
+    "value": 19.21,
+    "year": 2562,
+    "districtId": 27,
+    "districtName": "ปทุมวัน"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 319075000,
+      "focused": 10992100
+    },
+    "2556": {
+      "all": 293335000,
+      "focused": 11523200
+    },
+    "2557": {
+      "all": 293335000,
+      "focused": 11523200
+    },
+    "2558": {
+      "all": 342122300,
+      "focused": 16561300
+    },
+    "2559": {
+      "all": 324257100,
+      "focused": 6080500
+    },
+    "2560": {
+      "all": 331560000,
+      "focused": 5819700
+    },
+    "2561": {
+      "all": 319166840,
+      "focused": 5335900
+    },
+    "2562": {
+      "all": 336891000,
+      "focused": 19103600
+    }
+  },
+  "budgetOverall": {
+    "all": 2559742240,
+    "focused": 86939500
+  },
+  "ranked": 3,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 19.21
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 18.54
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 16.06
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 15.65
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 14.94
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 13.59
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 13.59
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 13
+    }
+  ],
+  "publicGreenSpacePerCapita": 11.82
+}

@@ -1,0 +1,107 @@
+{
+  "value": 3.15,
+  "valuePerYear": {
+    "2555": 1.55,
+    "2556": 1.73,
+    "2557": 1.73,
+    "2558": 2.76,
+    "2559": 2.95,
+    "2560": 2.93,
+    "2561": 3.13,
+    "2562": 3.15
+  },
+  "minimumPoint": {
+    "value": 1.55,
+    "year": 2555,
+    "districtId": 6,
+    "districtName": "จอมทอง"
+  },
+  "maximumPoint": {
+    "value": 3.15,
+    "year": 2562,
+    "districtId": 6,
+    "districtName": "จอมทอง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 431947600,
+      "focused": 15741100
+    },
+    "2556": {
+      "all": 430018800,
+      "focused": 16305700
+    },
+    "2557": {
+      "all": 430018800,
+      "focused": 16305700
+    },
+    "2558": {
+      "all": 433937700,
+      "focused": 16392000
+    },
+    "2559": {
+      "all": 427280600,
+      "focused": 17085200
+    },
+    "2560": {
+      "all": 436246000,
+      "focused": 34574200
+    },
+    "2561": {
+      "all": 395992440,
+      "focused": 17319500
+    },
+    "2562": {
+      "all": 373745200,
+      "focused": 20653400
+    }
+  },
+  "budgetOverall": {
+    "all": 3359187140,
+    "focused": 154376800
+  },
+  "ranked": 39,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2562,
+      "value": 3.15
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 3.13
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 2.95
+    },
+    {
+      "ranked": 4,
+      "year": 2560,
+      "value": 2.93
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 2.76
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 1.73
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 1.73
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 1.55
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.21
+}

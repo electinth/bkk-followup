@@ -1,0 +1,107 @@
+{
+  "value": 5.17,
+  "valuePerYear": {
+    "2555": 2.84,
+    "2556": 2.93,
+    "2557": 2.93,
+    "2558": 4.18,
+    "2559": 4.43,
+    "2560": 4.48,
+    "2561": 5.34,
+    "2562": 5.17
+  },
+  "minimumPoint": {
+    "value": 2.84,
+    "year": 2555,
+    "districtId": 50,
+    "districtName": "ห้วยขวาง"
+  },
+  "maximumPoint": {
+    "value": 5.34,
+    "year": 2561,
+    "districtId": 50,
+    "districtName": "ห้วยขวาง"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 290675000,
+      "focused": 19690800
+    },
+    "2556": {
+      "all": 312859600,
+      "focused": 20764000
+    },
+    "2557": {
+      "all": 312859600,
+      "focused": 20764000
+    },
+    "2558": {
+      "all": 320055800,
+      "focused": 23065200
+    },
+    "2559": {
+      "all": 318754500,
+      "focused": 14405900
+    },
+    "2560": {
+      "all": 337698200,
+      "focused": 16096700
+    },
+    "2561": {
+      "all": 339700840,
+      "focused": 18468200
+    },
+    "2562": {
+      "all": 344432000,
+      "focused": 25269600
+    }
+  },
+  "budgetOverall": {
+    "all": 2577035540,
+    "focused": 158524400
+  },
+  "ranked": 26,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2561,
+      "value": 5.34
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 5.17
+    },
+    {
+      "ranked": 3,
+      "year": 2560,
+      "value": 4.48
+    },
+    {
+      "ranked": 4,
+      "year": 2559,
+      "value": 4.43
+    },
+    {
+      "ranked": 5,
+      "year": 2558,
+      "value": 4.18
+    },
+    {
+      "ranked": 6,
+      "year": 2556,
+      "value": 2.93
+    },
+    {
+      "ranked": 7,
+      "year": 2557,
+      "value": 2.93
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 2.84
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.51
+}

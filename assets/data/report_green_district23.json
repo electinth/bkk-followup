@@ -1,0 +1,107 @@
+{
+  "value": 8.59,
+  "valuePerYear": {
+    "2555": 6.8,
+    "2556": 7.61,
+    "2557": 7.61,
+    "2558": 8.79,
+    "2559": 9.02,
+    "2560": 6.86,
+    "2561": 6.98,
+    "2562": 8.59
+  },
+  "minimumPoint": {
+    "value": 6.8,
+    "year": 2555,
+    "districtId": 23,
+    "districtName": "บางบอน"
+  },
+  "maximumPoint": {
+    "value": 9.02,
+    "year": 2559,
+    "districtId": 23,
+    "districtName": "บางบอน"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 367449200,
+      "focused": 19356000
+    },
+    "2556": {
+      "all": 376547000,
+      "focused": 23545000
+    },
+    "2557": {
+      "all": 376547000,
+      "focused": 23545000
+    },
+    "2558": {
+      "all": 318168600,
+      "focused": 22282700
+    },
+    "2559": {
+      "all": 361793100,
+      "focused": 12763800
+    },
+    "2560": {
+      "all": 326827600,
+      "focused": 13297600
+    },
+    "2561": {
+      "all": 339805840,
+      "focused": 13589500
+    },
+    "2562": {
+      "all": 357892000,
+      "focused": 27916100
+    }
+  },
+  "budgetOverall": {
+    "all": 2825030340,
+    "focused": 156295700
+  },
+  "ranked": 12,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 9.02
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 8.79
+    },
+    {
+      "ranked": 3,
+      "year": 2562,
+      "value": 8.59
+    },
+    {
+      "ranked": 4,
+      "year": 2556,
+      "value": 7.61
+    },
+    {
+      "ranked": 5,
+      "year": 2557,
+      "value": 7.61
+    },
+    {
+      "ranked": 6,
+      "year": 2561,
+      "value": 6.98
+    },
+    {
+      "ranked": 7,
+      "year": 2560,
+      "value": 6.86
+    },
+    {
+      "ranked": 8,
+      "year": 2555,
+      "value": 6.8
+    }
+  ],
+  "publicGreenSpacePerCapita": 0
+}

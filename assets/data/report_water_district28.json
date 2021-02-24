@@ -1,0 +1,73 @@
+{
+  "value": 17.31,
+  "valuePerYear": {
+    "2555": 11.49,
+    "2556": 9.42,
+    "2557": 9.42,
+    "2558": 14.86,
+    "2559": 18.61,
+    "2560": 14.61,
+    "2561": 17.67,
+    "2562": 17.31
+  },
+  "minimumPoint": {
+    "value": 9.42,
+    "year": 2556,
+    "districtId": 28,
+    "districtName": "ประเวศ"
+  },
+  "maximumPoint": {
+    "value": 18.61,
+    "year": 2559,
+    "districtId": 28,
+    "districtName": "ประเวศ"
+  },
+  "budgetPerYear": {},
+  "budgetOverall": {
+    "all": 0,
+    "focused": 0
+  },
+  "ranked": 12,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 18.61
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 17.67
+    },
+    {
+      "ranked": 3,
+      "year": 2562,
+      "value": 17.31
+    },
+    {
+      "ranked": 4,
+      "year": 2558,
+      "value": 14.86
+    },
+    {
+      "ranked": 5,
+      "year": 2560,
+      "value": 14.61
+    },
+    {
+      "ranked": 6,
+      "year": 2555,
+      "value": 11.49
+    },
+    {
+      "ranked": 7,
+      "year": 2556,
+      "value": 9.42
+    },
+    {
+      "ranked": 8,
+      "year": 2557,
+      "value": 9.42
+    }
+  ]
+}

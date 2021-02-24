@@ -1,0 +1,107 @@
+{
+  "value": 5.63,
+  "valuePerYear": {
+    "2555": 5.93,
+    "2556": 6.07,
+    "2557": 6.07,
+    "2558": 6.31,
+    "2559": 6.57,
+    "2560": 5.29,
+    "2561": 5.6,
+    "2562": 5.63
+  },
+  "minimumPoint": {
+    "value": 5.29,
+    "year": 2560,
+    "districtId": 26,
+    "districtName": "บึงกุ่ม"
+  },
+  "maximumPoint": {
+    "value": 6.57,
+    "year": 2559,
+    "districtId": 26,
+    "districtName": "บึงกุ่ม"
+  },
+  "budgetPerYear": {
+    "2555": {
+      "all": 339766700,
+      "focused": 13366600
+    },
+    "2556": {
+      "all": 318237800,
+      "focused": 18492100
+    },
+    "2557": {
+      "all": 318237800,
+      "focused": 18492100
+    },
+    "2558": {
+      "all": 450382700,
+      "focused": 16093500
+    },
+    "2559": {
+      "all": 546951100,
+      "focused": 228240900
+    },
+    "2560": {
+      "all": 398313000,
+      "focused": 59890000
+    },
+    "2561": {
+      "all": 357998840,
+      "focused": 19249500
+    },
+    "2562": {
+      "all": 346746000,
+      "focused": 17826800
+    }
+  },
+  "budgetOverall": {
+    "all": 3076633940,
+    "focused": 391651500
+  },
+  "ranked": 21,
+  "rankings": [
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 6.57
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 6.31
+    },
+    {
+      "ranked": 3,
+      "year": 2556,
+      "value": 6.07
+    },
+    {
+      "ranked": 4,
+      "year": 2557,
+      "value": 6.07
+    },
+    {
+      "ranked": 5,
+      "year": 2555,
+      "value": 5.93
+    },
+    {
+      "ranked": 6,
+      "year": 2562,
+      "value": 5.63
+    },
+    {
+      "ranked": 7,
+      "year": 2561,
+      "value": 5.6
+    },
+    {
+      "ranked": 8,
+      "year": 2560,
+      "value": 5.29
+    }
+  ],
+  "publicGreenSpacePerCapita": 0.18
+}
