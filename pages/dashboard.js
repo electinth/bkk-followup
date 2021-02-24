@@ -159,8 +159,6 @@ const dashboard = () => {
       district_data = DistrictData(districtID, selected_theme);
     }
 
-    console.log(data);
-
     const is_show = () => {
       SET_IS_RANK(!isRank);
     };
@@ -200,7 +198,6 @@ const dashboard = () => {
                 type="zone"
                 SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
                 SET_IS_RANK={SET_IS_RANK}
-                SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
               />
               {checked != 'เขตพื้นที่ทั้งหมด' || district != null ? (
                 <img
@@ -273,6 +270,8 @@ const dashboard = () => {
               SET_SELECTED_YEAR={SET_SELECTED_YEAR}
               SET_SELECTED_INDEX={SET_SELECTED_INDEX}
               SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
+              SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+              SET_CHECKED={SET_CHECKED}
             />
             {!isRank ? (
               <div id="isAll-wrapper">
@@ -396,6 +395,8 @@ const dashboard = () => {
                     id="budget"
                     selected_theme={selected_theme}
                     data={data}
+                    checked={checked}
+                    state_dropdown={state_dropdown}
                   />
                   {checked === 'เขตพื้นที่ทั้งหมด' &&
                   state_dropdown != 'zone' ? (

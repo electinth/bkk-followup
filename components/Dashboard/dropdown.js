@@ -11,7 +11,6 @@ const dropdown = ({
   SET_DISTRICT,
   SET_STATE_DROPDOWN,
   SET_IS_RANK,
-  SET_SELECTED_TOOLTIP,
 }) => {
   const [dropdown_state, SET_DROPDOWN_STATE] = useState(false);
   const dropdown_menu_ref = useRef(null);

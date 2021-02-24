@@ -6,6 +6,8 @@ const category_manu = ({
   SET_SELECTED_YEAR,
   SET_SELECTED_INDEX,
   SET_SELECTED_TOOLTIP,
+  SET_STATE_DROPDOWN,
+  SET_CHECKED,
 }) => {
   const router = useRouter();
   const [location_route, SET_LOCATION_ROUTE] = useState();
@@ -20,6 +22,8 @@ const category_manu = ({
     SET_SELECTED_YEAR(55);
     SET_SELECTED_INDEX(0);
     SET_SELECTED_TOOLTIP();
+    SET_STATE_DROPDOWN(null);
+    SET_CHECKED('เขตพื้นที่ทั้งหมด');
   };
   return (
     <div

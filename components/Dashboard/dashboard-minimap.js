@@ -55,7 +55,7 @@ const mini_map = ({
     topo_district.objects.district
   );
   useEffect(() => {
-    d3.selectAll(`.minimap`).style('fill', 'none');
+    
     let svg_map = d3
       .select('#map')
       .append('svg')
