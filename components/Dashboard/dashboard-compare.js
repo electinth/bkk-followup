@@ -4,7 +4,7 @@ const compare = ({ selected_theme, data }) => {
   let title, unit;
   if (selected_theme.name === 'น้ำท่วมถนน') {
     title = 'เปรียบเทียบจำนวนครั้งทั้งหมดที่น้ำท่วมแต่ละกลุ่มเขต';
-    unit = 'ซม.';
+    unit = 'ครั้ง';
   } else if (selected_theme.name === 'พื้นที่สีเขียว') {
     title = 'เปรียบเทียบจำนวนขยะแต่ละกลุ่มเขต';
     unit = 'ตร.ม./คน';
@@ -47,7 +47,7 @@ const compare = ({ selected_theme, data }) => {
               {d.areaName}
             </div>
             <div
-              className="flex items-baseline flex-1 pl-2"
+              className="flex items-center flex-1 px-2"
               style={{ color: selected_theme.text_color }}
             >
               <div className="pr-1 h4">{d.value}</div>

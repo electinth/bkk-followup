@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
+import playImg from 'assets/images/play.svg';
 
-const timeLine = ({ selected_year, SET_SELECTED_YEAR }) => {
+const timeLine = ({
+  selected_year,
+  SET_SELECTED_YEAR,
+  selected_index,
+  SET_SELECTED_INDEX,
+}) => {
   const years = [55, 56, 57, 58, 59, 60, 61, 62];
-  const [selected_index, SET_SELECTED_INDEX] = useState(0);
-  // const [selected_year, SET_SELECTED_YEAR] = useState(55);
   const [interval, SET_INTERVAL] = useState();
   const selectedYear = (year, index) => {
     SET_SELECTED_INDEX(index);
@@ -15,7 +19,7 @@ const timeLine = ({ selected_year, SET_SELECTED_YEAR }) => {
   let index = selected_index + 1;
 
   const play = () => {
-    if (index != years.length) {
+    if (index < years.length) {
       SET_INTERVAL(
         setInterval(() => {
           SET_SELECTED_INDEX(index++);
@@ -39,12 +43,15 @@ const timeLine = ({ selected_year, SET_SELECTED_YEAR }) => {
       id="tile-line-wrapper"
     >
       <div className="flex justify-end flex-1 d2" id="time-line-text">
-        <div onClick={play} className="cursor-pointer">
-          {'>'}
-        </div>
-        <div onClick={resume} className="cursor-pointer">
+        <img
+          src={playImg}
+          alt="playImg"
+          className="pt-2 mr-5 cursor-pointer"
+          onClick={play}
+        />
+        {/* <div onClick={resume} className="cursor-pointer">
           {'='}
-        </div>
+        </div> */}
         25{selected_year}
       </div>
       <div id="time-line" style={{ flex: 2 }}>

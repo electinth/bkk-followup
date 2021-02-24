@@ -32,12 +32,12 @@ import report_water_tourism_and_cultural from 'assets/data/report_water_tourism-
 const select_data = (data) => {
   if (data === 'น้ำท่วมถนน') {
     return {
-      map: map_water,
-      all: report_water_all,
-      report_business: report_water_business,
-      report_residence: report_water_residence,
-      report_suburban: report_water_suburban,
-      report_tourism: report_water_tourism_and_cultural,
+      map: map_flood,
+      all: report_flood_all,
+      report_business: report_flood_business,
+      report_residence: report_flood_residence,
+      report_suburban: report_flood_suburban,
+      report_tourism: report_flood_tourism_and_cultural,
     };
   } else if (data === 'พื้นที่สีเขียว') {
     return {
@@ -50,12 +50,12 @@ const select_data = (data) => {
     };
   } else if (data === 'มลพิษในคลอง') {
     return {
-      map: map_flood,
-      all: report_flood_all,
-      report_business: report_flood_business,
-      report_residence: report_flood_residence,
-      report_suburban: report_flood_suburban,
-      report_tourism: report_flood_tourism_and_cultural,
+      map: map_water,
+      all: report_water_all,
+      report_business: report_water_business,
+      report_residence: report_water_residence,
+      report_suburban: report_water_suburban,
+      report_tourism: report_water_tourism_and_cultural,
     };
   } else if (data === 'ขยะมูลฝอย') {
     return {

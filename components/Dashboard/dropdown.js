@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import arrow from 'assets/images/arrow.svg';
+import * as d3 from 'd3';
 
 const dropdown = ({
   filter,
@@ -9,6 +10,8 @@ const dropdown = ({
   district,
   SET_DISTRICT,
   SET_STATE_DROPDOWN,
+  SET_IS_RANK,
+  SET_SELECTED_TOOLTIP,
 }) => {
   const [dropdown_state, SET_DROPDOWN_STATE] = useState(false);
   const dropdown_menu_ref = useRef(null);
@@ -28,12 +31,13 @@ const dropdown = ({
     SET_STATE_DROPDOWN(type);
     if (type === 'group') {
       SET_CHECKED(e.target.value);
-      SET_DROPDOWN_STATE(false);
       SET_DISTRICT(null);
     } else {
-      SET_DROPDOWN_STATE(false);
       SET_DISTRICT(e.target.value);
     }
+    SET_DROPDOWN_STATE(false);
+    SET_IS_RANK(false);
+    document.removeEventListener('click', closeMenu);
   };
 
   useEffect(() => {
@@ -49,7 +53,11 @@ const dropdown = ({
             id="manu"
             className="relative flex flex-row w-56 p-2 font-bold rounded cursor-pointer bg-white-default h4"
           >
-            {checked === null ? <p>เลือกกลุ่มพื้นที่ </p> : checked}
+            {checked === 'เขตพื้นที่ทั้งหมด' ? (
+              <p>เลือกกลุ่มพื้นที่ </p>
+            ) : (
+              checked
+            )}
             <div
               id="arrow-wrpper"
               className="absolute right-0 flex justify-center pr-3"

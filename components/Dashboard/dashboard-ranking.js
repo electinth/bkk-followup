@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ranking = ({ selected_theme, checked, rankings }) => {
+const ranking = ({ selected_theme, checked, rankings, is_show }) => {
   let title, unit, top3, last3;
 
   if (selected_theme.name === 'น้ำท่วมถนน') {
@@ -137,13 +137,13 @@ const ranking = ({ selected_theme, checked, rankings }) => {
     <div
       id="ranking_wrapper"
       className={
-        checked === null || checked === 'เขตพื้นที่ทั้งหมด'
+        checked === 'เขตพื้นที่ทั้งหมด'
           ? 'card_cat_detail pt-3 mt-3'
           : 'flex-1 card_cat_ranking card_cat_detail pt-3'
       }
       style={{ backgroundColor: selected_theme.color }}
     >
-      {checked === null || checked === 'เขตพื้นที่ทั้งหมด' ? (
+      {checked === 'เขตพื้นที่ทั้งหมด' ? (
         <div id="ranking_default">
           <div className="flex justify-center rounded-t text-white-default p2">
             การจัดอันดับแต่ละเขต
@@ -152,7 +152,10 @@ const ranking = ({ selected_theme, checked, rankings }) => {
             {title}
           </div>
           {list_ranking()}
-          <div className="flex justify-center py-2 mt-3 font-bold rounded-b text-white-default bg-black-default p1">
+          <div
+            className="flex justify-center py-2 mt-3 font-bold rounded-b cursor-pointer text-white-default bg-black-default p1"
+            onClick={is_show}
+          >
             ดูการจัดอันดับทั้งหมด
           </div>
         </div>

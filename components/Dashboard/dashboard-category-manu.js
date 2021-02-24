@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
-const category_manu = ({ category }) => {
+const category_manu = ({
+  category,
+  SET_SELECTED_YEAR,
+  SET_SELECTED_INDEX,
+  SET_SELECTED_TOOLTIP,
+}) => {
   const router = useRouter();
   const [location_route, SET_LOCATION_ROUTE] = useState();
 
@@ -12,6 +17,9 @@ const category_manu = ({ category }) => {
   const setRoute = (name) => {
     router.push('/dashboard?location=' + name);
     SET_LOCATION_ROUTE(name);
+    SET_SELECTED_YEAR(55);
+    SET_SELECTED_INDEX(0);
+    SET_SELECTED_TOOLTIP();
   };
   return (
     <div
