@@ -86,7 +86,10 @@ const dropdown = ({
                   id="options"
                   key={index}
                 >
-                  <p className="pointer-events-none pl-7 p1">{f.filter_by}</p>
+                  <span className="flex pointer-events-none pl-7">
+                    <img src={f.img} alt="icon-dropdown" className="mr-3" />
+                    <p className=" p1">{f.filter_by}</p>
+                  </span>
                   <input
                     type="radio"
                     id="options"

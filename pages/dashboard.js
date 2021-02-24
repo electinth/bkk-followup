@@ -67,18 +67,24 @@ const dashboard = () => {
   const filter_by_group = [
     {
       filter_by: 'เขตพื้นที่ทั้งหมด',
-      img: 'assets/images/by_all.svg',
+      img: require('assets/images/by_all.svg'),
     },
-    { filter_by: 'เขตพื้นที่ธุรกิจ', img: 'assets/images/by_business.svg' },
+    {
+      filter_by: 'เขตพื้นที่ธุรกิจ',
+      img: require('assets/images/by_business.svg'),
+    },
     {
       filter_by: 'เขตพื้นที่ท่องเที่ยวและวัฒนธรรม',
-      img: 'assets/images/by_culture.svg',
+      img: require('assets/images/by_culture.svg'),
     },
     {
       filter_by: 'เขตพื้นที่อยู่อาศัย',
-      img: 'assets/images/by_residence.svg',
+      img: require('assets/images/by_residence.svg'),
     },
-    { filter_by: 'เขตพื้นที่ชานเมือง', img: 'assets/images/by_suburb.svg' },
+    {
+      filter_by: 'เขตพื้นที่ชานเมือง',
+      img: require('assets/images/by_suburb.svg'),
+    },
   ];
 
   const router = useRouter();
@@ -152,6 +158,8 @@ const dashboard = () => {
 
       district_data = DistrictData(districtID, selected_theme);
     }
+
+    console.log(data);
 
     const is_show = () => {
       SET_IS_RANK(!isRank);
@@ -368,23 +376,10 @@ const dashboard = () => {
                 ) : (
                   ''
                 )}
-                <div id="graph-trend" className="mt-3 card_cat_detail">
-                  <div
-                    className="flex justify-center py-1 rounded-t text-white-default p2"
-                    style={{ backgroundColor: selected_theme.color }}
-                  >
-                    แนวโน้มของ 8 ปีที่ผ่านมา
-                  </div>
-                  <div className="px-2 py-3 leading-tight">
-                    <div className="flex justify-center px-24 font-bold text-center h4">
-                      แนวโน้มจำนวนขยะมูลฝอยต่อประชากรต่อวัน (กก.) ตั้งแต่ปี
-                      2555-2562
-                    </div>
-                    <div className="flex justify-center mt-3">
-                      <LineChart selected_theme={selected_theme} />
-                    </div>
-                  </div>
-                </div>
+                <LineChart
+                  selected_theme={selected_theme}
+                  data={data.valuePerYear}
+                />
                 {checked === 'เขตพื้นที่ทั้งหมด' ? (
                   <Ranking
                     id="ranking"

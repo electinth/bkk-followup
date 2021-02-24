@@ -28,6 +28,7 @@ const map = ({
   };
 
   const click = (_, d) => {
+    d3.selectAll(`.minimap`).style('fill', 'none');
     d3.selectAll('.tool_tip_detail_wrapper').style('visibility', 'hidden');
     SET_SELECTED_TOOLTIP(d.districtName);
     actived_tool_tip(d.districtName);

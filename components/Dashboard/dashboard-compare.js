@@ -19,6 +19,14 @@ const compare = ({ selected_theme, data }) => {
     unit = 'มค.ก./ลบ.ม.';
   }
 
+  let arr_img = {
+    ทุกเขตในกรุงเทพมหานคร: require('assets/images/by_all_w.svg'),
+    พื้นที่ศูนย์กลางธุรกิจและพาณิชยกรรม: require('assets/images/by_business_w.svg'),
+    พื้นที่อนุรักษ์ศิลปวัฒนธรรมและส่งเสริมการท่องเที่ยว: require('assets/images/by_business_w.svg'),
+    ทุกเขตพื้นที่อยู่อาศัย: require('assets/images/by_residence_w.svg'),
+    ทุกเขตพื้นที่อยู่อาศัยชานเมือง: require('assets/images/by_suburb_w.svg'),
+  };
+
   return (
     <div className="flex-1 card_cat_detail " style={{ height: 'fit-content' }}>
       <div
@@ -39,12 +47,17 @@ const compare = ({ selected_theme, data }) => {
             }}
           >
             <div
-              className="flex-1 py-4 pl-2 pr-5 rounded-l p2 text-white-default"
+              className="flex flex-1 py-4 pl-2 pr-5 rounded-l p2 text-white-default"
               style={{
                 backgroundColor: i === 0 ? selected_theme.color : 'black',
               }}
             >
-              {d.areaName}
+              <img
+                src={arr_img[`${d.areaName}`]}
+                alt="compare-icon"
+                className="mr-2 "
+              />
+              <p>{d.areaName}</p>
             </div>
             <div
               className="flex items-center flex-1 px-2"

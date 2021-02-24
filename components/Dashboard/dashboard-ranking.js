@@ -1,4 +1,5 @@
 import React from 'react';
+import rankingImg from 'assets/images/rankingImg_w.svg';
 
 const ranking = ({ selected_theme, checked, rankings, is_show }) => {
   let title, unit, top3, last3;
@@ -156,7 +157,8 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
             className="flex justify-center py-2 mt-3 font-bold rounded-b cursor-pointer text-white-default bg-black-default p1"
             onClick={is_show}
           >
-            ดูการจัดอันดับทั้งหมด
+            <img src={rankingImg} alt="rankingImg" className="mr-3" />
+            <p>ดูการจัดอันดับทั้งหมด</p>
           </div>
         </div>
       ) : (
