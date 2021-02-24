@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import * as d3 from "d3";
 import numeral from "numeral";
 
-export default function BudgetPageOne(props) {
+export default function BudgetPageTwo(props) {
   const { active_index } = props;
 
   useEffect(() => {
@@ -52,96 +52,73 @@ export default function BudgetPageOne(props) {
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    if (active_index === 3) {
-      d3.selectAll(".label-year").remove();
-      d3.selectAll(".label-value").remove();
-      d3.selectAll(".label-unit").remove();
+    chart
+      .append("path")
+      .data([data])
+      .attr("class", "line")
+      .attr("d", valueLine)
+      .style("fill", "none")
+      .style("stroke", "white")
+      .style("stroke-width", 4);
 
-      chart
-        .append("path")
-        .data([data])
-        .attr("class", "line")
-        .attr("d", valueLine)
-        .style("fill", "none")
-        .style("stroke", "white")
-        .style("stroke-width", 4);
+    chart
+      .append("g")
+      .attr("class", "x-axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(x_axis)
+      .select("path")
+      .style("color", "#00C853")
+      .style("stroke-dasharray", "4, 4")
+      .style("stroke-width", 2);
 
-      chart
-        .append("g")
-        .attr("class", "x-axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(x_axis)
-        .select("path")
-        .style("color", "#00C853")
-        .style("stroke-dasharray", "4, 4")
-        .style("stroke-width", 2);
-    }
-    if (active_index === 4) {
-      d3.selectAll(".line").remove();
-      d3.selectAll(".x-axis").remove();
+    chart
+      .selectAll()
+      .data(data)
+      .enter()
+      .append("text")
+      .attr("class", "label-year")
+      .attr("x", (d) => x_scale(d.year))
+      .attr("y", (d) => y_scale(d.value))
+      .attr("dy", "-50")
+      .style("font-size", "24px")
+      .style("fill", "white")
+      .style("text-anchor", "middle")
+      .style("opacity", "0")
+      .style("transition", "0.4s")
+      .text((d) => d.year);
 
-      chart
-        .append("path")
-        .data([data])
-        .attr("class", "line")
-        .attr("d", valueLine)
-        .style("fill", "none")
-        .style("stroke", "#00C853")
-        .style("stroke-width", 4);
+    chart
+      .selectAll()
+      .data(data)
+      .enter()
+      .append("text")
+      .attr("class", "label-value")
+      .attr("x", (d) => x_scale(d.year))
+      .attr("y", (d) => y_scale(d.value))
+      .attr("dy", "-28")
+      .style("font-size", "16px")
+      .style("font-family", "TheMATTER")
+      .style("fill", "#7AE2A6")
+      .style("text-anchor", "middle")
+      .style("opacity", "0")
+      .style("transition", "0.4s")
+      .text((d) => numeral(d.value).format("0,0"));
 
-      chart
-        .append("g")
-        .attr("class", "x-axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(x_axis)
-        .select("path")
-        .style("color", "white")
-        .style("stroke-dasharray", "4, 4")
-        .style("stroke-width", 2);
-
-      chart
-        .selectAll()
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("class", "label-year")
-        .attr("x", (d) => x_scale(d.year))
-        .attr("y", (d) => y_scale(d.value))
-        .attr("dy", "-50")
-        .style("font-size", "24px")
-        .style("fill", "white")
-        .style("text-anchor", "middle")
-        .text((d) => d.year);
-
-      chart
-        .selectAll()
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("class", "label-value")
-        .attr("x", (d) => x_scale(d.year))
-        .attr("y", (d) => y_scale(d.value))
-        .attr("dy", "-28")
-        .style("font-size", "16px")
-        .style("font-family", "TheMATTER")
-        .style("fill", "#7AE2A6")
-        .style("text-anchor", "middle")
-        .text((d) => numeral(d.value).format("0,0"));
-
-      chart
-        .selectAll()
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("class", "label-unit")
-        .attr("x", (d) => x_scale(d.year))
-        .attr("y", (d) => y_scale(d.value))
-        .attr("dy", "-12")
-        .style("font-size", "16px")
-        .style("fill", "#7AE2A6")
-        .style("text-anchor", "middle")
-        .text((_) => "บาท/คน");
-    }
+    chart
+      .selectAll()
+      .data(data)
+      .enter()
+      .append("text")
+      .attr("class", "label-unit")
+      .attr("x", (d) => x_scale(d.year))
+      .attr("y", (d) => y_scale(d.value))
+      .attr("dy", "-12")
+      .style("font-size", "16px")
+      .style("fill", "#7AE2A6")
+      .style("text-anchor", "middle")
+      .style("opacity", "0")
+      .style("transition", "0.4s")
+      .text((_) => "บาท/คน");
 
     chart
       .selectAll()
@@ -153,6 +130,23 @@ export default function BudgetPageOne(props) {
       .attr("cy", (d) => y_scale(d.value))
       .attr("r", 6)
       .style("fill", "white");
+  }, []);
+
+  useEffect(() => {
+    if (active_index === 3) {
+      d3.select(".line").style("stroke", "white");
+      d3.select(".x-axis").select("path").style("color", "#00C853");
+      d3.selectAll(".label-year").style("opacity", "0");
+      d3.selectAll(".label-value").style("opacity", "0");
+      d3.selectAll(".label-unit").style("opacity", "0");
+    }
+    if (active_index === 4) {
+      d3.select(".line").style("stroke", "#00C853");
+      d3.select(".x-axis").select("path").style("color", "white");
+      d3.selectAll(".label-year").style("opacity", "1");
+      d3.selectAll(".label-value").style("opacity", "1");
+      d3.selectAll(".label-unit").style("opacity", "1");
+    }
   }, [active_index]);
 
   return (

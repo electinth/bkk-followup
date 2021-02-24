@@ -11,12 +11,15 @@
     overflow: hidden;
     outline: none;
   }
+  body {
+    background: black;
+  }
   h1,
   h2,
   h3,
   h4,
   h5 {
-    font-weight: 700;
+    font-weight: 700 !important;
   }
   .h1 {
     font-size: 80px;

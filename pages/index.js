@@ -1,10 +1,15 @@
 import Layout from "layouts/layout";
 import Image from "next/image";
-import Intro from "components/Home/Intro";
 import Main from "components/Home/Main";
 import BudgetPageOne from "components/Home/BudgetPageOne";
 import BudgetPageTwo from "components/Home/BudgetPageTwo";
 import BudgetPageThree from "components/Home/BudgetPageThree";
+import BudgetPageFour from "components/Home/BudgetPageFour";
+import ResponsibilityPageOne from "components/Home/ResponsibilityPageOne";
+import ResponsibilityPageTwo from "components/Home/ResponsibilityPageTwo";
+import ResponsibilityPageThree from "components/Home/ResponsibilityPageThree";
+import ResponsibilityPageFour from "components/Home/ResponsibilityPageFour";
+import CitizenPageOne from "components/Home/CitizenPageOne";
 import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import SwiperCore, { Mousewheel } from "swiper";
@@ -52,17 +57,19 @@ export default function Home() {
             />
           </div>
 
-          <div
-            className="swiper-btn-next bg-white-default w-12 h-12 rounded-full flex items-center justify-center shadow-xl mt-4 pointer-events-auto cursor-pointer"
-            onClick={() => swiper_ref.slideNext()}
-          >
-            <Image
-              width={40}
-              height={40}
-              src={arrow_down_black}
-              alt={arrow_down_black}
-            />
-          </div>
+          {!swiper_ref.isEnd ? (
+            <div
+              className="swiper-btn-next bg-white-default w-12 h-12 rounded-full flex items-center justify-center shadow-xl mt-4 pointer-events-auto cursor-pointer"
+              onClick={() => swiper_ref.slideNext()}
+            >
+              <Image
+                width={40}
+                height={40}
+                src={arrow_down_black}
+                alt={arrow_down_black}
+              />
+            </div>
+          ) : null}
         </div>
       </CSSTransition>
     );
@@ -70,17 +77,31 @@ export default function Home() {
 
   return (
     <Layout>
-      <Intro />
-
       <Swiper {...swiper_options} className="page-swiper h-full">
         <SwiperSlide>
-          <Main />
+          <Main swiper_ref={swiper_ref} />
         </SwiperSlide>
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <BudgetPageFour />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ResponsibilityPageOne />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ResponsibilityPageTwo />
+        </SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <ResponsibilityPageFour />
+        </SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
       </Swiper>
 
       {navigation()}
@@ -110,6 +131,24 @@ export default function Home() {
         classNames="fade"
       >
         <BudgetPageThree active_index={active_index} />
+      </CSSTransition>
+
+      <CSSTransition
+        in={active_index === 10}
+        timeout={400}
+        unmountOnExit
+        classNames="fade"
+      >
+        <ResponsibilityPageThree />
+      </CSSTransition>
+
+      <CSSTransition
+        in={[12, 13].includes(active_index)}
+        timeout={400}
+        unmountOnExit
+        classNames="fade"
+      >
+        <CitizenPageOne active_index={active_index} />
       </CSSTransition>
     </Layout>
   );

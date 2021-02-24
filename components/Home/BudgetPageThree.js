@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { CSSTransition } from "react-transition-group";
 import _ from "lodash";
 
-export default function BudgetPageOne(props) {
+export default function BudgetPageThree(props) {
   const { active_index } = props;
   const chart_legends = [
     {
@@ -305,8 +306,6 @@ export default function BudgetPageOne(props) {
     return _.get(legend, "color");
   };
 
-  useEffect(() => {}, []);
-
   return (
     <div
       className="budget-page-three bg-black-default fixed z-10 inset-x-0 bottom-0 pointer-events-none text-white-default"
@@ -314,24 +313,31 @@ export default function BudgetPageOne(props) {
     >
       <div className="container h-full mx-auto py-14">
         <div className="grid grid-cols-2 gap-5 h-full">
-          <div className="left">
+          <div className="left w-4/5">
             <h3 className="d3">8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป</h3>
 
             <h2 className="d2">581,112,916,500 บาท</h2>
 
             <h4 className="d4 mt-6">งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?</h4>
 
-            <ul className="legends mt-9">
-              {chart_legends.map((l) => (
-                <li key={l.title} className="d5 flex items-center">
-                  <div
-                    className="w-5 h-5 rounded mr-3 flex-none"
-                    style={{ background: l.color }}
-                  ></div>
-                  {l.title}
-                </li>
-              ))}
-            </ul>
+            <CSSTransition
+              in={active_index === 6}
+              timeout={400}
+              unmountOnExit
+              classNames="fade"
+            >
+              <ul className="legends mt-9">
+                {chart_legends.map((l) => (
+                  <li key={l.title} className="d5 flex items-center">
+                    <div
+                      className="w-5 h-5 rounded mr-3 flex-none"
+                      style={{ background: l.color }}
+                    ></div>
+                    {l.title}
+                  </li>
+                ))}
+              </ul>
+            </CSSTransition>
           </div>
 
           <div className="right flex items-center">
@@ -345,7 +351,7 @@ export default function BudgetPageOne(props) {
                     {d.values.map((v) => (
                       <div
                         key={v.title}
-                        className="box rounded-md mb-1 relative pointer-events-auto cursor-pointer"
+                        className="box rounded-md mb-0.5 relative pointer-events-auto cursor-pointer"
                         style={{
                           width: "52px",
                           height: `${v.value}%`,
@@ -353,7 +359,7 @@ export default function BudgetPageOne(props) {
                         }}
                       >
                         <div
-                          className="tooltip text-xs bg-white-default rounded-md py-2 px-4 absolute -top-20 left-2/4 transform -translate-x-2/4 mx-auto text-black-default z-10"
+                          className="tooltip text-xs bg-white-default rounded-md py-2 px-4 absolute -top-20 left-2/4 transform -translate-x-2/4 mx-auto text-black-default z-10 shadow-md"
                           style={{ minWidth: "176px" }}
                         >
                           ปี {d.year}
