@@ -30,6 +30,7 @@ const dropdown = ({
   const handleOptionChange = (e) => {
     SET_STATE_DROPDOWN(type);
     if (type === 'group') {
+      d3.selectAll(`.minimap`).style('fill', 'none');
       SET_CHECKED(e.target.value);
       SET_DISTRICT(null);
     } else {

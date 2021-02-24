@@ -194,4 +194,13 @@
     width: 235px;
     height: 37px;
   }
+  .circle_wrapper {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000000;
+  }
 }

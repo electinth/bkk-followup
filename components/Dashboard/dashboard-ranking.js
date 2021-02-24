@@ -43,7 +43,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
                   className="flex px-3 py-3 my-1 font-bold rounded bg-white-default p2"
                 >
                   <div className="flex flex-row flex-1">
-                    <div className="mr-2">
+                    <div className="mr-2 circle_wrapper">
                       {selected_theme.name === 'มลพิษในคลอง'
                         ? rankings.length - index
                         : index + 1}
@@ -78,7 +78,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
                   className="flex px-3 py-3 my-1 font-bold rounded bg-white-default p2"
                 >
                   <div className="flex flex-row flex-1">
-                    <div className="mr-2">
+                    <div className="mr-2 circle_wrapper">
                       {selected_theme.name === 'มลพิษในคลอง'
                         ? rankings.length - index
                         : index + 1}
