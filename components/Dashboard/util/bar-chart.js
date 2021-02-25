@@ -51,7 +51,7 @@ const bar_chart = ({ data, selected_theme }) => {
           >
             {d.year}
           </div>
-          {/* <div id={`tooltip-budget${d.year}`} className="absolute">
+          <div id={`tooltip-budget${d.year}`} className="absolute">
             <div
               id="tooltip-budget-header"
               className="p3"
@@ -61,7 +61,7 @@ const bar_chart = ({ data, selected_theme }) => {
             >
               ปี 25{d.year}
             </div>
-          </div> */}
+          </div>
         </div>
       ))}
     </div>

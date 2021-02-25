@@ -5,8 +5,65 @@ export default function DashboardLineChart({
   selected_theme,
   data_line_chart,
 }) {
-  // const { subPageIndex } = props;
   const createChart = () => {
+    let AVG;
+    if (selected_theme.name === 'น้ำท่วมถนน') {
+      AVG = [
+        { year: '55', value: 22.53 },
+        { year: '56', value: 22.53 },
+        { year: '57', value: 22.53 },
+        { year: '58', value: 22.53 },
+        { year: '59', value: 22.53 },
+        { year: '60', value: 22.53 },
+        { year: '61', value: 22.53 },
+        { year: '62', value: 22.53 },
+      ];
+    } else if (selected_theme.name === 'พื้นที่สีเขียว') {
+      AVG = [
+        { year: '55', value: 9 },
+        { year: '56', value: 9 },
+        { year: '57', value: 9 },
+        { year: '58', value: 9 },
+        { year: '59', value: 9 },
+        { year: '60', value: 9 },
+        { year: '61', value: 9 },
+        { year: '62', value: 9 },
+      ];
+    } else if (selected_theme.name === 'มลพิษในคลอง') {
+      AVG = [
+        { year: '55', value: 15 },
+        { year: '56', value: 15 },
+        { year: '57', value: 15 },
+        { year: '58', value: 15 },
+        { year: '59', value: 15 },
+        { year: '60', value: 15 },
+        { year: '61', value: 15 },
+        { year: '62', value: 15 },
+      ];
+    } else if (selected_theme.name === 'ขยะมูลฝอย') {
+      AVG = [
+        { year: '55', value: 1.05 },
+        { year: '56', value: 1.15 },
+        { year: '57', value: 1.11 },
+        { year: '58', value: 1.13 },
+        { year: '59', value: 1.14 },
+        { year: '60', value: 1.13 },
+        { year: '61', value: 1.15 },
+        { year: '62', value: 1.18 },
+      ];
+    } else if (selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน') {
+      AVG = [
+        { year: '55', value: 25 },
+        { year: '56', value: 25 },
+        { year: '57', value: 25 },
+        { year: '58', value: 25 },
+        { year: '59', value: 25 },
+        { year: '60', value: 25 },
+        { year: '61', value: 25 },
+        { year: '62', value: 25 },
+      ];
+    }
+
     let data = [];
     _.forIn(data_line_chart, (d, key) => {
       data.push({ year: key.substring(2, 4), value: d });
@@ -34,12 +91,12 @@ export default function DashboardLineChart({
       })
     );
 
+    const scale_data = [...data, ...AVG];
+    console.log('scale_data => ', scale_data);
+
     const y_scale = d3
       .scaleLinear()
-      .domain([
-        d3.min(data, (d) => d.value * 1),
-        d3.max(data, (d) => d.value * 1.3),
-      ])
+      .domain([0, d3.max(scale_data, (d) => d.value)])
       .range([height, 0]);
 
     // y_scale.domain([
@@ -128,7 +185,7 @@ export default function DashboardLineChart({
 
     chart
       .append('path')
-      .data([second_data])
+      .data([AVG])
       .attr('class', 'dash-line')
       .attr('d', valueLine)
       .style('fill', 'none')
