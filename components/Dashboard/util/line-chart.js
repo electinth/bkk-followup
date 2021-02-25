@@ -6,7 +6,6 @@ export default function DashboardLineChart({
   data_line_chart,
 }) {
   // const { subPageIndex } = props;
-
   const createChart = () => {
     let data = [];
     _.forIn(data_line_chart, (d, key) => {
@@ -35,14 +34,20 @@ export default function DashboardLineChart({
       })
     );
 
-    const y_scale = d3.scaleLinear().range([height, 0]);
+    const y_scale = d3
+      .scaleLinear()
+      .domain([
+        d3.min(data, (d) => d.value * 1),
+        d3.max(data, (d) => d.value * 1.3),
+      ])
+      .range([height, 0]);
 
-    y_scale.domain([
-      d3.min(data, function (d) {
-        return 0;
-      }),
-      5,
-    ]);
+    // y_scale.domain([
+    //   d3.min(data, function (d) {
+    //     return 0;
+    //   }),
+    //   5,
+    // ]);
 
     const valueLine = d3
       .line()
@@ -184,7 +189,7 @@ export default function DashboardLineChart({
       .style('font-size', '12px')
       .style('text-anchor', 'middle')
       .text(function (d) {
-        return d.value;
+        return d.value ? d.value : 0;
       });
 
     chart
