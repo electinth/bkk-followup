@@ -203,4 +203,44 @@
     justify-content: center;
     border: 1px solid #000000;
   }
+  #cardน้ำท่วมถนน {
+    background-image: url('../assets/images/flood_bg.png');
+    background-size: cover;
+  }
+  #cardพื้นที่สีเขียว {
+    background-image: url('../assets/images/park_bg.png');
+    background-size: cover;
+  }
+  #cardมลพิษในคลอง {
+    background-image: url('../assets/images/water_bg.png');
+    background-size: cover;
+  }
+  #cardขยะมูลฝอย {
+    background-image: url('../assets/images/waste_bg.png');
+    background-size: cover;
+  }
+  #cardฝุ่นควันเกินมาตรฐาน {
+    background-image: url('../assets/images/air_bg.png');
+    background-size: cover;
+  }
+  #cardน้ำท่วมถนน:hover {
+    background-image: url('../assets/images/flood_bg_hover.jpg');
+    background-size: cover;
+  }
+  #cardพื้นที่สีเขียว:hover {
+    background-image: url('../assets/images/park_bg_hover.jpg');
+    background-size: cover;
+  }
+  #cardมลพิษในคลอง:hover {
+    background-image: url('../assets/images/water_bg_hover.jpg');
+    background-size: cover;
+  }
+  #cardขยะมูลฝอย:hover {
+    background-image: url('../assets/images/waste_bg_hover.jpg');
+    background-size: cover;
+  }
+  #cardฝุ่นควันเกินมาตรฐาน:hover {
+    background-image: url('../assets/images/air_bg_hover.jpg');
+    background-size: cover;
+  }
 }

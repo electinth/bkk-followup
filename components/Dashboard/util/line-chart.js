@@ -1,21 +1,19 @@
 import React, { useEffect } from 'react';
 import * as d3 from 'd3';
 
-export default function DashboardLineChart({ selected_theme }) {
+export default function DashboardLineChart({
+  selected_theme,
+  data_line_chart,
+}) {
   // const { subPageIndex } = props;
 
   const createChart = () => {
+    let data = [];
+    _.forIn(data_line_chart, (d, key) => {
+      data.push({ year: key.substring(2, 4), value: d });
+    });
+
     d3.select('.svg-line-chart').remove();
-    const data = [
-      { year: 55, value: 4.111 },
-      { year: 56, value: 1.923 },
-      { year: 57, value: 1.323 },
-      { year: 58, value: 1.423 },
-      { year: 59, value: 1.623 },
-      { year: 60, value: 1.123 },
-      { year: 61, value: 1.423 },
-      { year: 62, value: 3.823 },
-    ];
 
     const second_data = data.map((d) => {
       return { year: d.year, value: d.value / 2 };

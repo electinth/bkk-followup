@@ -50,6 +50,7 @@ export default function Intro_Dashboard() {
             <Link href={'/dashboard?location=' + cat.name} key={index}>
               <div
                 className="card_cat_intro"
+                id={`card${cat.name}`}
                 style={{ backgroundColor: cat.color }}
               >
                 {cat.name === 'ขยะมูลฝอย' ? (

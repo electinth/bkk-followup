@@ -6,7 +6,7 @@ const location_water = ({ selected_theme, data }) => {
       <div
         id="good-to-know"
         className="flex flex-col justify-center mt-3 text-center card_cat_detail"
-        style={{ maxHeight: '10%' }}
+        style={{ maxHeight: '50%' }}
       >
         <div
           id="gtk-header"

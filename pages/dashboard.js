@@ -231,7 +231,7 @@ const dashboard = () => {
               SET_CHECKED={SET_CHECKED}
             />
             <div className="flex" id="map-footer">
-              <InfoMap selected_theme={selected_theme.color} />
+              <InfoMap selected_theme={selected_theme} />
               <div className="relative flex-1 w-full h-full ">
                 <MiniMap
                   selected_tooltip={selected_tooltip}
@@ -274,10 +274,10 @@ const dashboard = () => {
               SET_CHECKED={SET_CHECKED}
             />
             {!isRank ? (
-              <div id="isAll-wrapper">
+              <div id="isAll-wrapper" className="overflow-auto">
                 <div
-                  id="card-title"
-                  className="flex justify-center py-6 mt-6 text-center text-white-default card_cat_detail"
+                  id={`card${selected_theme.name}`}
+                  className="flex justify-center py-6 mt-6 text-center pointer-events-none text-white-default card_cat_detail"
                   style={{ backgroundColor: selected_theme.color }}
                 >
                   <span>

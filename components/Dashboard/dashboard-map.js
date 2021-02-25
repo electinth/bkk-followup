@@ -264,12 +264,12 @@ const map = ({
   useEffect(() => {
     if (state_dropdown === 'group' && checked != 'เขตพื้นที่ทั้งหมด') {
       _.forEach(raw_data.rankings, (d) => {
-        setTimeout(() => {
-          d3.selectAll(`.rect${d.districtName}`)
-            .style('stroke-width', 1)
-            .style('stroke', 'white');
-          d3.select(`.minimap${d.districtName}`).style('fill', 'white');
-        }, 100);
+        // setTimeout(() => {
+        d3.selectAll(`.rect${d.districtName}`)
+          .style('stroke-width', 1)
+          .style('stroke', 'white');
+        d3.select(`.minimap${d.districtName}`).style('fill', 'white');
+        // }, 100);
       });
     }
   }, [checked]);

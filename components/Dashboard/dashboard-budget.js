@@ -1,6 +1,7 @@
 import React from 'react';
 import numeral from 'numeral';
 import DonutChart from 'components/Dashboard/util/donut-chart';
+import BarChart from 'components/Dashboard/util/bar-chart';
 
 const budget = ({ selected_theme, data, checked, state_dropdown }) => {
   let focused = data.budgetOverall.focused / 1000000;
@@ -49,8 +50,10 @@ const budget = ({ selected_theme, data, checked, state_dropdown }) => {
           <DonutChart selected_theme={selected_theme} percent={percent * 100} />
         </div>
         <p className="px-4 mt-3 font-bold text-center p1">{sub}</p>
-        <div className="flex justify-center py-3">bar chart</div>
-        <div className="absolute bottom-0 flex justify-center w-full py-2 mt-3 font-bold rounded-b text-white-default bg-black-default p1">
+        <div className="flex justify-center py-10 ">
+          <BarChart selected_theme={selected_theme} data={data} />
+        </div>
+        <div className="flex justify-center w-full py-2 mt-3 font-bold rounded-b text-white-default bg-black-default p1">
           เกี่ยวกับงบประมาณกทม
         </div>
       </div>

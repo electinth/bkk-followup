@@ -44,7 +44,7 @@ const line_chart = ({ selected_theme, data }) => {
           <p>{sub}</p>
         </div>
         <div className="flex justify-center mt-3">
-          <LineChart selected_theme={selected_theme} data={data} />
+          <LineChart selected_theme={selected_theme} data_line_chart={data} />
         </div>
         <div id="line-chart-footer" className="flex flex-col items-center mt-4">
           <span className="flex">
