@@ -21,7 +21,7 @@ export default function Intro() {
 
   return (
     <div
-      className={`intro-page fixed z-10 inset-0 bg-black-default flex items-center ${
+      className={`intro-page fixed z-30 inset-0 bg-black-default flex items-center ${
         hide_intro ? "hide-intro" : ""
       }`}
       onClick={() => hideIntro(true)}

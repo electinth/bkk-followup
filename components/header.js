@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
-export default function header() {
+export default function Header() {
   return (
     <div
       id="header"
-      className="sticky shadow-xl bg-white-default"
+      className="sticky z-20 shadow-xl bg-white-default"
       style={{ height: "60px" }}
     >
       <Link href="/">

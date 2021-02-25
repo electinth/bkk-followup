@@ -3,6 +3,56 @@
 @tailwind utilities;
 
 @layer utilities {
+  * {
+    font-family: "NotoSansThaiUI";
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+    outline: none;
+  }
+  body {
+    background: black;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 700 !important;
+  }
+  .h1 {
+    font-size: 80px;
+    font-weight: 700;
+    @media screen and (max-width: 767px) {
+      font-size: 48px;
+    }
+  }
+  .h2 {
+    font-size: 42px;
+    font-weight: 700;
+    @media screen and (max-width: 767px) {
+      font-size: 28px;
+    }
+  }
+  .h3 {
+    font-size: 24px;
+    font-weight: 700;
+    @media screen and (max-width: 767px) {
+      font-size: 22px;
+    }
+  }
+  .h4 {
+    font-size: 20px;
+    font-weight: 700;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .h5 {
+    font-weight: 700;
+    font-size: 36px;
+  }
   .d1 {
     font-family: "TheMATTER";
     font-size: 80px;
@@ -38,48 +88,17 @@
       font-size: 18px;
     }
   }
-  .h1 {
-    font-family: "NotoSansThaiUI";
-    font-size: 80px;
-    @media screen and (max-width: 767px) {
-      font-size: 48px;
-    }
-  }
-  .h2 {
-    font-family: "NotoSansThaiUI";
-    font-size: 42px;
-    @media screen and (max-width: 767px) {
-      font-size: 28px;
-    }
-  }
-  .h3 {
-    font-family: "NotoSansThaiUI";
-    font-size: 24px;
-    @media screen and (max-width: 767px) {
-      font-size: 22px;
-    }
-  }
-  .h4 {
-    font-family: "NotoSansThaiUI";
-    font-size: 20px;
-    @media screen and (max-width: 767px) {
-      font-size: 18px;
-    }
-  }
   .h5 {
     font-family: "NotoSansThaiUI";
     font-size: 36px;
   }
   .p1 {
-    font-family: "NotoSansThaiUI";
     font-size: 18px;
   }
   .p2 {
-    font-family: "NotoSansThaiUI";
     font-size: 14px;
   }
   .p3 {
-    font-family: "NotoSansThaiUI";
     font-size: 12px;
   }
 }
@@ -107,4 +126,19 @@
     font-weight: 700;
     font-style: normal;
   }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.4s;
 }
