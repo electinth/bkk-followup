@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { CSSTransition } from "react-transition-group";
 import children from "assets/images/children.png";
 import p_icon from "assets/images/p_icon.svg";
@@ -9,13 +8,13 @@ export default function BudgetPageOne(props) {
 
   return (
     <div
-      className="budget-page-one bg-green-default fixed z-10 inset-0 flex items-center pointer-events-none"
+      className="fixed inset-0 z-10 flex items-center pointer-events-none budget-page-one bg-green-default"
       style={{ top: "60px" }}
     >
       <div className="container mx-auto">
         <div className="grid grid-cols-2 gap-5">
           <div className="left">
-            <h2 className="d2 leading-tight">
+            <h2 className="leading-tight d2">
               <span className="d2 text-white-default">
                 สิ้นปี 2562
                 <br />
@@ -25,18 +24,18 @@ export default function BudgetPageOne(props) {
               5,666,264 คน
             </h2>
 
-            <h2 className="d2 leading-tight mt-14">
+            <h2 className="leading-tight d2 mt-14">
               <span className="d2 text-white-default">ใช้งบประมาณมากถึง</span>
               <br />
               80,000 ล้านบาท
             </h2>
 
-            <h3 className="d3 mt-8">
+            <h3 className="mt-8 d3">
               แต่เราก็ยังเห็นหลายปัญหากวนใจ ที่เกิดขึ้นซ้ำๆ และยังไม่ถูกแก้
             </h3>
           </div>
 
-          <div className="right text-center flex items-center justify-center relative">
+          <div className="relative flex items-center justify-center text-center right">
             <img
               src={children}
               alt={children}
@@ -51,14 +50,14 @@ export default function BudgetPageOne(props) {
               classNames="fade"
             >
               <div
-                className="content bg-white-default bg-opacity-75 p-5 rounded-md absolute top-2/4 transform -translate-y-2/4 left-2/4 -translate-x-2/4 shadow-xl"
+                className="absolute p-5 transform bg-opacity-75 rounded-md shadow-xl content bg-white-default top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4"
                 style={{ minWidth: "387px" }}
               >
                 <h5 className="text-lg">
                   ในปี 2562 กทม. ใช้เงินดูแลประชาชนเฉลี่ย
                 </h5>
 
-                <div className="budget bg-green-light rounded-md px-4 py-2 my-2">
+                <div className="px-4 py-2 my-2 rounded-md budget bg-green-light">
                   <h4 className="d4">14,118.65 บาท / คน / ปี</h4>
                 </div>
 
@@ -73,10 +72,10 @@ export default function BudgetPageOne(props) {
               classNames="fade"
             >
               <div
-                className="content bg-white-default p-2 rounded-md absolute inset-x-0 bottom-0 shadow-xl flex items-center w-max mx-auto cursor-pointer pointer-events-auto"
+                className="absolute inset-x-0 bottom-0 flex items-center p-2 mx-auto rounded-md shadow-xl cursor-pointer pointer-events-auto content bg-white-default w-max"
                 style={{ width: "fit-content" }}
               >
-                <Image width={30} height={30} src={p_icon} alt={p_icon} />
+                <img width={30} height={30} src={p_icon} alt={p_icon} />
 
                 <h3 className="ml-2">อ่านบทความเกี่ยวกับงบกทม.</h3>
               </div>

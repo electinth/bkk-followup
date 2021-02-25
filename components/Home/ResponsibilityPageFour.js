@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import check from "assets/images/check.svg";
 
 export default function ResponsibilityPageFour() {
@@ -28,9 +27,9 @@ export default function ResponsibilityPageFour() {
   ];
 
   return (
-    <div className="responsibility-page-four flex items-center h-full bg-black-default text-white-default">
-      <div className="container mx-auto max-w-4xl">
-        <h2 className="leading-tight d2 text-center">
+    <div className="flex items-center h-full responsibility-page-four bg-black-default text-white-default">
+      <div className="container max-w-4xl mx-auto">
+        <h2 className="leading-tight text-center d2">
           บทบาทและอำนาจหน้าที่ของ กทม.
         </h2>
 
@@ -38,20 +37,20 @@ export default function ResponsibilityPageFour() {
           {data.map((d, d_index) => (
             <div
               key={d_index}
-              className="box p-4 rounded-md"
+              className="p-4 rounded-md box"
               style={{ background: d.bg_color }}
             >
               <h3 className="d3">{d.title}</h3>
 
-              <ul className="list mt-5">
+              <ul className="mt-5 list">
                 {d.list.map((l, l_index) => (
                   <li
                     key={l_index}
                     className="flex items-center mt-1.5 bg-white-default rounded-md text-black-default p-2"
                   >
-                    <Image width={25} height={25} src={check} alt={check} />
+                    <img width={25} height={25} src={check} alt={check} />
 
-                    <h4 className="text-lg ml-3 flex-1">{l}</h4>
+                    <h4 className="flex-1 ml-3 text-lg">{l}</h4>
                   </li>
                 ))}
               </ul>
@@ -59,7 +58,7 @@ export default function ResponsibilityPageFour() {
           ))}
         </div>
 
-        <p className="text-xl mt-20 text-center">
+        <p className="mt-20 text-xl text-center">
           <b>
             ที่มา: • อรทัย ก๊กผล. (2547). สารานุกรมการปกครองท้องถิ่นไทย หมวดที่
             3 พัฒนาการและรูปแบบการปกครองท้องถิ่นไทย ลำดับที่ 5 เรื่อง

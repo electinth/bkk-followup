@@ -1,5 +1,4 @@
 import Layout from "layouts/layout";
-import Image from "next/image";
 import Main from "components/Home/Main";
 import BudgetPageOne from "components/Home/BudgetPageOne";
 import BudgetPageTwo from "components/Home/BudgetPageTwo";
@@ -44,12 +43,12 @@ export default function Home() {
         unmountOnExit
         classNames="fade"
       >
-        <div className="swiper-btn-wrap fixed inset-y-0 right-5 z-20 flex flex-col justify-center pointer-events-none">
+        <div className="fixed inset-y-0 z-20 flex flex-col justify-center pointer-events-none swiper-btn-wrap right-5">
           <div
-            className="swiper-btn-prev bg-white-default w-12 h-12 rounded-full flex items-center justify-center shadow-xl pointer-events-auto cursor-pointer"
+            className="flex items-center justify-center w-12 h-12 rounded-full shadow-xl cursor-pointer pointer-events-auto swiper-btn-prev bg-white-default"
             onClick={() => swiper_ref.slidePrev()}
           >
-            <Image
+            <img
               width={40}
               height={40}
               src={arrow_up_black}
@@ -59,10 +58,10 @@ export default function Home() {
 
           {!swiper_ref.isEnd ? (
             <div
-              className="swiper-btn-next bg-white-default w-12 h-12 rounded-full flex items-center justify-center shadow-xl mt-4 pointer-events-auto cursor-pointer"
+              className="flex items-center justify-center w-12 h-12 mt-4 rounded-full shadow-xl cursor-pointer pointer-events-auto swiper-btn-next bg-white-default"
               onClick={() => swiper_ref.slideNext()}
             >
-              <Image
+              <img
                 width={40}
                 height={40}
                 src={arrow_down_black}
@@ -77,7 +76,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <Swiper {...swiper_options} className="page-swiper h-full">
+      <Swiper {...swiper_options} className="h-full page-swiper">
         <SwiperSlide>
           <Main swiper_ref={swiper_ref} />
         </SwiperSlide>

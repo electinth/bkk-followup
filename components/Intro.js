@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import intro_bg from "assets/images/intro-bg.png";
 import fb_share from "assets/images/fb_share.svg";
 import twitter_share from "assets/images/twitter_share.svg";
@@ -27,39 +26,39 @@ export default function Intro() {
       onClick={() => hideIntro(true)}
     >
       <div className="fixed inset-0 h-full mx-auto opacity-60">
-        <Image layout="fill" objectFit="cover" src={intro_bg} alt={intro_bg} />
+        <img className="object-cover w-full h-full" src={intro_bg} alt={intro_bg} />
       </div>
 
-      <div className="container mx-auto relative z-10">
+      <div className="container relative z-10 mx-auto">
         <div className="grid grid-cols-2 gap-5 text-white-default">
-          <h1 className="d1 leading-tight">
+          <h1 className="leading-tight d1">
             BANGKOK
             <br />
             <span className="text-green-default">FOLLOW-UP</span>
           </h1>
 
           <div className="right">
-            <h3 className="d3 leading-tight">
+            <h3 className="leading-tight d3">
               สำรวจย้อนหลัง 8 ปีกับ
               <br />
               ปัญหาที่กวนใจชาวกทม.
             </h3>
 
-            <div className="social-wrap mt-4 flex items-center">
+            <div className="flex items-center mt-4 social-wrap">
               <h4 className="d4">Share:</h4>
 
               <FacebookShareButton
                 url={"https://ellisonleao.github.io/sharer.js/"}
-                className="social ml-4 cursor-pointer"
+                className="ml-4 cursor-pointer social"
               >
-                <Image width={40} height={40} src={fb_share} alt={fb_share} />
+                <img width={40} height={40} src={fb_share} alt={fb_share} />
               </FacebookShareButton>
 
               <TwitterShareButton
                 url={"https://ellisonleao.github.io/sharer.js/"}
-                className="social ml-4 cursor-pointer"
+                className="ml-4 cursor-pointer social"
               >
-                <Image
+                <img
                   width={40}
                   height={40}
                   src={twitter_share}
@@ -69,9 +68,9 @@ export default function Intro() {
 
               <LineShareButton
                 url={"https://ellisonleao.github.io/sharer.js/"}
-                className="social ml-4 cursor-pointer"
+                className="ml-4 cursor-pointer social"
               >
-                <Image
+                <img
                   width={40}
                   height={40}
                   src={line_share}

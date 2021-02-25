@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import fb_share from "assets/images/fb_share.svg";
 import twitter_share from "assets/images/twitter_share.svg";
@@ -39,14 +38,14 @@ export default function Main(props) {
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="ml-4 cursor-pointer social"
               >
-                <Image width={40} height={40} src={fb_share} alt={fb_share} />
+                <img width={40} height={40} src={fb_share} alt={fb_share} />
               </FacebookShareButton>
 
               <TwitterShareButton
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="ml-4 cursor-pointer social"
               >
-                <Image
+                <img
                   width={40}
                   height={40}
                   src={twitter_share}
@@ -58,7 +57,7 @@ export default function Main(props) {
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="ml-4 cursor-pointer social"
               >
-                <Image
+                <img
                   width={40}
                   height={40}
                   src={line_share}
@@ -78,7 +77,7 @@ export default function Main(props) {
                 <h4 className="d4">สำรวจแผนที่ตามประเด็น ที่กวนใจชาว กทม.</h4>
               </div>
 
-              <Image
+              <img
                 width={100}
                 height={100}
                 src={arrow_right_white}
@@ -96,7 +95,7 @@ export default function Main(props) {
                 สำรวจดูงบประมาณกทม. ย้อนหลัง 8 ปี
               </h4>
 
-              <Image
+              <img
                 width={100}
                 height={100}
                 src={arrow_right_white}
@@ -110,7 +109,7 @@ export default function Main(props) {
             >
               <h4 className="d4 text-white-default">กทม. มีหน้าที่ทำอะไร ?</h4>
 
-              <Image
+              <img
                 width={100}
                 height={100}
                 src={arrow_right_white}
@@ -126,7 +125,7 @@ export default function Main(props) {
                 ชาวกทม. มีส่วนร่วม อย่างไรได้บ้าง
               </h4>
 
-              <Image
+              <img
                 width={100}
                 height={100}
                 src={arrow_right_white}
@@ -138,7 +137,7 @@ export default function Main(props) {
 
         <div className="absolute inset-x-0 bottom-0 flex items-center justify-center p-3 scroll-down bg-green-default d5">
           Scroll Down
-          <Image
+          <img
             width={40}
             height={40}
             src={arrow_down_black}

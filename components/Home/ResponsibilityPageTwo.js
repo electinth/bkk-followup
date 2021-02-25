@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import check from "assets/images/check.svg";
 
 export default function ResponsibilityPageTwo() {
@@ -46,15 +45,15 @@ export default function ResponsibilityPageTwo() {
   ];
 
   return (
-    <div className="responsibility-page-two h-full flex items-center text-white-default text-center">
+    <div className="flex items-center h-full text-center responsibility-page-two text-white-default">
       <div className="container mx-auto">
         <h2 className="d2">กทม. มีหน้าที่ทำอะไร?</h2>
 
-        <h4 className="d4 mt-3">
+        <h4 className="mt-3 d4">
           กทม. ไม่ใช่จังหวัด แต่เป็นองค์กรปกครองท้องถิ่นแบบพิเศษ
         </h4>
 
-        <p className="text-2xl mt-4">
+        <p className="mt-4 text-2xl">
           กทม. มีกฎหมายการบริหารเป็นของตนเอง ซึ่งจังหวัดอื่นไม่มี
           (พรบ.ระเบียบริหาราชการกรุงเทพมหานคร พ.ศ. 2528)
           และตามกฎหมายนี้ระบุไว้ว่า กทม.&nbsp;
@@ -67,7 +66,7 @@ export default function ResponsibilityPageTwo() {
           {cards.map((c, c_index) => (
             <div
               key={c_index}
-              className="box rounded-md bg-blue-lightest text-black-default text-left p-4"
+              className="p-4 text-left rounded-md box bg-blue-lightest text-black-default"
             >
               <h5 className="d5">{c.title}</h5>
 
@@ -76,9 +75,9 @@ export default function ResponsibilityPageTwo() {
               <ul className="list">
                 {c.list.map((l, l_index) => (
                   <li key={l_index} className="flex items-center mt-3">
-                    <Image width={25} height={25} src={check} alt={check} />
+                    <img width={25} height={25} src={check} alt={check} />
 
-                    <h4 className="text-lg ml-3 flex-1">{l}</h4>
+                    <h4 className="flex-1 ml-3 text-lg">{l}</h4>
                   </li>
                 ))}
               </ul>

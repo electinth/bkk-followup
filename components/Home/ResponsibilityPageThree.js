@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
 import image_placeholder from "assets/images/image_placeholder.svg";
 
 export default function ResponsibilityPageThree() {
@@ -204,12 +203,12 @@ export default function ResponsibilityPageThree() {
 
   return (
     <div
-      className="responsibility-page-three fixed z-10 inset-0 pointer-events-none flex items-center text-white-default text-center"
+      className="fixed inset-0 z-10 flex items-center text-center pointer-events-none responsibility-page-three text-white-default"
       style={{ top: "60px" }}
     >
       <div className="w-full">
         <div className="container mx-auto">
-          <h2 className="d2 leading-snug">
+          <h2 className="leading-snug d2">
             กทม. มีทั้ง
             <span className="text-blue-default">ผู้ว่าราชการกรุงเทพมหานคร</span>
             เป็นผู้บริหาร และ
@@ -219,28 +218,27 @@ export default function ResponsibilityPageThree() {
           </h2>
         </div>
 
-        <div className="scroll-list w-full overflow-x-auto flex pointer-events-auto mt-20 pl-4 pb-6">
+        <div className="flex w-full pb-6 pl-4 mt-20 overflow-x-auto pointer-events-auto scroll-list">
           {data.map((d, index) => (
-            <div key={index} className="item pr-4">
+            <div key={index} className="pr-4 item">
               {d.image ? (
                 <div
-                  className="bg-blue-default rounded-full overflow-hidden"
+                  className="overflow-hidden rounded-full bg-blue-default"
                   style={{ height: "120px", width: "120px" }}
                 >
-                  <Image width={120} height={120} src={d.image} alt={d.image} />
+                  <img className="w-full h-full" src={d.image} alt={d.image} />
                 </div>
               ) : (
                 <div
-                  className="image-placeholder overflow-hidden flex items-center justify-center"
+                  className="flex items-center justify-center overflow-hidden image-placeholder"
                   style={{ height: "120px", width: "120px" }}
                 >
                   <div
-                    className="bg-white-default rounded-full"
+                    className="rounded-full bg-white-default"
                     style={{ height: "42px", width: "42px" }}
                   >
-                    <Image
-                      width={42}
-                      height={42}
+                    <img
+                      className="w-full h-full"
                       src={image_placeholder}
                       alt={image_placeholder}
                     />
