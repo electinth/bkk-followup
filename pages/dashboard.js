@@ -262,8 +262,8 @@ const dashboard = () => {
           </div>
           <div
             id="dashboard-right"
-            className="flex flex-col flex-1 px-5 py-5 overflow-auto"
-            style={{ backgroundColor: isRank ? 'black' : '' }}
+            className="flex flex-col flex-1 px-5 py-5 overflow-auto "
+            style={{ backgroundColor: isRank ? 'black' : 'white' }}
           >
             <Category_Manu
               category={category}
