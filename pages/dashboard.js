@@ -211,7 +211,7 @@ const dashboard = () => {
                 <img
                   src={close_filter}
                   alt="close"
-                  className="ml-2 cursor-pointer"
+                  className="ml-5 cursor-pointer "
                   onClick={cancle_filter}
                 />
               ) : (

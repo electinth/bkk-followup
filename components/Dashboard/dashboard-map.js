@@ -257,7 +257,7 @@ const map = ({
         [selected_theme.color, '#CCF4DD', '#FFFFFF'],
         selected_year
       );
-      if (state_dropdown === 'group') {
+      if (state_dropdown === 'group' && checked === 'เขตพื้นที่ทั้งหมด') {
         _.forEach(raw_data.rankings, (district) => {
           d3.select(`.rect${district.districtName}`)
             .style('stroke-width', 1)

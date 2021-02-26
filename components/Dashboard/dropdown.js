@@ -51,12 +51,14 @@ const dropdown = ({
           <div
             onClick={showMenu}
             id="manu"
-            className="relative flex flex-row w-56 p-2 font-bold rounded cursor-pointer bg-white-default h4"
+            className="relative flex flex-row w-56 p-2 font-bold rounded cursor-pointer bg-white-default h4 "
           >
             {checked === 'เขตพื้นที่ทั้งหมด' ? (
               <p>เลือกกลุ่มพื้นที่ </p>
             ) : (
-              checked
+              <p className="truncate ..." style={{ width: '80%' }}>
+                {checked}
+              </p>
             )}
             <div
               id="arrow-wrpper"
