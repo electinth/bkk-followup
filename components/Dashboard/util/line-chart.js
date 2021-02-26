@@ -92,19 +92,11 @@ export default function DashboardLineChart({
     );
 
     const scale_data = [...data, ...AVG];
-    console.log('scale_data => ', scale_data);
 
     const y_scale = d3
       .scaleLinear()
       .domain([0, d3.max(scale_data, (d) => d.value)])
       .range([height, 0]);
-
-    // y_scale.domain([
-    //   d3.min(data, function (d) {
-    //     return 0;
-    //   }),
-    //   5,
-    // ]);
 
     const valueLine = d3
       .line()
