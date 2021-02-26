@@ -57,20 +57,15 @@ export default function Main(props) {
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="ml-4 cursor-pointer social"
               >
-                <img
-                  width={40}
-                  height={40}
-                  src={line_share}
-                  alt={line_share}
-                />
+                <img width={40} height={40} src={line_share} alt={line_share} />
               </LineShareButton>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-5 mt-16">
+        <div className="grid grid-cols-2 gap-5 mt-6 lg:mt-10 2xl:mt-16">
           <Link href="/intro-dashboard">
-            <div className="flex items-center justify-between rounded-md cursor-pointer explore-map bg-black-default p-14">
+            <div className="flex items-center justify-between rounded-md cursor-pointer explore-map bg-black-default p-6 lg:p-10 2xl:p-14">
               <div className="text-white-default">
                 <h3 className="d3">EXPLORE MAP</h3>
 
@@ -78,10 +73,9 @@ export default function Main(props) {
               </div>
 
               <img
-                width={100}
-                height={100}
                 src={arrow_right_white}
                 alt={arrow_right_white}
+                className="w-16 lg:w-18 2xl:w-24"
               />
             </div>
           </Link>
@@ -91,15 +85,14 @@ export default function Main(props) {
               className="flex items-center justify-between p-5 rounded-md cursor-pointer budget bg-green-default"
               onClick={() => swiper_ref.slideTo(1)}
             >
-              <h4 className="d4 text-white-default">
+              <h5 className="d5 text-white-default">
                 สำรวจดูงบประมาณกทม. ย้อนหลัง 8 ปี
-              </h4>
+              </h5>
 
               <img
-                width={100}
-                height={100}
                 src={arrow_right_white}
                 alt={arrow_right_white}
+                className="w-16 lg:w-18 2xl:w-24"
               />
             </div>
 
@@ -107,13 +100,12 @@ export default function Main(props) {
               className="flex items-center justify-between p-5 mt-3 rounded-md cursor-pointer budget bg-blue-default"
               onClick={() => swiper_ref.slideTo(8)}
             >
-              <h4 className="d4 text-white-default">กทม. มีหน้าที่ทำอะไร ?</h4>
+              <h5 className="d5 text-white-default">กทม. มีหน้าที่ทำอะไร ?</h5>
 
               <img
-                width={100}
-                height={100}
                 src={arrow_right_white}
                 alt={arrow_right_white}
+                className="w-16 lg:w-18 2xl:w-24"
               />
             </div>
 
@@ -121,15 +113,14 @@ export default function Main(props) {
               className="flex items-center justify-between p-5 mt-3 rounded-md cursor-pointer budget bg-pink-default"
               onClick={() => swiper_ref.slideTo(13)}
             >
-              <h4 className="d4 text-white-default">
+              <h5 className="d5 text-white-default">
                 ชาวกทม. มีส่วนร่วม อย่างไรได้บ้าง
-              </h4>
+              </h5>
 
               <img
-                width={100}
-                height={100}
                 src={arrow_right_white}
                 alt={arrow_right_white}
+                className="w-16 lg:w-18 2xl:w-24"
               />
             </div>
           </div>
@@ -137,12 +128,7 @@ export default function Main(props) {
 
         <div className="absolute inset-x-0 bottom-0 flex items-center justify-center p-3 scroll-down bg-green-default d5">
           Scroll Down
-          <img
-            width={40}
-            height={40}
-            src={arrow_down_black}
-            alt={arrow_down_black}
-          />
+          <img src={arrow_down_black} alt={arrow_down_black} className="w-10" />
         </div>
       </div>
     </div>
