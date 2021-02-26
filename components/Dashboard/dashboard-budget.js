@@ -2,6 +2,7 @@ import React from 'react';
 import numeral from 'numeral';
 import DonutChart from 'components/Dashboard/util/donut-chart';
 import BarChart from 'components/Dashboard/util/bar-chart';
+import ElectLink from 'assets/images/link_elect.svg';
 
 const budget = ({ selected_theme, data, checked, state_dropdown }) => {
   let focused = data.budgetOverall.focused / 1000000;
@@ -24,15 +25,23 @@ const budget = ({ selected_theme, data, checked, state_dropdown }) => {
     sub = 'งบประมาณใช้ไปเพื่อจัดการคุณภาพอากาศและเสียงในแต่ละปี';
   }
   if (
-    checked != 'เขตพื้นที่ทั้งหมด' ||
-    (selected_theme.name === 'มลพิษในคลอง' && state_dropdown === 'zone') ||
-    checked != 'เขตพื้นที่ทั้งหมด' ||
-    (selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน' && state_dropdown === 'zone')
+    (checked != 'เขตพื้นที่ทั้งหมด' && selected_theme.name === 'มลพิษในคลอง') ||
+    (selected_theme.name === 'มลพิษในคลอง' && state_dropdown === 'zone')
   ) {
     return '';
+  } else if (
+    (checked != 'เขตพื้นที่ทั้งหมด' &&
+      selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน') ||
+    (selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน' && state_dropdown === 'zone')
+  ) {
+    return ';';
   } else {
     return (
-      <div id="budget" className="relative flex-1 mr-3 card_cat_detail">
+      <div
+        id="budget"
+        className="relative flex-1 mr-3 card_cat_detail"
+        style={{ height: 'fit-content' }}
+      >
         <div
           className="flex justify-center py-1 rounded-t text-white-default p2"
           style={{ backgroundColor: selected_theme.color }}
@@ -53,9 +62,19 @@ const budget = ({ selected_theme, data, checked, state_dropdown }) => {
         <div className="flex justify-center py-10 ">
           <BarChart selected_theme={selected_theme} data={data} />
         </div>
-        <div className="flex justify-center w-full py-2 mt-3 font-bold rounded-b text-white-default bg-black-default p1">
+        <a
+          className="flex justify-center w-full py-2 mt-3 font-bold rounded-b cursor-pointer text-white-default bg-black-default p1"
+          href="https://elect.in.th/"
+          target="_blank"
+          id="footer-barchart"
+        >
+          <img
+            src={ElectLink}
+            alt="ElectLink"
+            className="mr-2 pointer-events-none"
+          />
           เกี่ยวกับงบประมาณกทม
-        </div>
+        </a>
       </div>
     );
   }

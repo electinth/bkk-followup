@@ -28,6 +28,7 @@ import close_filter from 'assets/images/cancle.svg';
 import rankingImg from 'assets/images/rankingImg.svg';
 import allImg from 'assets/images/allImg.svg';
 import LineChart from 'components/Dashboard/dashboard-line-chart';
+
 import _ from 'lodash';
 
 const dashboard = () => {
@@ -377,7 +378,11 @@ const dashboard = () => {
                 )}
                 <LineChart
                   selected_theme={selected_theme}
-                  data={data.valuePerYear}
+                  data={
+                    state_dropdown === 'zone'
+                      ? district_data.valuePerYear
+                      : data.valuePerYear
+                  }
                 />
                 {checked === 'เขตพื้นที่ทั้งหมด' ? (
                   <Ranking

@@ -5,6 +5,7 @@ const compare = ({ selected_theme, data }) => {
   if (selected_theme.name === 'น้ำท่วมถนน') {
     title = 'เปรียบเทียบจำนวนครั้งทั้งหมดที่น้ำท่วมแต่ละกลุ่มเขต';
     unit = 'ครั้ง';
+    data = _.drop(data);
   } else if (selected_theme.name === 'พื้นที่สีเขียว') {
     title = 'เปรียบเทียบจำนวนขยะแต่ละกลุ่มเขต';
     unit = 'ตร.ม./คน';
@@ -49,7 +50,12 @@ const compare = ({ selected_theme, data }) => {
             <div
               className="flex flex-1 py-4 pl-2 pr-5 rounded-l p2 text-white-default"
               style={{
-                backgroundColor: i === 0 ? selected_theme.color : 'black',
+                backgroundColor:
+                  i === 0
+                    ? selected_theme.name === 'น้ำท่วมถนน'
+                      ? 'black'
+                      : selected_theme.color
+                    : 'black',
               }}
             >
               <img
