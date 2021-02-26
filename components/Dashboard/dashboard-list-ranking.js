@@ -83,7 +83,9 @@ const listRanking = ({ selected_theme, data }) => {
             className="flex px-3 py-3 my-1 font-bold rounded bg-white-default p2"
           >
             <div className="flex flex-row flex-1">
-              <div className="mr-2 circle_wrapper">{height_rank.length + 1 + index}</div>
+              <div className="mr-2 circle_wrapper">
+                {height_rank.length + 1 + index}
+              </div>
               <p>{rank.districtName}</p>
             </div>
             <div

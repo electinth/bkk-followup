@@ -65,12 +65,15 @@ const compare = ({ selected_theme, data }) => {
               />
               <p>{d.areaName}</p>
             </div>
-            <div
-              className="flex items-center flex-1 px-2"
-              style={{ color: selected_theme.text_color }}
-            >
-              <div className="pr-1 h4">{d.value}</div>
-              <div className="ml-1 p2">{unit}</div>
+            <div className="flex flex-col flex-1 px-2 pt-1">
+              <span
+                className="flex flex-row items-center"
+                style={{ color: selected_theme.text_color }}
+              >
+                <p className="pr-1 h4">{d.value}</p>
+                <p className="ml-1 p2">{unit}</p>
+              </span>
+              <p style={{ color: '#344E66' }}>ดูภาพรวมของกลุ่ม</p>
             </div>
           </div>
         ))}

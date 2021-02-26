@@ -399,7 +399,7 @@ const dashboard = () => {
                   <Budget
                     id="budget"
                     selected_theme={selected_theme}
-                    data={data}
+                    data={state_dropdown === 'zone' ? district_data : data}
                     checked={checked}
                     state_dropdown={state_dropdown}
                   />

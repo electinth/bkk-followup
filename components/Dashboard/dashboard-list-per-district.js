@@ -17,7 +17,7 @@ const per_district = ({ selected_theme, district_data }) => {
     <div
       className="flex flex-col flex-1 card_cat_detail "
       id="list-ranking"
-      style={{ backgroundColor: selected_theme.color }}
+      style={{ backgroundColor: selected_theme.color, height: 'fit-content' }}
     >
       <div
         id="list-header"
