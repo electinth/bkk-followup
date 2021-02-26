@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "NotoSansThaiUI";
+  src: url("assets/fonts/NotoSansThaiUI-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoSansThaiUI";
+  src: url("assets/fonts/NotoSansThaiUI-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TheMATTER";
+  src: url("assets/fonts/TheMATTER-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}

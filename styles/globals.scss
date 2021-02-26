@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "NotoSansThaiUI";
+}
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+  outline: none;
+}
+body {
+  background: black;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700 !important;
+}
+
+.d1 {
+  font-family: "TheMATTER";
+  font-size: 80px;
+  line-height: 110%;
+  @media screen and (max-width: 1440px) {
+    font-size: 70px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 48px;
+  }
+}
+.d2 {
+  font-family: "TheMATTER";
+  font-size: 60px;
+  line-height: 120%;
+  @media screen and (max-width: 1440px) {
+    font-size: 50px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 36px;
+  }
+}
+.d3 {
+  font-family: "TheMATTER";
+  font-size: 40px;
+  line-height: 120%;
+  @media screen and (max-width: 1440px) {
+    font-size: 36px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+.d4 {
+  font-family: "TheMATTER";
+  font-size: 30px;
+  line-height: 120%;
+  @media screen and (max-width: 1440px) {
+    font-size: 28px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+  }
+}
+.d5 {
+  font-family: "TheMATTER";
+  font-size: 24px;
+  line-height: 130%;
+  @media screen and (max-width: 1440px) {
+    font-size: 21px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+.h1 {
+  font-size: 42px;
+  line-height: 130%;
+  font-weight: 700;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+  }
+}
+.h2 {
+  font-size: 36px;
+  line-height: 130%;
+  font-weight: 700;
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+.h3 {
+  font-size: 24px;
+  line-height: 130%;
+  font-weight: 700;
+  @media screen and (max-width: 767px) {
+    font-size: 22px;
+  }
+}
+.h4 {
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: 700;
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+.p1 {
+  font-size: 18px;
+  line-height: 110%;
+}
+.p1-bold {
+  font-size: 18px;
+  line-height: 110%;
+  font-weight: 700;
+}
+.p2 {
+  font-size: 14px;
+  line-height: 120%;
+}
+.p3 {
+  font-size: 12px;
+  line-height: 120%;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.slide-enter {
+  right: -976px;
+}
+.slide-enter-active {
+  right: 0;
+  transition: 0.4s;
+}
+.slide-exit {
+  right: 0;
+}
+.slide-exit-active {
+  right: -976px;
+  transition: 0.4s;
+}

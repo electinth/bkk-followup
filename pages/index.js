@@ -10,6 +10,7 @@ import ResponsibilityPageThree from "components/Home/ResponsibilityPageThree";
 import ResponsibilityPageFour from "components/Home/ResponsibilityPageFour";
 import CitizenPageOne from "components/Home/CitizenPageOne";
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { CSSTransition } from "react-transition-group";
 import SwiperCore, { Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,6 +20,7 @@ import arrow_down_black from "assets/images/arrow_down_black.svg";
 SwiperCore.use([Mousewheel]);
 
 export default function Home() {
+  const router = useRouter();
   const [active_index, setActiveIndex] = useState(0);
   const [swiper_ref, setSwiperRef] = useState({});
   const swiper_options = {
@@ -34,6 +36,11 @@ export default function Home() {
     const swiper = document.querySelector(".swiper-container").swiper;
     setSwiperRef(swiper);
   }, []);
+
+  useEffect(() => {
+    const swiper = document.querySelector(".swiper-container").swiper;
+    if (router.query.slide) swiper.slideTo(router.query.slide);
+  }, [router.query]);
 
   const navigation = () => {
     return (
@@ -56,7 +63,7 @@ export default function Home() {
             />
           </div>
 
-          {!swiper_ref.isEnd ? (
+          {swiper_ref && !swiper_ref.isEnd ? (
             <div
               className="flex items-center justify-center w-12 h-12 mt-4 rounded-full shadow-xl cursor-pointer pointer-events-auto swiper-btn-next bg-white-default"
               onClick={() => swiper_ref.slideNext()}
