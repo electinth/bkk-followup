@@ -26,7 +26,11 @@ export default function Intro() {
       onClick={() => hideIntro(true)}
     >
       <div className="fixed inset-0 h-full mx-auto opacity-60">
-        <img className="object-cover w-full h-full" src={intro_bg} alt={intro_bg} />
+        <img
+          className="object-cover w-full h-full"
+          src={intro_bg}
+          alt={intro_bg}
+        />
       </div>
 
       <div className="container relative z-10 mx-auto">
@@ -70,12 +74,7 @@ export default function Intro() {
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="ml-4 cursor-pointer social"
               >
-                <img
-                  width={40}
-                  height={40}
-                  src={line_share}
-                  alt={line_share}
-                />
+                <img width={40} height={40} src={line_share} alt={line_share} />
               </LineShareButton>
             </div>
           </div>

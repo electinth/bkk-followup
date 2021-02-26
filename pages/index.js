@@ -63,7 +63,7 @@ export default function Home() {
             />
           </div>
 
-          {!swiper_ref.isEnd ? (
+          {swiper_ref && !swiper_ref.isEnd ? (
             <div
               className="flex items-center justify-center w-12 h-12 mt-4 rounded-full shadow-xl cursor-pointer pointer-events-auto swiper-btn-next bg-white-default"
               onClick={() => swiper_ref.slideNext()}

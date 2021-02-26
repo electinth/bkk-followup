@@ -1,16 +1,17 @@
-import React from "react";
 import Header from "components/Header";
 import Intro from "components/Intro";
-import { useRouter } from "next/router";
+
+let show_intro = true;
+setTimeout(() => {
+  show_intro = false;
+}, 4000);
 
 export default function Layout(props) {
-  const router = useRouter();
-
   return (
     <div>
       <Header />
 
-      {router.pathname === "/" ? <Intro /> : null}
+      {show_intro ? <Intro /> : null}
 
       <div
         id="main"
