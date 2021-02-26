@@ -71,14 +71,16 @@ export default function BudgetPageOne(props) {
               unmountOnExit
               classNames="fade"
             >
-              <div
-                className="absolute inset-x-0 bottom-0 flex items-center p-2 mx-auto rounded-md shadow-xl cursor-pointer pointer-events-auto content bg-white-default w-max"
-                style={{ width: "fit-content" }}
+              <a
+                href="https://elect.in.th/bkk-budget/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-x-0 bottom-0 flex items-center p-2 mx-auto rounded-md shadow-xl pointer-events-auto content bg-white-default w-max"
               >
-                <img width={30} height={30} src={p_icon} alt={p_icon} />
+                <img width={30} src={p_icon} alt={p_icon} />
 
                 <h3 className="ml-2">อ่านบทความเกี่ยวกับงบกทม.</h3>
-              </div>
+              </a>
             </CSSTransition>
           </div>
         </div>

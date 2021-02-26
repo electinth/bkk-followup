@@ -45,7 +45,7 @@ export default function ResponsibilityPageTwo() {
   ];
 
   return (
-    <div className="flex items-center h-full text-center responsibility-page-two text-white-default">
+    <div className="responsibility-page-two flex items-center h-full text-center text-white-default">
       <div className="container mx-auto">
         <h2 className="d2">กทม. มีหน้าที่ทำอะไร?</h2>
 
@@ -62,7 +62,7 @@ export default function ResponsibilityPageTwo() {
           </b>
         </p>
 
-        <div className="grid grid-cols-4 gap-3 mt-14">
+        <div className="grid grid-cols-4 gap-3 mt-2 lg:mt-6 2xl:mt-14">
           {cards.map((c, c_index) => (
             <div
               key={c_index}
@@ -74,8 +74,8 @@ export default function ResponsibilityPageTwo() {
 
               <ul className="list">
                 {c.list.map((l, l_index) => (
-                  <li key={l_index} className="flex items-center mt-3">
-                    <img width={25} height={25} src={check} alt={check} />
+                  <li key={l_index} className="flex items-center mt-2 2xl:mt-3">
+                    <img width={25} src={check} alt={check} />
 
                     <h4 className="flex-1 ml-3 text-lg">{l}</h4>
                   </li>

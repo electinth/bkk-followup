@@ -20,14 +20,18 @@ export default function ResponsibilityPageOne() {
           เพื่อช่วยกันสร้างกรุงเทพฯ และชีวิตดีๆ แบบที่เราฝันอยากให้เป็นร่วมกัน
         </p>
 
-        <div
-          className="flex items-center max-w-lg p-2 mx-auto mt-10 rounded-md shadow-xl cursor-pointer content bg-white-default"
-          style={{ width: "fit-content" }}
+        <a
+          href="https://elect.in.th/bkk-admin/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center w-max p-2 mx-auto mt-10 rounded-md shadow-xl content bg-white-default"
         >
-          <img width={30} height={30} src={p_icon} alt={p_icon} />
+          <img width={30} src={p_icon} alt={p_icon} />
 
-          <h3 className="ml-2 text-black-default">อ่านบทความเกี่ยวกับงบกทม.</h3>
-        </div>
+          <h3 className="ml-2 text-black-default">
+            อ่านบทความเกี่ยวกับหน้าที่กทม.
+          </h3>
+        </a>
       </div>
     </div>
   );
