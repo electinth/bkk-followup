@@ -1,13 +1,7 @@
 module.exports = {
   purge: ["./pages/**/*.js", "./components/**/*.js"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
-    screens: {
-      sm: "480px",
-      md: "768px",
-      lg: "976px",
-      xl: "1440px",
-    },
     colors: {
       white: {
         default: "#FFFFFF",
@@ -51,8 +45,4 @@ module.exports = {
       serif: ["Merriweather", "serif"],
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 };
