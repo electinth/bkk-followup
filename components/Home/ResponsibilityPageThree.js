@@ -203,7 +203,7 @@ export default function ResponsibilityPageThree() {
 
   return (
     <div
-      className="fixed inset-0 z-10 flex items-center text-center pointer-events-none responsibility-page-three text-white-default"
+      className="responsibility-page-three fixed inset-0 z-10 flex items-center text-center pointer-events-none text-white-default"
       style={{ top: "60px" }}
     >
       <div className="w-full">

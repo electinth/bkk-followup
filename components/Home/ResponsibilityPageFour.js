@@ -27,13 +27,13 @@ export default function ResponsibilityPageFour() {
   ];
 
   return (
-    <div className="flex items-center h-full responsibility-page-four bg-black-default text-white-default">
+    <div className="responsibility-page-four flex items-center h-full bg-black-default text-white-default">
       <div className="container max-w-4xl mx-auto">
         <h2 className="leading-tight text-center d2">
           บทบาทและอำนาจหน้าที่ของ กทม.
         </h2>
 
-        <div className="grid grid-cols-2 gap-5 mt-14">
+        <div className="grid grid-cols-2 gap-5 mt-4 2xl:mt-14">
           {data.map((d, d_index) => (
             <div
               key={d_index}
@@ -58,7 +58,7 @@ export default function ResponsibilityPageFour() {
           ))}
         </div>
 
-        <p className="mt-20 text-xl text-center">
+        <p className="text-xl text-center mt-4 2xl:mt-20">
           <b>
             ที่มา: • อรทัย ก๊กผล. (2547). สารานุกรมการปกครองท้องถิ่นไทย หมวดที่
             3 พัฒนาการและรูปแบบการปกครองท้องถิ่นไทย ลำดับที่ 5 เรื่อง

@@ -162,7 +162,7 @@ export default function BudgetPageTwo(props) {
 
         <h2 className="d2 text-green-default">10,000 บาท/คน/ปี</h2>
 
-        <div className="line-chart mt-14 relative">
+        <div className="line-chart mt-14 mx-auto relative w-10/12 lg:w-10/12 2xl:w-full">
           <svg></svg>
 
           <h4 className="start-at text-green-default text-base absolute -bottom-1 -right-24">
