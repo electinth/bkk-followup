@@ -47,7 +47,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
                   key={index}
                   className="flex px-3 py-3 my-1 font-bold rounded bg-white-default p2"
                 >
-                  <div className="flex flex-row flex-1">
+                  <div className="flex flex-row items-center flex-1">
                     <div className="mr-2 circle_wrapper">
                       {selected_theme.name === 'มลพิษในคลอง'
                         ? rankings.length - index
@@ -56,7 +56,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
                     <p>{rank.districtName}</p>
                   </div>
                   <div
-                    className="flex flex-row justify-end flex-1"
+                    className="flex flex-row items-center justify-end flex-1"
                     style={{ color: selected_theme.text_color }}
                   >
                     <div>{rank.value}</div>
@@ -84,7 +84,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
                   key={index}
                   className="flex px-3 py-3 my-1 font-bold rounded bg-white-default p2"
                 >
-                  <div className="flex flex-row flex-1">
+                  <div className="flex flex-row items-center flex-1">
                     <div className="mr-2 circle_wrapper">
                       {selected_theme.name === 'มลพิษในคลอง'
                         ? rankings.length - index
@@ -93,7 +93,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
                     <p>{rank.districtName}</p>
                   </div>
                   <div
-                    className="flex flex-row justify-end flex-1"
+                    className="flex flex-row items-center justify-end flex-1"
                     style={{ color: selected_theme.text_color }}
                   >
                     <div>{rank.value}</div>

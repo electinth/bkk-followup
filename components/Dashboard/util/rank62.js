@@ -61,12 +61,12 @@ const rank62 = ({ selected_theme, data }) => {
             key={index}
             className="flex px-3 py-3 my-1 font-bold rounded bg-white-default p2"
           >
-            <div className="flex flex-row flex-1">
-              <div className="mr-2">{index + 1}</div>
+            <div className="flex flex-row items-center flex-1">
+              <div className="mr-2 circle_wrapper">{index + 1}</div>
               <p>{rank.districtName}</p>
             </div>
             <div
-              className="flex flex-row justify-end flex-1"
+              className="flex flex-row items-center justify-end flex-1"
               style={{ color: selected_theme.text_color }}
             >
               <div>{rank.value}</div>
@@ -80,12 +80,14 @@ const rank62 = ({ selected_theme, data }) => {
             key={index}
             className="flex px-3 py-3 my-1 font-bold rounded bg-white-default p2"
           >
-            <div className="flex flex-row flex-1">
-              <div className="mr-2">{height_rank.length + 1 + index}</div>
+            <div className="flex flex-row items-center flex-1">
+              <div className="mr-2 circle_wrapper">
+                {height_rank.length + 1 + index}
+              </div>
               <p>{rank.districtName}</p>
             </div>
             <div
-              className="flex flex-row justify-end flex-1"
+              className="flex flex-row items-center justify-end flex-1"
               style={{ color: selected_theme.text_color }}
             >
               <div>{rank.value}</div>

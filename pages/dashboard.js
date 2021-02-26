@@ -269,7 +269,7 @@ const dashboard = () => {
           </div>
           <div
             id="dashboard-right"
-            className="flex flex-col flex-1 px-5 py-5 overflow-auto "
+            className="flex flex-col flex-1 overflow-auto "
             style={{ backgroundColor: isRank ? 'black' : 'white' }}
           >
             <Category_Manu
@@ -282,7 +282,7 @@ const dashboard = () => {
               SET_DISTRICT={SET_DISTRICT}
             />
             {!isRank ? (
-              <div id="isAll-wrapper" className="overflow-auto">
+              <div id="isAll-wrapper" className="px-5 py-5 overflow-auto">
                 <div
                   id={`card${selected_theme.name}`}
                   className="flex justify-center py-6 mt-6 text-center pointer-events-none text-white-default card_cat_detail"
