@@ -25,17 +25,15 @@ export default function Intro() {
       }`}
       onClick={() => hideIntro(true)}
     >
-      <div className="fixed inset-0 h-full mx-auto opacity-60">
-        <img
-          className="object-cover w-full h-full"
-          src={intro_bg}
-          alt={intro_bg}
-        />
-      </div>
+      <img
+        className="object-cover fixed inset-0 h-full mx-auto opacity-60"
+        src={intro_bg}
+        alt={intro_bg}
+      />
 
       <div className="container relative z-10 mx-auto">
-        <div className="grid grid-cols-2 gap-5 text-white-default">
-          <h1 className="leading-tight d1">
+        <div className="flex items-center justify-center text-white-default">
+          <h1 className="leading-tight d1 mr-20">
             BANGKOK
             <br />
             <span className="text-green-default">FOLLOW-UP</span>
