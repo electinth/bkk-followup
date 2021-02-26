@@ -1,5 +1,7 @@
 import React from 'react';
 import Rating from 'components/Dashboard/util/rating';
+import exclamation from 'assets/images/exclamation.svg';
+import smile from 'assets/images/smile.svg';
 
 const AVG = ({
   selected_theme,
@@ -115,6 +117,12 @@ const AVG = ({
             className="flex justify-center py-1 rounded-t text-white-default p2"
             style={{ backgroundColor: selected_theme.color }}
           >
+            <img
+              src={smile}
+              alt="smile"
+              className="mr-3"
+              style={{ width: '20px' }}
+            />
             {AVG_min}
           </div>
           <div className="px-2 py-3 leading-tight">
@@ -135,6 +143,12 @@ const AVG = ({
             className="flex justify-center py-1 rounded-t text-white-default p2"
             style={{ backgroundColor: selected_theme.color }}
           >
+            <img
+              src={exclamation}
+              alt="exclamation"
+              className="mr-3"
+              style={{ width: '20px' }}
+            />
             {AVG_max}
           </div>
           <div className="px-2 py-3 leading-tight">
@@ -196,13 +210,24 @@ const AVG = ({
   };
 
   return (
-    <div id="AVG" className="flex mt-3">
-      <div className="flex-1 mr-3 card_cat_detail" id="AVG-left">
+    <div id="AVG" className="flex mt-3 ">
+      <div
+        className="flex-1 mr-3 card_cat_detail"
+        id="AVG-left"
+        style={{
+          backgroundColor:
+            selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน'
+              ? selected_theme.color50
+              : '',
+        }}
+      >
         <div
           className="flex justify-center py-1 rounded-t text-white-default p2"
           style={{ backgroundColor: selected_theme.color }}
         >
-          ค่าเฉลี่ย
+          {selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน'
+            ? 'จำนวนครั้งที่ค่าฝุ่นเกินกำหนด'
+            : 'ค่าเฉลี่ย'}
         </div>
         <div className="px-2 py-3">
           <p className="font-bold leading-tight h4">{AVG_title}</p>

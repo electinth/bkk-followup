@@ -30,7 +30,10 @@ const max_min_flood = ({ selected_theme, data }) => {
           >
             เขตที่มีน้ำท่วมบนถนนสูงสุด
           </div>
-          <div className="px-2 py-3">
+          <div
+            className="px-2 py-3"
+            style={{ backgroundColor: selected_theme.color50 }}
+          >
             <p className="font-bold leading-tight h4">
               เขต{data.meanFloodLevelMaximumPoint.districtName}
             </p>

@@ -1,5 +1,7 @@
 import React from 'react';
 import rankingImg from 'assets/images/rankingImg_w.svg';
+import exclamation from 'assets/images/exclamation.svg';
+import smile from 'assets/images/smile.svg';
 
 const ranking = ({ selected_theme, checked, rankings, is_show }) => {
   let title, unit, top3, last3;
@@ -33,7 +35,10 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
   const list_top3 = () => {
     return (
       <div className="flex-1 px-2">
-        <div className="font-bold p1 text-white-default">{top3}</div>
+        <div className="flex pb-2 font-bold p1 text-white-default">
+          {top3}
+          <img src={smile} alt="smile" className="ml-3" />
+        </div>
         <div id="ranking-wrapper-body" className="flex flex-col">
           {rankings.map((rank, index) => {
             if (index < 3)
@@ -68,7 +73,9 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
   const list_last3 = () => {
     return (
       <div className="flex-1 px-2">
-        <div className="font-bold p1 text-white-default">{last3}</div>
+        <div className="flex pb-2 font-bold p1 text-white-default">
+          {last3} <img src={exclamation} alt="exclamation" className="ml-3" />
+        </div>
         <div id="ranking-wrapper-body" className="flex flex-col-reverse">
           {rankings.map((rank, index) => {
             if (index > rankings.length - 4)

@@ -8,7 +8,7 @@ const category_manu = ({
   SET_SELECTED_TOOLTIP,
   SET_STATE_DROPDOWN,
   SET_CHECKED,
-  SET_DISTRICT
+  SET_DISTRICT,
 }) => {
   const router = useRouter();
   const [location_route, SET_LOCATION_ROUTE] = useState();
@@ -25,7 +25,7 @@ const category_manu = ({
     SET_SELECTED_TOOLTIP();
     SET_STATE_DROPDOWN(null);
     SET_CHECKED('เขตพื้นที่ทั้งหมด');
-    SET_DISTRICT('null')
+    SET_DISTRICT(null);
   };
   return (
     <div

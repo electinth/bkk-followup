@@ -3,7 +3,11 @@ import React from 'react';
 const standard = ({ selected_theme }) => {
   return (
     <div id="AVG" className="flex mt-3">
-      <div className="flex-1 mr-3 card_cat_detail" id="AVG-left">
+      <div
+        className="flex-1 mr-3 card_cat_detail"
+        id="AVG-left"
+        style={{ backgroundColor: selected_theme.color50 }}
+      >
         <div
           className="flex justify-center py-1 rounded-t text-white-default p2"
           style={{ backgroundColor: selected_theme.color }}
@@ -29,7 +33,11 @@ const standard = ({ selected_theme }) => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col flex-1 card_cat_detail" id="AVG-right">
+      <div
+        className="flex flex-col flex-1 card_cat_detail"
+        id="AVG-right"
+        style={{ backgroundColor: selected_theme.color50 }}
+      >
         <div
           className="flex justify-center py-1 rounded-t text-white-default p2"
           style={{ backgroundColor: selected_theme.color }}

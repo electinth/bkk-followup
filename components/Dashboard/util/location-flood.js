@@ -15,7 +15,11 @@ const location_water = ({ selected_theme, data }) => {
         >
           บริเวณที่มักมีน้ำท่วมขัง
         </div>
-        <div id="body-lo-wrapper" className="py-3 pl-6 overflow-auto p1">
+        <div
+          id="body-lo-wrapper"
+          className="py-3 pl-6 overflow-auto p1"
+          style={{ backgroundColor: selected_theme.color50 }}
+        >
           {data.map((lo, index) => (
             <div key={index} className="flex justify-start">
               <p className="font-bold">•{lo.name}</p>

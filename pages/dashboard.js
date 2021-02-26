@@ -14,7 +14,7 @@ import Knowledge from 'components/Dashboard/util/knowledge';
 import BOD from 'components/Dashboard/util/BOD';
 import Standard from 'components/Dashboard/util/standard';
 import AVG from 'components/Dashboard/util/AVG';
-import LocationWater from 'components/Dashboard/util/location-water';
+import LocationFlood from 'components/Dashboard/util/location-flood';
 import ListRanking from 'components/Dashboard/dashboard-list-ranking';
 import DistrictData from 'components/Dashboard/util/district';
 import MaxMinPerDistrict from 'components/Dashboard/util/max-min-per-district';
@@ -28,6 +28,7 @@ import close_filter from 'assets/images/cancle.svg';
 import rankingImg from 'assets/images/rankingImg.svg';
 import allImg from 'assets/images/allImg.svg';
 import LineChart from 'components/Dashboard/dashboard-line-chart';
+import StandardGreen from 'components/Dashboard/util/standard_green';
 
 import _ from 'lodash';
 
@@ -47,8 +48,8 @@ const dashboard = () => {
     },
     {
       name: 'มลพิษในคลอง',
-      color: '#FF9E0D',
-      text_color: '#CC7E0A',
+      color: '#D6AD6D',
+      text_color: '#AB8A57',
       color50: '#FFECCF',
     },
     {
@@ -103,22 +104,41 @@ const dashboard = () => {
   let selectedData, data;
   if (selected_theme != null) {
     selectedData = selectData(selected_theme.name);
-    let rankings;
+    let rankings, format_type;
     if (checked === 'เขตพื้นที่ทั้งหมด') {
       rankings = selectedData.all.rankings;
       data = selectedData.all;
+      format_type = 'all';
     } else if (checked === 'เขตพื้นที่ธุรกิจ') {
       rankings = selectedData.report_business.rankings;
       data = selectedData.report_business;
+      format_type = 'business';
     } else if (checked === 'เขตพื้นที่ท่องเที่ยวและวัฒนธรรม') {
       rankings = selectedData.report_tourism.rankings;
       data = selectedData.report_tourism;
+      format_type = 'tourism-and-cultural';
     } else if (checked === 'เขตพื้นที่อยู่อาศัย') {
       rankings = selectedData.report_residence.rankings;
       data = selectedData.report_residence;
+      format_type = 'residence';
     } else if (checked === 'เขตพื้นที่ชานเมือง') {
       rankings = selectedData.report_suburban.rankings;
       data = selectedData.report_suburban;
+      format_type = 'suburban';
+    }
+    let note;
+    if (selected_theme.name === 'น้ำท่วมถนน') {
+      note =
+        'ที่มาข้อมูล: สํานักยุทธศาสตร์และประเมินผล และสำนักงบประมาณ กรุงเทพมหานคร ';
+    } else if (selected_theme.name === 'พื้นที่สีเขียว') {
+      note =
+        'ที่มาข้อมูล: สํานักยุทธศาสตร์และประเมินผล สำนักงบประมาณ และสำนักสิ่งแวดล้อม กรุงเทพมหานคร ';
+    } else if (selected_theme.name === 'มลพิษในคลอง') {
+      note = 'สำนักการระบายน้ำ และสำนักงบประมาณ กรุงเทพมหานคร';
+    } else if (selected_theme.name === 'ขยะมูลฝอย') {
+      note = 'สํานักยุทธศาสตร์และประเมินผล และสำนักงบประมาณ กรุงเทพมหานคร ';
+    } else if (selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน') {
+      note = 'กรมควบคุมมลพิษ กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม';
     }
 
     const group_district = (type) => {
@@ -134,19 +154,6 @@ const dashboard = () => {
       SET_STATE_DROPDOWN(null);
       SET_SELECTED_TOOLTIP();
     };
-
-    let format_type;
-    if (checked === 'เขตพื้นที่ธุรกิจ') {
-      format_type = 'business';
-    } else if (checked === 'เขตพื้นที่ท่องเที่ยวและวัฒนธรรม') {
-      format_type = 'tourism-and-cultural';
-    } else if (checked === 'เขตพื้นที่อยู่อาศัย') {
-      format_type = 'residence';
-    } else if (checked === 'เขตพื้นที่ชานเมือง') {
-      format_type = 'suburban';
-    } else {
-      format_type = 'all';
-    }
 
     let districtName = _.map(group_district(format_type), (rank) => {
       return { filter_by: _.get(rank, 'name') };
@@ -328,6 +335,13 @@ const dashboard = () => {
                 )}
 
                 {selected_theme.name === 'พื้นที่สีเขียว' &&
+                district != null ? (
+                  <StandardGreen selected_theme={selected_theme} />
+                ) : (
+                  ''
+                )}
+
+                {selected_theme.name === 'พื้นที่สีเขียว' &&
                 district === null ? (
                   <Standard selected_theme={selected_theme} />
                 ) : (
@@ -366,7 +380,7 @@ const dashboard = () => {
                   ''
                 )}
                 {selected_theme.name === 'น้ำท่วมถนน' ? (
-                  <LocationWater
+                  <LocationFlood
                     selected_theme={selected_theme}
                     data={
                       state_dropdown === 'zone'
@@ -430,10 +444,7 @@ const dashboard = () => {
                 </div>
                 <div id="note" className="px-2 py-3 mt-3 card_cat_detail">
                   <p className="font-bold h4">หมายเหตุ</p>
-                  <p className="p3">
-                    ที่มาข้อมูล: สํานักยุทธศาสตร์และประเมินผล และสำนักงบประมาณ
-                    กรุงเทพมหานคร
-                  </p>
+                  <p className="p3">{note}</p>
                 </div>
               </div>
             ) : (
