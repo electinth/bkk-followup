@@ -282,10 +282,10 @@ const dashboard = () => {
               SET_DISTRICT={SET_DISTRICT}
             />
             {!isRank ? (
-              <div id="isAll-wrapper" className="px-5 py-5 overflow-auto">
+              <div id="isAll-wrapper" className="px-5 pb-5 overflow-auto">
                 <div
                   id={`card${selected_theme.name}`}
-                  className="flex justify-center py-6 mt-6 text-center pointer-events-none text-white-default card_cat_detail"
+                  className="flex justify-center py-6 mt-3 text-center pointer-events-none text-white-default card_cat_detail"
                   style={{ backgroundColor: selected_theme.color }}
                 >
                   <span>

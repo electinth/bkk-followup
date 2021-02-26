@@ -29,7 +29,7 @@ const category_manu = ({
   };
   return (
     <div
-      className="flex flex-row flex-wrap justify-center mb-2"
+      className="flex flex-row flex-wrap justify-center my-2"
       id="category-manu"
       style={{ height: 'fit-content' }}
     >
