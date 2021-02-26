@@ -235,7 +235,6 @@ const dashboard = () => {
               raw_data={data}
               SET_DISTRICT={SET_DISTRICT}
               SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
-              district={district}
               SET_CHECKED={SET_CHECKED}
             />
             <div className="flex" id="map-footer">

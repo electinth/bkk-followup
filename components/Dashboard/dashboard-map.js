@@ -12,7 +12,6 @@ const map = ({
   raw_data,
   SET_DISTRICT,
   SET_STATE_DROPDOWN,
-  district,
   SET_CHECKED,
 }) => {
   const actived_tool_tip = (name) => {
@@ -58,7 +57,6 @@ const map = ({
     }
   };
 
-  d3.selectAll('.tool_tip_wrapper').remove();
   const box_width = 50;
   const box_gap = 3;
   const r_max = 20;
@@ -250,6 +248,7 @@ const map = ({
         unit = d3.mean(merge_data, (d) => +d.value);
       }
       const maps = d3.select('#maps');
+
       d3.select('.svg-wrapper').remove();
       add_map(
         maps,
@@ -258,6 +257,14 @@ const map = ({
         [selected_theme.color, '#CCF4DD', '#FFFFFF'],
         selected_year
       );
+      if (state_dropdown === 'group') {
+        _.forEach(raw_data.rankings, (district) => {
+          d3.select(`.rect${district.districtName}`)
+            .style('stroke-width', 1)
+            .style('stroke', 'white');
+          d3.select(`.minimap${district.districtName}`).style('fill', 'white');
+        });
+      }
     });
   };
 
@@ -279,16 +286,9 @@ const map = ({
   // }, [selected_year]);
 
   useEffect(() => {
-    d3.select('.tool_tip_wrapper').remove();
+    // d3.select('.tool_tip_wrapper').remove();
+    d3.selectAll('.tool_tip_wrapper').remove();
     run();
-    if (state_dropdown === 'zone') {
-      SET_SELECTED_TOOLTIP(district);
-      d3.select(`.rect${district}`)
-        .style('stroke-width', 1)
-        .style('stroke', 'white');
-      d3.select(`.minimap${district}`).style('fill', 'white');
-      d3.select(`.tooltip${district}`).style('visibility', 'visible');
-    }
   }, [selected_theme]);
 
   return (

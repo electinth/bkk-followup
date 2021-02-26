@@ -21,7 +21,7 @@ const location_water = ({ selected_theme, data }) => {
           style={{ backgroundColor: selected_theme.color50 }}
         >
           {data.map((lo, index) => (
-            <div key={index} className="flex justify-start">
+            <div key={index} className="flex justify-start py-1">
               <p className="font-bold">•{lo.name}</p>
               <p className="pl-1">{lo.description}</p>
             </div>
