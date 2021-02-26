@@ -1,6 +1,7 @@
-import "styles/globals.css";
-import "styles/header.css";
-import "styles/dashboard.css";
+import "styles/globals.scss";
+import "styles/font.css";
+import "styles/header.scss";
+import "styles/dashboard.scss";
 import "styles/home.scss";
 import "swiper/swiper.scss";
 
