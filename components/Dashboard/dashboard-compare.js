@@ -1,11 +1,19 @@
 import React from 'react';
 
-const compare = ({ selected_theme, data }) => {
+const compare = ({ selected_theme, data, SET_CHECKED, SET_STATE_DROPDOWN }) => {
   let title, unit;
+  let arr_filter = [
+    'เขตพื้นที่ทั้งหมด',
+    'เขตพื้นที่อยู่อาศัย',
+    'เขตพื้นที่ชานเมือง',
+    'เขตพื้นที่ท่องเที่ยวและวัฒนธรรม',
+    'เขตพื้นที่ธุรกิจ',
+  ];
   if (selected_theme.name === 'น้ำท่วมถนน') {
     title = 'เปรียบเทียบจำนวนครั้งทั้งหมดที่น้ำท่วมแต่ละกลุ่มเขต';
     unit = 'ครั้ง';
     data = _.drop(data);
+    arr_filter = _.drop(arr_filter);
   } else if (selected_theme.name === 'พื้นที่สีเขียว') {
     title = 'เปรียบเทียบจำนวนขยะแต่ละกลุ่มเขต';
     unit = 'ตร.ม./คน';
@@ -28,6 +36,11 @@ const compare = ({ selected_theme, data }) => {
     ทุกเขตพื้นที่อยู่อาศัยชานเมือง: require('assets/images/by_suburb_w.svg'),
   };
 
+  const clickOverAll = (_, filter) => {
+    SET_STATE_DROPDOWN('group');
+    SET_CHECKED(filter);
+  };
+
   return (
     <div className="flex-1 card_cat_detail " style={{ height: 'fit-content' }}>
       <div
@@ -48,7 +61,7 @@ const compare = ({ selected_theme, data }) => {
             }}
           >
             <div
-              className="flex flex-1 py-4 pl-2 pr-5 rounded-l p2 text-white-default"
+              className="flex flex-1 py-4 pl-2 pr-5 rounded-l cursor-pointer p2 text-white-default"
               style={{
                 backgroundColor:
                   i === 0
@@ -57,13 +70,14 @@ const compare = ({ selected_theme, data }) => {
                       : selected_theme.color
                     : 'black',
               }}
+              onClick={() => clickOverAll(_, arr_filter[i])}
             >
               <img
                 src={arr_img[`${d.areaName}`]}
                 alt="compare-icon"
-                className="mr-2 "
+                className="mr-2 pointer-events-none"
               />
-              <p>{d.areaName}</p>
+              <p className="pointer-events-none">{d.areaName}</p>
             </div>
             <div className="flex flex-col flex-1 px-2 pt-1">
               <span
@@ -73,7 +87,13 @@ const compare = ({ selected_theme, data }) => {
                 <p className="pr-1 h4">{d.value}</p>
                 <p className="ml-1 p2">{unit}</p>
               </span>
-              <p style={{ color: '#344E66' }}>ดูภาพรวมของกลุ่ม</p>
+              <p
+                style={{ color: '#344E66' }}
+                className="underline opacity-50 cursor-pointer p2"
+                onClick={() => clickOverAll(_, arr_filter[i])}
+              >
+                ดูภาพรวมของกลุ่ม
+              </p>
             </div>
           </div>
         ))}

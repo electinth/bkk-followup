@@ -273,6 +273,7 @@ const dashboard = () => {
               SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
               SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
               SET_CHECKED={SET_CHECKED}
+              SET_DISTRICT={SET_DISTRICT}
             />
             {!isRank ? (
               <div id="isAll-wrapper" className="overflow-auto">
@@ -410,6 +411,8 @@ const dashboard = () => {
                       selected_theme={selected_theme}
                       checked={checked}
                       data={data.benchmarks}
+                      SET_CHECKED={SET_CHECKED}
+                      SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
                     />
                   ) : state_dropdown === 'zone' ? (
                     <ListPerDistrict
