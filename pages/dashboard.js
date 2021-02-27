@@ -31,6 +31,7 @@ import LineChart from 'components/Dashboard/dashboard-line-chart';
 import StandardGreen from 'components/Dashboard/util/standard_green';
 
 import _ from 'lodash';
+import * as d3 from 'd3';
 
 const dashboard = () => {
   const category = [
@@ -153,6 +154,7 @@ const dashboard = () => {
       SET_DISTRICT(null);
       SET_STATE_DROPDOWN(null);
       SET_SELECTED_TOOLTIP();
+      d3.selectAll(`.minimap`).style('fill', 'none');
     };
 
     let districtName = _.map(group_district(format_type), (rank) => {
@@ -174,8 +176,9 @@ const dashboard = () => {
       <Layout id="dashboard">
         <div
           id="dashboard-wrapper"
-          className="absolute top-0 bottom-0 left-0 right-0 flex overflow-hidden"
+          className="absolute top-0 bottom-0 left-0 right-0 flex overflow-hidden "
         >
+          {/* md:flex-col md:overflow-auto */}
           <div
             className="flex flex-col flex-1 bg-black-default"
             id="dashboard-left"
@@ -267,6 +270,7 @@ const dashboard = () => {
               </div>
             </div>
           </div>
+          {/* { md:min-h-full} */}
           <div
             id="dashboard-right"
             className="flex flex-col flex-1 overflow-auto "

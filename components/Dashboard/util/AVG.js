@@ -233,7 +233,7 @@ const AVG = ({
           <p className="font-bold leading-tight h4">{AVG_title}</p>
           <p
             style={{ color: selected_theme.text_color }}
-            className="font-bold h5"
+            className="font-bold h2"
           >
             {AVG}
           </p>

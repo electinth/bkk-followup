@@ -15,7 +15,7 @@ const rating = (selected_theme, rank_text, district_data) => {
             <span className="flex flex-col">
               <p className="font-bold h4">{rank_text}</p>
               <p
-                className="font-bold h5"
+                className="font-bold h2"
                 style={{ color: selected_theme.text_color }}
               >
                 {district_data.ranked}/50

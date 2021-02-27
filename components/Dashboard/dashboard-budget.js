@@ -50,7 +50,7 @@ const budget = ({ selected_theme, data, checked, state_dropdown }) => {
         </div>
         <span className="flex flex-col items-center py-3 font-bold leading-snug">
           <p className="p2">ในปี 2555-2562 กทม. ใช้เงินงบประมาณ</p>
-          <p className="h5" style={{ color: selected_theme.text_color }}>
+          <p className="h2" style={{ color: selected_theme.text_color }}>
             {numeral(focused).format('0,0')} ล้านบาท
           </p>
           <p className="p2">{title}</p>

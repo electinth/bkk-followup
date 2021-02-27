@@ -39,7 +39,7 @@ const timeLine = ({
 
   return (
     <div
-      className="flex items-center text-white-default"
+      className="flex items-center mt-2 text-white-default"
       id="tile-line-wrapper"
     >
       <div className="flex justify-end flex-1 d2" id="time-line-text">

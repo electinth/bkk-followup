@@ -18,7 +18,7 @@ const standard = ({ selected_theme }) => {
           <p className="font-bold leading-tight h4">พื้นที่สีเขียวควรมากกว่า</p>
           <p
             style={{ color: selected_theme.text_color }}
-            className="font-bold h5"
+            className="font-bold h2"
           >
             9
           </p>
