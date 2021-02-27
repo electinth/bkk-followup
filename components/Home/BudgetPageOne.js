@@ -1,6 +1,6 @@
 import React from "react";
 import { CSSTransition } from "react-transition-group";
-import children from "assets/images/children.png";
+import children from "assets/images/children.gif";
 import p_icon from "assets/images/p_icon.svg";
 
 export default function BudgetPageOne(props) {
@@ -8,11 +8,11 @@ export default function BudgetPageOne(props) {
 
   return (
     <div
-      className="fixed inset-0 z-10 flex items-center pointer-events-none budget-page-one bg-green-default"
+      className="budget-page-one fixed inset-0 z-10 flex items-center pointer-events-none bg-green-default"
       style={{ top: "60px" }}
     >
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-10">
           <div className="left">
             <h2 className="leading-tight d2">
               <span className="d2 text-white-default">
@@ -30,7 +30,7 @@ export default function BudgetPageOne(props) {
               80,000 ล้านบาท
             </h2>
 
-            <h3 className="mt-8 d3">
+            <h3 className="mt-8 text-4xl">
               แต่เราก็ยังเห็นหลายปัญหากวนใจ ที่เกิดขึ้นซ้ำๆ และยังไม่ถูกแก้
             </h3>
           </div>
@@ -39,8 +39,7 @@ export default function BudgetPageOne(props) {
             <img
               src={children}
               alt={children}
-              className="children-image"
-              style={{ width: "288px" }}
+              className="children-image w-2/4 mb-10"
             />
 
             <CSSTransition
@@ -50,7 +49,7 @@ export default function BudgetPageOne(props) {
               classNames="fade"
             >
               <div
-                className="absolute p-5 transform bg-opacity-75 rounded-md shadow-xl content bg-white-default top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4"
+                className="absolute p-5 transform bg-opacity-80 rounded-md shadow-xl content bg-white-default top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4"
                 style={{ minWidth: "387px" }}
               >
                 <h5 className="text-lg">

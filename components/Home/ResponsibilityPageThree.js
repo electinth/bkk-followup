@@ -1,196 +1,102 @@
 import React, { useEffect } from "react";
-import image_placeholder from "assets/images/image_placeholder.svg";
+import image_placeholder from "assets/images/image_placeholder.png";
 
 export default function ResponsibilityPageThree() {
   const data = [
     {
-      year: 2519,
-      image: require("assets/images/ธรรมนูญ_เทียนเงิน 1.png"),
+      year: 2516,
       name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
       appoint: true,
     },
     {
-      year: 2520,
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
-    },
-    {
-      year: 2519,
-      image: require("assets/images/ธรรมนูญ_เทียนเงิน 1.png"),
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
+      year: 2516,
+      name: "อรรถ วิสูตรโยธาภิบาล",
       appoint: true,
     },
     {
-      year: 2520,
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
-    },
-    {
-      year: 2519,
-      image: require("assets/images/ธรรมนูญ_เทียนเงิน 1.png"),
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
+      year: 2517,
+      name: "ศิริ สันติบุตร",
       appoint: true,
     },
     {
-      year: 2520,
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
-    },
-    {
-      year: 2519,
-      image: require("assets/images/ธรรมนูญ_เทียนเงิน 1.png"),
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
+      year: 2518,
+      name: "สาย หุตะเจริญ",
       appoint: true,
     },
     {
-      year: 2520,
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
+      year: 2518,
+      image: require("assets/images/ธรรมนูญ_เทียนเงิน.png"),
+      name: "ธรรมนูญ เทียนเงิน",
     },
     {
-      year: 2519,
-      image: require("assets/images/ธรรมนูญ_เทียนเงิน 1.png"),
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
+      year: 2520,
+      name: "ชลอ ธรรมศิริ",
       appoint: true,
     },
     {
-      year: 2520,
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
-    },
-    {
-      year: 2519,
-      image: require("assets/images/ธรรมนูญ_เทียนเงิน 1.png"),
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
+      year: 2522,
+      name: "เชาวน์วัศ สุดลาภา",
       appoint: true,
     },
     {
-      year: 2520,
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
-    },
-    {
-      year: 2519,
-      image: require("assets/images/ธรรมนูญ_เทียนเงิน 1.png"),
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
+      year: 2524,
+      name: "พลเรือเอก เทียม มกรานนท์",
       appoint: true,
     },
     {
-      year: 2520,
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
-    },
-    {
-      year: 2519,
-      image: require("assets/images/ธรรมนูญ_เทียนเงิน 1.png"),
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
+      year: 2527,
+      name: "อาษา เมฆสวรรค์",
       appoint: true,
     },
     {
-      year: 2520,
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
+      year: 2528,
+      name: "พลตรี จำลอง ศรีเมือง",
+      image: require("assets/images/02-จำลอง-ศรีเมือง.png"),
     },
     {
-      year: 2519,
-      image: require("assets/images/ธรรมนูญ_เทียนเงิน 1.png"),
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
+      year: 2533,
+      name: "พลตรี จำลอง ศรีเมือง",
+      image: require("assets/images/02-จำลอง-ศรีเมือง.png"),
+    },
+    {
+      year: 2535,
+      name: "ร้อยเอก กฤษฎา อรุณวงษ์ ณ อยุธยา",
+      image: require("assets/images/03-กฤษฎา-อรุณวงษ์-ณ-อยุธยา.png"),
+    },
+    {
+      year: 2539,
+      name: "พิจิตต รัตตกุล",
+      image: require("assets/images/04-พิจิตต-รัตตกุล.png"),
+    },
+    {
+      year: 2543,
+      name: "สมัคร สุนทรเวช",
+      image: require("assets/images/05-สมัคร-สุนทรเวช.png"),
+    },
+    {
+      year: 2547,
+      name: "อภิรักษ์ โกษะโยธิน",
+      image: require("assets/images/06-อภิรักษ์-โกษะโยธิน.png"),
+    },
+    {
+      year: 2551,
+      name: "อภิรักษ์ โกษะโยธิน",
+      image: require("assets/images/06-อภิรักษ์-โกษะโยธิน.png"),
+    },
+    {
+      year: 2552,
+      name: "หม่อมราชวงศ์สุขุมพันธุ์ บริพัตร",
+      image: require("assets/images/07-สุขุมพันธุ์-บริพัตร.png"),
+    },
+    {
+      year: 2556,
+      name: "หม่อมราชวงศ์สุขุมพันธุ์ บริพัตร",
+      image: require("assets/images/07-สุขุมพันธุ์-บริพัตร.png"),
+    },
+    {
+      year: 2559,
+      name: "พลตำรวจเอก อัศวิน ขวัญเมือง",
       appoint: true,
-    },
-    {
-      year: 2520,
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
-    },
-    {
-      year: 2520,
-      name: "ชำนาญ ยุวบูรณ์",
-      list: [
-        "การดูแลรักษาทางบกทางน้ำ",
-        "การขนส่ง",
-        "การจัดการและวิศวกรรมจราจร",
-      ],
     },
   ];
 
@@ -226,7 +132,11 @@ export default function ResponsibilityPageThree() {
                   className="overflow-hidden rounded-full bg-blue-default"
                   style={{ height: "120px", width: "120px" }}
                 >
-                  <img className="w-full h-full" src={d.image} alt={d.image} />
+                  <img
+                    className="w-full h-full  object-cover"
+                    src={d.image}
+                    alt={d.image}
+                  />
                 </div>
               ) : (
                 <div
@@ -238,7 +148,7 @@ export default function ResponsibilityPageThree() {
                     style={{ height: "42px", width: "42px" }}
                   >
                     <img
-                      className="w-full h-full"
+                      className="w-full h-full object-cover"
                       src={image_placeholder}
                       alt={image_placeholder}
                     />

@@ -1,5 +1,6 @@
 import React from "react";
 import { CSSTransition } from "react-transition-group";
+import numeral from "numeral";
 import _ from "lodash";
 
 export default function BudgetPageThree(props) {
@@ -34,37 +35,37 @@ export default function BudgetPageThree(props) {
       color: "#00C853",
     },
   ];
-  const chart_data = [
+  let chart_data = [
     {
       year: 2555,
       values: [
         {
           title: "การศึกษา",
-          value: 14.28,
+          value: 6377129080,
         },
         {
           title: "สาธารณสุข",
-          value: 14.28,
+          value: 4954041000,
         },
         {
           title: "การพัฒนาและบริการสังคม",
-          value: 14.28,
+          value: 8817996000,
         },
         {
           title: "การระบายน้ำและกำจัดน้ำเสีย",
-          value: 14.28,
+          value: 7490564300,
         },
         {
           title: "การโยธาและระบบจราจร",
-          value: 14.28,
+          value: 11745330820,
         },
         {
           title: "การรักษาความสะอาดและความเป็นระเบียบเรียบร้อย",
-          value: 14.28,
+          value: 9407826600,
         },
         {
           title: "การบริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 21207112200,
         },
       ],
     },
@@ -73,31 +74,31 @@ export default function BudgetPageThree(props) {
       values: [
         {
           title: "การศึกษา",
-          value: 14.28,
+          value: 9113839500,
         },
         {
           title: "สาธารณสุข",
-          value: 14.28,
+          value: 5170299900,
         },
         {
           title: "การพัฒนาและบริการสังคม",
-          value: 14.28,
+          value: 7228200700,
         },
         {
           title: "การระบายน้ำและกำจัดน้ำเสีย",
-          value: 14.28,
+          value: 5697053500,
         },
         {
           title: "การโยธาและระบบจราจร",
-          value: 14.28,
+          value: 11511754000,
         },
         {
           title: "การรักษาความสะอาดและความเป็นระเบียบเรียบร้อย",
-          value: 14.28,
+          value: 13788670400,
         },
         {
           title: "การบริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 17390182000,
         },
       ],
     },
@@ -106,31 +107,31 @@ export default function BudgetPageThree(props) {
       values: [
         {
           title: "การศึกษา",
-          value: 14.28,
+          value: 5690207300,
         },
         {
           title: "สาธารณสุข",
-          value: 14.28,
+          value: 5522328600,
         },
         {
           title: "การพัฒนาและบริการสังคม",
-          value: 14.28,
+          value: 6951754400,
         },
         {
           title: "การระบายน้ำและกำจัดน้ำเสีย",
-          value: 14.28,
+          value: 5868312300,
         },
         {
           title: "การโยธาและระบบจราจร",
-          value: 14.28,
+          value: 11604899100,
         },
         {
           title: "การรักษาความสะอาดและความเป็นระเบียบเรียบร้อย",
-          value: 14.28,
+          value: 14743038700,
         },
         {
           title: "การบริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 19619459600,
         },
       ],
     },
@@ -139,31 +140,31 @@ export default function BudgetPageThree(props) {
       values: [
         {
           title: "การศึกษา",
-          value: 14.28,
+          value: 5327612260,
         },
         {
           title: "สาธารณสุข",
-          value: 14.28,
+          value: 5436231200,
         },
         {
           title: "การพัฒนาและบริการสังคม",
-          value: 14.28,
+          value: 7501896200,
         },
         {
           title: "การระบายน้ำและกำจัดน้ำเสีย",
-          value: 14.28,
+          value: 6875239600,
         },
         {
           title: "การโยธาและระบบจราจร",
-          value: 14.28,
+          value: 10721085000,
         },
         {
           title: "การรักษาความสะอาดและความเป็นระเบียบเรียบร้อย",
-          value: 14.28,
+          value: 13395895700,
         },
         {
           title: "การบริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 15742040040,
         },
       ],
     },
@@ -172,31 +173,31 @@ export default function BudgetPageThree(props) {
       values: [
         {
           title: "การศึกษา",
-          value: 14.28,
+          value: 5339825700,
         },
         {
           title: "สาธารณสุข",
-          value: 14.28,
+          value: 5199125000,
         },
         {
           title: "การพัฒนาและบริการสังคม",
-          value: 14.28,
+          value: 7109940700,
         },
         {
           title: "การระบายน้ำและกำจัดน้ำเสีย",
-          value: 14.28,
+          value: 9135334762,
         },
         {
           title: "การโยธาและระบบจราจร",
-          value: 14.28,
+          value: 12415062000,
         },
         {
           title: "การรักษาความสะอาดและความเป็นระเบียบเรียบร้อย",
-          value: 14.28,
+          value: 13089534400,
         },
         {
           title: "การบริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 17711177438,
         },
       ],
     },
@@ -205,31 +206,31 @@ export default function BudgetPageThree(props) {
       values: [
         {
           title: "การศึกษา",
-          value: 14.28,
+          value: 4142355400,
         },
         {
           title: "สาธารณสุข",
-          value: 14.28,
+          value: 6141582200,
         },
         {
           title: "การพัฒนาและบริการสังคม",
-          value: 14.28,
+          value: 7459922417,
         },
         {
           title: "การระบายน้ำและกำจัดน้ำเสีย",
-          value: 14.28,
+          value: 6827092100,
         },
         {
           title: "การโยธาและระบบจราจร",
-          value: 14.28,
+          value: 14743356700,
         },
         {
           title: "การรักษาความสะอาดและความเป็นระเบียบเรียบร้อย",
-          value: 14.28,
+          value: 11649415683,
         },
         {
           title: "การบริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 26749192000,
         },
       ],
     },
@@ -238,31 +239,31 @@ export default function BudgetPageThree(props) {
       values: [
         {
           title: "การศึกษา",
-          value: 14.28,
+          value: 5077764500,
         },
         {
           title: "สาธารณสุข",
-          value: 14.28,
+          value: 6086651800,
         },
         {
           title: "การพัฒนาและบริการสังคม",
-          value: 14.28,
+          value: 6559004200,
         },
         {
           title: "การระบายน้ำและกำจัดน้ำเสีย",
-          value: 14.28,
+          value: 5936177400,
         },
         {
           title: "การโยธาและระบบจราจร",
-          value: 14.28,
+          value: 15934089400,
         },
         {
           title: "การรักษาความสะอาดและความเป็นระเบียบเรียบร้อย",
-          value: 14.28,
+          value: 13029289300,
         },
         {
           title: "การบริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 25877023400,
         },
       ],
     },
@@ -271,35 +272,47 @@ export default function BudgetPageThree(props) {
       values: [
         {
           title: "การศึกษา",
-          value: 14.28,
+          value: 4529808000,
         },
         {
           title: "สาธารณสุข",
-          value: 14.28,
+          value: 6490147850,
         },
         {
           title: "การพัฒนาและบริการสังคม",
-          value: 14.28,
+          value: 6207329598,
         },
         {
           title: "การระบายน้ำและกำจัดน้ำเสีย",
-          value: 14.28,
+          value: 6281779301,
         },
         {
           title: "การโยธาและระบบจราจร",
-          value: 14.28,
+          value: 15774401980,
         },
         {
           title: "การรักษาความสะอาดและความเป็นระเบียบเรียบร้อย",
-          value: 14.28,
+          value: 12978587552,
         },
         {
           title: "การบริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 27737945719,
         },
       ],
     },
   ];
+  chart_data = _.map(chart_data, (d) => {
+    const sum = _.sumBy(d.values, "value");
+    return {
+      year: d.year,
+      values: _.map(d.values, (v) => {
+        return {
+          ...v,
+          percent: (v.value * 100) / sum,
+        };
+      }),
+    };
+  });
 
   const getColor = (title) => {
     const legend = chart_legends.find((l) => l.title === title);
@@ -354,19 +367,21 @@ export default function BudgetPageThree(props) {
                         className="box rounded-md mb-0.5 relative pointer-events-auto cursor-pointer"
                         style={{
                           width: "52px",
-                          height: `${v.value}%`,
+                          height: `${v.percent}%`,
                           background: getColor(v.title),
                         }}
                       >
                         <div
-                          className="tooltip text-xs bg-white-default rounded-md py-2 px-4 absolute -top-20 left-2/4 transform -translate-x-2/4 mx-auto text-black-default z-10 shadow-md"
+                          className="tooltip text-xs bg-white-default rounded-md py-2 px-4 absolute -top-10 left-2/4 transform -translate-x-2/4 mx-auto text-black-default z-10 shadow-md pointer-events-none"
                           style={{ minWidth: "176px" }}
                         >
                           ปี {d.year}
                           <br />
                           <b>{v.title}</b>
                           <br />
-                          494.58 ล้านบาท (23%)
+                          {numeral(v.value / 1e7).format("0.00")} ล้านบาท (
+                          {numeral(v.percent).format("0.00")}
+                          %)
                         </div>
                       </div>
                     ))}

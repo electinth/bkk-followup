@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import _ from "lodash";
+import numeral from "numeral";
 
 export default function BudgetPageFour() {
   const [hover_legend, setHoverLegend] = useState(null);
@@ -7,55 +8,47 @@ export default function BudgetPageFour() {
     {
       title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
       color: "#00C853",
-      total: 29.6,
+      value: 172034132397,
+      percent: 29.6,
     },
     {
       title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
       color: "#CCF4DD",
-      total: 18.0,
+      value: 104449979000,
+      percent: 18.0,
     },
     {
       title: "งานรักษาความสะอาด",
       color: "#DAE1E8",
-      total: 34.6,
+      value: 94887660735,
+      percent: 16.3,
     },
     {
       title: "อื่นๆ",
       color: "black",
-      total: 17.6,
+      value: 412040688835,
+      percent: 70.9,
     },
   ];
-  const chart_data = [
+  let chart_data = [
     {
       year: 2555,
       values: [
         {
           title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
+          value: 49690262400,
         },
         {
           title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
-          value: 14.28,
+          value: 11745330820,
         },
         {
           title: "งานรักษาความสะอาด",
-          value: 14.28,
+          value: 11000391100,
         },
         {
           title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 21207112200,
         },
       ],
     },
@@ -64,31 +57,19 @@ export default function BudgetPageFour() {
       values: [
         {
           title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
+          value: 49435413000,
         },
         {
           title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
-          value: 14.28,
+          value: 11511754000,
         },
         {
           title: "งานรักษาความสะอาด",
-          value: 14.28,
+          value: 12478124100,
         },
         {
           title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 17390182000,
         },
       ],
     },
@@ -97,31 +78,19 @@ export default function BudgetPageFour() {
       values: [
         {
           title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
+          value: 48598911100,
         },
         {
           title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
-          value: 14.28,
+          value: 11604899100,
         },
         {
           title: "งานรักษาความสะอาด",
-          value: 14.28,
+          value: 13328421600,
         },
         {
           title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 19619459600,
         },
       ],
     },
@@ -130,31 +99,19 @@ export default function BudgetPageFour() {
       values: [
         {
           title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
+          value: 43352395700,
         },
         {
           title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
-          value: 14.28,
+          value: 10721085000,
         },
         {
           title: "งานรักษาความสะอาด",
-          value: 14.28,
+          value: 12054632300,
         },
         {
           title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 15742040040,
         },
       ],
     },
@@ -163,31 +120,19 @@ export default function BudgetPageFour() {
       values: [
         {
           title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
+          value: 46011061638,
         },
         {
           title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
-          value: 14.28,
+          value: 12415062000,
         },
         {
           title: "งานรักษาความสะอาด",
-          value: 14.28,
+          value: 11946842700,
         },
         {
           title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 17711177438,
         },
       ],
     },
@@ -196,31 +141,19 @@ export default function BudgetPageFour() {
       values: [
         {
           title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
+          value: 57343687300,
         },
         {
           title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
-          value: 14.28,
+          value: 14743356700,
         },
         {
           title: "งานรักษาความสะอาด",
-          value: 14.28,
+          value: 10481866083,
         },
         {
           title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 26749192000,
         },
       ],
     },
@@ -229,31 +162,19 @@ export default function BudgetPageFour() {
       values: [
         {
           title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
+          value: 58178763652,
         },
         {
           title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
-          value: 14.28,
+          value: 15934089400,
         },
         {
           title: "งานรักษาความสะอาด",
-          value: 14.28,
+          value: 11869146200,
         },
         {
           title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 25877023400,
         },
       ],
     },
@@ -262,35 +183,35 @@ export default function BudgetPageFour() {
       values: [
         {
           title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
-        },
-        {
-          title: "อื่นๆ",
-          value: 14.28,
+          value: 59430194045,
         },
         {
           title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
-          value: 14.28,
+          value: 15774401980,
         },
         {
           title: "งานรักษาความสะอาด",
-          value: 14.28,
+          value: 11728236652,
         },
         {
           title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
-          value: 14.28,
+          value: 27737945719,
         },
       ],
     },
   ];
+  chart_data = _.map(chart_data, (d) => {
+    const sum = _.sumBy(d.values, "value");
+    return {
+      year: d.year,
+      values: _.map(d.values, (v) => {
+        return {
+          ...v,
+          percent: (v.value * 100) / sum,
+        };
+      }),
+    };
+  });
 
   const getColor = (title) => {
     const legend = chart_legends.find((l) => l.title === title);
@@ -318,13 +239,13 @@ export default function BudgetPageFour() {
                         : "none",
                   }}
                   onMouseOver={() => setHoverLegend(l.title)}
+                  onMouseLeave={() => setHoverLegend(null)}
                 >
                   <div className="title d5 flex-1">{l.title}</div>
 
                   <h3 className="value flex-none ml-3 text-right">
-                    x,xxx ล้านบาท
-                    <br />
-                    (29.6%)
+                    {numeral(l.value / 1e7).format("0,0")} ล้านบาท
+                    <br />({l.percent}%)
                   </h3>
                 </li>
               ))}
@@ -347,7 +268,7 @@ export default function BudgetPageFour() {
                         }`}
                         style={{
                           width: "52px",
-                          height: `${v.value}%`,
+                          height: `${v.percent}%`,
                           border:
                             v.title === "อื่นๆ"
                               ? "2px solid rgba(255, 255, 255, 0.9)"
@@ -357,7 +278,7 @@ export default function BudgetPageFour() {
                       >
                         {v.title !== "อื่นๆ" ? (
                           <h5 className="value text-xs text-black-default">
-                            13.44%
+                            {numeral(v.percent).format("0.00")}%
                           </h5>
                         ) : null}
                       </div>
