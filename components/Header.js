@@ -11,7 +11,7 @@ import p_icon from "assets/images/p_icon.svg";
 import fb_icon from "assets/images/fb_icon.svg";
 import twitter_icon from "assets/images/twitter_icon.svg";
 import { CSSTransition } from "react-transition-group";
-import { isMobile } from "react-device-detect";
+import { isMobile, isTablet } from "react-device-detect";
 
 export default function Header() {
   const [show_modal, showModal] = useState(false);
@@ -24,7 +24,7 @@ export default function Header() {
     >
       <div className="left flex items-center">
         <img
-          width={isMobile ? 94 : 124}
+          width={isMobile || isTablet ? 94 : 124}
           src={elect_logo}
           alt={elect_logo}
           className="mr-4"
@@ -67,9 +67,9 @@ export default function Header() {
         <div
           className="modal fixed right-0 shadow-xl max-w-screen-lg bg-white-default overflow-y-auto"
           style={{
-            top: isMobile ? "0" : "60px",
-            bottom: isMobile ? "0" : "unset",
-            maxHeight: isMobile ? "100%" : "calc(100vh - 60px)",
+            top: isMobile || isTablet ? "0" : "60px",
+            bottom: isMobile || isTablet ? "0" : "unset",
+            maxHeight: isMobile || isTablet ? "100%" : "calc(100vh - 60px)",
           }}
         >
           <div
@@ -79,14 +79,14 @@ export default function Header() {
             <h3 className="d3 hidden lg:block">MENU</h3>
 
             <img
-              width={isMobile ? 94 : 124}
+              width={isMobile || isTablet ? 94 : 124}
               src={elect_logo}
               alt={elect_logo}
               className="mr-2 block lg:hidden"
             />
 
             <img
-              width={isMobile ? 30 : 40}
+              width={isMobile || isTablet ? 30 : 40}
               src={close}
               alt={close}
               className="cursor-pointer"

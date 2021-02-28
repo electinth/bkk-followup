@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
 import numeral from "numeral";
-import { isMobile } from "react-device-detect";
+import { isMobile, isTablet } from "react-device-detect";
 
 export default function BudgetPageTwo(props) {
   const { active_index } = props;
@@ -25,9 +25,9 @@ export default function BudgetPageTwo(props) {
 
     const margin = {
       top: 5,
-      right: isMobile ? 40 : 25,
+      right: isMobile || isTablet ? 40 : 25,
       bottom: 5,
-      left: isMobile ? 40 : 25,
+      left: isMobile || isTablet ? 40 : 25,
     };
 
     width = width - margin.left - margin.right;
@@ -134,7 +134,7 @@ export default function BudgetPageTwo(props) {
       .attr("r", 6)
       .style("fill", "white");
 
-    if (isMobile) showValue();
+    if (isMobile || isTablet) showValue();
   }, []);
 
   const showValue = () => {
@@ -155,7 +155,7 @@ export default function BudgetPageTwo(props) {
   };
 
   useEffect(() => {
-    if (!isMobile) showValue();
+    if (!(isMobile || isTablet)) showValue();
   }, [active_index]);
 
   return (
@@ -177,10 +177,10 @@ export default function BudgetPageTwo(props) {
         <h2 className="d2 text-green-default">10,000 บาท/คน/ปี</h2>
       </div>
 
-      <div className="overflow-x-auto pointer-events-auto lg:pointer-events-none pb-4">
+      <div className="overflow-x-auto pointer-events-auto lg:pointer-events-none pb-5">
         <div
           className="line-chart mt-14 mx-auto relative"
-          style={{ width: isMobile ? "200%" : "80%" }}
+          style={{ width: isMobile || isTablet ? "200%" : "80%" }}
         >
           <svg></svg>
 

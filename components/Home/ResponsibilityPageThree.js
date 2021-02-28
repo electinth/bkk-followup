@@ -114,7 +114,7 @@ export default function ResponsibilityPageThree() {
     >
       <div className="w-full">
         <div className="container mx-auto">
-          <h2 className="leading-snug d2">
+          <h2 className="leading-snug d2 hidden lg:block">
             กทม. มีทั้ง
             <span className="text-blue-default">ผู้ว่าราชการกรุงเทพมหานคร</span>
             เป็นผู้บริหาร และ
@@ -122,9 +122,18 @@ export default function ResponsibilityPageThree() {
             ในการตรวจสอบการทำงานของผู้ว่าฯ อีกที
             โดยจะมาจากการเลือกตั้งโดยตรงของประชาชน ทุกๆ 4 ปี
           </h2>
+
+          <h4 className="leading-snug d4 block lg:hidden">
+            กทม. มีทั้ง
+            <span className="text-blue-default">ผู้ว่าราชการกรุงเทพมหานคร</span>
+            เป็นผู้บริหาร และ
+            <span className="text-blue-default">สภากรุงเทพมหานคร</span>
+            ในการตรวจสอบการทำงานของผู้ว่าฯ อีกที
+            โดยจะมาจากการเลือกตั้งโดยตรงของประชาชน ทุกๆ 4 ปี
+          </h4>
         </div>
 
-        <div className="flex w-full pb-6 pl-4 mt-20 overflow-x-auto pointer-events-auto scroll-list">
+        <div className="flex w-full pb-5 pl-4 mt-10 lg:mt-20 overflow-x-auto pointer-events-auto scroll-list">
           {data.map((d, index) => (
             <div key={index} className="pr-4 item">
               {d.image ? (

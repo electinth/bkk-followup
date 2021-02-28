@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile, isTablet } from "react-device-detect";
 
 export default function CitizenPageOne(props) {
   const { active_index } = props;
@@ -23,44 +24,61 @@ export default function CitizenPageOne(props) {
 
   return (
     <div
-      className="citizen-page-one flex items-center fixed z-10 inset-0 bg-pink-default pointer-events-none"
+      className="citizen-page-one flex lg:items-center fixed z-10 inset-0 bg-pink-default pointer-events-none py-4"
       style={{ top: "60px" }}
     >
       <div className="container mx-auto">
-        <h2 className="leading-tight d2 text-center text-white-default">
-          บทบาทและอำนาจหน้าที่ของ กทม.
-        </h2>
+        {!(isMobile || isTablet) || active_index === 15 ? (
+          <h2 className="leading-tight d2 text-center text-white-default">
+            ประชาชนสามารถมีส่วนร่วม กับกรุงเทพฯ อย่างไรได้บ้าง?
+          </h2>
+        ) : null}
 
-        <div
-          className="mt-14"
-          style={{ opacity: active_index > 12 ? 1 : 0, transition: "0.4s" }}
-        >
-          <div className="grid grid-cols-3 gap-5">
-            {data.map((d, d_index) => (
-              <div
-                key={d_index}
-                className="box p-8 rounded-md"
-                style={{ background: d.bg_color }}
-              >
-                <h3 className="d3">{d_index + 1}.</h3>
+        {!(isMobile || isTablet) || active_index === 16 ? (
+          <div
+            className="mt-0 lg:mt-14 h-full"
+            style={{ opacity: active_index > 12 ? 1 : 0, transition: "0.4s" }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-5 bg-white-default bg-opacity-90 lg:bg-opacity-0 rounded-md p-4 pb-0 lg:p-0">
+              {data.map((d, d_index) => (
+                <div
+                  key={d_index}
+                  className="box p-0 lg:p-8 rounded-md"
+                  style={{
+                    background: isMobile || isTablet ? "none" : d.bg_color,
+                  }}
+                >
+                  <h3 className="d3">{d_index + 1}.</h3>
 
-                <h4 className="d4 leading-tight mt-4">{d.title}</h4>
+                  <h4 className="d4 leading-tight mt-4 hidden lg:block">
+                    {d.title}
+                  </h4>
 
-                <hr className="my-5" />
+                  <h5 className="d5 leading-tight mt-4 block lg:hidden">
+                    {d.title}
+                  </h5>
 
-                <p className="text-lg leading-tight">{d.description}</p>
-              </div>
-            ))}
+                  {d.description ? (
+                    <p className="text-sm lg:text-lg leading-tight mt-5">
+                      {d.description}
+                    </p>
+                  ) : null}
+
+                  <hr className="mb-5 mt-3 lg:mt-5" />
+                </div>
+              ))}
+            </div>
+
+            <p className="text-xl mt-20 mx-auto text-center text-white-default max-w-4xl hidden lg:block">
+              <b>
+                ที่มา: • พรบ.
+                ว่าด้วยการลงคะแนนเสียงเพื่อถอดถอนสมาชิกหรือผู้บริหารท้องถิ่น
+                พ.ศ. 2542 • พรบ. ว่าด้วยการเข้าชื่อเสนอข้อบัญญัติท้องถิ่น พ.ศ.
+                2542”
+              </b>
+            </p>
           </div>
-
-          <p className="text-xl mt-20 mx-auto text-center text-white-default max-w-4xl">
-            <b>
-              ที่มา: • พรบ.
-              ว่าด้วยการลงคะแนนเสียงเพื่อถอดถอนสมาชิกหรือผู้บริหารท้องถิ่น พ.ศ.
-              2542 • พรบ. ว่าด้วยการเข้าชื่อเสนอข้อบัญญัติท้องถิ่น พ.ศ. 2542”
-            </b>
-          </p>
-        </div>
+        ) : null}
       </div>
     </div>
   );

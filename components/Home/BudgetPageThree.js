@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import numeral from "numeral";
 import _ from "lodash";
-import { isMobile } from "react-device-detect";
+import { isMobile, isTablet } from "react-device-detect";
 
 export default function BudgetPageThree(props) {
   const { active_index } = props;
@@ -344,8 +344,8 @@ export default function BudgetPageThree(props) {
 
             <h3 className="d3 block lg:hidden">581,112,916,500 บาท</h3>
 
-            {(isMobile && active_index === 5) ||
-            (!isMobile && active_index === 6) ? (
+            {((isMobile || isTablet) && active_index === 5) ||
+            (!(isMobile || isTablet) && active_index === 6) ? (
               <>
                 <h5 className="d5 mt-4 block lg:hidden">
                   งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?
@@ -366,7 +366,7 @@ export default function BudgetPageThree(props) {
             ) : null}
           </div>
 
-          {!isMobile || active_index === 6 ? (
+          {!(isMobile || isTablet) || active_index === 6 ? (
             <div className="right flex items-center">
               <div className="chart text-center grid grid-cols-8 gap-2 lg:gap-4 w-full lg:w-auto">
                 {chart_data.map((d) => (
@@ -374,7 +374,10 @@ export default function BudgetPageThree(props) {
                     <div
                       className="box-wrap flex flex-col"
                       style={{
-                        height: isMobile ? "calc(100vh - 380px)" : "560px",
+                        height:
+                          isMobile || isTablet
+                            ? "calc(100vh - 380px)"
+                            : "560px",
                       }}
                     >
                       {d.values.map((v) => (
@@ -382,7 +385,7 @@ export default function BudgetPageThree(props) {
                           key={v.title}
                           className="box rounded-md mb-0.5 relative pointer-events-auto cursor-pointer"
                           style={{
-                            width: isMobile ? "100%" : "52px",
+                            width: isMobile || isTablet ? "100%" : "52px",
                             height: `${v.percent}%`,
                             background: getColor(v.title),
                           }}
@@ -391,7 +394,7 @@ export default function BudgetPageThree(props) {
                           }
                           onMouseLeave={() => setHoverLegend(null)}
                         >
-                          {isMobile ? null : (
+                          {isMobile || isTablet ? null : (
                             <div
                               className="tooltip text-xs bg-white-default rounded-md py-2 px-4 absolute -top-10 left-2/4 transform -translate-x-2/4 mx-auto text-black-default z-10 shadow-md pointer-events-none"
                               style={{ minWidth: "176px" }}
@@ -418,7 +421,7 @@ export default function BudgetPageThree(props) {
             </div>
           ) : null}
 
-          {isMobile && hover_legend ? (
+          {(isMobile || isTablet) && hover_legend ? (
             <div
               className="tooltip text-xs bg-white-default rounded-md p-2 mx-auto text-black-default shadow-md pointer-events-none text-center w-max max-w-full"
               style={{ minWidth: "176px" }}

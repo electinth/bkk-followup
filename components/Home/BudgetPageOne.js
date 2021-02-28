@@ -1,7 +1,7 @@
 import React from "react";
 import children from "assets/images/children.gif";
 import p_icon from "assets/images/p_icon.svg";
-import { isMobile } from "react-device-detect";
+import { isMobile, isTablet } from "react-device-detect";
 
 export default function BudgetPageOne(props) {
   const { active_index } = props;
@@ -13,7 +13,7 @@ export default function BudgetPageOne(props) {
     >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {!isMobile || active_index === 1 ? (
+          {!(isMobile || isTablet) || active_index === 1 ? (
             <div className="left">
               <h2 className="leading-tight d2 hidden lg:block">
                 <span className="d2 text-white-default">
@@ -57,7 +57,7 @@ export default function BudgetPageOne(props) {
             </div>
           ) : null}
 
-          {!isMobile || active_index > 1 ? (
+          {!(isMobile || isTablet) || active_index > 1 ? (
             <div className="right relative">
               <img
                 src={children}
@@ -65,12 +65,14 @@ export default function BudgetPageOne(props) {
                 className="children-image w-3/4 lg:w-2/4 absolute top-2/4 transform -translate-y-2/4 left-2/4 -translate-x-2/4"
               />
 
-              {(!isMobile && active_index > 1) ||
-              (isMobile && active_index > 2) ? (
+              {(!(isMobile || isTablet) && active_index > 1) ||
+              ((isMobile || isTablet) && active_index > 2) ? (
                 <div className="relative h-full flex flex-col lg:flex-row items-center justify-center text-center">
                   <div
-                    className="p-5 bg-opacity-80 rounded-md shadow-xl content bg-white-default"
-                    style={{ minWidth: isMobile ? "100%" : "387px" }}
+                    className="p-5 bg-opacity-90 rounded-md shadow-xl content bg-white-default"
+                    style={{
+                      minWidth: isMobile || isTablet ? "100%" : "387px",
+                    }}
                   >
                     <h5 className="text-lg">
                       ในปี 2562 กทม. ใช้เงินดูแลประชาชนเฉลี่ย
