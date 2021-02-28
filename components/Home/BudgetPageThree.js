@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import numeral from "numeral";
 import _ from "lodash";
+import { isMobile } from "react-device-detect";
 
 export default function BudgetPageThree(props) {
   const { active_index } = props;
+  const [hover_legend, setHoverLegend] = useState(null);
   const chart_legends = [
     {
       title: "การศึกษา",
@@ -323,71 +325,113 @@ export default function BudgetPageThree(props) {
       className="budget-page-three bg-black-default fixed z-10 inset-x-0 bottom-0 pointer-events-none text-white-default"
       style={{ top: "60px" }}
     >
-      <div className="container h-full mx-auto py-14">
-        <div className="grid grid-cols-2 gap-5 h-full">
+      <div className="container h-full mx-auto py-5 lg:py-14">
+        <div className="block lg:grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5 h-full">
           <div className="left w-4/5">
-            <h3 className="d3">8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป</h3>
+            <h3 className="d3 hidden lg:block">
+              8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป
+            </h3>
 
-            <h2 className="d2">581,112,916,500 บาท</h2>
+            <h2 className="d2 hidden lg:block">581,112,916,500 บาท</h2>
 
-            <h4 className="d4 mt-6">งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?</h4>
+            <h4 className="d4 mt-6 hidden lg:block">
+              งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?
+            </h4>
 
-            {active_index === 6 ? (
-              <ul className="legends mt-9">
-                {chart_legends.map((l) => (
-                  <li key={l.title} className="d5 flex items-center">
-                    <div
-                      className="w-5 h-5 rounded mr-3 flex-none"
-                      style={{ background: l.color }}
-                    ></div>
-                    {l.title}
-                  </li>
-                ))}
-              </ul>
+            <h4 className="d4 block lg:hidden">
+              8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป
+            </h4>
+
+            <h3 className="d3 block lg:hidden">581,112,916,500 บาท</h3>
+
+            {(isMobile && active_index === 5) ||
+            (!isMobile && active_index === 6) ? (
+              <>
+                <h5 className="d5 mt-4 block lg:hidden">
+                  งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?
+                </h5>
+
+                <ul className="legends mt-4 lg:mt-9">
+                  {chart_legends.map((l) => (
+                    <li key={l.title} className="d5 flex items-center">
+                      <div
+                        className="w-5 h-5 rounded mr-3 flex-none"
+                        style={{ background: l.color }}
+                      ></div>
+                      {l.title}
+                    </li>
+                  ))}
+                </ul>
+              </>
             ) : null}
           </div>
 
-          <div className="right flex items-center">
-            <div className="chart text-center grid grid-cols-8 gap-4">
-              {chart_data.map((d) => (
-                <div key={d.year} className="bar">
-                  <div
-                    className="box-wrap flex flex-col"
-                    style={{ height: "560px" }}
-                  >
-                    {d.values.map((v) => (
-                      <div
-                        key={v.title}
-                        className="box rounded-md mb-0.5 relative pointer-events-auto cursor-pointer"
-                        style={{
-                          width: "52px",
-                          height: `${v.percent}%`,
-                          background: getColor(v.title),
-                        }}
-                      >
+          {!isMobile || active_index === 6 ? (
+            <div className="right flex items-center">
+              <div className="chart text-center grid grid-cols-8 gap-2 lg:gap-4 w-full lg:w-auto mt-4 lg:mt-0">
+                {chart_data.map((d) => (
+                  <div key={d.year} className="bar">
+                    <div
+                      className="box-wrap flex flex-col"
+                      style={{
+                        height: isMobile ? "calc(100vh - 380px)" : "560px",
+                      }}
+                    >
+                      {d.values.map((v) => (
                         <div
-                          className="tooltip text-xs bg-white-default rounded-md py-2 px-4 absolute -top-10 left-2/4 transform -translate-x-2/4 mx-auto text-black-default z-10 shadow-md pointer-events-none"
-                          style={{ minWidth: "176px" }}
+                          key={v.title}
+                          className="box rounded-md mb-0.5 relative pointer-events-auto cursor-pointer"
+                          style={{
+                            width: isMobile ? "100%" : "52px",
+                            height: `${v.percent}%`,
+                            background: getColor(v.title),
+                          }}
+                          onMouseOver={() =>
+                            setHoverLegend({ year: d.year, ...v })
+                          }
+                          onMouseLeave={() => setHoverLegend(null)}
                         >
-                          ปี {d.year}
-                          <br />
-                          <b>{v.title}</b>
-                          <br />
-                          {numeral(v.value / 1e7).format("0.00")} ล้านบาท (
-                          {numeral(v.percent).format("0.00")}
-                          %)
+                          {isMobile ? null : (
+                            <div
+                              className="tooltip text-xs bg-white-default rounded-md py-2 px-4 absolute -top-10 left-2/4 transform -translate-x-2/4 mx-auto text-black-default z-10 shadow-md pointer-events-none"
+                              style={{ minWidth: "176px" }}
+                            >
+                              ปี {d.year}
+                              <br />
+                              <b>{v.title}</b>
+                              <br />
+                              {numeral(v.value / 1e7).format("0.00")} ล้านบาท (
+                              {numeral(v.percent).format("0.00")}
+                              %)
+                            </div>
+                          )}
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
 
-                  <div className="year d5">
-                    '{d.year.toString().split("25")[1]}
+                    <div className="year d5">
+                      '{d.year.toString().split("25")[1]}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          ) : null}
+
+          {isMobile && hover_legend ? (
+            <div
+              className="tooltip text-xs bg-white-default rounded-md p-2 mx-auto text-black-default shadow-md pointer-events-none text-center w-max max-w-full mt-4"
+              style={{ minWidth: "176px" }}
+            >
+              ปี {hover_legend.year}
+              <br />
+              <b>{hover_legend.title}</b>
+              <br />
+              {numeral(hover_legend.value / 1e7).format("0.00")} ล้านบาท (
+              {numeral(hover_legend.percent).format("0.00")}
+              %)
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

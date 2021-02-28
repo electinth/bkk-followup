@@ -84,6 +84,8 @@ export default function Home() {
 
   return (
     <Layout>
+      <span className="fixed z-50 text-blue-default">{active_index}</span>
+
       <Swiper {...swiper_options} className="h-full page-swiper">
         <SwiperSlide>
           <Main swiper_ref={swiper_ref} />
@@ -147,7 +149,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobile ? [5, 6] : [5, 6]).includes(active_index)}
+        in={[5, 6].includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
