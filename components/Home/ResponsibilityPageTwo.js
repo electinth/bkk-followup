@@ -45,7 +45,10 @@ export default function ResponsibilityPageTwo() {
   ];
 
   return (
-    <div className="responsibility-page-two flex items-center h-full text-center text-white-default">
+    <div
+      className="responsibility-page-two flex items-center text-center text-white-default fixed z-10 inset-0 pointer-events-none"
+      style={{ top: "60px" }}
+    >
       <div className="container mx-auto">
         <h2 className="d2">กทม. มีหน้าที่ทำอะไร?</h2>
 

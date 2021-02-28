@@ -17,7 +17,7 @@ export default function Main(props) {
   return (
     <div className="flex items-center h-full pb-16 main-page bg-white-default">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-5 hidden lg:grid">
           <h1 className="leading-tight d1">
             BANGKOK
             <br />
@@ -63,13 +63,19 @@ export default function Main(props) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-5 mt-6 lg:mt-10 2xl:mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 mt-0 lg:mt-10 2xl:mt-16">
           <Link href="/intro-dashboard">
-            <div className="flex items-center justify-between rounded-md cursor-pointer explore-map bg-black-default p-6 lg:p-10 2xl:p-14">
-              <div className="text-white-default">
+            <div className="flex items-center justify-between rounded-md cursor-pointer explore-map bg-black-default p-3 lg:p-10 2xl:p-14">
+              <div className="text-white-default hidden lg:block">
                 <h3 className="d3">EXPLORE MAP</h3>
 
                 <h4 className="d4">สำรวจแผนที่ตามประเด็น ที่กวนใจชาว กทม.</h4>
+              </div>
+
+              <div className="text-white-default block lg:hidden">
+                <h5 className="d5">EXPLORE MAP</h5>
+
+                <h5 className="d5">สำรวจแผนที่ตามประเด็น</h5>
               </div>
 
               <img
@@ -82,7 +88,7 @@ export default function Main(props) {
 
           <div className="right">
             <div
-              className="flex items-center justify-between p-5 rounded-md cursor-pointer budget bg-green-default"
+              className="flex items-center justify-between p-3 lg:p-5 rounded-md cursor-pointer budget bg-green-default"
               onClick={() => swiper_ref.slideTo(1)}
             >
               <h5 className="d5 text-white-default">
@@ -97,7 +103,7 @@ export default function Main(props) {
             </div>
 
             <div
-              className="flex items-center justify-between p-5 mt-3 rounded-md cursor-pointer budget bg-blue-default"
+              className="flex items-center justify-between p-3 lg:p-5 mt-1 lg:mt-3 rounded-md cursor-pointer budget bg-blue-default"
               onClick={() => swiper_ref.slideTo(8)}
             >
               <h5 className="d5 text-white-default">กทม. มีหน้าที่ทำอะไร ?</h5>
@@ -110,7 +116,7 @@ export default function Main(props) {
             </div>
 
             <div
-              className="flex items-center justify-between p-5 mt-3 rounded-md cursor-pointer budget bg-pink-default"
+              className="flex items-center justify-between p-3 lg:p-5 mt-1 lg:mt-3 rounded-md cursor-pointer budget bg-pink-default"
               onClick={() => swiper_ref.slideTo(13)}
             >
               <h5 className="d5 text-white-default">
@@ -126,7 +132,7 @@ export default function Main(props) {
           </div>
         </div>
 
-        <div className="absolute inset-x-0 bottom-0 flex items-center justify-center p-3 scroll-down bg-green-default d5">
+        <div className="absolute inset-x-0 bottom-0 flex items-center justify-center p-2 lg:p-3 scroll-down bg-green-default d5">
           Scroll Down
           <img src={arrow_down_black} alt={arrow_down_black} className="w-10" />
         </div>

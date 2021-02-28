@@ -16,6 +16,7 @@ import SwiperCore, { Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import arrow_up_black from "assets/images/arrow_up_black.svg";
 import arrow_down_black from "assets/images/arrow_down_black.svg";
+import { isMobile } from "react-device-detect";
 
 SwiperCore.use([Mousewheel]);
 
@@ -87,33 +88,48 @@ export default function Home() {
         <SwiperSlide>
           <Main swiper_ref={swiper_ref} />
         </SwiperSlide>
+
+        {/* BudgetPageOne */}
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
+        {isMobile ? <SwiperSlide></SwiperSlide> : null}
+
+        {/* BudgetPageTwo */}
+        <SwiperSlide></SwiperSlide>
+        {isMobile ? null : <SwiperSlide></SwiperSlide>}
+
+        {/* BudgetPageThree */}
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
+
+        {/* BudgetPageFour */}
         <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide>
-          <BudgetPageFour />
-        </SwiperSlide>
+        {isMobile ? <SwiperSlide></SwiperSlide> : null}
+
         <SwiperSlide>
           <ResponsibilityPageOne />
         </SwiperSlide>
-        <SwiperSlide>
-          <ResponsibilityPageTwo />
-        </SwiperSlide>
+
+        {/* ResponsibilityPageTwo */}
         <SwiperSlide></SwiperSlide>
+        {isMobile ? <SwiperSlide></SwiperSlide> : null}
+
+        {/* ResponsibilityPageThree */}
+        <SwiperSlide></SwiperSlide>
+
         <SwiperSlide>
           <ResponsibilityPageFour />
         </SwiperSlide>
+
+        {/* CitizenPageOne */}
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
       </Swiper>
 
-      {navigation()}
+      {isMobile ? null : navigation()}
 
       <CSSTransition
-        in={[1, 2].includes(active_index)}
+        in={(isMobile ? [1, 2, 3] : [1, 2]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -122,7 +138,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={[3, 4].includes(active_index)}
+        in={(isMobile ? [4] : [3, 4]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -131,7 +147,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={[5, 6].includes(active_index)}
+        in={(isMobile ? [5, 6] : [5, 6]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -140,7 +156,25 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={active_index === 10}
+        in={(isMobile ? [7, 8] : [7]).includes(active_index)}
+        timeout={400}
+        unmountOnExit
+        classNames="fade"
+      >
+        <BudgetPageFour active_index={active_index} />
+      </CSSTransition>
+
+      <CSSTransition
+        in={(isMobile ? [10, 11] : [9]).includes(active_index)}
+        timeout={400}
+        unmountOnExit
+        classNames="fade"
+      >
+        <ResponsibilityPageTwo />
+      </CSSTransition>
+
+      <CSSTransition
+        in={(isMobile ? [12] : [10]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -149,7 +183,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={[12, 13].includes(active_index)}
+        in={(isMobile ? [14, 15] : [12, 13]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"

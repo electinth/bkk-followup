@@ -219,7 +219,10 @@ export default function BudgetPageFour() {
   };
 
   return (
-    <div className="budget-page-four h-full bg-black-default text-white-default">
+    <div
+      className="budget-page-four bg-black-default text-white-default fixed z-10 inset-0 pointer-events-none"
+      style={{ top: "60px" }}
+    >
       <div className="container h-full mx-auto py-14">
         <div className="grid grid-cols-2 gap-5 h-full">
           <div className="left w-4/5">
@@ -229,7 +232,7 @@ export default function BudgetPageFour() {
               {chart_legends.map((l) => (
                 <li
                   key={l.title}
-                  className="flex items-center py-5 px-9 mb-0.5 rounded-md cursor-pointer"
+                  className="flex items-center py-5 px-9 mb-0.5 rounded-md cursor-pointer pointer-events-auto"
                   style={{
                     background: l.color,
                     color: l.title === "อื่นๆ" ? "white" : "black",
@@ -263,7 +266,7 @@ export default function BudgetPageFour() {
                     {d.values.map((v, index) => (
                       <div
                         key={index}
-                        className={`box rounded-md mb-0.5 relative pointer-events-auto pt-1 ${
+                        className={`box rounded-md mb-0.5 pt-1 ${
                           hover_legend === v.title ? "is-hover" : ""
                         }`}
                         style={{

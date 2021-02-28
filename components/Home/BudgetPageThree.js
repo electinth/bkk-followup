@@ -1,5 +1,4 @@
 import React from "react";
-import { CSSTransition } from "react-transition-group";
 import numeral from "numeral";
 import _ from "lodash";
 
@@ -333,12 +332,7 @@ export default function BudgetPageThree(props) {
 
             <h4 className="d4 mt-6">งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?</h4>
 
-            <CSSTransition
-              in={active_index === 6}
-              timeout={400}
-              unmountOnExit
-              classNames="fade"
-            >
+            {active_index === 6 ? (
               <ul className="legends mt-9">
                 {chart_legends.map((l) => (
                   <li key={l.title} className="d5 flex items-center">
@@ -350,7 +344,7 @@ export default function BudgetPageThree(props) {
                   </li>
                 ))}
               </ul>
-            </CSSTransition>
+            ) : null}
           </div>
 
           <div className="right flex items-center">
