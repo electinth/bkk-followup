@@ -326,7 +326,7 @@ export default function BudgetPageThree(props) {
       style={{ top: "60px" }}
     >
       <div className="container h-full mx-auto py-5 lg:py-14">
-        <div className="block lg:grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5 h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 lg:h-full">
           <div className="left w-4/5">
             <h3 className="d3 hidden lg:block">
               8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป
@@ -368,7 +368,7 @@ export default function BudgetPageThree(props) {
 
           {!isMobile || active_index === 6 ? (
             <div className="right flex items-center">
-              <div className="chart text-center grid grid-cols-8 gap-2 lg:gap-4 w-full lg:w-auto mt-4 lg:mt-0">
+              <div className="chart text-center grid grid-cols-8 gap-2 lg:gap-4 w-full lg:w-auto">
                 {chart_data.map((d) => (
                   <div key={d.year} className="bar">
                     <div
@@ -420,7 +420,7 @@ export default function BudgetPageThree(props) {
 
           {isMobile && hover_legend ? (
             <div
-              className="tooltip text-xs bg-white-default rounded-md p-2 mx-auto text-black-default shadow-md pointer-events-none text-center w-max max-w-full mt-4"
+              className="tooltip text-xs bg-white-default rounded-md p-2 mx-auto text-black-default shadow-md pointer-events-none text-center w-max max-w-full"
               style={{ minWidth: "176px" }}
             >
               ปี {hover_legend.year}

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import _ from "lodash";
 import numeral from "numeral";
+import { isMobile } from "react-device-detect";
 
-export default function BudgetPageFour() {
+export default function BudgetPageFour(props) {
+  const { active_index } = props;
   const [hover_legend, setHoverLegend] = useState(null);
   const chart_legends = [
     {
@@ -223,78 +225,106 @@ export default function BudgetPageFour() {
       className="budget-page-four bg-black-default text-white-default fixed z-10 inset-0 pointer-events-none"
       style={{ top: "60px" }}
     >
-      <div className="container h-full mx-auto py-14">
-        <div className="grid grid-cols-2 gap-5 h-full">
-          <div className="left w-4/5">
-            <h2 className="d2">3 ประเด็นที่งบกทม. ถูกใชัมากที่สุด</h2>
+      <div className="container h-full mx-auto py-5 lg:py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 lg:h-full">
+          <div className="left lg:w-4/5">
+            <h2 className="d2 hidden lg:block">
+              3 ประเด็นที่งบกทม. ถูกใชัมากที่สุด
+            </h2>
 
-            <ul className="legends mt-9">
-              {chart_legends.map((l) => (
-                <li
-                  key={l.title}
-                  className="flex items-center py-5 px-9 mb-0.5 rounded-md cursor-pointer pointer-events-auto"
-                  style={{
-                    background: l.color,
-                    color: l.title === "อื่นๆ" ? "white" : "black",
-                    border:
-                      l.title === "อื่นๆ"
-                        ? "2px solid rgba(255, 255, 255, 0.9)"
-                        : "none",
-                  }}
-                  onMouseOver={() => setHoverLegend(l.title)}
-                  onMouseLeave={() => setHoverLegend(null)}
-                >
-                  <div className="title d5 flex-1">{l.title}</div>
+            <h3 className="d3 block lg:hidden">
+              3 ประเด็นที่งบกทม. ถูกใชัมากที่สุด
+            </h3>
 
-                  <h3 className="value flex-none ml-3 text-right">
-                    {numeral(l.value / 1e7).format("0,0")} ล้านบาท
-                    <br />({l.percent}%)
-                  </h3>
-                </li>
-              ))}
-            </ul>
+            {!isMobile || active_index === 7 ? (
+              <ul className="legends mt-4 lg:mt-9">
+                {chart_legends.map((l) => (
+                  <li
+                    key={l.title}
+                    className="flex items-center py-4 lg:py-5 px-4 lg:px-9 mb-0.5 rounded-md cursor-pointer pointer-events-none lg:pointer-events-auto"
+                    style={{
+                      background: l.color,
+                      color: l.title === "อื่นๆ" ? "white" : "black",
+                      border:
+                        l.title === "อื่นๆ"
+                          ? "2px solid rgba(255, 255, 255, 0.9)"
+                          : "none",
+                    }}
+                    onMouseOver={() => setHoverLegend(l.title)}
+                    onMouseLeave={() => setHoverLegend(null)}
+                  >
+                    <div className="title d5 flex-1">{l.title}</div>
+
+                    <h3 className="value flex-none ml-3 text-right">
+                      {numeral(l.value / 1e7).format("0,0")} ล้านบาท
+                      <br />({l.percent}%)
+                    </h3>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
 
-          <div className="right flex items-center">
-            <div className="chart text-center grid grid-cols-8 gap-4">
-              {chart_data.map((d) => (
-                <div key={d.year} className="bar">
-                  <div
-                    className="box-wrap flex flex-col"
-                    style={{ height: "560px" }}
-                  >
-                    {d.values.map((v, index) => (
+          {!isMobile || active_index === 8 ? (
+            <>
+              <div className="right flex items-center">
+                <div className="chart text-center grid grid-cols-8 gap-2 lg:gap-4 w-full lg:w-auto">
+                  {chart_data.map((d) => (
+                    <div key={d.year} className="bar">
                       <div
-                        key={index}
-                        className={`box rounded-md mb-0.5 pt-1 ${
-                          hover_legend === v.title ? "is-hover" : ""
-                        }`}
+                        className="box-wrap flex flex-col"
                         style={{
-                          width: "52px",
-                          height: `${v.percent}%`,
-                          border:
-                            v.title === "อื่นๆ"
-                              ? "2px solid rgba(255, 255, 255, 0.9)"
-                              : "none",
-                          background: getColor(v.title),
+                          height: isMobile ? "calc(100vh - 380px)" : "560px",
                         }}
                       >
-                        {v.title !== "อื่นๆ" ? (
-                          <h5 className="value text-xs text-black-default">
-                            {numeral(v.percent).format("0.00")}%
-                          </h5>
-                        ) : null}
+                        {d.values.map((v, index) => (
+                          <div
+                            key={index}
+                            className={`box rounded-md mb-0.5 pt-1 ${
+                              hover_legend === v.title ? "is-hover" : ""
+                            }`}
+                            style={{
+                              width: isMobile ? "100%" : "52px",
+                              height: `${v.percent}%`,
+                              border:
+                                v.title === "อื่นๆ"
+                                  ? "2px solid rgba(255, 255, 255, 0.9)"
+                                  : "none",
+                              background: getColor(v.title),
+                            }}
+                          >
+                            {v.title !== "อื่นๆ" ? (
+                              <h5 className="value text-xs text-black-default">
+                                {numeral(v.percent).format("0.00")}%
+                              </h5>
+                            ) : null}
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
 
-                  <div className="year d5">
-                    '{d.year.toString().split("25")[1]}
-                  </div>
+                      <div className="year d5">
+                        '{d.year.toString().split("25")[1]}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+
+              {isMobile ? (
+                <ul className="legends">
+                  {chart_legends.map((l) => (
+                    <li key={l.title} className="d5 flex items-center">
+                      <div
+                        className="w-5 h-5 rounded mr-3 flex-none"
+                        style={{ background: l.color }}
+                      ></div>
+                      {l.title}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </>
+          ) : null}
         </div>
       </div>
     </div>
