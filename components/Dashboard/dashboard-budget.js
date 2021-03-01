@@ -34,12 +34,12 @@ const budget = ({ selected_theme, data, checked, state_dropdown }) => {
       selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน') ||
     (selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน' && state_dropdown === 'zone')
   ) {
-    return ';';
+    return '';
   } else {
     return (
       <div
         id="budget"
-        className="relative flex-1 mr-3 card_cat_detail"
+        className="relative flex-1 md:mr-3 card_cat_detail"
         style={{ height: 'fit-content' }}
       >
         <div

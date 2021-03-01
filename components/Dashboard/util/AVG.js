@@ -111,7 +111,7 @@ const AVG = ({
   };
   const default_choice = (data, unit) => {
     return (
-      <div className="flex flex-col flex-1 " id="AVG-right">
+      <div className="flex flex-col flex-1 mt-3 md:mt-0 " id="AVG-right">
         <div className="flex-1 card_cat_detail">
           <div
             className="flex justify-center py-1 rounded-t text-white-default p2"
@@ -183,7 +183,7 @@ const AVG = ({
 
     return (
       <div
-        className="flex flex-col flex-1 "
+        className="flex flex-col flex-1 mt-3 md:mt-3"
         id="AVG-right"
         style={{ height: 'fit-content' }}
       >
@@ -210,9 +210,9 @@ const AVG = ({
   };
 
   return (
-    <div id="AVG" className="flex mt-3 ">
+    <div id="AVG" className="flex flex-col mt-3 md:flex-row">
       <div
-        className="flex-1 mr-3 card_cat_detail"
+        className="flex-1 md:mr-3 card_cat_detail"
         id="AVG-left"
         style={{
           backgroundColor:

@@ -2,7 +2,7 @@ import React from 'react';
 import rankingImg from 'assets/images/rankingImg_w.svg';
 import exclamation from 'assets/images/exclamation.svg';
 import smile from 'assets/images/smile.svg';
-
+import { isMobileOnly } from 'react-device-detect';
 const ranking = ({ selected_theme, checked, rankings, is_show }) => {
   let title, unit, top3, last3;
 
@@ -35,7 +35,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
   const list_top3 = () => {
     return (
       <div className="flex-1 px-2">
-        <div className="flex pb-2 font-bold p1 text-white-default">
+        <div className="flex items-center pb-2 font-bold p1 text-white-default">
           {top3}
           <img src={smile} alt="smile" className="ml-3" />
         </div>
@@ -73,7 +73,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
   const list_last3 = () => {
     return (
       <div className="flex-1 px-2">
-        <div className="flex pb-2 font-bold p1 text-white-default">
+        <div className="flex items-center pb-2 font-bold p1 text-white-default">
           {last3} <img src={exclamation} alt="exclamation" className="ml-3" />
         </div>
         <div id="ranking-wrapper-body" className="flex flex-col-reverse">
@@ -110,7 +110,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
   const list_ranking = () => {
     if (selected_theme.name === 'น้ำท่วมถนน') {
       return (
-        <div id="less-most" className="flex mt-5">
+        <div id="less-most" className="flex flex-col mt-5 md:flex-row">
           {list_top3()}
         </div>
       );
@@ -119,21 +119,21 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
       selected_theme.name === 'ขยะมูลฝอย'
     ) {
       return (
-        <div id="less-most" className="flex mt-5">
+        <div id="less-most" className="flex flex-col mt-5 md:flex-row">
           {list_top3()}
           {list_last3()}
         </div>
       );
     } else if (selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน') {
       return (
-        <div id="less-most" className="flex mt-5">
+        <div id="less-most" className="flex flex-col mt-5 md:flex-row">
           {list_top3()}
           {list_last3()}
         </div>
       );
     } else if (selected_theme.name === 'มลพิษในคลอง') {
       return (
-        <div id="less-most" className="flex mt-5">
+        <div id="less-most" className="flex flex-col mt-5 md:flex-row">
           {list_last3()}
           {list_top3()}
         </div>
@@ -156,9 +156,14 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
           <div className="flex justify-center rounded-t text-white-default p2">
             การจัดอันดับแต่ละเขต
           </div>
-          <div className="flex justify-center mt-3 text-white-default h4">
-            {title}
-          </div>
+          {isMobileOnly ? (
+            ''
+          ) : (
+            <div className="flex justify-center mt-3 text-white-default h4">
+              {title}
+            </div>
+          )}
+
           {list_ranking()}
           <div
             className="flex justify-center py-2 mt-3 font-bold rounded-b cursor-pointer text-white-default bg-black-default p1"

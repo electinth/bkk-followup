@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { isMobileOnly, isMobile } from 'react-device-detect';
 import * as d3 from 'd3';
 
 const map = ({
@@ -15,9 +16,13 @@ const map = ({
   SET_CHECKED,
 }) => {
   const actived_tool_tip = (name) => {
-    d3.select(`.rect${name}`).style('stroke-width', 1).style('stroke', 'white');
-    d3.select(`.minimap${name}`).style('fill', 'white');
-    d3.select(`.tooltip${name}`).style('visibility', 'visible');
+    setTimeout(() => {
+      d3.select(`.rect${name}`)
+        .style('stroke-width', 1)
+        .style('stroke', 'white');
+      d3.select(`.minimap${name}`).style('fill', 'white');
+      d3.select(`.tooltip${name}`).style('visibility', 'visible');
+    }, 0);
   };
 
   const disable_tool_tip = (name) => {
@@ -42,24 +47,28 @@ const map = ({
   };
 
   const mouseover = (_, d) => {
-    actived_tool_tip(d.districtName);
+    if (!isMobile) {
+      actived_tool_tip(d.districtName);
+    }
   };
   const mouseout = (d) => {
-    if (state_dropdown === 'group' && checked != 'เขตพื้นที่ทั้งหมด') {
-      if (!_.some(raw_data.rankings, { districtName: d.districtName })) {
-        disable_tool_tip(d.districtName);
-      }
-      d3.select(`.tooltip${d.districtName}`).style('visibility', 'hidden');
-    } else {
-      if (selected_tooltip != d.districtName) {
-        disable_tool_tip(d.districtName);
+    if (!isMobile) {
+      if (state_dropdown === 'group' && checked != 'เขตพื้นที่ทั้งหมด') {
+        if (!_.some(raw_data.rankings, { districtName: d.districtName })) {
+          disable_tool_tip(d.districtName);
+        }
+        d3.select(`.tooltip${d.districtName}`).style('visibility', 'hidden');
+      } else {
+        if (selected_tooltip != d.districtName) {
+          disable_tool_tip(d.districtName);
+        }
       }
     }
   };
 
-  const box_width = 50;
-  const box_gap = 3;
-  const r_max = 20;
+  const box_width = isMobileOnly ? 30 : 50;
+  const box_gap = isMobileOnly ? 2 : 3;
+  const r_max = isMobileOnly ? 15 : 20;
 
   const bkk_width = 11;
   const bkk_height = 8;
@@ -121,10 +130,10 @@ const map = ({
         group
           .append('rect')
           .attr('class', (d) => `group_circle rect${d.districtName}`)
-          .attr('width', '50')
-          .attr('height', '50')
-          .attr('x', '-25')
-          .attr('y', '-25')
+          .attr('width', box_width)
+          .attr('height', box_width)
+          .attr('x', -box_width / 2)
+          .attr('y', -box_width / 2)
           .style('cursor', 'pointer')
           .on('mouseover', (e, d) => (d.value ? mouseover(e, d) : ''))
           .on('mouseout', (_, d) => mouseout(d))
@@ -167,7 +176,13 @@ const map = ({
                   `tool_tip_detail_wrapper rounded-lg tooltip${d.districtName}`
               )
               .style('top', (d) => cy(d) - 50 + 'px')
-              .style('left', (d) => cx(d) + 40 + 'px')
+              .style('left', (d) => {
+                if (cx(d) < screen.width / 2) {
+                  return cx(d) + 20 + 'px';
+                } else {
+                  return cx(d) - 200 + 'px';
+                }
+              })
               .style('visibility', (d) => 'hidden');
 
             let header = tooltip
@@ -265,6 +280,9 @@ const map = ({
           d3.select(`.minimap${district.districtName}`).style('fill', 'white');
         });
       }
+      // if (selected_tooltip) {
+      //   console.log('selected_tooltip');
+      // }
     });
   };
 
@@ -292,7 +310,7 @@ const map = ({
   }, [selected_theme]);
 
   return (
-    <div className="relative flex items-center flex-1 m-auto">
+    <div className="relative flex items-center flex-1 m-auto my-5 lg:my-0">
       <div id="maps" />
     </div>
   );

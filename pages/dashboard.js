@@ -26,9 +26,13 @@ import Budget from 'components/Dashboard/dashboard-budget';
 import Rank62 from 'components/Dashboard/util/rank62';
 import close_filter from 'assets/images/cancle.svg';
 import rankingImg from 'assets/images/rankingImg.svg';
+import rankingImg_w from 'assets/images/rankingImg_w.svg';
 import allImg from 'assets/images/allImg.svg';
+import overAll from 'assets/images/overall.svg';
+import allImg_w from 'assets/images/allImg_w.svg';
 import LineChart from 'components/Dashboard/dashboard-line-chart';
 import StandardGreen from 'components/Dashboard/util/standard_green';
+import { isMobile, isMobileOnly } from 'react-device-detect';
 
 import _ from 'lodash';
 import * as d3 from 'd3';
@@ -171,56 +175,145 @@ const dashboard = () => {
 
     const is_show = () => {
       SET_IS_RANK(!isRank);
+      // if (isMobile) {
+      //   // window.scrollTo(0, 0);
+      // }
     };
+
     return (
       <Layout id="dashboard">
         <div
           id="dashboard-wrapper"
-          className="absolute top-0 bottom-0 left-0 right-0 flex overflow-hidden "
+          className="absolute top-0 bottom-0 left-0 right-0 flex flex-col overflow-x-hidden lg:overflow-hidden lg:flex-row"
         >
           {/* md:flex-col md:overflow-auto */}
           <div
             className="flex flex-col flex-1 bg-black-default"
             id="dashboard-left"
           >
+            {/* group-dropdown */}
             <div
-              className="flex justify-center py-4"
+              className="relative flex flex-col items-start justify-center w-full py-4 md:relative md:items-center md:flex-row"
+              id="group-dropdown"
               style={{
                 height: 'fit-content',
                 backgroundColor: selected_theme.color,
               }}
             >
-              <div className="py-2 mr-6 font-bold text-white-default h4 ">
-                สำรวจตาม
-              </div>
-              <DropDown
-                filter={filter_by_group}
-                checked={checked}
-                SET_CHECKED={SET_CHECKED}
-                type="group"
-                SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
-                SET_DISTRICT={SET_DISTRICT}
-                SET_IS_RANK={SET_IS_RANK}
-              />
-              <DropDown
-                filter={districtName}
-                district={district}
-                SET_DISTRICT={SET_DISTRICT}
-                type="zone"
-                SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
-                SET_IS_RANK={SET_IS_RANK}
-              />
-              {checked != 'เขตพื้นที่ทั้งหมด' || district != null ? (
-                <img
-                  src={close_filter}
-                  alt="close"
-                  className="ml-5 cursor-pointer "
-                  onClick={cancle_filter}
+              {isMobile ? (
+                <DropDown
+                  type="category"
+                  filter={category}
+                  SET_SELECTED_YEAR={SET_SELECTED_YEAR}
+                  SET_SELECTED_INDEX={SET_SELECTED_INDEX}
+                  SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
+                  SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                  SET_CHECKED={SET_CHECKED}
+                  SET_DISTRICT={SET_DISTRICT}
                 />
               ) : (
-                ''
+                <div className="py-2 font-bold text-white-default h4 ">
+                  สำรวจตาม
+                </div>
               )}
+              <div className="flex w-full px-3 md:contents">
+                <DropDown
+                  filter={filter_by_group}
+                  checked={checked}
+                  SET_CHECKED={SET_CHECKED}
+                  type="group"
+                  SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                  SET_DISTRICT={SET_DISTRICT}
+                  SET_IS_RANK={SET_IS_RANK}
+                />
+                <DropDown
+                  filter={districtName}
+                  district={district}
+                  SET_DISTRICT={SET_DISTRICT}
+                  type="zone"
+                  SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                  SET_IS_RANK={SET_IS_RANK}
+                />
+                {checked != 'เขตพื้นที่ทั้งหมด' || district != null ? (
+                  <img
+                    src={close_filter}
+                    alt="close"
+                    className="my-auto ml-2 cursor-pointer md:ml-5"
+                    onClick={cancle_filter}
+                    style={{
+                      height: isMobileOnly ? '30px' : '',
+                    }}
+                  />
+                ) : (
+                  ''
+                )}
+              </div>
             </div>
+            {/* group-dropdown */}
+            {/* group-dropdown-mobile */}
+            {isMobile ? (
+              <div
+                className="fixed z-50 flex flex-col items-start justify-center w-full py-4 md:items-center md:flex-row"
+                id="group-dropdown"
+                style={{
+                  height: 'fit-content',
+                  backgroundColor: selected_theme.color,
+                }}
+              >
+                {isMobile ? (
+                  <DropDown
+                    type="category"
+                    filter={category}
+                    SET_SELECTED_YEAR={SET_SELECTED_YEAR}
+                    SET_SELECTED_INDEX={SET_SELECTED_INDEX}
+                    SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
+                    SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                    SET_CHECKED={SET_CHECKED}
+                    SET_DISTRICT={SET_DISTRICT}
+                  />
+                ) : (
+                  <div className="py-2 font-bold text-white-default h4 ">
+                    สำรวจตาม
+                  </div>
+                )}
+                <div className="flex w-full px-3 md:contents">
+                  <DropDown
+                    filter={filter_by_group}
+                    checked={checked}
+                    SET_CHECKED={SET_CHECKED}
+                    type="group"
+                    SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                    SET_DISTRICT={SET_DISTRICT}
+                    SET_IS_RANK={SET_IS_RANK}
+                  />
+                  <DropDown
+                    filter={districtName}
+                    district={district}
+                    SET_DISTRICT={SET_DISTRICT}
+                    type="zone"
+                    SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                    SET_IS_RANK={SET_IS_RANK}
+                  />
+                  {checked != 'เขตพื้นที่ทั้งหมด' || district != null ? (
+                    <img
+                      src={close_filter}
+                      alt="close"
+                      className="my-auto ml-2 cursor-pointer md:ml-5"
+                      onClick={cancle_filter}
+                      style={{
+                        height: isMobileOnly ? '30px' : '',
+                      }}
+                    />
+                  ) : (
+                    ''
+                  )}
+                </div>
+              </div>
+            ) : (
+              ''
+            )}
+
+            {/* group-dropdown-mobile */}
             <TimeLine
               selected_index={selected_index}
               SET_SELECTED_INDEX={SET_SELECTED_INDEX}
@@ -240,53 +333,73 @@ const dashboard = () => {
               SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
               SET_CHECKED={SET_CHECKED}
             />
-            <div className="flex" id="map-footer">
+            <div className="relative flex" id="map-footer">
               <InfoMap selected_theme={selected_theme} />
-              <div className="relative flex-1 w-full h-full ">
-                <MiniMap
-                  selected_tooltip={selected_tooltip}
-                  SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
-                  selected_theme={selected_theme.color}
-                />
-                <div id="btn-isRank" className="absolute right-5 bottom-10 p1">
-                  {isRank ? (
-                    <button
-                      className="flex flex-row items-center justify-center font-bold isRank"
-                      onClick={is_show}
-                    >
-                      <img src={allImg} alt="allImg" className="mr-3" />
-                      <p>ดูภาพรวม</p>
-                    </button>
-                  ) : (
-                    <button
-                      className="flex flex-row items-center justify-center font-bold isRank"
-                      onClick={is_show}
-                    >
-                      <img src={rankingImg} alt="rankingImg" className="mr-3" />
-                      <p>ดูการจัดอันดับ</p>
-                    </button>
-                  )}
+              {isMobile ? (
+                ''
+              ) : (
+                <div className="relative flex-1 w-full h-full ">
+                  <MiniMap
+                    selected_tooltip={selected_tooltip}
+                    SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
+                    selected_theme={selected_theme.color}
+                  />
+
+                  <div
+                    id="btn-isRank"
+                    className="absolute right-5 bottom-10 p1"
+                  >
+                    {isRank ? (
+                      <button
+                        className="flex flex-row items-center justify-center font-bold isRank"
+                        onClick={is_show}
+                      >
+                        <img src={allImg} alt="allImg" className="mr-3" />
+                        <p>ดูภาพรวม</p>
+                      </button>
+                    ) : (
+                      <button
+                        className="flex flex-row items-center justify-center font-bold isRank"
+                        onClick={is_show}
+                      >
+                        <img
+                          src={rankingImg}
+                          alt="rankingImg"
+                          className="mr-3"
+                        />
+                        <p>ดูการจัดอันดับ</p>
+                      </button>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
           {/* { md:min-h-full} */}
           <div
             id="dashboard-right"
-            className="flex flex-col flex-1 overflow-auto "
+            className="flex flex-col flex-1 min-h-full lg:overflow-auto"
             style={{ backgroundColor: isRank ? 'black' : 'white' }}
           >
-            <Category_Manu
-              category={category}
-              SET_SELECTED_YEAR={SET_SELECTED_YEAR}
-              SET_SELECTED_INDEX={SET_SELECTED_INDEX}
-              SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
-              SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
-              SET_CHECKED={SET_CHECKED}
-              SET_DISTRICT={SET_DISTRICT}
-            />
+            {isMobile ? (
+              ''
+            ) : (
+              <Category_Manu
+                category={category}
+                SET_SELECTED_YEAR={SET_SELECTED_YEAR}
+                SET_SELECTED_INDEX={SET_SELECTED_INDEX}
+                SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
+                SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                SET_CHECKED={SET_CHECKED}
+                SET_DISTRICT={SET_DISTRICT}
+              />
+            )}
+
             {!isRank ? (
-              <div id="isAll-wrapper" className="px-5 pb-5 overflow-auto">
+              <div
+                id="isAll-wrapper"
+                className="absolute max-w-full px-5 pb-10 md:pb-16 bg-white-default lg:relative lg:overflow-auto"
+              >
                 <div
                   id={`card${selected_theme.name}`}
                   className="flex justify-center py-6 mt-3 text-center pointer-events-none text-white-default card_cat_detail"
@@ -304,7 +417,11 @@ const dashboard = () => {
                       </p>
                     )}
 
-                    <p className="h4">ภาพรวมย้อนหลัง 8 ปี (2555-2562)</p>
+                    {isMobileOnly ? (
+                      <p className="h4">ภาพรวมย้อนหลัง 8 ปี (2555-2562)</p>
+                    ) : (
+                      ''
+                    )}
                   </span>
                 </div>
                 {state_dropdown === 'zone' &&
@@ -413,7 +530,10 @@ const dashboard = () => {
                 ) : (
                   ''
                 )}
-                <div id="budget compare" className="flex flex-row mt-3 ">
+                <div
+                  id="budget compare"
+                  className="flex flex-col mt-3 md:flex-row "
+                >
                   <Budget
                     id="budget"
                     selected_theme={selected_theme}
@@ -457,6 +577,37 @@ const dashboard = () => {
               />
             )}
           </div>
+          {isMobile ? (
+            <div className="fixed z-40 flex w-full bottom-3" id="mobile_rank">
+              {isRank ? (
+                <button
+                  className="flex flex-row items-center justify-center flex-1 mx-3 font-bold isRank_black text-white-default"
+                  onClick={is_show}
+                >
+                  <img src={allImg_w} alt="allImg_w" className="mr-3" />
+                  <p>ดูภาพรวม</p>
+                </button>
+              ) : (
+                <button
+                  className="flex flex-row items-center justify-center flex-1 mx-3 font-bold isRank_black text-white-default"
+                  onClick={is_show}
+                >
+                  <img src={rankingImg_w} alt="rankingImg_w" className="mr-3" />
+                  <p>ดูการจัดอันดับ</p>
+                </button>
+              )}
+
+              {/* <button
+                className="flex flex-row items-center justify-center flex-1 mx-3 font-bold isRank_black text-white-default"
+                // onClick={is_show}
+              >
+                <img src={overAll} alt="overAll" className="mr-3" />
+                <p>สำรวจทุกประเด็น</p>
+              </button> */}
+            </div>
+          ) : (
+            ''
+          )}
         </div>
       </Layout>
     );

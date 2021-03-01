@@ -1,8 +1,11 @@
 import React from 'react';
+import * as d3 from 'd3';
+import { isMobile } from 'react-device-detect';
 
 const rank62 = ({ selected_theme, data }) => {
   let title, sub, standard, avg, height_rank, low_rank, unit, note;
-
+  let height_elem = d3.select('#group-dropdown').node().getBoundingClientRect()
+    .height;
   if (selected_theme.name === 'น้ำท่วมถนน') {
     title = 'อันดับน้ำท่วมกรุงเทพมหานคร';
     sub = 'จำนวนครั้งที่มีน้ำท่วมบนถนน (ครั้ง)';
@@ -50,7 +53,13 @@ const rank62 = ({ selected_theme, data }) => {
   low_rank = _.filter(data, (d) => d.value < standard);
 
   return (
-    <div id="rank62">
+    <div
+      id="rank62"
+      className="absolute z-30 w-full bg-black-default lg:relative md:pb-16"
+      style={{
+        top: isMobile?  height_elem + 'px': '',
+      }}
+    >
       <div
         id="rank62-header"
         className="flex flex-col justify-center mt-3 text-center text-white-default"

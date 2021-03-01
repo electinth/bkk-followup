@@ -39,7 +39,7 @@ const line_chart = ({ selected_theme, data }) => {
         แนวโน้มของ 8 ปีที่ผ่านมา
       </div>
       <div className="px-2 py-3 leading-tight">
-        <div className="flex flex-col justify-center px-24 font-bold text-center h4">
+        <div className="flex flex-col justify-center font-bold text-center h4">
           <p>{title}</p>
           <p>{sub}</p>
         </div>

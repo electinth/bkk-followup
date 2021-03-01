@@ -29,7 +29,7 @@ const knowledge = ({ selected }) => {
       className="py-4 rounded-b"
       style={{ backgroundColor: selected.color50 }}
     >
-      <p className="px-32 font-bold leading-tight h3">{title}</p>
+      <p className="font-bold leading-tight h3">{title}</p>
       <p className="px-5 mt-3 leading-tight p2">{body}</p>
     </span>
   );

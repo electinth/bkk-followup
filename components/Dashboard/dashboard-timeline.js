@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
 import playImg from 'assets/images/play.svg';
+import { isMobileOnly } from 'react-device-detect';
 
 const timeLine = ({
   selected_year,
@@ -42,20 +43,30 @@ const timeLine = ({
       className="flex items-center mt-2 text-white-default"
       id="tile-line-wrapper"
     >
-      <div className="flex justify-end flex-1 d2" id="time-line-text">
+      {isMobileOnly ? (
         <img
           src={playImg}
           alt="playImg"
-          className="pt-2 mr-5 cursor-pointer"
+          className="absolute z-20 ml-5 cursor-pointer top-44"
           onClick={play}
         />
-        {/* <div onClick={resume} className="cursor-pointer">
+      ) : (
+        <div className="flex justify-end flex-1 d2" id="time-line-text">
+          <img
+            src={playImg}
+            alt="playImg"
+            className="pt-2 cursor-pointer md:mr-5"
+            onClick={play}
+          />
+          {/* <div onClick={resume} className="cursor-pointer">
           {'='}
         </div> */}
-        25{selected_year}
-      </div>
+          25{selected_year}
+        </div>
+      )}
+
       <div id="time-line" style={{ flex: 2 }}>
-        <ul className="timeline">
+        <ul className="flex justify-center timeline">
           {years.map((y, index) => (
             <li
               key={index}

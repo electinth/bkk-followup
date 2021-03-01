@@ -2,9 +2,9 @@ import React from 'react';
 
 const standard = ({ selected_theme }) => {
   return (
-    <div id="AVG" className="flex mt-3">
+    <div id="AVG" className="flex flex-col mt-3 md:flex-row">
       <div
-        className="flex-1 mr-3 card_cat_detail"
+        className="flex-1 md:mr-3 card_cat_detail"
         id="AVG-left"
         style={{ backgroundColor: selected_theme.color50 }}
       >
@@ -34,7 +34,7 @@ const standard = ({ selected_theme }) => {
         </div>
       </div>
       <div
-        className="flex flex-col flex-1 card_cat_detail"
+        className="flex flex-col flex-1 mt-3 card_cat_detail md:mt-0"
         id="AVG-right"
         style={{ backgroundColor: selected_theme.color50 }}
       >

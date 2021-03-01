@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { isMobileOnly } from 'react-device-detect';
 import * as d3 from 'd3';
 
 export default function DashboardLineChart({
@@ -71,12 +72,12 @@ export default function DashboardLineChart({
 
     d3.select('.svg-line-chart').remove();
 
-    const second_data = data.map((d) => {
-      return { year: d.year, value: d.value / 2 };
-    });
+    // const second_data = data.map((d) => {
+    //   return { year: d.year, value: d.value / 2 };
+    // });
 
-    let height = 200;
-    let width = 540;
+    let height = isMobileOnly ? 150 : 200;
+    let width = isMobileOnly ? 300 : 540;
 
     const margin = { top: 40, right: 25, bottom: 40, left: 25 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { isMobile, isMobileOnly, isTablet } from 'react-device-detect';
 
 const location_water = ({ selected_theme, data }) => {
   if (data) {
@@ -7,7 +6,7 @@ const location_water = ({ selected_theme, data }) => {
       <div
         id="good-to-know"
         className="flex flex-col justify-center mt-3 text-center card_cat_detail"
-        style={{ maxHeight: isMobile ? '300px' : '50%' }}
+        style={{ maxHeight: '10%' }}
       >
         <div
           id="gtk-header"
@@ -16,13 +15,9 @@ const location_water = ({ selected_theme, data }) => {
         >
           บริเวณที่มักมีน้ำท่วมขัง
         </div>
-        <div
-          id="body-lo-wrapper"
-          className="py-3 pl-6 overflow-auto p1"
-          style={{ backgroundColor: selected_theme.color50 }}
-        >
+        <div id="body-lo-wrapper" className="py-3 pl-6 overflow-auto p1">
           {data.map((lo, index) => (
-            <div key={index} className="flex justify-start py-1">
+            <div key={index} className="flex justify-start">
               <p className="font-bold">•{lo.name}</p>
               <p className="pl-1">{lo.description}</p>
             </div>
