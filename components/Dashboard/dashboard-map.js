@@ -310,7 +310,7 @@ const map = ({
   }, [selected_theme]);
 
   return (
-    <div className="relative flex items-center flex-1 m-auto my-5 lg:my-0">
+    <div className="relative flex justify-center flex-1 m-auto my-5 lg:my-0">
       <div id="maps" />
     </div>
   );

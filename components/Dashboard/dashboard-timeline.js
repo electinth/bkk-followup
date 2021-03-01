@@ -40,7 +40,7 @@ const timeLine = ({
 
   return (
     <div
-      className="flex items-center mt-2 text-white-default"
+      className="items-center block mt-2 md:flex text-white-default"
       id="tile-line-wrapper"
     >
       {isMobileOnly ? (

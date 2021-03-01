@@ -32,7 +32,7 @@ import overAll from 'assets/images/overall.svg';
 import allImg_w from 'assets/images/allImg_w.svg';
 import LineChart from 'components/Dashboard/dashboard-line-chart';
 import StandardGreen from 'components/Dashboard/util/standard_green';
-import { isMobile, isMobileOnly } from 'react-device-detect';
+import { isMobile, isMobileOnly,isTablet } from 'react-device-detect';
 
 import _ from 'lodash';
 import * as d3 from 'd3';
@@ -188,76 +188,79 @@ const dashboard = () => {
         >
           {/* md:flex-col md:overflow-auto */}
           <div
-            className="flex flex-col flex-1 bg-black-default"
+            className="relative flex-col flex-1 lg:flex bg-black-default"
             id="dashboard-left"
           >
             {/* group-dropdown */}
             <div
-              className="relative flex flex-col items-start justify-center w-full py-4 md:relative md:items-center md:flex-row"
+              className="relative z-50 "
               id="group-dropdown"
               style={{
-                height: 'fit-content',
                 backgroundColor: selected_theme.color,
+                padding: '10px 0',
               }}
             >
-              {isMobile ? (
-                <DropDown
-                  type="category"
-                  filter={category}
-                  SET_SELECTED_YEAR={SET_SELECTED_YEAR}
-                  SET_SELECTED_INDEX={SET_SELECTED_INDEX}
-                  SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
-                  SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
-                  SET_CHECKED={SET_CHECKED}
-                  SET_DISTRICT={SET_DISTRICT}
-                />
-              ) : (
-                <div className="py-2 font-bold text-white-default h4 ">
-                  สำรวจตาม
-                </div>
-              )}
-              <div className="flex w-full px-3 md:contents">
-                <DropDown
-                  filter={filter_by_group}
-                  checked={checked}
-                  SET_CHECKED={SET_CHECKED}
-                  type="group"
-                  SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
-                  SET_DISTRICT={SET_DISTRICT}
-                  SET_IS_RANK={SET_IS_RANK}
-                />
-                <DropDown
-                  filter={districtName}
-                  district={district}
-                  SET_DISTRICT={SET_DISTRICT}
-                  type="zone"
-                  SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
-                  SET_IS_RANK={SET_IS_RANK}
-                />
-                {checked != 'เขตพื้นที่ทั้งหมด' || district != null ? (
-                  <img
-                    src={close_filter}
-                    alt="close"
-                    className="my-auto ml-2 cursor-pointer md:ml-5"
-                    onClick={cancle_filter}
-                    style={{
-                      height: isMobileOnly ? '30px' : '',
-                    }}
+              <div className="flex flex-col items-start justify-center w-full md:items-center md:flex-row">
+                {isMobile ? (
+                  <DropDown
+                    type="category"
+                    filter={category}
+                    SET_SELECTED_YEAR={SET_SELECTED_YEAR}
+                    SET_SELECTED_INDEX={SET_SELECTED_INDEX}
+                    SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
+                    SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                    SET_CHECKED={SET_CHECKED}
+                    SET_DISTRICT={SET_DISTRICT}
                   />
                 ) : (
-                  ''
+                  <div className="py-2 font-bold text-white-default h4 ">
+                    สำรวจตาม
+                  </div>
                 )}
+                <div className="flex w-full px-3 md:contents">
+                  <DropDown
+                    filter={filter_by_group}
+                    checked={checked}
+                    SET_CHECKED={SET_CHECKED}
+                    type="group"
+                    SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                    SET_DISTRICT={SET_DISTRICT}
+                    SET_IS_RANK={SET_IS_RANK}
+                  />
+                  <DropDown
+                    filter={districtName}
+                    district={district}
+                    SET_DISTRICT={SET_DISTRICT}
+                    type="zone"
+                    SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
+                    SET_IS_RANK={SET_IS_RANK}
+                  />
+                  {checked != 'เขตพื้นที่ทั้งหมด' || district != null ? (
+                    <img
+                      src={close_filter}
+                      alt="close"
+                      className="my-auto ml-2 cursor-pointer md:ml-5"
+                      onClick={cancle_filter}
+                      style={{
+                        height: isMobileOnly ? '30px' : '',
+                      }}
+                    />
+                  ) : (
+                    ''
+                  )}
+                </div>
               </div>
             </div>
             {/* group-dropdown */}
             {/* group-dropdown-mobile */}
             {isMobile ? (
               <div
-                className="fixed z-50 flex flex-col items-start justify-center w-full py-4 md:items-center md:flex-row"
+                className="fixed z-50 flex flex-col items-start justify-center w-full md:items-center md:flex-row"
                 id="group-dropdown"
                 style={{
-                  height: 'fit-content',
+                  padding: '10px 0',
                   backgroundColor: selected_theme.color,
+                  top: '60px',
                 }}
               >
                 {isMobile ? (
