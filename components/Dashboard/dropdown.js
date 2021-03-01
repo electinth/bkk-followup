@@ -171,33 +171,36 @@ const dropdown = ({
           </div>
           {dropdown_state ? (
             <div
-              className="absolute bottom-auto z-50 flex flex-col w-full p-3 mt-1 rounded bg-white-default"
+              className="absolute bottom-auto z-50 flex flex-col w-full p-3 mt-1 overflow-hidden rounded bg-white-default"
               style={{
                 border: '1px solid #eee',
                 boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.15)',
                 maxHeight: '50vh',
-                overflow: 'auto',
               }}
               ref={dropdown_menu_ref}
               id="options"
             >
-              {filter.map((f, index) => (
-                <label
-                  className="flex flex-row p-2 my-1 check"
-                  id="options"
-                  key={index}
-                >
-                  <p className="pointer-events-none pl-7 p1 truncate ...">{f.filter_by}</p>
-                  <input
-                    type="radio"
+              <div id="option-wrapper " className="overflow-auto">
+                {filter.map((f, index) => (
+                  <label
+                    className="flex flex-row p-2 my-1 check"
                     id="options"
-                    value={f.filter_by}
-                    checked={district === f.filter_by}
-                    onChange={handleOptionChange}
-                  />
-                  <span className="ml-2 pointer-events-none checkmark"></span>
-                </label>
-              ))}
+                    key={index}
+                  >
+                    <p className="pointer-events-none pl-7 p1 truncate ...">
+                      {f.filter_by}
+                    </p>
+                    <input
+                      type="radio"
+                      id="options"
+                      value={f.filter_by}
+                      checked={district === f.filter_by}
+                      onChange={handleOptionChange}
+                    />
+                    <span className="ml-2 pointer-events-none checkmark"></span>
+                  </label>
+                ))}
+              </div>
             </div>
           ) : null}
         </div>

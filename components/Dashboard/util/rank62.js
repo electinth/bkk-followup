@@ -55,9 +55,9 @@ const rank62 = ({ selected_theme, data }) => {
   return (
     <div
       id="rank62"
-      className="absolute z-30 w-full bg-black-default lg:relative md:pb-16"
+      className="absolute z-30 w-full pb-16 bg-black-default lg:relative lg:pb-0"
       style={{
-        top: isMobile?  height_elem + 'px': '',
+        top: isMobile ? height_elem + 'px' : '',
       }}
     >
       <div

@@ -31,7 +31,7 @@ const category_manu = ({
     <div
       className="flex flex-row flex-wrap justify-center my-2"
       id="category-manu"
-      style={{ height: 'fit-content' }}
+      style={{ minHeight: 'fit-content' }}
     >
       {category.map((cat, index) => (
         <div

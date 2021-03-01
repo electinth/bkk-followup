@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import elect_logo from "assets/images/elect_logo.svg";
-import map_logo from "assets/images/map_logo.svg";
-import stb_logo from "assets/images/stb_logo.svg";
-import cu_thai_logo from "assets/images/cu_thai_logo.svg";
-import hamburger from "assets/images/hamburger.svg";
-import arrow_right_white from "assets/images/arrow_right_white.svg";
-import close from "assets/images/close.svg";
-import p_icon from "assets/images/p_icon.svg";
-import fb_icon from "assets/images/fb_icon.svg";
-import twitter_icon from "assets/images/twitter_icon.svg";
-import { CSSTransition } from "react-transition-group";
-import { isMobile, isTablet } from "react-device-detect";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import elect_logo from 'assets/images/elect_logo.svg';
+import map_logo from 'assets/images/map_logo.svg';
+import stb_logo from 'assets/images/stb_logo.svg';
+import cu_thai_logo from 'assets/images/cu_thai_logo.svg';
+import hamburger from 'assets/images/hamburger.svg';
+import arrow_right_white from 'assets/images/arrow_right_white.svg';
+import close from 'assets/images/close.svg';
+import p_icon from 'assets/images/p_icon.svg';
+import fb_icon from 'assets/images/fb_icon.svg';
+import twitter_icon from 'assets/images/twitter_icon.svg';
+import { CSSTransition } from 'react-transition-group';
+import { isMobile, isTablet } from 'react-device-detect';
 
 export default function Header() {
   const [show_modal, showModal] = useState(false);
@@ -19,10 +19,10 @@ export default function Header() {
   return (
     <div
       id="header"
-      className="sticky z-20 shadow-xl bg-white-default flex items-center justify-between px-3 lg:px-5"
-      style={{ height: "60px" }}
+      className="sticky z-20 flex items-center justify-between px-3 shadow-xl bg-white-default lg:px-5"
+      style={{ height: '60px' }}
     >
-      <div className="left flex items-center">
+      <div className="flex items-center left">
         <img
           width={isMobile || isTablet ? 94 : 124}
           src={elect_logo}
@@ -30,24 +30,24 @@ export default function Header() {
           className="mr-4"
         />
 
-        <img src={map_logo} alt={map_logo} className="mr-2 hidden lg:block" />
+        <img src={map_logo} alt={map_logo} className="hidden mr-2 lg:block" />
 
-        <h5 className="d5 hidden lg:block">
+        <h5 className="hidden d5 lg:block">
           BKK<span className="text-green-default">FOLLOW-UP</span>
         </h5>
       </div>
 
-      <div className="right flex items-center">
-        <div className="d5 mr-4 hidden lg:block" style={{ fontSize: "16px" }}>
+      <div className="flex items-center right">
+        <div className="hidden mr-4 d5 lg:block" style={{ fontSize: '16px' }}>
           In collaboration with
         </div>
 
-        <img src={stb_logo} alt={stb_logo} className="mr-3 hidden lg:block" />
+        <img src={stb_logo} alt={stb_logo} className="hidden mr-3 lg:block" />
 
         <img
           src={cu_thai_logo}
           alt={cu_thai_logo}
-          className="mr-8 hidden lg:block"
+          className="hidden mr-8 lg:block"
         />
 
         <img
@@ -65,24 +65,24 @@ export default function Header() {
         classNames="slide"
       >
         <div
-          className="modal fixed right-0 shadow-xl max-w-screen-lg bg-white-default overflow-y-auto"
+          className="fixed right-0 max-w-screen-lg overflow-y-auto shadow-xl modal bg-white-default"
           style={{
-            top: isMobile || isTablet ? "0" : "60px",
-            bottom: isMobile || isTablet ? "0" : "unset",
-            maxHeight: isMobile || isTablet ? "100%" : "calc(100vh - 60px)",
+            top: isMobile || isTablet ? '0' : '60px',
+            bottom: isMobile || isTablet ? '0' : 'unset',
+            maxHeight: isMobile || isTablet ? '100%' : 'calc(100vh - 60px)',
           }}
         >
           <div
-            className="head flex items-center justify-between bg-green-default lg:bg-white-default px-3"
-            style={{ height: "60px" }}
+            className="flex items-center justify-between px-3 head bg-green-default lg:bg-white-default"
+            style={{ height: '60px' }}
           >
-            <h3 className="d3 hidden lg:block">MENU</h3>
+            <h3 className="hidden d3 lg:block">MENU</h3>
 
             <img
               width={isMobile || isTablet ? 94 : 124}
               src={elect_logo}
               alt={elect_logo}
-              className="mr-2 block lg:hidden"
+              className="block mr-2 lg:hidden"
             />
 
             <img
@@ -94,30 +94,30 @@ export default function Header() {
             />
           </div>
 
-          <div className="content p-3">
+          <div className="p-3 content">
             <div className="flex items-center justify-center">
               <img
                 src={map_logo}
                 alt={map_logo}
-                className="mr-2 block lg:hidden"
+                className="block mr-2 lg:hidden"
               />
 
-              <h4 className="d4 block lg:hidden">
+              <h4 className="block d4 lg:hidden">
                 BKK<span className="text-green-default">FOLLOW-UP</span>
               </h4>
             </div>
 
-            <hr className="block lg:hidden my-4" />
+            <hr className="block my-4 lg:hidden" />
 
-            <h5 className="d5 block lg:hidden text-center mb-4">MENU</h5>
+            <h5 className="block mb-4 text-center d5 lg:hidden">MENU</h5>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 z-30">
+            <div className="z-30 grid grid-cols-1 gap-1 lg:grid-cols-2 lg:gap-3">
               <Link href="/intro-dashboard">
                 <div
-                  className="flex items-center justify-between rounded-md cursor-pointer explore-map bg-black-default p-3 lg:p-6"
+                  className="flex items-center justify-between p-3 rounded-md cursor-pointer explore-map bg-black-default lg:p-6"
                   onClick={() => showModal(false)}
                 >
-                  <div className="text-white-default hidden lg:block">
+                  <div className="hidden text-white-default lg:block">
                     <h3 className="d3">EXPLORE MAP</h3>
 
                     <h4 className="d4">
@@ -125,7 +125,7 @@ export default function Header() {
                     </h4>
                   </div>
 
-                  <div className="text-white-default block lg:hidden">
+                  <div className="block text-white-default lg:hidden">
                     <h5 className="d5">EXPLORE MAP</h5>
 
                     <h5 className="d5">สำรวจแผนที่ตามประเด็น</h5>
@@ -142,7 +142,7 @@ export default function Header() {
               <div className="right">
                 <Link href="/?slide=1">
                   <div
-                    className="flex items-center justify-between p-3 lg:p-6 rounded-md cursor-pointer budget bg-green-default"
+                    className="flex items-center justify-between p-3 rounded-md cursor-pointer lg:p-6 budget bg-green-default"
                     onClick={() => showModal(false)}
                   >
                     <h5 className="d5 text-white-default">
@@ -159,7 +159,7 @@ export default function Header() {
 
                 <Link href="/?slide=8">
                   <div
-                    className="flex items-center justify-between p-3 lg:p-6 mt-1 lg:mt-3 rounded-md cursor-pointer budget bg-blue-default"
+                    className="flex items-center justify-between p-3 mt-1 rounded-md cursor-pointer lg:p-6 lg:mt-3 budget bg-blue-default"
                     onClick={() => showModal(false)}
                   >
                     <h5 className="d5 text-white-default">
@@ -176,7 +176,7 @@ export default function Header() {
 
                 <Link href="/?slide=13">
                   <div
-                    className="flex items-center justify-between p-3 lg:p-6 mt-1 lg:mt-3 rounded-md cursor-pointer budget bg-pink-default"
+                    className="flex items-center justify-between p-3 mt-1 rounded-md cursor-pointer lg:p-6 lg:mt-3 budget bg-pink-default"
                     onClick={() => showModal(false)}
                   >
                     <h5 className="d5 text-white-default">
@@ -193,11 +193,11 @@ export default function Header() {
               </div>
             </div>
 
-            <hr className="block lg:hidden my-6" />
+            <hr className="block my-6 lg:hidden" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 mt-1 lg:mt-3 z-30">
-              <div className="border-0 lg:border rounded-md p-0 lg:p-3">
-                <h5 className="d5 mb-3 text-center lg:text-left">
+            <div className="z-30 grid grid-cols-1 gap-1 mt-1 lg:grid-cols-2 lg:gap-3 lg:mt-3">
+              <div className="p-0 border-0 rounded-md lg:border lg:p-3">
+                <h5 className="mb-3 text-center d5 lg:text-left">
                   อ่านบทความเพิ่มเติม
                 </h5>
 
@@ -247,16 +247,16 @@ export default function Header() {
                   </li>
                 </ul>
 
-                <hr className="block lg:hidden my-6" />
+                <hr className="block my-6 lg:hidden" />
               </div>
 
-              <div className="border-0 lg:border rounded-md p-0 lg:p-3">
-                <h5 className="d5 mb-3 text-center lg:text-left">
+              <div className="p-0 border-0 rounded-md lg:border lg:p-3">
+                <h5 className="mb-3 text-center d5 lg:text-left">
                   เกี่ยวกับเรา
                 </h5>
 
                 <div className="flex">
-                  <div className="mr-2 lg:mr-3 flex-1">
+                  <div className="flex-1 mr-2 lg:mr-3">
                     <h5 className="text-sm">About Us</h5>
 
                     <a
@@ -269,7 +269,7 @@ export default function Header() {
                     </a>
                   </div>
 
-                  <div className="mr-2 lg:mr-3 flex-1">
+                  <div className="flex-1 mr-2 lg:mr-3">
                     <h5 className="text-sm">Contact Us</h5>
 
                     <a
@@ -285,7 +285,7 @@ export default function Header() {
                   <div className="flex-1">
                     <h5 className="text-sm">Follow Us</h5>
 
-                    <div className="flex mt-2 items-center">
+                    <div className="flex items-center mt-2">
                       <a
                         href="https://www.facebook.com/electinth/"
                         target="_blank"
@@ -315,12 +315,12 @@ export default function Header() {
           </div>
 
           <div
-            className="callab-with block lg:hidden flex items-center justify-center p-2"
+            className="flex items-center justify-center p-2 callab-with lg:hidden"
             style={{
-              boxShadow: "0px 16px 48px rgba(0, 0, 0, 0.176)",
+              boxShadow: '0px 16px 48px rgba(0, 0, 0, 0.176)',
             }}
           >
-            <div className="d5 mr-4" style={{ fontSize: "14px" }}>
+            <div className="mr-4 d5" style={{ fontSize: '14px' }}>
               In collaboration with
             </div>
 
