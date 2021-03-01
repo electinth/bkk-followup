@@ -32,8 +32,8 @@ export default function Intro() {
       />
 
       <div className="container relative z-10 mx-auto">
-        <div className="flex items-center justify-center text-white-default">
-          <h1 className="leading-tight d1 mr-20">
+        <div className="flex flex-col lg:flex-row items-center justify-center text-white-default text-center lg:text-left">
+          <h1 className="leading-tight d1 mr-0 lg:mr-20 mb-5 lg:mb-0">
             BANGKOK
             <br />
             <span className="text-green-default">FOLLOW-UP</span>
@@ -46,33 +46,28 @@ export default function Intro() {
               ปัญหาที่กวนใจชาวกทม.
             </h3>
 
-            <div className="flex items-center mt-4 social-wrap">
+            <div className="flex items-center justify-center lg:justify-start mt-8 lg:mt-4 social-wrap">
               <h4 className="d4">Share:</h4>
 
               <FacebookShareButton
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="ml-4 cursor-pointer social"
               >
-                <img width={40} height={40} src={fb_share} alt={fb_share} />
+                <img width={40} src={fb_share} alt={fb_share} />
               </FacebookShareButton>
 
               <TwitterShareButton
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="ml-4 cursor-pointer social"
               >
-                <img
-                  width={40}
-                  height={40}
-                  src={twitter_share}
-                  alt={twitter_share}
-                />
+                <img width={40} src={twitter_share} alt={twitter_share} />
               </TwitterShareButton>
 
               <LineShareButton
                 url={"https://ellisonleao.github.io/sharer.js/"}
                 className="ml-4 cursor-pointer social"
               >
-                <img width={40} height={40} src={line_share} alt={line_share} />
+                <img width={40} src={line_share} alt={line_share} />
               </LineShareButton>
             </div>
           </div>

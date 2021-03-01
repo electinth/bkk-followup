@@ -16,6 +16,7 @@ import SwiperCore, { Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import arrow_up_black from "assets/images/arrow_up_black.svg";
 import arrow_down_black from "assets/images/arrow_down_black.svg";
+import { isMobile, isTablet } from "react-device-detect";
 
 SwiperCore.use([Mousewheel]);
 
@@ -83,37 +84,54 @@ export default function Home() {
 
   return (
     <Layout>
+      {/* <span className="fixed z-50 text-blue-default">{active_index}</span> */}
+
       <Swiper {...swiper_options} className="h-full page-swiper">
         <SwiperSlide>
           <Main swiper_ref={swiper_ref} />
         </SwiperSlide>
+
+        {/* BudgetPageOne */}
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
+        {isMobile || isTablet ? <SwiperSlide></SwiperSlide> : null}
+
+        {/* BudgetPageTwo */}
+        <SwiperSlide></SwiperSlide>
+        {isMobile || isTablet ? null : <SwiperSlide></SwiperSlide>}
+
+        {/* BudgetPageThree */}
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
+
+        {/* BudgetPageFour */}
         <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide>
-          <BudgetPageFour />
-        </SwiperSlide>
+        {isMobile || isTablet ? <SwiperSlide></SwiperSlide> : null}
+
         <SwiperSlide>
           <ResponsibilityPageOne />
         </SwiperSlide>
-        <SwiperSlide>
-          <ResponsibilityPageTwo />
-        </SwiperSlide>
+
+        {/* ResponsibilityPageTwo */}
         <SwiperSlide></SwiperSlide>
-        <SwiperSlide>
-          <ResponsibilityPageFour />
-        </SwiperSlide>
+        {isMobile || isTablet ? <SwiperSlide></SwiperSlide> : null}
+
+        {/* ResponsibilityPageThree */}
+        <SwiperSlide></SwiperSlide>
+
+        {/* ResponsibilityPageFour */}
+        <SwiperSlide></SwiperSlide>
+        {isMobile || isTablet ? <SwiperSlide></SwiperSlide> : null}
+
+        {/* CitizenPageOne */}
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
       </Swiper>
 
-      {navigation()}
+      {isMobile || isTablet ? null : navigation()}
 
       <CSSTransition
-        in={[1, 2].includes(active_index)}
+        in={(isMobile || isTablet ? [1, 2, 3] : [1, 2]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -122,7 +140,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={[3, 4].includes(active_index)}
+        in={(isMobile || isTablet ? [4] : [3, 4]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -140,7 +158,25 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={active_index === 10}
+        in={(isMobile || isTablet ? [7, 8] : [7]).includes(active_index)}
+        timeout={400}
+        unmountOnExit
+        classNames="fade"
+      >
+        <BudgetPageFour active_index={active_index} />
+      </CSSTransition>
+
+      <CSSTransition
+        in={(isMobile || isTablet ? [10, 11] : [9]).includes(active_index)}
+        timeout={400}
+        unmountOnExit
+        classNames="fade"
+      >
+        <ResponsibilityPageTwo active_index={active_index} />
+      </CSSTransition>
+
+      <CSSTransition
+        in={(isMobile || isTablet ? [12] : [10]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -149,7 +185,16 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={[12, 13].includes(active_index)}
+        in={(isMobile || isTablet ? [13, 14] : [11]).includes(active_index)}
+        timeout={400}
+        unmountOnExit
+        classNames="fade"
+      >
+        <ResponsibilityPageFour active_index={active_index} />
+      </CSSTransition>
+
+      <CSSTransition
+        in={(isMobile || isTablet ? [15, 16] : [12, 13]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"

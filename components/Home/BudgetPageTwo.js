@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
 import numeral from "numeral";
+import { isMobile, isTablet } from "react-device-detect";
 
 export default function BudgetPageTwo(props) {
   const { active_index } = props;
@@ -22,7 +23,12 @@ export default function BudgetPageTwo(props) {
     let height = 200;
     let width = parent_width;
 
-    const margin = { top: 5, right: 25, bottom: 5, left: 25 };
+    const margin = {
+      top: 5,
+      right: isMobile || isTablet ? 40 : 25,
+      bottom: 5,
+      left: isMobile || isTablet ? 40 : 25,
+    };
 
     width = width - margin.left - margin.right;
     height = height - margin.top - margin.bottom;
@@ -84,7 +90,6 @@ export default function BudgetPageTwo(props) {
       .style("fill", "white")
       .style("text-anchor", "middle")
       .style("opacity", "0")
-      .style("transition", "0.4s")
       .text((d) => d.year);
 
     chart
@@ -101,7 +106,6 @@ export default function BudgetPageTwo(props) {
       .style("fill", "#7AE2A6")
       .style("text-anchor", "middle")
       .style("opacity", "0")
-      .style("transition", "0.4s")
       .text((d) => numeral(d.value).format("0,0"));
 
     chart
@@ -117,7 +121,6 @@ export default function BudgetPageTwo(props) {
       .style("fill", "#7AE2A6")
       .style("text-anchor", "middle")
       .style("opacity", "0")
-      .style("transition", "0.4s")
       .text((_) => "บาท/คน");
 
     chart
@@ -130,9 +133,11 @@ export default function BudgetPageTwo(props) {
       .attr("cy", (d) => y_scale(d.value))
       .attr("r", 6)
       .style("fill", "white");
+
+    if (isMobile || isTablet) showValue();
   }, []);
 
-  useEffect(() => {
+  const showValue = () => {
     if (active_index === 3) {
       d3.select(".line").style("stroke", "white");
       d3.select(".x-axis").select("path").style("color", "#00C853");
@@ -147,25 +152,39 @@ export default function BudgetPageTwo(props) {
       d3.selectAll(".label-value").style("opacity", "1");
       d3.selectAll(".label-unit").style("opacity", "1");
     }
+  };
+
+  useEffect(() => {
+    if (!(isMobile || isTablet)) showValue();
   }, [active_index]);
 
   return (
     <div
-      className="budget-page-two bg-black-default fixed z-10 inset-x-0 bottom-0 pointer-events-none"
+      className="budget-page-two bg-black-default fixed z-10 inset-0 pointer-events-none"
       style={{ top: "60px" }}
     >
       <div className="container mx-auto">
-        <h3 className="d3 text-white-default w-9/12 mt-14">
+        <h3 className="d3 text-white-default w-9/12 mt-14 hidden lg:block">
           8 ปีที่ผ่านมา (2555-2562) กทม. ใช้งบประมาณ
           ดูแลประชาชนต่อคนไม่เคยต่ำกว่า
         </h3>
 
-        <h2 className="d2 text-green-default">10,000 บาท/คน/ปี</h2>
+        <h4 className="d4 text-white-default w-full mt-5 block ld:hidden">
+          8 ปีที่ผ่านมา (2555-2562) กทม. ใช้งบประมาณ
+          ดูแลประชาชนต่อคนไม่เคยต่ำกว่า
+        </h4>
 
-        <div className="line-chart mt-14 mx-auto relative w-10/12 lg:w-10/12 2xl:w-full">
+        <h2 className="d2 text-green-default">10,000 บาท/คน/ปี</h2>
+      </div>
+
+      <div className="overflow-x-auto pointer-events-auto lg:pointer-events-none pb-5">
+        <div
+          className="line-chart mt-14 mx-auto relative"
+          style={{ width: isMobile || isTablet ? "200%" : "80%" }}
+        >
           <svg></svg>
 
-          <h4 className="start-at text-green-default text-base absolute -bottom-1 -right-24">
+          <h4 className="start-at text-green-default text-base absolute -bottom-1 -right-24 hidden lg:block">
             10,000 บาท
           </h4>
         </div>
