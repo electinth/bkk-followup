@@ -60,9 +60,13 @@ h5 {
   @media screen and (max-width: 1440px) {
     font-size: 36px;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1023px) {
     font-size: 28px;
   }
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+  }
+
 }
 .d4 {
   font-family: 'TheMATTER';

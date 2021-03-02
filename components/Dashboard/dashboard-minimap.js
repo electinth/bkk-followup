@@ -3,44 +3,7 @@ import * as d3 from 'd3';
 import * as topojson from 'topojson-client';
 import topo_district from 'assets/data/district.topojson.json';
 
-const mini_map = ({
-  // selected_tooltip,
-  // SET_SELECTED_TOOLTIP,
-  selected_theme,
-}) => {
-  // const active_tool_tip = (name) => {
-  //   d3.selectAll(`.rect${name}`)
-  //     .style('stroke-width', 1)
-  //     .style('stroke', 'white');
-  //   d3.selectAll(`.minimap${name}`).style('fill', 'white');
-  //   d3.selectAll(`.tooltip${name}`).style('visibility', 'visible');
-  // };
-
-  // const disable_tool_tip = (name) => {
-  //   d3.selectAll(`.rect${name}`).style('stroke', 'none');
-  //   d3.selectAll(`.minimap${name}`).style('fill', 'black');
-  //   d3.selectAll(`.tooltip${name}`).style('visibility', 'hidden');
-  // };
-
-  // const click = (name) => {
-  //   d3.select('.minimap').remove();
-  //   SET_SELECTED_TOOLTIP(name.substring(3));
-  //   setTimeout(() => {
-  //     active_tool_tip(name.substring(3));
-  //     if (name.substring(3) === selected_tooltip) {
-  //       disable_tool_tip(name.substring(3));
-  //     }
-  //   }, 200);
-  // };
-
-  // const mouseover = (name) => {
-  //   active_tool_tip(name.substring(3));
-  // };
-  // const mouseout = (name) => {
-  //   if (name.substring(3) != selected_tooltip) {
-  //     disable_tool_tip(name.substring(3));
-  //   }
-  // };
+const mini_map = ({ selected_theme }) => {
   const height = 147;
   const width = 187;
 
@@ -55,7 +18,6 @@ const mini_map = ({
     topo_district.objects.district
   );
   useEffect(() => {
-    
     let svg_map = d3
       .select('#map')
       .append('svg')
@@ -69,17 +31,14 @@ const mini_map = ({
       .data(geojson.features)
       .enter()
       .append('g')
-      // .style('cursor', 'pointer')
-      // .on('mouseover', (_, d) => mouseover(d.properties.dname))
-      // .on('mouseout', (_, d) => mouseout(d.properties.dname))
-      // .on('click', (_, d) => click(d.properties.dname))
+
       .append('path')
       .attr('d', path)
       .attr('class', (d) => `minimap minimap${d.properties.dname.substring(3)}`)
 
       .style('stroke-width', 1)
       .style('stroke', 'white');
-  }, [selected_theme]);
+  }, []);
   return (
     <div id="map" className="flex justify-center text-white-default"></div>
   );

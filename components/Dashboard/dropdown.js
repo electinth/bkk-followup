@@ -64,10 +64,6 @@ const dropdown = ({
     document.removeEventListener('click', closeMenu);
   };
 
-  useEffect(() => {
-    document.addEventListener('click', closeMenu);
-  }, [dropdown_state]);
-
   return (
     <div
       style={{
@@ -81,7 +77,7 @@ const dropdown = ({
           className="relative inline-block w-full text-left md:ml-3"
         >
           <div
-            onClick={showMenu}
+            onClick={dropdown_state ? closeMenu : showMenu}
             id="manu"
             className="relative flex flex-row p-2 font-bold rounded cursor-pointer md:w-56 bg-white-default h4 "
           >
@@ -152,7 +148,7 @@ const dropdown = ({
           className="relative inline-block w-full pl-3 text-left md:ml-3"
         >
           <div
-            onClick={showMenu}
+            onClick={dropdown_state ? closeMenu : showMenu}
             id="manu"
             className="relative flex flex-row p-2 font-bold rounded cursor-pointer md:w-56 bg-white-default h4"
           >
@@ -214,7 +210,7 @@ const dropdown = ({
           }}
         >
           <div
-            onClick={showMenu}
+            onClick={dropdown_state ? closeMenu : showMenu}
             id="manu"
             className="relative flex flex-row p-2 mx-3 font-bold rounded cursor-pointer md:w-52 bg-white-default h4 md:mx-0"
           >

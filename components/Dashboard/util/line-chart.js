@@ -72,10 +72,6 @@ export default function DashboardLineChart({
 
     d3.select('.svg-line-chart').remove();
 
-    // const second_data = data.map((d) => {
-    //   return { year: d.year, value: d.value / 2 };
-    // });
-
     let height = isMobileOnly ? 150 : 200;
     let width = isMobileOnly ? 300 : 540;
 

@@ -14,6 +14,7 @@ const map = ({
   SET_DISTRICT,
   SET_STATE_DROPDOWN,
   SET_CHECKED,
+  district,
 }) => {
   const actived_tool_tip = (name) => {
     setTimeout(() => {
@@ -124,9 +125,6 @@ const map = ({
         let group = enter
           .append('g')
           .attr('transform', (d) => `translate(${cx(d)}, ${cy(d)})`);
-
-        // group.append('title').text((d) => `${d.dist} ${+d[data_key]}`);
-
         group
           .append('rect')
           .attr('class', (d) => `group_circle rect${d.districtName}`)
@@ -137,7 +135,9 @@ const map = ({
           .style('cursor', 'pointer')
           .on('mouseover', (e, d) => (d.value ? mouseover(e, d) : ''))
           .on('mouseout', (_, d) => mouseout(d))
-          .on('click', (e, d) => (d.value ? click(e, d) : ''));
+          .on('click', (e, d) => {
+            if (d.value) click(e, d);
+          });
 
         group
           .append('circle')
@@ -175,12 +175,16 @@ const map = ({
                 (d) =>
                   `tool_tip_detail_wrapper rounded-lg tooltip${d.districtName}`
               )
-              .style('top', (d) => cy(d) - 50 + 'px')
+              .style('top', (d) => cy(d) + 40 + 'px')
               .style('left', (d) => {
-                if (cx(d) < screen.width / 2) {
-                  return cx(d) + 20 + 'px';
+                if (isMobile) {
+                  if (cx(d) < screen.width / 2) {
+                    return cx(d) + 20 + 'px';
+                  } else {
+                    return cx(d) - 200 + 'px';
+                  }
                 } else {
-                  return cx(d) - 200 + 'px';
+                  return cx(d) + 40 + 'px';
                 }
               })
               .style('visibility', (d) => 'hidden');
@@ -197,12 +201,6 @@ const map = ({
               .text((d) => `เขต${d.districtName}`)
               .append('div')
               .text((d) => `ปี 25${selected_year}`);
-
-            // header
-            //   .append('div')
-            //   .attr('class', 'tooltip_h_right')
-            //   .text((d) => `x`)
-            //   .style('cursor', 'pointer')
 
             let body = tooltip
               .append('div')
@@ -263,8 +261,8 @@ const map = ({
         unit = d3.mean(merge_data, (d) => +d.value);
       }
       const maps = d3.select('#maps');
-
       d3.select('.svg-wrapper').remove();
+      d3.selectAll('.tool_tip_wrapper').remove();
       add_map(
         maps,
         merge_data,
@@ -272,7 +270,7 @@ const map = ({
         [selected_theme.color, '#CCF4DD', '#FFFFFF'],
         selected_year
       );
-      if (state_dropdown === 'group' && checked === 'เขตพื้นที่ทั้งหมด') {
+      if (state_dropdown === 'group' && checked != 'เขตพื้นที่ทั้งหมด') {
         _.forEach(raw_data.rankings, (district) => {
           d3.select(`.rect${district.districtName}`)
             .style('stroke-width', 1)
@@ -280,32 +278,32 @@ const map = ({
           d3.select(`.minimap${district.districtName}`).style('fill', 'white');
         });
       }
-      // if (selected_tooltip) {
-      //   console.log('selected_tooltip');
-      // }
+      if (state_dropdown === 'zone') {
+        actived_tool_tip(district);
+        SET_SELECTED_TOOLTIP(district);
+        SET_STATE_DROPDOWN(false);
+      }
     });
   };
 
-  useEffect(() => {
-    if (state_dropdown === 'group' && checked != 'เขตพื้นที่ทั้งหมด') {
-      _.forEach(raw_data.rankings, (d) => {
-        setTimeout(() => {
-          d3.selectAll(`.rect${d.districtName}`)
-            .style('stroke-width', 1)
-            .style('stroke', 'white');
-          d3.select(`.minimap${d.districtName}`).style('fill', 'white');
-        }, 100);
-      });
-    }
-  }, [checked]);
+  // useEffect(() => {
+  //   if (state_dropdown === 'group' && checked != 'เขตพื้นที่ทั้งหมด') {
+  //     _.forEach(raw_data.rankings, (d) => {
+  //       setTimeout(() => {
+  //         d3.selectAll(`.rect${d.districtName}`)
+  //           .style('stroke-width', 1)
+  //           .style('stroke', 'white');
+  //         d3.select(`.minimap${d.districtName}`).style('fill', 'white');
+  //       }, 100);
+  //     });
+  //   }
+  // }, [checked]);
 
   // useEffect(() => {
   //   run();
   // }, [selected_year]);
 
   useEffect(() => {
-    // d3.select('.tool_tip_wrapper').remove();
-    d3.selectAll('.tool_tip_wrapper').remove();
     run();
   }, [selected_theme]);
 

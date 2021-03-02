@@ -29,9 +29,9 @@ const timeLine = ({
       );
     }
   };
-  const resume = () => {
-    clearInterval(interval);
-  };
+  // const resume = () => {
+  //   clearInterval(interval);
+  // };
   useEffect(() => {
     if (index === years.length) {
       clearInterval(interval);

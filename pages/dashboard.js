@@ -28,11 +28,10 @@ import close_filter from 'assets/images/cancle.svg';
 import rankingImg from 'assets/images/rankingImg.svg';
 import rankingImg_w from 'assets/images/rankingImg_w.svg';
 import allImg from 'assets/images/allImg.svg';
-import overAll from 'assets/images/overall.svg';
 import allImg_w from 'assets/images/allImg_w.svg';
 import LineChart from 'components/Dashboard/dashboard-line-chart';
 import StandardGreen from 'components/Dashboard/util/standard_green';
-import { isMobile, isMobileOnly,isTablet } from 'react-device-detect';
+import { isMobile, isMobileOnly } from 'react-device-detect';
 
 import _ from 'lodash';
 import * as d3 from 'd3';
@@ -335,6 +334,7 @@ const dashboard = () => {
               SET_DISTRICT={SET_DISTRICT}
               SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
               SET_CHECKED={SET_CHECKED}
+              district={district}
             />
             <div className="relative flex" id="map-footer">
               <InfoMap selected_theme={selected_theme} />

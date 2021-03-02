@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import * as d3 from 'd3';
 
 const category_manu = ({
   category,
@@ -26,6 +27,7 @@ const category_manu = ({
     SET_STATE_DROPDOWN(null);
     SET_CHECKED('เขตพื้นที่ทั้งหมด');
     SET_DISTRICT(null);
+    d3.selectAll(`.minimap`).style('fill', 'none');
   };
   return (
     <div
