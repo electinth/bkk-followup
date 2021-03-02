@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import arrow from 'assets/images/arrow.svg';
 import { useRouter } from 'next/router';
 import { isMobileOnly, isMobile } from 'react-device-detect';
+import useOutsideClick from 'components/Dashboard/util/useOutsideClick';
+
 import * as d3 from 'd3';
 
 const dropdown = ({
@@ -19,7 +21,6 @@ const dropdown = ({
 }) => {
   const [dropdown_state, SET_DROPDOWN_STATE] = useState(false);
   const [category, SET_CATEGORY] = useState('น้ำท่วมถนน');
-  const dropdown_menu_ref = useRef(null);
   const router = useRouter();
 
   const showMenu = (e) => {
@@ -63,6 +64,12 @@ const dropdown = ({
     SET_DROPDOWN_STATE(false);
     document.removeEventListener('click', closeMenu);
   };
+  const ref = useRef();
+  useOutsideClick(ref, () => {
+    if (dropdown_state) {
+      SET_DROPDOWN_STATE(false);
+    }
+  });
 
   return (
     <div
@@ -110,8 +117,8 @@ const dropdown = ({
                 border: '1px solid #eee',
                 boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.15)',
               }}
-              ref={dropdown_menu_ref}
               id="options"
+              ref={ref}
             >
               {filter.map((f, index) => (
                 <label
@@ -173,7 +180,7 @@ const dropdown = ({
                 boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.15)',
                 maxHeight: '50vh',
               }}
-              ref={dropdown_menu_ref}
+              ref={ref}
               id="options"
             >
               <div id="option-wrapper " className="overflow-auto">
@@ -240,8 +247,8 @@ const dropdown = ({
                 border: '1px solid #eee',
                 boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.15)',
               }}
-              ref={dropdown_menu_ref}
               id="options"
+              ref={ref}
             >
               {filter.map((f, index) => (
                 <label
