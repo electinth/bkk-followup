@@ -2,8 +2,7 @@ import * as d3 from 'd3';
 import React, { useEffect } from 'react';
 
 const donut_chart = ({ selected_theme, percent }) => {
-  useEffect(() => {
-    d3.select('.svg-donut-chart').remove();
+  const draw_donut_chart = () => {
     let data = [percent, 100 - percent];
     let width = 140,
       height = 140;
@@ -45,7 +44,12 @@ const donut_chart = ({ selected_theme, percent }) => {
         return color(i);
       })
       .attr('d', arc);
-  }, [selected_theme]);
+  };
+  d3.select('.svg-donut-chart').remove();
+  draw_donut_chart();
+  useEffect(() => {
+    draw_donut_chart();
+  }, []);
 
   return (
     <div id="donut-chart" className="relative">

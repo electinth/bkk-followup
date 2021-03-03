@@ -43,7 +43,7 @@ const listRanking = ({ selected_theme, data }) => {
 
   return (
     <div
-      className="flex flex-col flex-1 card_cat_detail "
+      className="flex flex-col flex-1 mt-3 card_cat_detail md:mt-0 "
       id="list-ranking"
       style={{ backgroundColor: selected_theme.color }}
     >

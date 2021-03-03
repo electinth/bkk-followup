@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import arrow from 'assets/images/arrow.svg';
 import { useRouter } from 'next/router';
-import { isMobileOnly, isMobile } from 'react-device-detect';
+import { isMobileOnly } from 'react-device-detect';
 import useOutsideClick from 'components/Dashboard/util/useOutsideClick';
 
 import * as d3 from 'd3';
@@ -40,8 +40,15 @@ const dropdown = ({
       d3.selectAll(`.minimap`).style('fill', 'none');
       SET_CHECKED(e.target.value);
       SET_DISTRICT(null);
-    } else {
+    } else if (type === 'zone') {
       SET_DISTRICT(e.target.value);
+      setTimeout(() => {
+        d3.select(`.rect${e.target.value}`)
+          .style('stroke-width', 1)
+          .style('stroke', 'white');
+        d3.select(`.minimap${e.target.value}`).style('fill', 'white');
+        d3.select(`.tooltip${e.target.value}`).style('visibility', 'visible');
+      }, 100);
     }
     SET_DROPDOWN_STATE(false);
     SET_IS_RANK(false);

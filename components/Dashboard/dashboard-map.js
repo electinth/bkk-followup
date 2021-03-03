@@ -1,67 +1,61 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { isMobileOnly, isMobile } from 'react-device-detect';
 import * as d3 from 'd3';
 
 const map = ({
   selected_year,
   selected_theme,
-  selected_tooltip,
-  SET_SELECTED_TOOLTIP,
   data,
   state_dropdown,
   checked,
   raw_data,
   SET_DISTRICT,
-  SET_STATE_DROPDOWN,
-  SET_CHECKED,
   district,
 }) => {
   const actived_tool_tip = (name) => {
+    SET_DISTRICT(name);
     setTimeout(() => {
+      d3.selectAll(`.minimap`).style('fill', 'none');
+      d3.selectAll('.tool_tip_detail_wrapper').style('visibility', 'hidden');
+      d3.selectAll(`.group_circle`).style('stroke', 'none');
       d3.select(`.rect${name}`)
         .style('stroke-width', 1)
         .style('stroke', 'white');
       d3.select(`.minimap${name}`).style('fill', 'white');
       d3.select(`.tooltip${name}`).style('visibility', 'visible');
-    }, 0);
+    }, 100);
   };
-
   const disable_tool_tip = (name) => {
     d3.select(`.rect${name}`).style('stroke', 'none');
     d3.select(`.minimap${name}`).style('fill', 'black');
     d3.select(`.tooltip${name}`).style('visibility', 'hidden');
-  };
-
-  const click = (_, d) => {
-    d3.selectAll(`.minimap`).style('fill', 'none');
-    d3.selectAll('.tool_tip_detail_wrapper').style('visibility', 'hidden');
-    SET_SELECTED_TOOLTIP(d.districtName);
-    actived_tool_tip(d.districtName);
-    SET_STATE_DROPDOWN(false);
-    SET_DISTRICT(d.districtName);
-    if (d.districtName === selected_tooltip) {
-      disable_tool_tip(d.districtName);
-      SET_CHECKED('เขตพื้นที่ทั้งหมด');
-      SET_DISTRICT(null);
-      SET_SELECTED_TOOLTIP();
-    }
+    SET_DISTRICT(null);
   };
 
   const mouseover = (_, d) => {
     if (!isMobile) {
-      actived_tool_tip(d.districtName);
+      if (d.districtName != district) {
+        d3.select(`.rect${d.districtName}`)
+          .style('stroke-width', 1)
+          .style('stroke', 'white');
+        d3.select(`.minimap${d.districtName}`).style('fill', 'white');
+        d3.select(`.tooltip${d.districtName}`).style('visibility', 'visible');
+      }
     }
   };
   const mouseout = (d) => {
     if (!isMobile) {
       if (state_dropdown === 'group' && checked != 'เขตพื้นที่ทั้งหมด') {
         if (!_.some(raw_data.rankings, { districtName: d.districtName })) {
-          disable_tool_tip(d.districtName);
+          d3.select(`.rect${d.districtName}`).style('stroke', 'none');
+          d3.select(`.minimap${d.districtName}`).style('fill', 'black');
+          d3.select(`.tooltip${d.districtName}`).style('visibility', 'hidden');
         }
-        d3.select(`.tooltip${d.districtName}`).style('visibility', 'hidden');
       } else {
-        if (selected_tooltip != d.districtName) {
-          disable_tool_tip(d.districtName);
+        if (district != d.districtName) {
+          d3.select(`.rect${d.districtName}`).style('stroke', 'none');
+          d3.select(`.minimap${d.districtName}`).style('fill', 'black');
+          d3.select(`.tooltip${d.districtName}`).style('visibility', 'hidden');
         }
       }
     }
@@ -135,9 +129,7 @@ const map = ({
           .style('cursor', 'pointer')
           .on('mouseover', (e, d) => (d.value ? mouseover(e, d) : ''))
           .on('mouseout', (_, d) => mouseout(d))
-          .on('click', (e, d) => {
-            if (d.value) click(e, d);
-          });
+          .on('click', (_, d) => actived_tool_tip(d.districtName));
 
         group
           .append('circle')
@@ -200,7 +192,13 @@ const map = ({
               .append('div')
               .text((d) => `เขต${d.districtName}`)
               .append('div')
-              .text((d) => `ปี 25${selected_year}`);
+              .text((_) => `ปี 25${selected_year}`);
+
+            header
+              .append('div')
+              .attr('class', 'close_tooltip')
+              .text((_) => 'x')
+              .on('click', (_, d) => disable_tool_tip(d.districtName));
 
             let body = tooltip
               .append('div')
@@ -270,7 +268,11 @@ const map = ({
         [selected_theme.color, '#CCF4DD', '#FFFFFF'],
         selected_year
       );
-      if (state_dropdown === 'group' && checked != 'เขตพื้นที่ทั้งหมด') {
+      if (
+        state_dropdown === 'group' &&
+        checked != 'เขตพื้นที่ทั้งหมด' &&
+        !district
+      ) {
         _.forEach(raw_data.rankings, (district) => {
           d3.select(`.rect${district.districtName}`)
             .style('stroke-width', 1)
@@ -278,34 +280,10 @@ const map = ({
           d3.select(`.minimap${district.districtName}`).style('fill', 'white');
         });
       }
-      if (state_dropdown === 'zone') {
-        actived_tool_tip(district);
-        SET_SELECTED_TOOLTIP(district);
-        SET_STATE_DROPDOWN(false);
-      }
     });
   };
 
-  // useEffect(() => {
-  //   if (state_dropdown === 'group' && checked != 'เขตพื้นที่ทั้งหมด') {
-  //     _.forEach(raw_data.rankings, (d) => {
-  //       setTimeout(() => {
-  //         d3.selectAll(`.rect${d.districtName}`)
-  //           .style('stroke-width', 1)
-  //           .style('stroke', 'white');
-  //         d3.select(`.minimap${d.districtName}`).style('fill', 'white');
-  //       }, 100);
-  //     });
-  //   }
-  // }, [checked]);
-
-  // useEffect(() => {
-  //   run();
-  // }, [selected_year]);
-
-  useEffect(() => {
-    run();
-  }, [selected_theme]);
+  run();
 
   return (
     <div className="relative flex items-center justify-center flex-1 m-auto my-5 lg:my-0">

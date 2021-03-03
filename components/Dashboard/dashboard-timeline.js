@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import _ from 'lodash';
 import playImg from 'assets/images/play.svg';
 import { isMobileOnly } from 'react-device-detect';
@@ -32,11 +32,10 @@ const timeLine = ({
   // const resume = () => {
   //   clearInterval(interval);
   // };
-  useEffect(() => {
-    if (index === years.length) {
-      clearInterval(interval);
-    }
-  }, [index]);
+
+  if (index === years.length) {
+    clearInterval(interval);
+  }
 
   return (
     <div

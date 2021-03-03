@@ -152,6 +152,7 @@ const dashboard = () => {
         return DistrictJson;
       }
     };
+
     const cancle_filter = () => {
       SET_CHECKED('เขตพื้นที่ทั้งหมด');
       SET_DISTRICT(null);
@@ -164,7 +165,7 @@ const dashboard = () => {
       return { filter_by: _.get(rank, 'name') };
     });
     let district_data;
-    if (district && state_dropdown === 'zone') {
+    if (district) {
       let districtID = _.filter(group_district(format_type), (r) => {
         return r.name === district;
       })[0];
@@ -174,9 +175,6 @@ const dashboard = () => {
 
     const is_show = () => {
       SET_IS_RANK(!isRank);
-      // if (isMobile) {
-      //   // window.scrollTo(0, 0);
-      // }
     };
 
     return (
@@ -284,6 +282,7 @@ const dashboard = () => {
                     checked={checked}
                     SET_CHECKED={SET_CHECKED}
                     type="group"
+                    raw_data={data}
                     SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
                     SET_DISTRICT={SET_DISTRICT}
                     SET_IS_RANK={SET_IS_RANK}
@@ -325,15 +324,11 @@ const dashboard = () => {
             <Map
               selected_year={selected_year}
               selected_theme={selected_theme}
-              selected_tooltip={selected_tooltip}
-              SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
               data={selectedData.map}
               state_dropdown={state_dropdown}
               checked={checked}
               raw_data={data}
               SET_DISTRICT={SET_DISTRICT}
-              SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
-              SET_CHECKED={SET_CHECKED}
               district={district}
             />
             <div className="relative flex" id="map-footer">
@@ -378,7 +373,6 @@ const dashboard = () => {
               )}
             </div>
           </div>
-          {/* { md:min-h-full} */}
           <div
             id="dashboard-right"
             className="flex flex-col flex-1 min-h-full lg:overflow-auto"
@@ -427,8 +421,7 @@ const dashboard = () => {
                     )}
                   </span>
                 </div>
-                {state_dropdown === 'zone' &&
-                selected_theme.name === 'น้ำท่วมถนน' ? (
+                {district && selected_theme.name === 'น้ำท่วมถนน' ? (
                   <div className="mt-3" id="flood-rating">
                     {Rating(
                       selected_theme,
@@ -493,8 +486,7 @@ const dashboard = () => {
                 ) : (
                   ''
                 )}
-                {state_dropdown === 'zone' &&
-                selected_theme.name != 'น้ำท่วมถนน' ? (
+                {district && selected_theme.name != 'น้ำท่วมถนน' ? (
                   <MaxMinPerDistrict
                     selected_theme={selected_theme}
                     district_data={district_data}
@@ -506,7 +498,7 @@ const dashboard = () => {
                   <LocationFlood
                     selected_theme={selected_theme}
                     data={
-                      state_dropdown === 'zone'
+                      district
                         ? district_data.floodHotspots
                         : data.floodHotspots
                     }
@@ -517,9 +509,7 @@ const dashboard = () => {
                 <LineChart
                   selected_theme={selected_theme}
                   data={
-                    state_dropdown === 'zone'
-                      ? district_data.valuePerYear
-                      : data.valuePerYear
+                    district ? district_data.valuePerYear : data.valuePerYear
                   }
                 />
                 {checked === 'เขตพื้นที่ทั้งหมด' ? (
@@ -540,12 +530,11 @@ const dashboard = () => {
                   <Budget
                     id="budget"
                     selected_theme={selected_theme}
-                    data={state_dropdown === 'zone' ? district_data : data}
+                    data={district ? district_data : data}
                     checked={checked}
                     state_dropdown={state_dropdown}
                   />
-                  {checked === 'เขตพื้นที่ทั้งหมด' &&
-                  state_dropdown != 'zone' ? (
+                  {checked === 'เขตพื้นที่ทั้งหมด' && !district ? (
                     <Compare
                       id="compare"
                       selected_theme={selected_theme}
@@ -554,7 +543,7 @@ const dashboard = () => {
                       SET_CHECKED={SET_CHECKED}
                       SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
                     />
-                  ) : state_dropdown === 'zone' ? (
+                  ) : district ? (
                     <ListPerDistrict
                       id="list-ranking-per-district"
                       selected_theme={selected_theme}
@@ -599,14 +588,6 @@ const dashboard = () => {
                   <p>ดูการจัดอันดับ</p>
                 </button>
               )}
-
-              {/* <button
-                className="flex flex-row items-center justify-center flex-1 mx-3 font-bold isRank_black text-white-default"
-                // onClick={is_show}
-              >
-                <img src={overAll} alt="overAll" className="mr-3" />
-                <p>สำรวจทุกประเด็น</p>
-              </button> */}
             </div>
           ) : (
             ''

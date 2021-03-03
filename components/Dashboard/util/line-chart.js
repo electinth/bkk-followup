@@ -70,8 +70,6 @@ export default function DashboardLineChart({
       data.push({ year: key.substring(2, 4), value: d });
     });
 
-    d3.select('.svg-line-chart').remove();
-
     let height = isMobileOnly ? 150 : 200;
     let width = isMobileOnly ? 300 : 540;
 
@@ -246,9 +244,13 @@ export default function DashboardLineChart({
       .style('font-weight', 'bold');
   };
 
+  
+  d3.select('.svg-line-chart').remove();
+  createChart();
+
   useEffect(() => {
     createChart();
-  }, [selected_theme]);
+  }, []);
 
   return <div className="inline-block mx-auto border line-chart"></div>;
 }
