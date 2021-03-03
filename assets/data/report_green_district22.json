@@ -63,44 +63,44 @@
   "ranked": 30,
   "rankings": [
     {
-      "ranked": 1,
-      "year": 2562,
-      "value": 4.54
+      "ranked": 32,
+      "year": 2555,
+      "value": 2.67
     },
     {
-      "ranked": 2,
-      "year": 2561,
-      "value": 4.53
-    },
-    {
-      "ranked": 3,
-      "year": 2560,
-      "value": 4.24
-    },
-    {
-      "ranked": 4,
-      "year": 2559,
-      "value": 4.07
-    },
-    {
-      "ranked": 5,
-      "year": 2558,
-      "value": 3.5
-    },
-    {
-      "ranked": 6,
+      "ranked": 30,
       "year": 2556,
       "value": 3
     },
     {
-      "ranked": 7,
+      "ranked": 30,
       "year": 2557,
       "value": 3
     },
     {
-      "ranked": 8,
-      "year": 2555,
-      "value": 2.67
+      "ranked": 31,
+      "year": 2558,
+      "value": 3.5
+    },
+    {
+      "ranked": 27,
+      "year": 2559,
+      "value": 4.07
+    },
+    {
+      "ranked": 28,
+      "year": 2560,
+      "value": 4.24
+    },
+    {
+      "ranked": 28,
+      "year": 2561,
+      "value": 4.53
+    },
+    {
+      "ranked": 30,
+      "year": 2562,
+      "value": 4.54
     }
   ],
   "publicGreenSpacePerCapita": 0.11

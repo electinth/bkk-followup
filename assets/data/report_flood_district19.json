@@ -63,44 +63,34 @@
   "ranked": 6,
   "rankings": [
     {
-      "ranked": 1,
-      "year": 2562,
-      "value": 34
-    },
-    {
-      "ranked": 2,
-      "year": 2557,
-      "value": 22
-    },
-    {
-      "ranked": 3,
+      "ranked": 10,
       "year": 2556,
       "value": 14
     },
     {
-      "ranked": 4,
-      "year": 2561,
-      "value": 13
+      "ranked": 13,
+      "year": 2557,
+      "value": 22
     },
     {
-      "ranked": 5,
+      "ranked": 16,
       "year": 2558,
       "value": 12
     },
     {
-      "ranked": 6,
+      "ranked": 20,
       "year": 2559,
       "value": 1
     },
     {
-      "ranked": 7,
-      "year": 2555,
-      "value": null
+      "ranked": 13,
+      "year": 2561,
+      "value": 13
     },
     {
-      "ranked": 8,
-      "year": 2560,
-      "value": null
+      "ranked": 6,
+      "year": 2562,
+      "value": 34
     }
   ],
   "meanFloodLevel": 29.1,

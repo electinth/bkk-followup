@@ -63,42 +63,42 @@
   "ranked": 11,
   "rankings": [
     {
-      "ranked": 1,
-      "year": 2558,
-      "value": 173
-    },
-    {
-      "ranked": 2,
-      "year": 2561,
-      "value": 48
-    },
-    {
-      "ranked": 3,
-      "year": 2556,
-      "value": 29
-    },
-    {
-      "ranked": 4,
+      "ranked": 6,
       "year": 2555,
       "value": 27
     },
     {
-      "ranked": 5,
-      "year": 2559,
-      "value": 26
-    },
-    {
-      "ranked": 6,
-      "year": 2560,
-      "value": 24
-    },
-    {
       "ranked": 7,
+      "year": 2556,
+      "value": 29
+    },
+    {
+      "ranked": 12,
       "year": 2557,
       "value": 22
     },
     {
+      "ranked": 4,
+      "year": 2558,
+      "value": 173
+    },
+    {
       "ranked": 8,
+      "year": 2559,
+      "value": 26
+    },
+    {
+      "ranked": 12,
+      "year": 2560,
+      "value": 24
+    },
+    {
+      "ranked": 6,
+      "year": 2561,
+      "value": 48
+    },
+    {
+      "ranked": 11,
       "year": 2562,
       "value": 16
     }

@@ -63,22 +63,27 @@
   "ranked": 6,
   "rankings": [
     {
-      "ranked": 1,
-      "year": 2558,
-      "value": 3.175
+      "ranked": 5,
+      "year": 2555,
+      "value": 2.925
     },
     {
-      "ranked": 2,
+      "ranked": 5,
       "year": 2556,
       "value": 3.173
     },
     {
-      "ranked": 3,
+      "ranked": 5,
       "year": 2557,
       "value": 3.173
     },
     {
-      "ranked": 4,
+      "ranked": 5,
+      "year": 2558,
+      "value": 3.175
+    },
+    {
+      "ranked": 5,
       "year": 2559,
       "value": 3.145
     },
@@ -93,12 +98,7 @@
       "value": 2.959
     },
     {
-      "ranked": 7,
-      "year": 2555,
-      "value": 2.925
-    },
-    {
-      "ranked": 8,
+      "ranked": 6,
       "year": 2562,
       "value": 2.919
     }

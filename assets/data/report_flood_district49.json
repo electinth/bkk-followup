@@ -63,14 +63,9 @@
   "ranked": 4,
   "rankings": [
     {
-      "ranked": 1,
-      "year": 2560,
-      "value": 376
-    },
-    {
-      "ranked": 2,
-      "year": 2559,
-      "value": 177
+      "ranked": 7,
+      "year": 2555,
+      "value": 25
     },
     {
       "ranked": 3,
@@ -78,29 +73,34 @@
       "value": 66
     },
     {
-      "ranked": 4,
-      "year": 2561,
-      "value": 59
-    },
-    {
-      "ranked": 5,
-      "year": 2562,
-      "value": 51
-    },
-    {
-      "ranked": 6,
+      "ranked": 10,
       "year": 2557,
       "value": 30
     },
     {
-      "ranked": 7,
-      "year": 2555,
-      "value": 25
-    },
-    {
-      "ranked": 8,
+      "ranked": 11,
       "year": 2558,
       "value": 22
+    },
+    {
+      "ranked": 1,
+      "year": 2559,
+      "value": 177
+    },
+    {
+      "ranked": 1,
+      "year": 2560,
+      "value": 376
+    },
+    {
+      "ranked": 3,
+      "year": 2561,
+      "value": 59
+    },
+    {
+      "ranked": 4,
+      "year": 2562,
+      "value": 51
     }
   ],
   "floodHotspots": [

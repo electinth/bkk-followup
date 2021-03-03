@@ -30,42 +30,12 @@
   "ranked": 9,
   "rankings": [
     {
-      "ranked": 1,
+      "ranked": 2,
       "year": 2561,
       "value": 99
     },
     {
-      "ranked": 2,
-      "year": 2555,
-      "value": null
-    },
-    {
-      "ranked": 3,
-      "year": 2556,
-      "value": null
-    },
-    {
-      "ranked": 4,
-      "year": 2557,
-      "value": null
-    },
-    {
-      "ranked": 5,
-      "year": 2558,
-      "value": null
-    },
-    {
-      "ranked": 6,
-      "year": 2559,
-      "value": null
-    },
-    {
-      "ranked": 7,
-      "year": 2560,
-      "value": null
-    },
-    {
-      "ranked": 8,
+      "ranked": 9,
       "year": 2562,
       "value": 0
     }

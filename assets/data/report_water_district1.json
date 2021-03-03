@@ -35,39 +35,39 @@
       "value": 36.12
     },
     {
-      "ranked": 2,
-      "year": 2559,
-      "value": 32.53
-    },
-    {
       "ranked": 3,
-      "year": 2560,
-      "value": 32.02
-    },
-    {
-      "ranked": 4,
-      "year": 2562,
-      "value": 31.05
-    },
-    {
-      "ranked": 5,
-      "year": 2561,
-      "value": 30.14
-    },
-    {
-      "ranked": 6,
-      "year": 2558,
-      "value": 29.6
-    },
-    {
-      "ranked": 7,
       "year": 2556,
       "value": 25.57
     },
     {
-      "ranked": 8,
+      "ranked": 3,
       "year": 2557,
       "value": 25.57
+    },
+    {
+      "ranked": 2,
+      "year": 2558,
+      "value": 29.6
+    },
+    {
+      "ranked": 3,
+      "year": 2559,
+      "value": 32.53
+    },
+    {
+      "ranked": 2,
+      "year": 2560,
+      "value": 32.02
+    },
+    {
+      "ranked": 2,
+      "year": 2561,
+      "value": 30.14
+    },
+    {
+      "ranked": 2,
+      "year": 2562,
+      "value": 31.05
     }
   ]
 }
