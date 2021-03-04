@@ -1,13 +1,13 @@
 import React from 'react';
 import * as d3 from 'd3';
-import { isMobile } from 'react-device-detect';
+import { isMobile, isMobileOnly } from 'react-device-detect';
 
-const rank62 = ({ selected_theme, data }) => {
+const rank62 = ({ selected_theme, data, SET_DISTRICT, SET_IS_RANK }) => {
   let title, sub, standard, avg, height_rank, low_rank, unit, note;
   let height_elem = d3.select('#group-dropdown').node().getBoundingClientRect()
     .height;
   if (selected_theme.name === 'น้ำท่วมถนน') {
-    title = 'อันดับน้ำท่วมกรุงเทพมหานคร';
+    title = 'อันดับน้ำท่วมในกรุงเทพมหานคร';
     sub = 'จำนวนครั้งที่มีน้ำท่วมบนถนน (ครั้ง)';
     unit = 'ครั้ง';
     note =
@@ -52,6 +52,18 @@ const rank62 = ({ selected_theme, data }) => {
   });
   low_rank = _.filter(data, (d) => d.value < standard);
 
+  const selected_zone = (name) => {
+    SET_DISTRICT(name);
+    setTimeout(() => {
+      d3.select(`.rect${name}`)
+        .style('stroke-width', 1)
+        .style('stroke', 'white');
+      d3.select(`.minimap${name}`).style('fill', 'white');
+      d3.select(`.tooltip${name}`).style('visibility', 'visible');
+    }, 100);
+    SET_IS_RANK(false);
+  };
+
   return (
     <div
       id="rank62"
@@ -65,17 +77,22 @@ const rank62 = ({ selected_theme, data }) => {
         className="flex flex-col justify-center mt-3 text-center text-white-default"
       >
         <p className="font-bold d4">{title}</p>
-        <p className="font-bold h4">ข้อมูลประจำปี 2562</p>
-        <span className="flex m-auto p1">
-          <p>{sub}</p>
-          <p className="font-bold">เรียงลำดับมากไปน้อย</p>
+        <p className="my-2 font-bold h4 lg:my-0">
+          {isMobile ? 'ภาพรวมย้อนหลัง 8 ปี (2555-2562)' : 'ข้อมูลประจำปี 2562'}
+        </p>
+        <span className="flex flex-col m-auto p1 md:flex-row">
+          <p className="mb-2 lg:mb-0">{sub}</p>
+          <p className="mb-1 font-bold underline md:ml-1 lg:mb:0">
+            เรียงลำดับมากไปน้อย
+          </p>
         </span>
       </div>
       <div id="list-body" className="px-3 pt-2">
         {height_rank.map((rank, index) => (
           <div
             key={index}
-            className="flex px-3 py-3 my-1 font-bold rounded bg-white-default p2"
+            className="flex px-3 py-3 my-1 font-bold rounded cursor-pointer bg-white-default p2"
+            onClick={() => selected_zone(rank.districtName)}
           >
             <div className="flex flex-row items-center flex-1">
               <div className="mr-2 circle_wrapper">{index + 1}</div>
@@ -94,7 +111,8 @@ const rank62 = ({ selected_theme, data }) => {
         {low_rank.map((rank, index) => (
           <div
             key={index}
-            className="flex px-3 py-3 my-1 font-bold rounded bg-white-default p2"
+            className="flex px-3 py-3 my-1 font-bold rounded cursor-pointer bg-white-default p2"
+            onClick={() => selected_zone(rank.districtName)}
           >
             <div className="flex flex-row items-center flex-1">
               <div className="mr-2 circle_wrapper">

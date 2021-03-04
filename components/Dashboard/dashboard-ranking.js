@@ -37,7 +37,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
       <div className="flex-1 px-2">
         <div className="flex items-center pb-2 font-bold p1 text-white-default">
           {top3}
-          <img src={smile} alt="smile" className="ml-3" />
+          <img src={exclamation} alt="exclamation" className="ml-3" />
         </div>
         <div id="ranking-wrapper-body" className="flex flex-col">
           {rankings.map((rank, index) => {
@@ -74,7 +74,7 @@ const ranking = ({ selected_theme, checked, rankings, is_show }) => {
     return (
       <div className="flex-1 px-2">
         <div className="flex items-center pb-2 font-bold p1 text-white-default">
-          {last3} <img src={exclamation} alt="exclamation" className="ml-3" />
+          {last3} <img src={smile} alt="smile" className="ml-3" />
         </div>
         <div id="ranking-wrapper-body" className="flex flex-col-reverse">
           {rankings.map((rank, index) => {

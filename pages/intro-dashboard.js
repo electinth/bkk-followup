@@ -24,7 +24,7 @@ export default function Intro_Dashboard() {
     },
     {
       name: 'มลพิษในคลอง',
-      color: '#FF9E0D',
+      color: '#D6AD6D',
     },
     {
       name: 'ขยะมูลฝอย',

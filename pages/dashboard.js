@@ -96,11 +96,11 @@ const dashboard = () => {
   const router = useRouter();
   const [checked, SET_CHECKED] = useState('เขตพื้นที่ทั้งหมด');
   const [district, SET_DISTRICT] = useState(null);
-  const [selected_year, SET_SELECTED_YEAR] = useState(55);
   const [selected_tooltip, SET_SELECTED_TOOLTIP] = useState();
   const [state_dropdown, SET_STATE_DROPDOWN] = useState(null);
   const [isRank, SET_IS_RANK] = useState(false);
   const [selected_index, SET_SELECTED_INDEX] = useState(0);
+  const years = [55, 56, 57, 58, 59, 60, 61, 62];
 
   let selected_theme = _.find(category, (cat) => {
     return cat.name === router.query.location;
@@ -189,6 +189,7 @@ const dashboard = () => {
             id="dashboard-left"
           >
             {/* group-dropdown */}
+
             <div
               className="relative z-50 "
               id="group-dropdown"
@@ -202,7 +203,6 @@ const dashboard = () => {
                   <DropDown
                     type="category"
                     filter={category}
-                    SET_SELECTED_YEAR={SET_SELECTED_YEAR}
                     SET_SELECTED_INDEX={SET_SELECTED_INDEX}
                     SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
                     SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
@@ -248,6 +248,7 @@ const dashboard = () => {
                 </div>
               </div>
             </div>
+
             {/* group-dropdown */}
             {/* group-dropdown-mobile */}
             {isMobile ? (
@@ -264,7 +265,6 @@ const dashboard = () => {
                   <DropDown
                     type="category"
                     filter={category}
-                    SET_SELECTED_YEAR={SET_SELECTED_YEAR}
                     SET_SELECTED_INDEX={SET_SELECTED_INDEX}
                     SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
                     SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
@@ -318,11 +318,11 @@ const dashboard = () => {
             <TimeLine
               selected_index={selected_index}
               SET_SELECTED_INDEX={SET_SELECTED_INDEX}
-              selected_year={selected_year}
-              SET_SELECTED_YEAR={SET_SELECTED_YEAR}
+              years={years}
+              selected_year={years[selected_index]}
             />
             <Map
-              selected_year={selected_year}
+              selected_year={years[selected_index]}
               selected_theme={selected_theme}
               data={selectedData.map}
               state_dropdown={state_dropdown}
@@ -383,7 +383,6 @@ const dashboard = () => {
             ) : (
               <Category_Manu
                 category={category}
-                SET_SELECTED_YEAR={SET_SELECTED_YEAR}
                 SET_SELECTED_INDEX={SET_SELECTED_INDEX}
                 SET_SELECTED_TOOLTIP={SET_SELECTED_TOOLTIP}
                 SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
@@ -566,6 +565,8 @@ const dashboard = () => {
               <Rank62
                 selected_theme={selected_theme}
                 data={selectedData.all.rankings}
+                SET_DISTRICT={SET_DISTRICT}
+                SET_IS_RANK={SET_IS_RANK}
               />
             )}
           </div>

@@ -25,7 +25,7 @@ const max_min_flood = ({ selected_theme, data }) => {
       <div className="flex flex-col flex-1 " id="AVG-right">
         <div className="flex-1 card_cat_detail">
           <div
-            className="flex flex-col justify-center px-5 py-1 text-center rounded-t text-white-default p2"
+            className="flex flex-col justify-center px-3 py-1 text-center rounded-t text-white-default p2"
             style={{ backgroundColor: selected_theme.color }}
           >
             เขตที่มีน้ำท่วมบนถนนสูงสุด

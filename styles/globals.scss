@@ -66,7 +66,6 @@ h5 {
   @media screen and (max-width: 767px) {
     font-size: 24px;
   }
-
 }
 .d4 {
   font-family: 'TheMATTER';
@@ -77,6 +76,9 @@ h5 {
   }
   @media screen and (max-width: 767px) {
     font-size: 24px;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 20px;
   }
 }
 .d5 {
@@ -133,7 +135,7 @@ h5 {
 .p1 {
   font-size: 18px;
   line-height: 110%;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1023px) {
     font-size: 14px;
   }
 }

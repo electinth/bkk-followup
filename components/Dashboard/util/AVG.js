@@ -19,7 +19,9 @@ const AVG = ({
     compare_title,
     compare_sub,
     unit_filter,
-    rank_text;
+    rank_text,
+    img_top,
+    img_bot;
 
   function sum(obj) {
     var sum = 0;
@@ -51,15 +53,19 @@ const AVG = ({
     compare_title = 'เปรียบเทียบสัดส่วนขยะมูลฝอย';
     compare_sub = 'ต่อประชากร 1 คนต่อวันแต่ละกลุ่มเขต';
     rank_text = 'ปี 2562 เขตนี้มีพื้นที่สีเขียวต่อคน มากที่สุดเป็นอันดับ';
+    img_top = exclamation;
+    img_bot = smile;
   } else if (selected_theme.name === 'มลพิษในคลอง') {
     AVG_title = 'ค่า BOD ในน้ำคลองแต่ละเขตโดยเฉลี่ยตั้งแต่ปี 2555-2562';
     unit = 'มก./ลิตร';
     unit_filter = 'มก./ลิตร';
-    AVG_max = 'เขตที่มีระดับน้ำท่วมบนถนนโดยเฉลี่ยสูงที่สุด';
-    AVG_min = 'เขตที่มีระดับน้ำท่วมบนถนนโดยเฉลี่ยต่ำที่สุด';
+    AVG_max = 'ค่า BOD ในน้ำคลองโดยเฉลี่ยสูงที่สุด';
+    AVG_min = 'ค่า BOD ในน้ำคลองโดยเฉลี่ยต่ำที่สุด';
     AVG = (sum(data.valuePerYear) / year_length).toFixed(2);
     compare_title = 'เปรียบเทียบค่า BOD ในน้ำคลองแต่ละกลุ่มเขต';
     rank_text = 'ปี 2562 เขตนี้มีค่า BOD มากที่สุดเป็นอันดับที่';
+    img_top = smile;
+    img_bot = exclamation;
   } else if (selected_theme.name === 'ขยะมูลฝอย') {
     AVG_title = 'จำนวนขยะมูลฝอยโดยเฉลี่ย ปี 2562';
     unit = 'กก./คน/วัน';
@@ -70,6 +76,8 @@ const AVG = ({
     compare_title = 'เปรียบเทียบสัดส่วนขยะมูลฝอย';
     compare_sub = 'ต่อประชากร 1 คนต่อวันแต่ละกลุ่มเขต';
     rank_text = 'ปี 2562 เขตนี้มีปริมาณขยะมูลฝอยต่อคนต่อวันมากสุดเป็นอันดับที่';
+    img_top = smile;
+    img_bot = exclamation;
   } else if (selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน') {
     AVG_title = 'ร้อยละของจำนวนครั้งที่ค่าฝุ่นเกินค่ามาตรฐาน';
     unit = 'มค.ก./ลบ.ม.';
@@ -79,6 +87,8 @@ const AVG = ({
     AVG = '39%';
     compare_title = 'เปรียบเทียบปัญหาฝุ่นควันสูงแต่ละกลุ่มเขต';
     rank_text = 'ปี 2562 เขตนี้มีค่าสูงสุดของ PM2.5 มากที่สุดเป็นอันดับที่';
+    img_top = smile;
+    img_bot = exclamation;
   }
 
   const box_compare = (data, unit, color) => {
@@ -118,8 +128,8 @@ const AVG = ({
             style={{ backgroundColor: selected_theme.color }}
           >
             <img
-              src={smile}
-              alt="smile"
+              src={img_top}
+              alt={`${img_top}`}
               className="mr-3"
               style={{ width: '20px' }}
             />
@@ -144,8 +154,8 @@ const AVG = ({
             style={{ backgroundColor: selected_theme.color }}
           >
             <img
-              src={exclamation}
-              alt="exclamation"
+              src={img_bot}
+              alt={`${img_bot}`}
               className="mr-3"
               style={{ width: '20px' }}
             />

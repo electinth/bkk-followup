@@ -1,12 +1,12 @@
 @font-face {
   font-family: "NotoSansThaiUI";
-  src: url("assets/fonts/NotoSansThaiUI-Bold.ttf");
+  src: url("assets/fonts/NotoSansThai-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "NotoSansThaiUI";
-  src: url("assets/fonts/NotoSansThaiUI-Regular.ttf");
+  src: url("assets/fonts/NotoSansThai-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }

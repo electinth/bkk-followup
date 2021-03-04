@@ -138,6 +138,10 @@
   margin: auto;
   cursor: pointer;
 }
+.text:hover {
+  color: black;
+  background: white;
+}
 
 .tool_tip_detail_wrapper {
   width: 183px;
@@ -233,3 +237,4 @@
 #tooltip-budget {
   visibility: hidden;
 }
+

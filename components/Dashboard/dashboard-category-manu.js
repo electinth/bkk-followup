@@ -4,7 +4,6 @@ import * as d3 from 'd3';
 
 const category_manu = ({
   category,
-  SET_SELECTED_YEAR,
   SET_SELECTED_INDEX,
   SET_SELECTED_TOOLTIP,
   SET_STATE_DROPDOWN,
@@ -21,7 +20,6 @@ const category_manu = ({
   const setRoute = (name) => {
     router.push('/dashboard?location=' + name);
     SET_LOCATION_ROUTE(name);
-    SET_SELECTED_YEAR(55);
     SET_SELECTED_INDEX(0);
     SET_SELECTED_TOOLTIP();
     SET_STATE_DROPDOWN(null);

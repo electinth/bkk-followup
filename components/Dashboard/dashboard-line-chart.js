@@ -30,6 +30,7 @@ const line_chart = ({ selected_theme, data }) => {
     dis = 'ค่าฝุ่นละออง PM2.5 (ไม่เกิน 25 มคก./ลบ.ม.)';
     note = 'ยิ่งน้อย ยิ่งดี และควรมีฝุ่นละออง PM2.5 ไม่เกินกว่ามาตรฐานที่กำหนด';
   }
+  
   return (
     <div id="graph-trend" className="mt-3 card_cat_detail">
       <div
@@ -47,10 +48,15 @@ const line_chart = ({ selected_theme, data }) => {
           <LineChart selected_theme={selected_theme} data_line_chart={data} />
         </div>
         <div id="line-chart-footer" className="flex flex-col items-center mt-4">
-          <span className="flex">
-            <img src={dashImg} alt="dashImg" className="mr-3" />
-            <p className="font-bold p2">{dis}</p>
-          </span>
+          {selected_theme.name != 'น้ำท่วมถนน' ? (
+            <span className="flex">
+              <img src={dashImg} alt="dashImg" className="mr-3" />
+              <p className="font-bold p2">{dis}</p>
+            </span>
+          ) : (
+            ''
+          )}
+
           <span className="flex mt-2 p1">
             <p className="mr-2 font-bold">หมายเหตุ</p>
             <p>{note}</p>

@@ -170,15 +170,17 @@ export default function DashboardLineChart({
       .style('stroke', selected_theme.color)
       .style('stroke-width', 2);
 
-    chart
-      .append('path')
-      .data([AVG])
-      .attr('class', 'dash-line')
-      .attr('d', valueLine)
-      .style('fill', 'none')
-      .style('stroke', 'black')
-      .style('stroke-width', 1)
-      .style('stroke-dasharray', 5);
+    if (selected_theme.name != 'น้ำท่วมถนน') {
+      chart
+        .append('path')
+        .data([AVG])
+        .attr('class', 'dash-line')
+        .attr('d', valueLine)
+        .style('fill', 'none')
+        .style('stroke', 'black')
+        .style('stroke-width', 1)
+        .style('stroke-dasharray', 5);
+    }
 
     chart
       .selectAll()
@@ -244,7 +246,6 @@ export default function DashboardLineChart({
       .style('font-weight', 'bold');
   };
 
-  
   d3.select('.svg-line-chart').remove();
   createChart();
 

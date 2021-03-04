@@ -12,7 +12,6 @@ const dropdown = ({
   checked,
   district,
   SET_IS_RANK,
-  SET_SELECTED_YEAR,
   SET_SELECTED_INDEX,
   SET_SELECTED_TOOLTIP,
   SET_STATE_DROPDOWN,
@@ -61,7 +60,6 @@ const dropdown = ({
 
   const hamdleCategory = (e) => {
     router.push('/dashboard?location=' + e.target.value);
-    SET_SELECTED_YEAR(55);
     SET_SELECTED_INDEX(0);
     SET_SELECTED_TOOLTIP();
     SET_STATE_DROPDOWN(null);

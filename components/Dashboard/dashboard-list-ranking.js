@@ -5,7 +5,7 @@ const listRanking = ({ selected_theme, data }) => {
   if (selected_theme.name === 'น้ำท่วมถนน') {
     title = 'ระดับน้ำท่วมบนถนน';
     subtitle = 'เรียงลำดับจากมากไปน้อย';
-    unit = 'ซม.';
+    unit = 'ครั้ง';
   } else if (selected_theme.name === 'พื้นที่สีเขียว') {
     title = 'ปริมาณพื้นที่สีเขียว ปี 2562';
     subtitle = 'เรียงลำดับจากมากไปน้อย';
@@ -61,9 +61,9 @@ const listRanking = ({ selected_theme, data }) => {
         {height_rank.map((rank, index) => (
           <div
             key={index}
-            className="flex px-3 py-3 my-1 font-bold rounded bg-white-default p2"
+            className="flex items-center px-3 py-3 my-1 font-bold rounded bg-white-default p2"
           >
-            <div className="flex flex-row flex-1">
+            <div className="flex flex-row items-center flex-1">
               <div className="mr-2 circle_wrapper">{index + 1}</div>
               <p>{rank.districtName}</p>
             </div>

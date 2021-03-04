@@ -46,7 +46,7 @@ const budget = ({ selected_theme, data, checked, state_dropdown }) => {
           className="flex justify-center py-1 rounded-t text-white-default p2"
           style={{ backgroundColor: selected_theme.color }}
         >
-          งบประมาณที่ใช้ไป
+          งบประมาณที่ใช้ไปในพื้นที่นี้
         </div>
         <span className="flex flex-col items-center py-3 font-bold leading-snug">
           <p className="p2">ในปี 2555-2562 กทม. ใช้เงินงบประมาณ</p>
@@ -64,7 +64,7 @@ const budget = ({ selected_theme, data, checked, state_dropdown }) => {
         </div>
         <a
           className="flex justify-center w-full py-2 mt-3 font-bold rounded-b cursor-pointer text-white-default bg-black-default p1"
-          href="https://elect.in.th/"
+          href="https://elect.in.th/bkk-budget/"
           target="_blank"
           id="footer-barchart"
         >

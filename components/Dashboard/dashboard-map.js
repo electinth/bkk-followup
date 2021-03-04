@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { isMobileOnly, isMobile } from 'react-device-detect';
 import * as d3 from 'd3';
+import close_img from '../../assets/images/close_map.svg';
 
 const map = ({
   selected_year,
@@ -14,16 +15,6 @@ const map = ({
 }) => {
   const actived_tool_tip = (name) => {
     SET_DISTRICT(name);
-    setTimeout(() => {
-      d3.selectAll(`.minimap`).style('fill', 'none');
-      d3.selectAll('.tool_tip_detail_wrapper').style('visibility', 'hidden');
-      d3.selectAll(`.group_circle`).style('stroke', 'none');
-      d3.select(`.rect${name}`)
-        .style('stroke-width', 1)
-        .style('stroke', 'white');
-      d3.select(`.minimap${name}`).style('fill', 'white');
-      d3.select(`.tooltip${name}`).style('visibility', 'visible');
-    }, 100);
   };
   const disable_tool_tip = (name) => {
     d3.select(`.rect${name}`).style('stroke', 'none');
@@ -61,6 +52,22 @@ const map = ({
     }
   };
 
+  const color = (d) => {
+    if (d > 100) {
+      return '#1570FF';
+    } else if (d > 80) {
+      return '#3A87FF';
+    } else if (d > 60) {
+      return '#609EFF';
+    } else if (d > 40) {
+      return '#85B5FF';
+    } else if (d > 20) {
+      return '#ABCCFF';
+    } else if (d > 0) {
+      return '#D0E2FF';
+    }
+  };
+
   const box_width = isMobileOnly ? 30 : 50;
   const box_gap = isMobileOnly ? 2 : 3;
   const r_max = isMobileOnly ? 15 : 20;
@@ -73,27 +80,31 @@ const map = ({
   let cx = (d) => (+d.X - 1) * (box_width + box_gap) + box_width / 2;
   let cy = (d) => (+d.Y - 1) * (box_width + box_gap) + box_width / 2;
   let add_map = function (parent, data, ref, colors, year) {
-    let unit, tool_top, tool_bot;
+    let unit, tool_top, tool_bot, avg;
     if (selected_theme.name === 'น้ำท่วมถนน') {
-      unit = 'ซม.';
+      unit = 'ครั้ง';
       tool_top = 'ระดับน้ำท่วมบนถนน';
       tool_bot = 'โดยเฉลี่ย';
     } else if (selected_theme.name === 'พื้นที่สีเขียว') {
       unit = 'ตร.ม./คน';
       tool_top = 'ปริมาณ';
       tool_bot = 'พื้นที่สีเขียว';
+      avg = '9';
     } else if (selected_theme.name === 'มลพิษในคลอง') {
       unit = 'มก./ลิตร';
       tool_top = 'ปริมาณ';
       tool_bot = 'มลพิษในคลอง';
+      avg = '15';
     } else if (selected_theme.name === 'ขยะมูลฝอย') {
       unit = 'กก./คน/วัน';
       tool_top = 'ปริมาณ';
       tool_bot = 'ขยะมูลฝอย';
+      avg = '1.864';
     } else if (selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน') {
       unit = 'มค.ก./ลบ.ม.';
       tool_top = 'ปริมาณ';
       tool_bot = 'ฝุ่นควันเกินมาตรฐาน';
+      avg = '25';
     }
 
     r_scale.domain([0, d3.max(data, (d) => +d.value)]);
@@ -126,10 +137,12 @@ const map = ({
           .attr('height', box_width)
           .attr('x', -box_width / 2)
           .attr('y', -box_width / 2)
-          .style('cursor', 'pointer')
+          .style('cursor', (d) => (d.value > 0 ? 'pointer' : ''))
           .on('mouseover', (e, d) => (d.value ? mouseover(e, d) : ''))
           .on('mouseout', (_, d) => mouseout(d))
-          .on('click', (_, d) => actived_tool_tip(d.districtName));
+          .on('click', (_, d) =>
+            d.value > 0 ? actived_tool_tip(d.districtName) : ''
+          );
 
         group
           .append('circle')
@@ -138,21 +151,34 @@ const map = ({
           .style('fill', (d) => {
             let value = +d.value;
             if (value === ref) return colors[1];
-            if (value === 0) return 'none';
+            if (value === 0) return null;
+            if (selected_theme.name === 'น้ำท่วมถนน') return color(d.value);
             return value > ref ? colors[0] : colors[2];
           });
 
-        if (selected_theme.name != 'น้ำท่วมถนน') {
-          group
-            .append('circle')
-            .attr('r', r_scale(ref))
-            .style('fill', 'none')
-            .style('stroke-width', 1)
-            .style('stroke', 'white')
-            .style('stroke-linecap', 'round')
-            .style('stroke-dasharray', '5 4')
-            .style('pointer-events', 'none');
-        }
+        group
+          .append('circle')
+          .attr('r', r_scale(ref))
+          .style('fill', 'none')
+          .style('stroke-width', (d) =>
+            selected_theme.name === 'น้ำท่วมถนน' && d.value > 0 ? 0 : 1
+          )
+          .style('stroke', 'white')
+          .style('stroke-linecap', 'round')
+          .style('stroke-dasharray', '5 4')
+          .style('pointer-events', (_) => 'none');
+
+        group
+          .append('svg:image')
+          .attr('xlink:href', (d) => {
+            let value = +d.value;
+            return value === 0 ? close_img : '';
+          })
+          .attr('x', (_) => -3)
+          .attr('y', (_) => -3)
+          .attr('height', 6)
+          .attr('width', 6)
+          .style('pointer-events', (_) => 'none');
 
         d3.select('#maps')
           .append('div')
@@ -167,13 +193,25 @@ const map = ({
                 (d) =>
                   `tool_tip_detail_wrapper rounded-lg tooltip${d.districtName}`
               )
-              .style('top', (d) => cy(d) + 40 + 'px')
-              .style('left', (d) => {
+              .style('top', (d) => {
                 if (isMobile) {
+                  return cy(d) + 'px';
+                } else {
+                  return cy(d) + 60 + 'px';
+                }
+              })
+              .style('left', (d) => {
+                if (isMobileOnly) {
                   if (cx(d) < screen.width / 2) {
                     return cx(d) + 20 + 'px';
                   } else {
-                    return cx(d) - 200 + 'px';
+                    return cx(d) - 150 + 'px';
+                  }
+                } else if (isMobile) {
+                  if (cx(d) < screen.width / 2) {
+                    return cx(d) + 120 + 'px';
+                  } else {
+                    return cx(d) - 130 + 'px';
                   }
                 } else {
                   return cx(d) + 40 + 'px';
@@ -196,7 +234,7 @@ const map = ({
 
             header
               .append('div')
-              .attr('class', 'close_tooltip')
+              .attr('class', 'close_tooltip cursor-pointer')
               .text((_) => 'x')
               .on('click', (_, d) => disable_tool_tip(d.districtName));
 
@@ -232,7 +270,13 @@ const map = ({
                 'class',
                 'tooltip_footer rounded-b-lg flex p3  justify-center'
               )
-              .text(`สูงกว่าค่าเฉลี่ย`);
+              .text((d) => {
+                if (d.value > avg) {
+                  return `สูงกว่าค่าเฉลี่ย`;
+                } else if (d.value < avg) {
+                  return `ต่ำกว่าค่าเฉลี่ย`;
+                }
+              });
           });
       });
   };
@@ -279,6 +323,15 @@ const map = ({
             .style('stroke', 'white');
           d3.select(`.minimap${district.districtName}`).style('fill', 'white');
         });
+      } else if (district) {
+        d3.selectAll(`.minimap`).style('fill', 'none');
+        d3.selectAll('.tool_tip_detail_wrapper').style('visibility', 'hidden');
+        d3.selectAll(`.group_circle`).style('stroke', 'none');
+        d3.select(`.rect${district}`)
+          .style('stroke-width', 1)
+          .style('stroke', 'white');
+        d3.select(`.minimap${district}`).style('fill', 'white');
+        d3.select(`.tooltip${district}`).style('visibility', 'visible');
       }
     });
   };
