@@ -181,7 +181,7 @@ const dashboard = () => {
       <Layout id="dashboard">
         <div
           id="dashboard-wrapper"
-          className="absolute top-0 bottom-0 left-0 right-0 flex flex-col overflow-x-hidden lg:overflow-hidden lg:flex-row"
+          className="absolute top-0 bottom-0 left-0 right-0 flex flex-col overflow-x-hidden xl:overflow-hidden xl:flex-row"
         >
           {/* md:flex-col md:overflow-auto */}
           <div

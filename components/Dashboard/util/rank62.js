@@ -67,7 +67,7 @@ const rank62 = ({ selected_theme, data, SET_DISTRICT, SET_IS_RANK }) => {
   return (
     <div
       id="rank62"
-      className="absolute z-30 w-full pb-16 bg-black-default lg:relative lg:pb-0"
+      className="absolute z-30 w-full pb-16 bg-black-default xl:relative xl:pb-0"
       style={{
         top: isMobile ? height_elem + 'px' : '',
       }}
