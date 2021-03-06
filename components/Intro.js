@@ -8,6 +8,7 @@ import {
   TwitterShareButton,
   LineShareButton,
 } from "react-share";
+import config from "jsconfig.json";
 
 export default function Intro() {
   const [hide_intro, hideIntro] = useState(false);
@@ -50,21 +51,21 @@ export default function Intro() {
               <h4 className="d4">Share:</h4>
 
               <FacebookShareButton
-                url={"https://ellisonleao.github.io/sharer.js/"}
+                url={config.web_url}
                 className="ml-4 cursor-pointer social"
               >
                 <img width={40} src={fb_share} alt={fb_share} />
               </FacebookShareButton>
 
               <TwitterShareButton
-                url={"https://ellisonleao.github.io/sharer.js/"}
+                url={config.web_url}
                 className="ml-4 cursor-pointer social"
               >
                 <img width={40} src={twitter_share} alt={twitter_share} />
               </TwitterShareButton>
 
               <LineShareButton
-                url={"https://ellisonleao.github.io/sharer.js/"}
+                url={config.web_url}
                 className="ml-4 cursor-pointer social"
               >
                 <img width={40} src={line_share} alt={line_share} />

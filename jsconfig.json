@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": "."
-  }
+  },
+  "title": "BKK Follow-Up สำรวจปัญหากวนใจชาว กทม.",
+  "description": "เปิดข้อมูลย้อนหลัง ฝุ่น น้ำท่วม ขยะ มลพิษ และสิ่งที่ติดค้างใจคน กทม.",
+  "web_url": "https://bkk-followup.netlify.app/",
+  "og_image": "og_main.jpg"
 }
