@@ -5,19 +5,19 @@ import "styles/dashboard.scss";
 import "styles/home.scss";
 import "swiper/swiper.scss";
 
-function SafeHydrate({ children }) {
-  return (
-    <div suppressHydrationWarning>
-      {typeof window === "undefined" ? null : children}
-    </div>
-  );
-}
+// function SafeHydrate({ children }) {
+//   return (
+//     <div suppressHydrationWarning>
+//       {typeof window === "undefined" ? null : children}
+//     </div>
+//   );
+// }
 
 function MyApp({ Component, pageProps }) {
   return (
-    <SafeHydrate>
-      <Component {...pageProps} />
-    </SafeHydrate>
+    // <SafeHydrate>
+    <Component {...pageProps} />
+    // </SafeHydrate>
   );
 }
 
