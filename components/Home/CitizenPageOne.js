@@ -36,7 +36,7 @@ export default function CitizenPageOne(props) {
 
         {!isMobile || active_index === 16 ? (
           <div
-            className="mt-0 lg:mt-14 h-full"
+            className="mt-0 lg:mt-6 2xl:mt-14 h-full"
             style={{ opacity: active_index > 12 ? 1 : 0, transition: "0.4s" }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-5 bg-white-default bg-opacity-90 lg:bg-opacity-0 rounded-md p-4 pb-0 lg:p-0">
@@ -69,7 +69,7 @@ export default function CitizenPageOne(props) {
               ))}
             </div>
 
-            <p className="text-xl mt-20 mx-auto text-center text-white-default max-w-4xl hidden lg:block">
+            <p className="text-xl mt-6 2xl:mt-20 mx-auto text-center text-white-default max-w-4xl hidden lg:block">
               <b>
                 ที่มา: • พรบ.
                 ว่าด้วยการลงคะแนนเสียงเพื่อถอดถอนสมาชิกหรือผู้บริหารท้องถิ่น

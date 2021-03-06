@@ -16,9 +16,9 @@ import SwiperCore, { Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import arrow_up_black from "assets/images/arrow_up_black.svg";
 import arrow_down_black from "assets/images/arrow_down_black.svg";
-import { isMobile } from "react-device-detect";
 import config from "jsconfig.json";
 import Head from "next/head";
+import { isMobile } from "react-device-detect";
 
 SwiperCore.use([Mousewheel]);
 
@@ -45,7 +45,7 @@ export default function Home() {
     if (router.query.slide) swiper.slideTo(router.query.slide);
   }, [router.query]);
 
-  const metaHead = () => {
+  const MetaHead = () => {
     let og_image = config.og_main;
     // if (router.query.slide == 1) og_image = config.og_budget;
     // if (router.query.slide == 8) og_image = config.og_responsibility;
@@ -79,7 +79,7 @@ export default function Home() {
     );
   };
 
-  const navigation = () => {
+  const Navigation = () => {
     return (
       <CSSTransition
         in={active_index !== 0}
@@ -122,7 +122,7 @@ export default function Home() {
     <Layout>
       {/* <span className="fixed z-50 text-blue-default">{active_index}</span> */}
 
-      {metaHead()}
+      <MetaHead />
 
       <Swiper {...swiper_options} className="h-full page-swiper">
         <SwiperSlide>
@@ -166,7 +166,7 @@ export default function Home() {
         <SwiperSlide></SwiperSlide>
       </Swiper>
 
-      {isMobile ? null : navigation()}
+      {isMobile ? null : <Navigation />}
 
       <CSSTransition
         in={(isMobile ? [1, 2, 3] : [1, 2]).includes(active_index)}
