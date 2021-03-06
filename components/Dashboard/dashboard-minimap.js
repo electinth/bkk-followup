@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import * as d3 from 'd3';
-import * as topojson from 'topojson-client';
-import topo_district from 'assets/data/district.topojson.json';
+import React, { useEffect } from "react";
+import * as d3 from "d3";
+import * as topojson from "topojson-client";
+import topo_district from "public/data/district.topojson.json";
 
 const mini_map = ({ selected_theme }) => {
   const height = 147;
@@ -19,25 +19,25 @@ const mini_map = ({ selected_theme }) => {
   );
   useEffect(() => {
     let svg_map = d3
-      .select('#map')
-      .append('svg')
-      .style('position', 'absolute')
-      .style('top', '-70%')
-      .attr('width', width)
-      .attr('height', height);
+      .select("#map")
+      .append("svg")
+      .style("position", "absolute")
+      .style("top", "-70%")
+      .attr("width", width)
+      .attr("height", height);
 
     svg_map
       .selectAll()
       .data(geojson.features)
       .enter()
-      .append('g')
+      .append("g")
 
-      .append('path')
-      .attr('d', path)
-      .attr('class', (d) => `minimap minimap${d.properties.dname.substring(3)}`)
+      .append("path")
+      .attr("d", path)
+      .attr("class", (d) => `minimap minimap${d.properties.dname.substring(3)}`)
 
-      .style('stroke-width', 1)
-      .style('stroke', 'white');
+      .style("stroke-width", 1)
+      .style("stroke", "white");
   }, []);
   return (
     <div id="map" className="flex justify-center text-white-default"></div>

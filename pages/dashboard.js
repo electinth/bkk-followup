@@ -1,100 +1,100 @@
-import React, { useState } from 'react';
-import Layout from 'layouts/layout';
-import { useRouter } from 'next/router';
-import Category_Manu from 'components/Dashboard/dashboard-category-manu';
-import DropDown from 'components/Dashboard/dropdown';
-import Ranking from 'components/Dashboard/dashboard-ranking';
-import Compare from 'components/Dashboard/dashboard-compare';
-import Map from 'components/Dashboard/dashboard-map';
-import TimeLine from 'components/Dashboard/dashboard-timeline';
-import InfoMap from 'components/Dashboard/dashboard-info-map';
-import MiniMap from 'components/Dashboard/dashboard-minimap';
-import selectData from 'components/Dashboard/util/select-data';
-import Knowledge from 'components/Dashboard/util/knowledge';
-import BOD from 'components/Dashboard/util/BOD';
-import Standard from 'components/Dashboard/util/standard';
-import AVG from 'components/Dashboard/util/AVG';
-import LocationFlood from 'components/Dashboard/util/location-flood';
-import ListRanking from 'components/Dashboard/dashboard-list-ranking';
-import DistrictData from 'components/Dashboard/util/district';
-import MaxMinPerDistrict from 'components/Dashboard/util/max-min-per-district';
-import MaxMinFlood from 'components/Dashboard/util/max-min-flood';
-import DistrictJson from 'assets/data/districts.json';
-import Rating from 'components/Dashboard/util/rating';
-import ListPerDistrict from 'components/Dashboard/dashboard-list-per-district';
-import Budget from 'components/Dashboard/dashboard-budget';
-import Rank62 from 'components/Dashboard/util/rank62';
-import close_filter from 'assets/images/cancle.svg';
-import rankingImg from 'assets/images/rankingImg.svg';
-import rankingImg_w from 'assets/images/rankingImg_w.svg';
-import allImg from 'assets/images/allImg.svg';
-import allImg_w from 'assets/images/allImg_w.svg';
-import LineChart from 'components/Dashboard/dashboard-line-chart';
-import StandardGreen from 'components/Dashboard/util/standard_green';
-import { isMobile, isMobileOnly } from 'react-device-detect';
+import React, { useState } from "react";
+import Layout from "layouts/layout";
+import { useRouter } from "next/router";
+import Category_Manu from "components/Dashboard/dashboard-category-manu";
+import DropDown from "components/Dashboard/dropdown";
+import Ranking from "components/Dashboard/dashboard-ranking";
+import Compare from "components/Dashboard/dashboard-compare";
+import Map from "components/Dashboard/dashboard-map";
+import TimeLine from "components/Dashboard/dashboard-timeline";
+import InfoMap from "components/Dashboard/dashboard-info-map";
+import MiniMap from "components/Dashboard/dashboard-minimap";
+import selectData from "components/Dashboard/util/select-data";
+import Knowledge from "components/Dashboard/util/knowledge";
+import BOD from "components/Dashboard/util/BOD";
+import Standard from "components/Dashboard/util/standard";
+import AVG from "components/Dashboard/util/AVG";
+import LocationFlood from "components/Dashboard/util/location-flood";
+import ListRanking from "components/Dashboard/dashboard-list-ranking";
+import DistrictData from "components/Dashboard/util/district";
+import MaxMinPerDistrict from "components/Dashboard/util/max-min-per-district";
+import MaxMinFlood from "components/Dashboard/util/max-min-flood";
+import DistrictJson from "public/data/districts.json";
+import Rating from "components/Dashboard/util/rating";
+import ListPerDistrict from "components/Dashboard/dashboard-list-per-district";
+import Budget from "components/Dashboard/dashboard-budget";
+import Rank62 from "components/Dashboard/util/rank62";
+import close_filter from "assets/images/cancle.svg";
+import rankingImg from "assets/images/rankingImg.svg";
+import rankingImg_w from "assets/images/rankingImg_w.svg";
+import allImg from "assets/images/allImg.svg";
+import allImg_w from "assets/images/allImg_w.svg";
+import LineChart from "components/Dashboard/dashboard-line-chart";
+import StandardGreen from "components/Dashboard/util/standard_green";
+import { isMobile, isMobileOnly } from "react-device-detect";
 
-import _ from 'lodash';
-import * as d3 from 'd3';
+import _ from "lodash";
+import * as d3 from "d3";
 
 const dashboard = () => {
   const category = [
     {
-      name: 'น้ำท่วมถนน',
-      color: '#1570FF',
-      text_color: '#0F52BB',
-      color50: '#D0E2FF',
+      name: "น้ำท่วมถนน",
+      color: "#1570FF",
+      text_color: "#0F52BB",
+      color50: "#D0E2FF",
     },
     {
-      name: 'พื้นที่สีเขียว',
-      color: '#00C853',
-      text_color: '#007832',
-      color50: '#CCF4DD',
+      name: "พื้นที่สีเขียว",
+      color: "#00C853",
+      text_color: "#007832",
+      color50: "#CCF4DD",
     },
     {
-      name: 'มลพิษในคลอง',
-      color: '#D6AD6D',
-      text_color: '#AB8A57',
-      color50: '#FFECCF',
+      name: "มลพิษในคลอง",
+      color: "#D6AD6D",
+      text_color: "#AB8A57",
+      color50: "#FFECCF",
     },
     {
-      name: 'ขยะมูลฝอย',
-      color: '#DF3A6B',
-      text_color: '#B22E56',
-      color50: '#F4B8CA',
+      name: "ขยะมูลฝอย",
+      color: "#DF3A6B",
+      text_color: "#B22E56",
+      color50: "#F4B8CA",
     },
 
     {
-      name: 'ฝุ่นควันเกินมาตรฐาน',
-      color: '#476A8B',
-      text_color: '#344E66',
-      color50: '#DAE1E8',
+      name: "ฝุ่นควันเกินมาตรฐาน",
+      color: "#476A8B",
+      text_color: "#344E66",
+      color50: "#DAE1E8",
     },
   ];
   const filter_by_group = [
     {
-      filter_by: 'เขตพื้นที่ทั้งหมด',
-      img: require('assets/images/by_all.svg'),
+      filter_by: "เขตพื้นที่ทั้งหมด",
+      img: require("assets/images/by_all.svg"),
     },
     {
-      filter_by: 'เขตพื้นที่ธุรกิจ',
-      img: require('assets/images/by_business.svg'),
+      filter_by: "เขตพื้นที่ธุรกิจ",
+      img: require("assets/images/by_business.svg"),
     },
     {
-      filter_by: 'เขตพื้นที่ท่องเที่ยวและวัฒนธรรม',
-      img: require('assets/images/by_culture.svg'),
+      filter_by: "เขตพื้นที่ท่องเที่ยวและวัฒนธรรม",
+      img: require("assets/images/by_culture.svg"),
     },
     {
-      filter_by: 'เขตพื้นที่อยู่อาศัย',
-      img: require('assets/images/by_residence.svg'),
+      filter_by: "เขตพื้นที่อยู่อาศัย",
+      img: require("assets/images/by_residence.svg"),
     },
     {
-      filter_by: 'เขตพื้นที่ชานเมือง',
-      img: require('assets/images/by_suburb.svg'),
+      filter_by: "เขตพื้นที่ชานเมือง",
+      img: require("assets/images/by_suburb.svg"),
     },
   ];
 
   const router = useRouter();
-  const [checked, SET_CHECKED] = useState('เขตพื้นที่ทั้งหมด');
+  const [checked, SET_CHECKED] = useState("เขตพื้นที่ทั้งหมด");
   const [district, SET_DISTRICT] = useState(null);
   const [selected_tooltip, SET_SELECTED_TOOLTIP] = useState();
   const [state_dropdown, SET_STATE_DROPDOWN] = useState(null);
@@ -109,44 +109,44 @@ const dashboard = () => {
   if (selected_theme != null) {
     selectedData = selectData(selected_theme.name);
     let rankings, format_type;
-    if (checked === 'เขตพื้นที่ทั้งหมด') {
+    if (checked === "เขตพื้นที่ทั้งหมด") {
       rankings = selectedData.all.rankings;
       data = selectedData.all;
-      format_type = 'all';
-    } else if (checked === 'เขตพื้นที่ธุรกิจ') {
+      format_type = "all";
+    } else if (checked === "เขตพื้นที่ธุรกิจ") {
       rankings = selectedData.report_business.rankings;
       data = selectedData.report_business;
-      format_type = 'business';
-    } else if (checked === 'เขตพื้นที่ท่องเที่ยวและวัฒนธรรม') {
+      format_type = "business";
+    } else if (checked === "เขตพื้นที่ท่องเที่ยวและวัฒนธรรม") {
       rankings = selectedData.report_tourism.rankings;
       data = selectedData.report_tourism;
-      format_type = 'tourism-and-cultural';
-    } else if (checked === 'เขตพื้นที่อยู่อาศัย') {
+      format_type = "tourism-and-cultural";
+    } else if (checked === "เขตพื้นที่อยู่อาศัย") {
       rankings = selectedData.report_residence.rankings;
       data = selectedData.report_residence;
-      format_type = 'residence';
-    } else if (checked === 'เขตพื้นที่ชานเมือง') {
+      format_type = "residence";
+    } else if (checked === "เขตพื้นที่ชานเมือง") {
       rankings = selectedData.report_suburban.rankings;
       data = selectedData.report_suburban;
-      format_type = 'suburban';
+      format_type = "suburban";
     }
     let note;
-    if (selected_theme.name === 'น้ำท่วมถนน') {
+    if (selected_theme.name === "น้ำท่วมถนน") {
       note =
-        'ที่มาข้อมูล: สํานักยุทธศาสตร์และประเมินผล และสำนักงบประมาณ กรุงเทพมหานคร ';
-    } else if (selected_theme.name === 'พื้นที่สีเขียว') {
+        "ที่มาข้อมูล: สํานักยุทธศาสตร์และประเมินผล และสำนักงบประมาณ กรุงเทพมหานคร ";
+    } else if (selected_theme.name === "พื้นที่สีเขียว") {
       note =
-        'ที่มาข้อมูล: สํานักยุทธศาสตร์และประเมินผล สำนักงบประมาณ และสำนักสิ่งแวดล้อม กรุงเทพมหานคร ';
-    } else if (selected_theme.name === 'มลพิษในคลอง') {
-      note = 'สำนักการระบายน้ำ และสำนักงบประมาณ กรุงเทพมหานคร';
-    } else if (selected_theme.name === 'ขยะมูลฝอย') {
-      note = 'สํานักยุทธศาสตร์และประเมินผล และสำนักงบประมาณ กรุงเทพมหานคร ';
-    } else if (selected_theme.name === 'ฝุ่นควันเกินมาตรฐาน') {
-      note = 'กรมควบคุมมลพิษ กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม';
+        "ที่มาข้อมูล: สํานักยุทธศาสตร์และประเมินผล สำนักงบประมาณ และสำนักสิ่งแวดล้อม กรุงเทพมหานคร ";
+    } else if (selected_theme.name === "มลพิษในคลอง") {
+      note = "สำนักการระบายน้ำ และสำนักงบประมาณ กรุงเทพมหานคร";
+    } else if (selected_theme.name === "ขยะมูลฝอย") {
+      note = "สํานักยุทธศาสตร์และประเมินผล และสำนักงบประมาณ กรุงเทพมหานคร ";
+    } else if (selected_theme.name === "ฝุ่นควันเกินมาตรฐาน") {
+      note = "กรมควบคุมมลพิษ กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม";
     }
 
     const group_district = (type) => {
-      if (type != 'all') {
+      if (type != "all") {
         return _.groupBy(DistrictJson, (d) => d.districtType === type).true;
       } else {
         return DistrictJson;
@@ -154,15 +154,15 @@ const dashboard = () => {
     };
 
     const cancle_filter = () => {
-      SET_CHECKED('เขตพื้นที่ทั้งหมด');
+      SET_CHECKED("เขตพื้นที่ทั้งหมด");
       SET_DISTRICT(null);
       SET_STATE_DROPDOWN(null);
       SET_SELECTED_TOOLTIP();
-      d3.selectAll(`.minimap`).style('fill', 'none');
+      d3.selectAll(`.minimap`).style("fill", "none");
     };
 
     let districtName = _.map(group_district(format_type), (rank) => {
-      return { filter_by: _.get(rank, 'name') };
+      return { filter_by: _.get(rank, "name") };
     });
     let district_data;
     if (district) {
@@ -195,7 +195,7 @@ const dashboard = () => {
               id="group-dropdown"
               style={{
                 backgroundColor: selected_theme.color,
-                padding: '10px 0',
+                padding: "10px 0",
               }}
             >
               <div className="flex flex-col items-start justify-center w-full md:items-center md:flex-row">
@@ -232,18 +232,18 @@ const dashboard = () => {
                     SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
                     SET_IS_RANK={SET_IS_RANK}
                   />
-                  {checked != 'เขตพื้นที่ทั้งหมด' || district != null ? (
+                  {checked != "เขตพื้นที่ทั้งหมด" || district != null ? (
                     <img
                       src={close_filter}
                       alt="close"
                       className="my-auto ml-2 cursor-pointer md:ml-5"
                       onClick={cancle_filter}
                       style={{
-                        height: isMobileOnly ? '30px' : '',
+                        height: isMobileOnly ? "30px" : "",
                       }}
                     />
                   ) : (
-                    ''
+                    ""
                   )}
                 </div>
               </div>
@@ -256,9 +256,9 @@ const dashboard = () => {
                 className="fixed z-50 flex flex-col items-start justify-center w-full md:items-center md:flex-row"
                 id="group-dropdown"
                 style={{
-                  padding: '10px 0',
+                  padding: "10px 0",
                   backgroundColor: selected_theme.color,
-                  top: '60px',
+                  top: "60px",
                 }}
               >
                 {isMobile ? (
@@ -295,23 +295,23 @@ const dashboard = () => {
                     SET_STATE_DROPDOWN={SET_STATE_DROPDOWN}
                     SET_IS_RANK={SET_IS_RANK}
                   />
-                  {checked != 'เขตพื้นที่ทั้งหมด' || district != null ? (
+                  {checked != "เขตพื้นที่ทั้งหมด" || district != null ? (
                     <img
                       src={close_filter}
                       alt="close"
                       className="my-auto ml-2 cursor-pointer md:ml-5"
                       onClick={cancle_filter}
                       style={{
-                        height: isMobileOnly ? '30px' : '',
+                        height: isMobileOnly ? "30px" : "",
                       }}
                     />
                   ) : (
-                    ''
+                    ""
                   )}
                 </div>
               </div>
             ) : (
-              ''
+              ""
             )}
 
             {/* group-dropdown-mobile */}
@@ -334,7 +334,7 @@ const dashboard = () => {
             <div className="relative flex" id="map-footer">
               <InfoMap selected_theme={selected_theme} />
               {isMobile ? (
-                ''
+                ""
               ) : (
                 <div className="relative flex-1 w-full h-full ">
                   <MiniMap
@@ -376,10 +376,10 @@ const dashboard = () => {
           <div
             id="dashboard-right"
             className="flex flex-col flex-1 min-h-full lg:overflow-auto"
-            style={{ backgroundColor: isRank ? 'black' : 'white' }}
+            style={{ backgroundColor: isRank ? "black" : "white" }}
           >
             {isMobile ? (
-              ''
+              ""
             ) : (
               <Category_Manu
                 category={category}
@@ -407,8 +407,8 @@ const dashboard = () => {
                       <p className="h3">{district}</p>
                     ) : (
                       <p className="h3">
-                        {checked === 'เขตพื้นที่ทั้งหมด'
-                          ? 'กรุงเทพมหานคร'
+                        {checked === "เขตพื้นที่ทั้งหมด"
+                          ? "กรุงเทพมหานคร"
                           : checked}
                       </p>
                     )}
@@ -416,22 +416,22 @@ const dashboard = () => {
                     {isMobileOnly ? (
                       <p className="h4">ภาพรวมย้อนหลัง 8 ปี (2555-2562)</p>
                     ) : (
-                      ''
+                      ""
                     )}
                   </span>
                 </div>
-                {district && selected_theme.name === 'น้ำท่วมถนน' ? (
+                {district && selected_theme.name === "น้ำท่วมถนน" ? (
                   <div className="mt-3" id="flood-rating">
                     {Rating(
                       selected_theme,
-                      'ปี 2562 เขตนี้น้ำท่วมบ่อยสุดเป็นอันดับที่',
+                      "ปี 2562 เขตนี้น้ำท่วมบ่อยสุดเป็นอันดับที่",
                       district_data
                     )}
                   </div>
                 ) : (
-                  ''
+                  ""
                 )}
-                {checked === 'เขตพื้นที่ทั้งหมด' && district === null ? (
+                {checked === "เขตพื้นที่ทั้งหมด" && district === null ? (
                   <div
                     id="good-to-know"
                     className="flex flex-col justify-center mt-3 text-center card_cat_detail"
@@ -446,28 +446,28 @@ const dashboard = () => {
                     <Knowledge selected={selected_theme} />
                   </div>
                 ) : (
-                  ''
+                  ""
                 )}
 
-                {selected_theme.name === 'พื้นที่สีเขียว' &&
+                {selected_theme.name === "พื้นที่สีเขียว" &&
                 district != null ? (
                   <StandardGreen selected_theme={selected_theme} />
                 ) : (
-                  ''
+                  ""
                 )}
 
-                {selected_theme.name === 'พื้นที่สีเขียว' &&
+                {selected_theme.name === "พื้นที่สีเขียว" &&
                 district === null ? (
                   <Standard selected_theme={selected_theme} />
                 ) : (
-                  ''
+                  ""
                 )}
-                {selected_theme.name === 'มลพิษในคลอง' ? (
+                {selected_theme.name === "มลพิษในคลอง" ? (
                   <BOD selected_theme={selected_theme} />
                 ) : (
-                  ''
+                  ""
                 )}
-                {selected_theme.name != 'น้ำท่วมถนน' ? (
+                {selected_theme.name != "น้ำท่วมถนน" ? (
                   <AVG
                     selected_theme={selected_theme}
                     data={data}
@@ -476,24 +476,24 @@ const dashboard = () => {
                     state_dropdown={state_dropdown}
                   />
                 ) : (
-                  ''
+                  ""
                 )}
-                {checked === 'เขตพื้นที่ทั้งหมด' &&
+                {checked === "เขตพื้นที่ทั้งหมด" &&
                 district === null &&
-                selected_theme.name === 'น้ำท่วมถนน' ? (
+                selected_theme.name === "น้ำท่วมถนน" ? (
                   <MaxMinFlood data={data} selected_theme={selected_theme} />
                 ) : (
-                  ''
+                  ""
                 )}
-                {district && selected_theme.name != 'น้ำท่วมถนน' ? (
+                {district && selected_theme.name != "น้ำท่วมถนน" ? (
                   <MaxMinPerDistrict
                     selected_theme={selected_theme}
                     district_data={district_data}
                   />
                 ) : (
-                  ''
+                  ""
                 )}
-                {selected_theme.name === 'น้ำท่วมถนน' ? (
+                {selected_theme.name === "น้ำท่วมถนน" ? (
                   <LocationFlood
                     selected_theme={selected_theme}
                     data={
@@ -503,7 +503,7 @@ const dashboard = () => {
                     }
                   />
                 ) : (
-                  ''
+                  ""
                 )}
                 <LineChart
                   selected_theme={selected_theme}
@@ -511,7 +511,7 @@ const dashboard = () => {
                     district ? district_data.valuePerYear : data.valuePerYear
                   }
                 />
-                {checked === 'เขตพื้นที่ทั้งหมด' ? (
+                {checked === "เขตพื้นที่ทั้งหมด" ? (
                   <Ranking
                     id="ranking"
                     selected_theme={selected_theme}
@@ -520,7 +520,7 @@ const dashboard = () => {
                     is_show={is_show}
                   />
                 ) : (
-                  ''
+                  ""
                 )}
                 <div
                   id="budget compare"
@@ -533,7 +533,7 @@ const dashboard = () => {
                     checked={checked}
                     state_dropdown={state_dropdown}
                   />
-                  {checked === 'เขตพื้นที่ทั้งหมด' && !district ? (
+                  {checked === "เขตพื้นที่ทั้งหมด" && !district ? (
                     <Compare
                       id="compare"
                       selected_theme={selected_theme}
@@ -591,7 +591,7 @@ const dashboard = () => {
               )}
             </div>
           ) : (
-            ''
+            ""
           )}
         </div>
       </Layout>
