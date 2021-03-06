@@ -9,7 +9,7 @@ import {
   TwitterShareButton,
   LineShareButton,
 } from "react-share";
-import { isMobile, isTablet, isMobileOnly } from "react-device-detect";
+import { isMobile, isTablet } from "react-device-detect";
 import config from "jsconfig.json";
 
 export default function IntroDashboard() {
@@ -44,7 +44,7 @@ export default function IntroDashboard() {
       style={{ top: "60px" }}
     >
       <div
-        className="flex flex-col pt-20 pb-16 px-5 md:px-20 lg:h-full lg:flex-1"
+        className="flex flex-col pt-0 lg:pt-20 pb-0 lg:pb-16 px-5 md:px-20 lg:h-full lg:flex-1"
         id="intro-dashboard-left"
       >
         <div className="flex justify-center flex-1 py-4 md:py-10 lg:py-0">
@@ -53,16 +53,17 @@ export default function IntroDashboard() {
               <div className="d5">หรืออีกวิธีที่สามารถมีส่วนร่วมได้ก็คือ</div>
             ) : null}
 
-            <div className="d3">
+            <div className="d3 mt-5">
               ร่วมกันสำรวจสถานการณ์ ปัญหาด้านต่างๆ ของกรุงเทพฯ ในรอบ 8
               ปีที่ผ่านมา
             </div>
 
-            {!isMobileOnly ? (
-              <div className="d5">ข้อมูลย้อนหลัง พ.ศ. 2555-2562</div>
+            {!isMobile ? (
+              <h5 className="mt-4 text-lg">ข้อมูลย้อนหลัง พ.ศ. 2555-2562</h5>
             ) : null}
-            {isMobileOnly ? (
-              <div className="d5">เลือกประเด็นที่คุณสนใจ</div>
+
+            {isMobile ? (
+              <h5 className="mt-4 text-lg">เลือกประเด็นที่คุณสนใจ</h5>
             ) : null}
           </div>
         </div>
@@ -101,14 +102,14 @@ export default function IntroDashboard() {
       </div>
 
       <div
-        className="flex-1 h-full overflow-y-auto pointer-events-auto"
+        className="px-4 flex-1 w-full h-full overflow-y-auto pointer-events-auto"
         id="intro-dashboard-right"
       >
         <div id="link-wrapper" className="overflow-auto lg:h-full">
           {category.map((cat, index) => (
             <Link href={"/dashboard?location=" + cat.name} key={index}>
               <div
-                className="flex card_cat_intro"
+                className="flex card_cat_intro rounded-md px-3 lg:px-10 mb-2"
                 id={`card${cat.name}`}
                 style={{ backgroundColor: cat.color }}
               >
@@ -119,11 +120,12 @@ export default function IntroDashboard() {
                     <div className="d5">{cat.name}</div>
                   )}
                 </div>
+
                 <img
                   src={intro_next}
                   alt="intro_next"
-                  className="flex flex-1"
-                  style={{ height: isMobile ? "50px" : "80px" }}
+                  className="flex flex-none"
+                  style={{ width: isMobile ? "60px" : "80px" }}
                 />
               </div>
             </Link>
@@ -163,6 +165,7 @@ export default function IntroDashboard() {
             </div>
           </div>
         ) : null}
+
         {isMobile ? (
           <p className="mt-2 h4">ข้อมูลย้อนหลัง พ.ศ. 2555-2562</p>
         ) : null}

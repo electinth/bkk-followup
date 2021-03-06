@@ -112,7 +112,7 @@ export default function Header() {
             <h5 className="block mb-4 text-center d5 lg:hidden">MENU</h5>
 
             <div className="z-30 grid grid-cols-1 gap-1 lg:grid-cols-2 lg:gap-3">
-              <Link href="/?slide=14">
+              <Link href={`/?slide=${isMobile ? 18 : 14}`}>
                 <div
                   className="flex items-center justify-between p-3 rounded-md cursor-pointer explore-map bg-black-default lg:p-6"
                   onClick={() => showModal(false)}
@@ -157,7 +157,7 @@ export default function Header() {
                   </div>
                 </Link>
 
-                <Link href="/?slide=8">
+                <Link href={`/?slide=${isMobile ? 9 : 8}`}>
                   <div
                     className="flex items-center justify-between p-3 mt-1 rounded-md cursor-pointer lg:p-6 lg:mt-3 budget bg-blue-default"
                     onClick={() => showModal(false)}
@@ -174,7 +174,7 @@ export default function Header() {
                   </div>
                 </Link>
 
-                <Link href="/?slide=13">
+                <Link href={`/?slide=${isMobile ? 15 : 13}`}>
                   <div
                     className="flex items-center justify-between p-3 mt-1 rounded-md cursor-pointer lg:p-6 lg:mt-3 budget bg-pink-default"
                     onClick={() => showModal(false)}

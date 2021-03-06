@@ -67,7 +67,7 @@ export default function Main(props) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 mt-0 lg:mt-10 2xl:mt-16">
           <div
             className="flex items-center justify-between rounded-md cursor-pointer explore-map bg-black-default p-3 lg:p-10 2xl:p-14"
-            onClick={() => swiper_ref.slideTo(isMobile ? 17 : 14)}
+            onClick={() => swiper_ref.slideTo(isMobile ? 18 : 14)}
           >
             <div className="text-white-default hidden lg:block">
               <h3 className="d3">EXPLORE MAP</h3>
@@ -106,7 +106,7 @@ export default function Main(props) {
 
             <div
               className="flex items-center justify-between p-3 lg:p-5 mt-1 lg:mt-3 rounded-md cursor-pointer budget bg-blue-default"
-              onClick={() => swiper_ref.slideTo(8)}
+              onClick={() => swiper_ref.slideTo(isMobile ? 9 : 8)}
             >
               <h5 className="d5 text-white-default">กทม. มีหน้าที่ทำอะไร ?</h5>
 
@@ -119,7 +119,7 @@ export default function Main(props) {
 
             <div
               className="flex items-center justify-between p-3 lg:p-5 mt-1 lg:mt-3 rounded-md cursor-pointer budget bg-pink-default"
-              onClick={() => swiper_ref.slideTo(13)}
+              onClick={() => swiper_ref.slideTo(isMobile ? 15 : 13)}
             >
               <h5 className="d5 text-white-default">
                 ชาวกทม. มีส่วนร่วม อย่างไรได้บ้าง

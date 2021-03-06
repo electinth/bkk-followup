@@ -1,5 +1,6 @@
 import React from "react";
 import { isMobile } from "react-device-detect";
+import citizen_hand from "assets/images/citizen_hand.png";
 
 export default function CitizenPageOne(props) {
   const { active_index } = props;
@@ -28,13 +29,13 @@ export default function CitizenPageOne(props) {
       style={{ top: "60px" }}
     >
       <div className="container mx-auto">
-        {!isMobile || active_index === 15 ? (
+        {!isMobile || active_index < 17 ? (
           <h2 className="leading-tight d2 text-center text-white-default">
             ประชาชนสามารถมีส่วนร่วม กับกรุงเทพฯ อย่างไรได้บ้าง?
           </h2>
         ) : null}
 
-        {!isMobile || active_index === 16 ? (
+        {!isMobile || active_index === 17 ? (
           <div
             className="mt-0 lg:mt-6 2xl:mt-14 h-full"
             style={{ opacity: active_index > 12 ? 1 : 0, transition: "0.4s" }}
@@ -78,6 +79,18 @@ export default function CitizenPageOne(props) {
               </b>
             </p>
           </div>
+        ) : null}
+
+        {isMobile && active_index < 17 ? (
+          <img
+            src={citizen_hand}
+            alt={citizen_hand}
+            className="absolute bottom-0 inset-x-0 mx-auto w-2/4"
+            style={{
+              bottom: active_index > 15 ? 0 : "-28%",
+              transition: "0.4s",
+            }}
+          />
         ) : null}
       </div>
     </div>

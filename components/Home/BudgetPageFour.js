@@ -226,18 +226,12 @@ export default function BudgetPageFour(props) {
       style={{ top: "60px" }}
     >
       <div className="container h-full mx-auto py-5 lg:py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 lg:h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 h-full">
           <div className="left lg:w-4/5">
-            <h2 className="d2 hidden lg:block">
-              3 ประเด็นที่งบกทม. ถูกใชัมากที่สุด
-            </h2>
-
-            <h3 className="d3 block lg:hidden">
-              3 ประเด็นที่งบกทม. ถูกใชัมากที่สุด
-            </h3>
+            <h2 className="d2">3 ประเด็นที่งบกทม. ถูกใชัมากที่สุด</h2>
 
             {!isMobile || active_index === 7 ? (
-              <ul className="legends mt-4 lg:mt-9">
+              <ul className="legends mt-6 lg:mt-9">
                 {chart_legends.map((l) => (
                   <li
                     key={l.title}

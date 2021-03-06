@@ -34,17 +34,14 @@ export default function Home() {
     speed: 500,
     initialSlide: 0,
     onSlideChange: (swiper) => setActiveIndex(swiper.activeIndex),
+    onSwiper: (swiper) => setSwiperRef(swiper),
   };
 
   useEffect(() => {
-    const swiper = document.querySelector(".swiper-container").swiper;
-    setSwiperRef(swiper);
-  }, []);
-
-  useEffect(() => {
-    const swiper = document.querySelector(".swiper-container").swiper;
-    if (router.query.slide) swiper.slideTo(router.query.slide);
-  }, [router.query]);
+    if (swiper_ref && router.query.slide) {
+      swiper_ref.slideTo(router.query.slide);
+    }
+  }, [router.query.slide]);
 
   const MetaHead = () => {
     let og_image = config.og_main;
@@ -165,6 +162,7 @@ export default function Home() {
         {/* CitizenPageOne */}
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
+        {isMobile ? <SwiperSlide></SwiperSlide> : null}
 
         {/* IntroDashboard */}
         <SwiperSlide></SwiperSlide>
@@ -236,7 +234,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobile ? [15, 16] : [12, 13]).includes(active_index)}
+        in={(isMobile ? [15, 16, 17] : [12, 13]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -245,7 +243,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobile ? [17] : [14]).includes(active_index)}
+        in={(isMobile ? [18] : [14]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"

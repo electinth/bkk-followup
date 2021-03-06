@@ -5,7 +5,7 @@ import { isMobile } from "react-device-detect";
 
 export default function BudgetPageThree(props) {
   const { active_index } = props;
-  const [hover_legend, setHoverLegend] = useState(null);
+  const [hover_legend, setHoverLegend] = useState({});
   const chart_legends = [
     {
       title: "การศึกษา",
@@ -326,34 +326,26 @@ export default function BudgetPageThree(props) {
       style={{ top: "60px" }}
     >
       <div className="container h-full mx-auto py-5 lg:py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 lg:h-full">
-          <div className="left w-4/5">
-            <h3 className="d3 hidden lg:block">
-              8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป
-            </h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 h-full">
+          <div className="left lg:w-4/5">
+            <h3 className="d3">8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป</h3>
 
-            <h2 className="d2 hidden lg:block">581,112,916,500 บาท</h2>
+            <h2 className="d2">581,112,916,500 บาท</h2>
 
             <h4 className="d4 mt-6 hidden lg:block">
               งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?
             </h4>
 
-            <h4 className="d4 block lg:hidden">
-              8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป
-            </h4>
-
-            <h3 className="d3 block lg:hidden">581,112,916,500 บาท</h3>
-
             {(isMobile && active_index === 5) ||
             (!isMobile && active_index === 6) ? (
               <>
-                <h5 className="d5 mt-4 block lg:hidden">
+                <h5 className="d5 mt-7 block lg:hidden">
                   งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?
                 </h5>
 
-                <ul className="legends mt-4 lg:mt-9">
+                <ul className="legends mt-7 lg:mt-9">
                   {chart_legends.map((l) => (
-                    <li key={l.title} className="d5 flex items-center">
+                    <li key={l.title} className="d5 mt-1 flex items-center">
                       <div
                         className="w-5 h-5 rounded mr-3 flex-none"
                         style={{ background: l.color }}
@@ -374,7 +366,7 @@ export default function BudgetPageThree(props) {
                     <div
                       className="box-wrap flex flex-col"
                       style={{
-                        height: isMobile ? "calc(100vh - 380px)" : "560px",
+                        height: isMobile ? "calc(100vh - 320px)" : "560px",
                       }}
                     >
                       {d.values.map((v) => (
@@ -389,7 +381,7 @@ export default function BudgetPageThree(props) {
                           onMouseOver={() =>
                             setHoverLegend({ year: d.year, ...v })
                           }
-                          onMouseLeave={() => setHoverLegend(null)}
+                          onMouseLeave={() => setHoverLegend({})}
                         >
                           {isMobile ? null : (
                             <div
@@ -418,10 +410,14 @@ export default function BudgetPageThree(props) {
             </div>
           ) : null}
 
-          {isMobile && hover_legend ? (
+          {isMobile ? (
             <div
               className="tooltip text-xs bg-white-default rounded-md p-2 mx-auto text-black-default shadow-md pointer-events-none text-center w-max max-w-full"
-              style={{ minWidth: "176px" }}
+              style={{
+                minWidth: "176px",
+                height: "fit-content",
+                opacity: hover_legend.title ? 1 : 0,
+              }}
             >
               ปี {hover_legend.year}
               <br />

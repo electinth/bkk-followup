@@ -160,21 +160,16 @@ export default function BudgetPageTwo(props) {
 
   return (
     <div
-      className="fixed inset-0 z-10 pointer-events-none budget-page-two bg-black-default"
+      className="budget-page-two fixed inset-0 z-10 pointer-events-none bg-black-default"
       style={{ top: "60px" }}
     >
       <div className="container mx-auto">
-        <h3 className="hidden w-9/12 d3 text-white-default mt-14 lg:block">
+        <h3 className="lg:w-9/12 d3 text-white-default mt-5 lg:mt-14">
           8 ปีที่ผ่านมา (2555-2562) กทม. ใช้งบประมาณ
           ดูแลประชาชนต่อคนไม่เคยต่ำกว่า
         </h3>
 
-        <h4 className="block w-full mt-5 d4 text-white-default ld:hidden">
-          8 ปีที่ผ่านมา (2555-2562) กทม. ใช้งบประมาณ
-          ดูแลประชาชนต่อคนไม่เคยต่ำกว่า
-        </h4>
-
-        <h2 className="d2 text-green-default">10,000 บาท/คน/ปี</h2>
+        <h2 className="d2 text-green-default mt-3">10,000 บาท/คน/ปี</h2>
       </div>
 
       <div className="pb-5 overflow-x-auto pointer-events-auto lg:pointer-events-none">
