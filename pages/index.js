@@ -9,6 +9,7 @@ import ResponsibilityPageTwo from "components/Home/ResponsibilityPageTwo";
 import ResponsibilityPageThree from "components/Home/ResponsibilityPageThree";
 import ResponsibilityPageFour from "components/Home/ResponsibilityPageFour";
 import CitizenPageOne from "components/Home/CitizenPageOne";
+import IntroDashboard from "components/Home/IntroDashboard";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { CSSTransition } from "react-transition-group";
@@ -164,6 +165,9 @@ export default function Home() {
         {/* CitizenPageOne */}
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
+
+        {/* IntroDashboard */}
+        <SwiperSlide></SwiperSlide>
       </Swiper>
 
       {isMobile ? null : <Navigation />}
@@ -238,6 +242,15 @@ export default function Home() {
         classNames="fade"
       >
         <CitizenPageOne active_index={active_index} />
+      </CSSTransition>
+
+      <CSSTransition
+        in={(isMobile ? [17] : [14]).includes(active_index)}
+        timeout={400}
+        unmountOnExit
+        classNames="fade"
+      >
+        <IntroDashboard />
       </CSSTransition>
     </Layout>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import fb_share from "assets/images/fb_share.svg";
 import twitter_share from "assets/images/twitter_share.svg";
 import line_share from "assets/images/line_share.svg";
@@ -11,6 +10,7 @@ import {
   LineShareButton,
 } from "react-share";
 import config from "jsconfig.json";
+import { isMobile } from "react-device-detect";
 
 export default function Main(props) {
   const { swiper_ref } = props;
@@ -65,27 +65,28 @@ export default function Main(props) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 mt-0 lg:mt-10 2xl:mt-16">
-          <Link href="/intro-dashboard">
-            <div className="flex items-center justify-between rounded-md cursor-pointer explore-map bg-black-default p-3 lg:p-10 2xl:p-14">
-              <div className="text-white-default hidden lg:block">
-                <h3 className="d3">EXPLORE MAP</h3>
+          <div
+            className="flex items-center justify-between rounded-md cursor-pointer explore-map bg-black-default p-3 lg:p-10 2xl:p-14"
+            onClick={() => swiper_ref.slideTo(isMobile ? 17 : 14)}
+          >
+            <div className="text-white-default hidden lg:block">
+              <h3 className="d3">EXPLORE MAP</h3>
 
-                <h4 className="d4">สำรวจแผนที่ตามประเด็น ที่กวนใจชาว กทม.</h4>
-              </div>
-
-              <div className="text-white-default block lg:hidden">
-                <h5 className="d5">EXPLORE MAP</h5>
-
-                <h5 className="d5">สำรวจแผนที่ตามประเด็น</h5>
-              </div>
-
-              <img
-                src={arrow_right_white}
-                alt={arrow_right_white}
-                className="w-16 lg:w-18 2xl:w-24"
-              />
+              <h4 className="d4">สำรวจแผนที่ตามประเด็น ที่กวนใจชาว กทม.</h4>
             </div>
-          </Link>
+
+            <div className="text-white-default block lg:hidden">
+              <h5 className="d5">EXPLORE MAP</h5>
+
+              <h5 className="d5">สำรวจแผนที่ตามประเด็น</h5>
+            </div>
+
+            <img
+              src={arrow_right_white}
+              alt={arrow_right_white}
+              className="w-16 lg:w-18 2xl:w-24"
+            />
+          </div>
 
           <div className="right">
             <div

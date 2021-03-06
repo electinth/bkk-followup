@@ -112,7 +112,7 @@ export default function Header() {
             <h5 className="block mb-4 text-center d5 lg:hidden">MENU</h5>
 
             <div className="z-30 grid grid-cols-1 gap-1 lg:grid-cols-2 lg:gap-3">
-              <Link href="/intro-dashboard">
+              <Link href="/?slide=14">
                 <div
                   className="flex items-center justify-between p-3 rounded-md cursor-pointer explore-map bg-black-default lg:p-6"
                   onClick={() => showModal(false)}
