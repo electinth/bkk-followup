@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import check from "assets/images/check.svg";
-import { isMobile, isTablet } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 
 export default function ResponsibilityPageFour(props) {
   const { active_index } = props;
@@ -30,7 +30,7 @@ export default function ResponsibilityPageFour(props) {
   const [cards, setCards] = useState(data);
 
   useEffect(() => {
-    if (!(isMobile || isTablet)) return;
+    if (!isMobile) return;
     if (active_index === 13) setCards([data[0]]);
     if (active_index === 14) setCards([data[1]]);
   }, [active_index]);

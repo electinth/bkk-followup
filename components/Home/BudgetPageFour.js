@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import _ from "lodash";
 import numeral from "numeral";
-import { isMobile, isTablet } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 
 export default function BudgetPageFour(props) {
   const { active_index } = props;
@@ -236,7 +236,7 @@ export default function BudgetPageFour(props) {
               3 ประเด็นที่งบกทม. ถูกใชัมากที่สุด
             </h3>
 
-            {!(isMobile || isTablet) || active_index === 7 ? (
+            {!isMobile || active_index === 7 ? (
               <ul className="legends mt-4 lg:mt-9">
                 {chart_legends.map((l) => (
                   <li
@@ -265,7 +265,7 @@ export default function BudgetPageFour(props) {
             ) : null}
           </div>
 
-          {!(isMobile || isTablet) || active_index === 8 ? (
+          {!isMobile || active_index === 8 ? (
             <>
               <div className="right flex items-center">
                 <div className="chart text-center grid grid-cols-8 gap-2 lg:gap-4 w-full lg:w-auto">
@@ -274,10 +274,7 @@ export default function BudgetPageFour(props) {
                       <div
                         className="box-wrap flex flex-col"
                         style={{
-                          height:
-                            isMobile || isTablet
-                              ? "calc(100vh - 380px)"
-                              : "560px",
+                          height: isMobile ? "calc(100vh - 380px)" : "560px",
                         }}
                       >
                         {d.values.map((v, index) => (
@@ -287,7 +284,7 @@ export default function BudgetPageFour(props) {
                               hover_legend === v.title ? "is-hover" : ""
                             }`}
                             style={{
-                              width: isMobile || isTablet ? "100%" : "52px",
+                              width: isMobile ? "100%" : "52px",
                               height: `${v.percent}%`,
                               border:
                                 v.title === "อื่นๆ"
@@ -313,7 +310,7 @@ export default function BudgetPageFour(props) {
                 </div>
               </div>
 
-              {isMobile || isTablet ? (
+              {isMobile ? (
                 <ul className="legends">
                   {chart_legends.map((l) => (
                     <li key={l.title} className="d5 flex items-center">

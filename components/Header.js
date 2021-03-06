@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import elect_logo from 'assets/images/elect_logo.svg';
-import map_logo from 'assets/images/map_logo.svg';
-import stb_logo from 'assets/images/stb_logo.svg';
-import cu_thai_logo from 'assets/images/cu_thai_logo.svg';
-import hamburger from 'assets/images/hamburger.svg';
-import arrow_right_white from 'assets/images/arrow_right_white.svg';
-import close from 'assets/images/close.svg';
-import p_icon from 'assets/images/p_icon.svg';
-import fb_icon from 'assets/images/fb_icon.svg';
-import twitter_icon from 'assets/images/twitter_icon.svg';
-import { CSSTransition } from 'react-transition-group';
-import { isMobile, isTablet } from 'react-device-detect';
+import React, { useState } from "react";
+import Link from "next/link";
+import elect_logo from "assets/images/elect_logo.svg";
+import map_logo from "assets/images/map_logo.svg";
+import stb_logo from "assets/images/stb_logo.svg";
+import cu_thai_logo from "assets/images/cu_thai_logo.svg";
+import hamburger from "assets/images/hamburger.svg";
+import arrow_right_white from "assets/images/arrow_right_white.svg";
+import close from "assets/images/close.svg";
+import p_icon from "assets/images/p_icon.svg";
+import fb_icon from "assets/images/fb_icon.svg";
+import twitter_icon from "assets/images/twitter_icon.svg";
+import { CSSTransition } from "react-transition-group";
+import { isMobile } from "react-device-detect";
 
 export default function Header() {
   const [show_modal, showModal] = useState(false);
@@ -20,11 +20,11 @@ export default function Header() {
     <div
       id="header"
       className="sticky z-20 flex items-center justify-between px-3 shadow-xl bg-white-default lg:px-5"
-      style={{ height: '60px' }}
+      style={{ height: "60px" }}
     >
       <div className="flex items-center left">
         <img
-          width={isMobile || isTablet ? 94 : 124}
+          width={isMobile ? 94 : 124}
           src={elect_logo}
           alt={elect_logo}
           className="mr-4"
@@ -38,7 +38,7 @@ export default function Header() {
       </div>
 
       <div className="flex items-center right">
-        <div className="hidden mr-4 d5 lg:block" style={{ fontSize: '16px' }}>
+        <div className="hidden mr-4 d5 lg:block" style={{ fontSize: "16px" }}>
           In collaboration with
         </div>
 
@@ -67,26 +67,26 @@ export default function Header() {
         <div
           className="fixed right-0 max-w-screen-lg overflow-y-auto shadow-xl modal bg-white-default"
           style={{
-            top: isMobile || isTablet ? '0' : '60px',
-            bottom: isMobile || isTablet ? '0' : 'unset',
-            maxHeight: isMobile || isTablet ? '100%' : 'calc(100vh - 60px)',
+            top: isMobile ? "0" : "60px",
+            bottom: isMobile ? "0" : "unset",
+            maxHeight: isMobile ? "100%" : "calc(100vh - 60px)",
           }}
         >
           <div
             className="flex items-center justify-between px-3 head bg-green-default lg:bg-white-default"
-            style={{ height: '60px' }}
+            style={{ height: "60px" }}
           >
             <h3 className="hidden d3 lg:block">MENU</h3>
 
             <img
-              width={isMobile || isTablet ? 94 : 124}
+              width={isMobile ? 94 : 124}
               src={elect_logo}
               alt={elect_logo}
               className="block mr-2 lg:hidden"
             />
 
             <img
-              width={isMobile || isTablet ? 30 : 40}
+              width={isMobile ? 30 : 40}
               src={close}
               alt={close}
               className="cursor-pointer"
@@ -317,10 +317,10 @@ export default function Header() {
           <div
             className="flex items-center justify-center p-2 callab-with lg:hidden"
             style={{
-              boxShadow: '0px 16px 48px rgba(0, 0, 0, 0.176)',
+              boxShadow: "0px 16px 48px rgba(0, 0, 0, 0.176)",
             }}
           >
-            <div className="mr-4 d5" style={{ fontSize: '14px' }}>
+            <div className="mr-4 d5" style={{ fontSize: "14px" }}>
               In collaboration with
             </div>
 

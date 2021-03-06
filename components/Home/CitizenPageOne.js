@@ -1,5 +1,5 @@
 import React from "react";
-import { isMobile, isTablet } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 
 export default function CitizenPageOne(props) {
   const { active_index } = props;
@@ -28,13 +28,13 @@ export default function CitizenPageOne(props) {
       style={{ top: "60px" }}
     >
       <div className="container mx-auto">
-        {!(isMobile || isTablet) || active_index === 15 ? (
+        {!isMobile || active_index === 15 ? (
           <h2 className="leading-tight d2 text-center text-white-default">
             ประชาชนสามารถมีส่วนร่วม กับกรุงเทพฯ อย่างไรได้บ้าง?
           </h2>
         ) : null}
 
-        {!(isMobile || isTablet) || active_index === 16 ? (
+        {!isMobile || active_index === 16 ? (
           <div
             className="mt-0 lg:mt-14 h-full"
             style={{ opacity: active_index > 12 ? 1 : 0, transition: "0.4s" }}
@@ -45,7 +45,7 @@ export default function CitizenPageOne(props) {
                   key={d_index}
                   className="box p-0 lg:p-8 rounded-md"
                   style={{
-                    background: isMobile || isTablet ? "none" : d.bg_color,
+                    background: isMobile ? "none" : d.bg_color,
                   }}
                 >
                   <h3 className="d3">{d_index + 1}.</h3>

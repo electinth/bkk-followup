@@ -16,7 +16,7 @@ import SwiperCore, { Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import arrow_up_black from "assets/images/arrow_up_black.svg";
 import arrow_down_black from "assets/images/arrow_down_black.svg";
-import { isMobile, isTablet } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 import config from "jsconfig.json";
 import Head from "next/head";
 
@@ -125,11 +125,11 @@ export default function Home() {
         {/* BudgetPageOne */}
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
-        {isMobile || isTablet ? <SwiperSlide></SwiperSlide> : null}
+        {isMobile ? <SwiperSlide></SwiperSlide> : null}
 
         {/* BudgetPageTwo */}
         <SwiperSlide></SwiperSlide>
-        {isMobile || isTablet ? null : <SwiperSlide></SwiperSlide>}
+        {isMobile ? null : <SwiperSlide></SwiperSlide>}
 
         {/* BudgetPageThree */}
         <SwiperSlide></SwiperSlide>
@@ -137,7 +137,7 @@ export default function Home() {
 
         {/* BudgetPageFour */}
         <SwiperSlide></SwiperSlide>
-        {isMobile || isTablet ? <SwiperSlide></SwiperSlide> : null}
+        {isMobile ? <SwiperSlide></SwiperSlide> : null}
 
         <SwiperSlide>
           <ResponsibilityPageOne />
@@ -145,24 +145,24 @@ export default function Home() {
 
         {/* ResponsibilityPageTwo */}
         <SwiperSlide></SwiperSlide>
-        {isMobile || isTablet ? <SwiperSlide></SwiperSlide> : null}
+        {isMobile ? <SwiperSlide></SwiperSlide> : null}
 
         {/* ResponsibilityPageThree */}
         <SwiperSlide></SwiperSlide>
 
         {/* ResponsibilityPageFour */}
         <SwiperSlide></SwiperSlide>
-        {isMobile || isTablet ? <SwiperSlide></SwiperSlide> : null}
+        {isMobile ? <SwiperSlide></SwiperSlide> : null}
 
         {/* CitizenPageOne */}
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
       </Swiper>
 
-      {isMobile || isTablet ? null : navigation()}
+      {isMobile ? null : navigation()}
 
       <CSSTransition
-        in={(isMobile || isTablet ? [1, 2, 3] : [1, 2]).includes(active_index)}
+        in={(isMobile ? [1, 2, 3] : [1, 2]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -171,7 +171,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobile || isTablet ? [4] : [3, 4]).includes(active_index)}
+        in={(isMobile ? [4] : [3, 4]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -189,7 +189,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobile || isTablet ? [7, 8] : [7]).includes(active_index)}
+        in={(isMobile ? [7, 8] : [7]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -198,7 +198,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobile || isTablet ? [10, 11] : [9]).includes(active_index)}
+        in={(isMobile ? [10, 11] : [9]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -207,7 +207,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobile || isTablet ? [12] : [10]).includes(active_index)}
+        in={(isMobile ? [12] : [10]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -216,7 +216,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobile || isTablet ? [13, 14] : [11]).includes(active_index)}
+        in={(isMobile ? [13, 14] : [11]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -225,7 +225,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobile || isTablet ? [15, 16] : [12, 13]).includes(active_index)}
+        in={(isMobile ? [15, 16] : [12, 13]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
