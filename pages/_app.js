@@ -9,11 +9,13 @@ import "swiper/swiper.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <SafeHydrate>
+    <>
       <MetaHead />
 
-      <Component {...pageProps} />
-    </SafeHydrate>
+      <SafeHydrate>
+        <Component {...pageProps} />
+      </SafeHydrate>
+    </>
   );
 }
 
