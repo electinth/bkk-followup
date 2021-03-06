@@ -34,14 +34,21 @@ export default function Home() {
     speed: 500,
     initialSlide: 0,
     onSlideChange: (swiper) => setActiveIndex(swiper.activeIndex),
-    onSwiper: (swiper) => setSwiperRef(swiper),
+    onSwiper: (swiper) => {
+      setSwiperRef(swiper);
+      initSlideTo(swiper);
+    },
   };
 
   useEffect(() => {
-    if (swiper_ref && router.query.slide) {
-      swiper_ref.slideTo(router.query.slide);
-    }
+    initSlideTo(swiper_ref);
   }, [router.query.slide]);
+
+  const initSlideTo = (swiper) => {
+    if (swiper.slideTo && router.query.slide) {
+      swiper.slideTo(router.query.slide);
+    }
+  };
 
   const MetaHead = () => {
     let og_image = config.og_main;

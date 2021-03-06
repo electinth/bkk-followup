@@ -1,5 +1,5 @@
-import Header from 'components/Header';
-import Intro from 'components/Intro';
+import Header from "components/Header";
+import Intro from "components/Intro";
 
 let show_intro = true;
 setTimeout(() => {
@@ -16,7 +16,7 @@ export default function Layout(props) {
       <div
         id="main"
         className="fixed inset-0 overflow-hidden"
-        style={{ top: '60px' }}
+        style={{ top: "60px" }}
       >
         {props.children}
       </div>

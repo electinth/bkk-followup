@@ -23,12 +23,14 @@ export default function Header() {
       style={{ height: "60px" }}
     >
       <div className="flex items-center left">
-        <img
-          width={isMobile ? 94 : 124}
-          src={elect_logo}
-          alt={elect_logo}
+        <a
+          href="https://elect.in.th/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="mr-4"
-        />
+        >
+          <img width={isMobile ? 94 : 124} src={elect_logo} alt={elect_logo} />
+        </a>
 
         <img src={map_logo} alt={map_logo} className="hidden mr-2 lg:block" />
 
@@ -78,12 +80,18 @@ export default function Header() {
           >
             <h3 className="hidden d3 lg:block">MENU</h3>
 
-            <img
-              width={isMobile ? 94 : 124}
-              src={elect_logo}
-              alt={elect_logo}
+            <a
+              href="https://elect.in.th/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block mr-2 lg:hidden"
-            />
+            >
+              <img
+                width={isMobile ? 94 : 124}
+                src={elect_logo}
+                alt={elect_logo}
+              />
+            </a>
 
             <img
               width={isMobile ? 30 : 40}
