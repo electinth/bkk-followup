@@ -109,10 +109,10 @@ export default function ResponsibilityPageThree() {
 
   return (
     <div
-      className="responsibility-page-three fixed inset-0 z-10 flex items-center text-center pointer-events-none text-white-default"
+      className="responsibility-page-three fixed inset-0 z-10 flex items-center text-center pointer-events-none text-white-default py-14"
       style={{ top: "60px" }}
     >
-      <div className="w-full">
+      <div className="w-full h-full flex flex-col justify-between">
         <div className="container mx-auto">
           <h2 className="leading-snug d2 hidden lg:block">
             กทม. มีทั้ง

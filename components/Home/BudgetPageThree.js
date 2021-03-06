@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import numeral from "numeral";
 import _ from "lodash";
-import { isMobile } from "react-device-detect";
+import { isMobileOnly, isMobile, isTablet } from "react-device-detect";
 
 export default function BudgetPageThree(props) {
   const { active_index } = props;
@@ -325,9 +325,9 @@ export default function BudgetPageThree(props) {
       className="budget-page-three bg-black-default fixed z-10 inset-x-0 bottom-0 pointer-events-none text-white-default"
       style={{ top: "60px" }}
     >
-      <div className="container h-full mx-auto py-5 lg:py-14">
+      <div className="container h-full mx-auto py-5 md:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 h-full">
-          <div className="left lg:w-4/5">
+          <div className="left lg:w-4/5 text-left md:text-center lg:text-left">
             <h3 className="d3">8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป</h3>
 
             <h2 className="d2">581,112,916,500 บาท</h2>
@@ -343,7 +343,7 @@ export default function BudgetPageThree(props) {
                   งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?
                 </h5>
 
-                <ul className="legends mt-7 lg:mt-9">
+                <ul className="legends mt-7 md:mt-9">
                   {chart_legends.map((l) => (
                     <li key={l.title} className="d5 mt-1 flex items-center">
                       <div
@@ -366,7 +366,11 @@ export default function BudgetPageThree(props) {
                     <div
                       className="box-wrap flex flex-col"
                       style={{
-                        height: isMobile ? "calc(100vh - 320px)" : "560px",
+                        height: isTablet
+                          ? "calc(100vh - 500px)"
+                          : isMobileOnly
+                          ? "calc(100vh - 420px)"
+                          : "560px",
                       }}
                     >
                       {d.values.map((v) => (

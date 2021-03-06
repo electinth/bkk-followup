@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
 import numeral from "numeral";
-import { isMobile } from "react-device-detect";
+import { isMobileOnly, isTablet } from "react-device-detect";
 
 export default function BudgetPageTwo(props) {
   const { active_index } = props;
@@ -25,9 +25,9 @@ export default function BudgetPageTwo(props) {
 
     const margin = {
       top: 5,
-      right: isMobile ? 40 : 25,
+      right: isMobileOnly ? 40 : 25,
       bottom: 5,
-      left: isMobile ? 40 : 25,
+      left: isMobileOnly ? 40 : 25,
     };
 
     width = width - margin.left - margin.right;
@@ -134,7 +134,7 @@ export default function BudgetPageTwo(props) {
       .attr("r", 6)
       .style("fill", "white");
 
-    if (isMobile) showValue();
+    if (isMobileOnly) showValue();
   }, []);
 
   const showValue = () => {
@@ -155,33 +155,37 @@ export default function BudgetPageTwo(props) {
   };
 
   useEffect(() => {
-    if (!isMobile) showValue();
+    if (!isMobileOnly) showValue();
   }, [active_index]);
 
   return (
     <div
-      className="budget-page-two fixed inset-0 z-10 pointer-events-none bg-black-default"
+      className="budget-page-two fixed inset-0 z-10 pointer-events-none bg-black-default flex items-center justify-center"
       style={{ top: "60px" }}
     >
-      <div className="container mx-auto">
-        <h3 className="lg:w-9/12 d3 text-white-default mt-5 lg:mt-14">
-          8 ปีที่ผ่านมา (2555-2562) กทม. ใช้งบประมาณ
-          ดูแลประชาชนต่อคนไม่เคยต่ำกว่า
-        </h3>
+      <div className="w-full">
+        <div className="container mx-auto">
+          <h3 className="lg:w-9/12 d3 text-white-default mt-5 lg:mt-14 text-left md:text-center lg:text-left">
+            8 ปีที่ผ่านมา (2555-2562) กทม. ใช้งบประมาณ
+            ดูแลประชาชนต่อคนไม่เคยต่ำกว่า
+          </h3>
 
-        <h2 className="d2 text-green-default mt-3">10,000 บาท/คน/ปี</h2>
-      </div>
+          <h2 className="d2 text-green-default mt-3 text-left md:text-center lg:text-left">
+            10,000 บาท/คน/ปี
+          </h2>
+        </div>
 
-      <div className="pb-5 overflow-x-auto pointer-events-auto lg:pointer-events-none">
-        <div
-          className="relative mx-auto line-chart mt-14"
-          style={{ width: isMobile ? "200%" : "80%" }}
-        >
-          <svg></svg>
+        <div className="pb-5 overflow-x-auto pointer-events-auto lg:pointer-events-none mt-16 lg:mt-10 2xl:mt-20">
+          <div
+            className="relative mx-auto line-chart mt-14"
+            style={{ width: isMobileOnly ? "200%" : "80%" }}
+          >
+            <svg></svg>
 
-          <h4 className="absolute hidden text-base start-at text-green-default -bottom-1 -right-24 lg:block">
-            10,000 บาท
-          </h4>
+            <h4 className="absolute hidden text-base start-at text-green-default -bottom-1 -right-24 lg:block">
+              10,000 บาท
+            </h4>
+          </div>
         </div>
       </div>
     </div>

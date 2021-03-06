@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import check from "assets/images/check.svg";
-import { isMobile } from "react-device-detect";
+import { isMobileOnly } from "react-device-detect";
 
 export default function ResponsibilityPageFour(props) {
   const { active_index } = props;
@@ -30,7 +30,7 @@ export default function ResponsibilityPageFour(props) {
   const [cards, setCards] = useState(data);
 
   useEffect(() => {
-    if (!isMobile) return;
+    if (!isMobileOnly) return;
     if (active_index === 13) setCards([data[0]]);
     if (active_index === 14) setCards([data[1]]);
   }, [active_index]);
@@ -49,7 +49,7 @@ export default function ResponsibilityPageFour(props) {
           บทบาทและอำนาจหน้าที่ของ กทม.
         </h3>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-4 2xl:mt-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4 md:mt-10 lg:mt-4 2xl:mt-14">
           {cards.map((d, d_index) => (
             <div
               key={d_index}
@@ -74,7 +74,7 @@ export default function ResponsibilityPageFour(props) {
           ))}
         </div>
 
-        <p className="text-xl text-center mt-4 2xl:mt-20 hidden lg:block">
+        <p className="text-xl text-center mt-4 md:mt-10 lg:mt-4 2xl:mt-20 hidden md:block">
           <b>
             ที่มา: • อรทัย ก๊กผล. (2547). สารานุกรมการปกครองท้องถิ่นไทย หมวดที่
             3 พัฒนาการและรูปแบบการปกครองท้องถิ่นไทย ลำดับที่ 5 เรื่อง

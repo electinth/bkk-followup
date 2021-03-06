@@ -10,7 +10,7 @@ import {
   LineShareButton,
 } from "react-share";
 import config from "jsconfig.json";
-import { isMobile } from "react-device-detect";
+import { isMobile, isMobileOnly, isTablet } from "react-device-detect";
 
 export default function Main(props) {
   const { swiper_ref } = props;
@@ -18,7 +18,7 @@ export default function Main(props) {
   return (
     <div className="flex items-center h-full pb-16 main-page bg-white-default">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-5 hidden lg:grid">
+        <div className="grid-cols-1 lg:grid-cols-2 gap-5 hidden md:grid text-center lg:text-left">
           <h1 className="leading-tight d1">
             BANGKOK
             <br />
@@ -32,7 +32,7 @@ export default function Main(props) {
               ปัญหาที่กวนใจชาวกทม.
             </h3>
 
-            <div className="flex items-center mt-4 social-wrap">
+            <div className="hidden lg:flex items-center mt-4 social-wrap">
               <h4 className="d4">Share:</h4>
 
               <FacebookShareButton
@@ -64,10 +64,12 @@ export default function Main(props) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 mt-0 lg:mt-10 2xl:mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-3 mt-0 md:mt-10 2xl:mt-16">
           <div
             className="flex items-center justify-between rounded-md cursor-pointer explore-map bg-black-default p-3 lg:p-10 2xl:p-14"
-            onClick={() => swiper_ref.slideTo(isMobile ? 18 : 14)}
+            onClick={() =>
+              swiper_ref.slideTo(isMobileOnly ? 18 : isTablet ? 15 : 14)
+            }
           >
             <div className="text-white-default hidden lg:block">
               <h3 className="d3">EXPLORE MAP</h3>
@@ -119,7 +121,7 @@ export default function Main(props) {
 
             <div
               className="flex items-center justify-between p-3 lg:p-5 mt-1 lg:mt-3 rounded-md cursor-pointer budget bg-pink-default"
-              onClick={() => swiper_ref.slideTo(isMobile ? 15 : 13)}
+              onClick={() => swiper_ref.slideTo(isMobileOnly ? 15 : 13)}
             >
               <h5 className="d5 text-white-default">
                 ชาวกทม. มีส่วนร่วม อย่างไรได้บ้าง
@@ -132,6 +134,36 @@ export default function Main(props) {
               />
             </div>
           </div>
+        </div>
+
+        <div className="hidden md:flex lg:hidden items-center justify-center mt-10 social-wrap">
+          <h4 className="d4">Share:</h4>
+
+          <FacebookShareButton
+            url={config.web_url}
+            className="ml-4 cursor-pointer social"
+          >
+            <img width={40} height={40} src={fb_share} alt={fb_share} />
+          </FacebookShareButton>
+
+          <TwitterShareButton
+            url={config.web_url}
+            className="ml-4 cursor-pointer social"
+          >
+            <img
+              width={40}
+              height={40}
+              src={twitter_share}
+              alt={twitter_share}
+            />
+          </TwitterShareButton>
+
+          <LineShareButton
+            url={config.web_url}
+            className="ml-4 cursor-pointer social"
+          >
+            <img width={40} height={40} src={line_share} alt={line_share} />
+          </LineShareButton>
         </div>
 
         <div className="absolute inset-x-0 bottom-0 flex items-center justify-center p-2 lg:p-3 scroll-down bg-green-default d5">

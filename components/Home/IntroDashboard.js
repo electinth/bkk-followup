@@ -9,7 +9,7 @@ import {
   TwitterShareButton,
   LineShareButton,
 } from "react-share";
-import { isMobile, isTablet } from "react-device-detect";
+import { isMobileOnly, isMobile, isTablet } from "react-device-detect";
 import config from "jsconfig.json";
 
 export default function IntroDashboard() {
@@ -49,7 +49,7 @@ export default function IntroDashboard() {
       >
         <div className="flex justify-center flex-1 py-4 md:py-10 lg:py-0">
           <div>
-            {!isMobile ? (
+            {!isMobileOnly ? (
               <div className="d5">หรืออีกวิธีที่สามารถมีส่วนร่วมได้ก็คือ</div>
             ) : null}
 
@@ -58,11 +58,11 @@ export default function IntroDashboard() {
               ปีที่ผ่านมา
             </div>
 
-            {!isMobile ? (
+            {!isMobileOnly ? (
               <h5 className="mt-4 text-lg">ข้อมูลย้อนหลัง พ.ศ. 2555-2562</h5>
             ) : null}
 
-            {isMobile ? (
+            {isMobileOnly ? (
               <h5 className="mt-4 text-lg">เลือกประเด็นที่คุณสนใจ</h5>
             ) : null}
           </div>
@@ -102,7 +102,7 @@ export default function IntroDashboard() {
       </div>
 
       <div
-        className="px-4 flex-1 w-full h-full overflow-y-auto pointer-events-auto"
+        className="px-4 md:px-10 flex-1 w-full h-full overflow-y-auto pointer-events-auto"
         id="intro-dashboard-right"
       >
         <div id="link-wrapper" className="overflow-auto lg:h-full">
@@ -125,7 +125,7 @@ export default function IntroDashboard() {
                   src={intro_next}
                   alt="intro_next"
                   className="flex flex-none"
-                  style={{ width: isMobile ? "60px" : "80px" }}
+                  style={{ width: isMobileOnly ? "60px" : "80px" }}
                 />
               </div>
             </Link>
@@ -134,7 +134,7 @@ export default function IntroDashboard() {
 
         {isTablet ? (
           <div id="mobile_wrapper">
-            <div className="flex items-center justify-center my-7 flexflex-1 social-wrap">
+            <div className="flex items-center justify-center my-6 flexflex-1 social-wrap">
               <h4 className="d4">Share:</h4>
 
               <FacebookShareButton

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import _ from "lodash";
 import numeral from "numeral";
-import { isMobile } from "react-device-detect";
+import { isMobile, isMobileOnly, isTablet } from "react-device-detect";
 
 export default function BudgetPageFour(props) {
   const { active_index } = props;
@@ -225,10 +225,12 @@ export default function BudgetPageFour(props) {
       className="budget-page-four bg-black-default text-white-default fixed z-10 inset-0 pointer-events-none"
       style={{ top: "60px" }}
     >
-      <div className="container h-full mx-auto py-5 lg:py-14">
+      <div className="container h-full mx-auto py-5 md:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 h-full">
           <div className="left lg:w-4/5">
-            <h2 className="d2">3 ประเด็นที่งบกทม. ถูกใชัมากที่สุด</h2>
+            <h2 className="d2 text-left md:text-center lg:text-left">
+              3 ประเด็นที่งบกทม. ถูกใชัมากที่สุด
+            </h2>
 
             {!isMobile || active_index === 7 ? (
               <ul className="legends mt-6 lg:mt-9">
@@ -268,7 +270,11 @@ export default function BudgetPageFour(props) {
                       <div
                         className="box-wrap flex flex-col"
                         style={{
-                          height: isMobile ? "calc(100vh - 380px)" : "560px",
+                          height: isTablet
+                            ? "calc(100vh - 500px)"
+                            : isMobileOnly
+                            ? "calc(100vh - 420px)"
+                            : "560px",
                         }}
                       >
                         {d.values.map((v, index) => (

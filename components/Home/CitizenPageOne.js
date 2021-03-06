@@ -1,5 +1,5 @@
 import React from "react";
-import { isMobile } from "react-device-detect";
+import { isMobileOnly, isMobile } from "react-device-detect";
 import citizen_hand from "assets/images/citizen_hand.png";
 
 export default function CitizenPageOne(props) {
@@ -25,22 +25,31 @@ export default function CitizenPageOne(props) {
 
   return (
     <div
-      className="citizen-page-one flex lg:items-center fixed z-10 inset-0 bg-pink-default pointer-events-none py-4"
+      className="citizen-page-one flex lg:items-center fixed z-10 inset-0 bg-pink-default pointer-events-none py-4 md:py-14 lg:py-4"
       style={{ top: "60px" }}
     >
       <div className="container mx-auto">
-        {!isMobile || active_index < 17 ? (
+        {!isMobileOnly || active_index < 17 ? (
           <h2 className="leading-tight d2 text-center text-white-default">
             ประชาชนสามารถมีส่วนร่วม กับกรุงเทพฯ อย่างไรได้บ้าง?
           </h2>
         ) : null}
 
-        {!isMobile || active_index === 17 ? (
+        {!isMobile || [14, 17].includes(active_index) ? (
           <div
             className="mt-0 lg:mt-6 2xl:mt-14 h-full"
             style={{ opacity: active_index > 12 ? 1 : 0, transition: "0.4s" }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-5 bg-white-default bg-opacity-90 lg:bg-opacity-0 rounded-md p-4 pb-0 lg:p-0">
+            <p className="text-xl mt-6 mx-auto text-center text-white-default max-w-4xl hidden md:block lg:hidden">
+              <b>
+                ที่มา: • พรบ.
+                ว่าด้วยการลงคะแนนเสียงเพื่อถอดถอนสมาชิกหรือผู้บริหารท้องถิ่น
+                พ.ศ. 2542 • พรบ. ว่าด้วยการเข้าชื่อเสนอข้อบัญญัติท้องถิ่น พ.ศ.
+                2542”
+              </b>
+            </p>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-5 bg-white-default bg-opacity-90 lg:bg-opacity-0 rounded-md p-4 pb-0 lg:p-0 mt-0 md:mt-10 lg:mt-0 relative z-10 shadow-lg">
               {data.map((d, d_index) => (
                 <div
                   key={d_index}
@@ -85,9 +94,9 @@ export default function CitizenPageOne(props) {
           <img
             src={citizen_hand}
             alt={citizen_hand}
-            className="absolute bottom-0 inset-x-0 mx-auto w-2/4"
+            className="absolute bottom-0 inset-x-0 mx-auto w-2/4 md:w-1/4"
             style={{
-              bottom: active_index > 15 ? 0 : "-28%",
+              bottom: active_index > 15 || !isMobileOnly ? 0 : "-28%",
               transition: "0.4s",
             }}
           />

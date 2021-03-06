@@ -1,7 +1,7 @@
 import React from "react";
 import children from "assets/images/children.gif";
 import p_icon from "assets/images/p_icon.svg";
-import { isMobile } from "react-device-detect";
+import { isMobileOnly, isMobile } from "react-device-detect";
 
 export default function BudgetPageOne(props) {
   const { active_index } = props;
@@ -65,8 +65,8 @@ export default function BudgetPageOne(props) {
                 className="children-image w-3/4 lg:w-2/4 absolute top-2/4 transform -translate-y-2/4 left-2/4 -translate-x-2/4"
               />
 
-              {(!isMobile && active_index > 1) ||
-              (isMobile && active_index > 2) ? (
+              {(!isMobileOnly && active_index > 1) ||
+              (isMobileOnly && active_index > 2) ? (
                 <div className="relative h-full flex flex-col lg:flex-row items-center justify-center text-center">
                   <div
                     className="p-5 bg-opacity-90 rounded-md shadow-xl content bg-white-default"
@@ -89,7 +89,7 @@ export default function BudgetPageOne(props) {
                     href="https://elect.in.th/bkk-budget/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative lg:absolute inset-x-0 bottom-0 flex items-center justify-center p-2 mx-auto rounded-md shadow-xl pointer-events-auto content bg-white-default w-full lg:w-max mt-3 lg:mt-0"
+                    className="relative lg:absolute inset-x-0 bottom-0 flex items-center justify-center p-2 mx-auto rounded-md shadow-xl pointer-events-auto content bg-white-default w-full md:w-max mt-3 md:mt-10"
                   >
                     <img width={30} src={p_icon} alt={p_icon} />
 
