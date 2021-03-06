@@ -47,8 +47,8 @@ export default function Home() {
 
   const metaHead = () => {
     let og_image = config.og_main;
-    if (router.query.slide == 1) og_image = config.og_budget;
-    if (router.query.slide == 8) og_image = config.og_responsibility;
+    // if (router.query.slide == 1) og_image = config.og_budget;
+    // if (router.query.slide == 8) og_image = config.og_responsibility;
 
     return (
       <Head>
