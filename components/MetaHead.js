@@ -4,7 +4,7 @@ import config from 'jsconfig.json';
 import { useRouter } from 'next/router';
 
 function MetaHead() {
-  let og_image = config.og_flood;
+  let og_image = config.og_main;
   const router = useRouter();
 
   if (router.query.title == 'น้ำท่วมถนน') og_image = config.og_flood;
