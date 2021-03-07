@@ -4,7 +4,7 @@ import config from 'jsconfig.json';
 import { useRouter } from 'next/router';
 
 function MetaHead() {
-  let og_image = config.og_main;
+  let og_image;
   const router = useRouter();
 
   if (router.query.title == 'น้ำท่วมถนน') og_image = config.og_flood;
@@ -13,6 +13,9 @@ function MetaHead() {
   if (router.query.title == 'ขยะมูลฝอย') og_image = config.og_waste;
   if (router.query.title == 'ฝุ่นควันเกินมาตรฐาน') og_image = config.og_air;
   if (router.query.slide == 15) og_image = config.og_overall;
+  else {
+    og_image = config.og_main;
+  }
 
   // if (router.query.slide == 8) og_image = config.og_responsibility;
 
