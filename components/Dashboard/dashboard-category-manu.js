@@ -14,11 +14,11 @@ const category_manu = ({
   const [location_route, SET_LOCATION_ROUTE] = useState();
 
   setTimeout(() => {
-    SET_LOCATION_ROUTE(router.query.location);
+    SET_LOCATION_ROUTE(router.query.title);
   }, 0);
 
   const setRoute = (name) => {
-    router.push('/dashboard?location=' + name);
+    router.push('/dashboard/' + name);
     SET_LOCATION_ROUTE(name);
     SET_SELECTED_INDEX(0);
     SET_SELECTED_TOOLTIP();

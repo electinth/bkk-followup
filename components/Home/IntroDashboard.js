@@ -40,11 +40,11 @@ export default function IntroDashboard() {
   return (
     <div
       id="dashboard-wrapper"
-      className="fixed z-10 inset-0 flex flex-col items-center text-center lg:text-left lg:flex-row text-white-default pointer-events-none"
+      className="fixed inset-0 z-10 flex flex-col items-center text-center pointer-events-none lg:text-left lg:flex-row text-white-default"
       style={{ top: "60px" }}
     >
       <div
-        className="flex flex-col pt-0 lg:pt-20 pb-0 lg:pb-16 px-5 md:px-20 lg:h-full lg:flex-1"
+        className="flex flex-col px-5 pt-0 pb-0 lg:pt-20 lg:pb-16 md:px-20 lg:h-full lg:flex-1"
         id="intro-dashboard-left"
       >
         <div className="flex justify-center flex-1 py-4 md:py-10 lg:py-0">
@@ -53,7 +53,7 @@ export default function IntroDashboard() {
               <div className="d5">หรืออีกวิธีที่สามารถมีส่วนร่วมได้ก็คือ</div>
             ) : null}
 
-            <div className="d3 mt-5">
+            <div className="mt-5 d3">
               ร่วมกันสำรวจสถานการณ์ ปัญหาด้านต่างๆ ของกรุงเทพฯ ในรอบ 8
               ปีที่ผ่านมา
             </div>
@@ -69,7 +69,7 @@ export default function IntroDashboard() {
         </div>
 
         {!isMobile ? (
-          <div className="flex items-end flex-1 social-wrap pointer-events-auto">
+          <div className="flex items-end flex-1 pointer-events-auto social-wrap">
             <h4 className="d4">Share:</h4>
 
             <FacebookShareButton
@@ -102,14 +102,14 @@ export default function IntroDashboard() {
       </div>
 
       <div
-        className="px-4 md:px-10 flex-1 w-full h-full overflow-y-auto pointer-events-auto"
+        className="flex-1 w-full h-full px-4 overflow-y-auto pointer-events-auto md:px-10"
         id="intro-dashboard-right"
       >
         <div id="link-wrapper" className="overflow-auto lg:h-full">
           {category.map((cat, index) => (
-            <Link href={"/dashboard?location=" + cat.name} key={index}>
+            <Link href={"/dashboard/" + cat.name} key={index}>
               <div
-                className="flex card_cat_intro rounded-md px-3 lg:px-10 mb-2"
+                className="flex px-3 mb-2 rounded-md card_cat_intro lg:px-10"
                 id={`card${cat.name}`}
                 style={{ backgroundColor: cat.color }}
               >

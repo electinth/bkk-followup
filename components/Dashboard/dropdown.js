@@ -55,11 +55,11 @@ const dropdown = ({
   };
 
   setTimeout(() => {
-    SET_CATEGORY(router.query.location);
+    SET_CATEGORY(router.query.title);
   }, 0);
 
-  const hamdleCategory = (e) => {
-    router.push('/dashboard?location=' + e.target.value);
+  const handleCategory = (e) => {
+    router.push('/dashboard/' + e.target.value);
     SET_SELECTED_INDEX(0);
     SET_SELECTED_TOOLTIP();
     SET_STATE_DROPDOWN(null);
@@ -269,7 +269,7 @@ const dropdown = ({
                     id="options"
                     value={f.name}
                     checked={category === f.name}
-                    onChange={hamdleCategory}
+                    onChange={handleCategory}
                   />
                   <span className="ml-2 pointer-events-none checkmark"></span>
                 </label>
