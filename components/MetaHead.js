@@ -12,6 +12,7 @@ function MetaHead() {
   if (router.query.title == 'มลพิษในคลอง') og_image = config.og_water;
   if (router.query.title == 'ขยะมูลฝอย') og_image = config.og_waste;
   if (router.query.title == 'ฝุ่นควันเกินมาตรฐาน') og_image = config.og_air;
+  if (router.query.slide == 15) og_image = config.og_overall;
 
   // if (router.query.slide == 8) og_image = config.og_responsibility;
 

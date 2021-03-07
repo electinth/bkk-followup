@@ -11,10 +11,8 @@ import {
 } from 'react-share';
 import { isMobileOnly, isMobile, isTablet } from 'react-device-detect';
 import config from 'jsconfig.json';
-import { useRouter } from 'next/router';
 
 export default function IntroDashboard() {
-  const router = useRouter();
   const category = [
     {
       name: 'น้ำท่วมถนน',
@@ -38,18 +36,6 @@ export default function IntroDashboard() {
       color: '#476A8B',
     },
   ];
-  let web_url;
-
-  if (router.query.title == 'น้ำท่วมถนน')
-    web_url = config.web_url + '/dashboard/' + router.query.title;
-  if (router.query.title == 'พื้นที่สีเขียว')
-    web_url = config.web_url + '/dashboard/' + router.query.title;
-  if (router.query.title == 'มลพิษในคลอง')
-    web_url = config.web_url + '/dashboard/' + router.query.title;
-  if (router.query.title == 'ขยะมูลฝอย')
-    web_url = config.web_url + '/dashboard/' + router.query.title;
-  if (router.query.title == 'ฝุ่นควันเกินมาตรฐาน')
-    web_url = config.web_url + '/dashboard/' + router.query.title;
 
   return (
     <div
@@ -87,14 +73,14 @@ export default function IntroDashboard() {
             <h4 className="d4">Share:</h4>
 
             <FacebookShareButton
-              url={web_url}
+              url={config.web_url}
               className="ml-4 cursor-pointer social"
             >
               <img width={40} height={40} src={fb_share} alt={fb_share} />
             </FacebookShareButton>
 
             <TwitterShareButton
-              url={web_url}
+              url={config.web_url}
               className="ml-4 cursor-pointer social"
             >
               <img
@@ -106,7 +92,7 @@ export default function IntroDashboard() {
             </TwitterShareButton>
 
             <LineShareButton
-              url={web_url}
+              url={config.web_url}
               className="ml-4 cursor-pointer social"
             >
               <img width={40} height={40} src={line_share} alt={line_share} />
@@ -152,14 +138,14 @@ export default function IntroDashboard() {
               <h4 className="d4">Share:</h4>
 
               <FacebookShareButton
-                url={web_url}
+                url={config.web_url}
                 className="ml-4 cursor-pointer social"
               >
                 <img width={40} height={40} src={fb_share} alt={fb_share} />
               </FacebookShareButton>
 
               <TwitterShareButton
-                url={web_url}
+                url={config.web_url}
                 className="ml-4 cursor-pointer social"
               >
                 <img
@@ -171,7 +157,7 @@ export default function IntroDashboard() {
               </TwitterShareButton>
 
               <LineShareButton
-                url={web_url}
+                url={config.web_url}
                 className="ml-4 cursor-pointer social"
               >
                 <img width={40} height={40} src={line_share} alt={line_share} />
