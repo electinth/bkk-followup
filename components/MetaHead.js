@@ -1,10 +1,18 @@
-import React from "react";
-import Head from "next/head";
-import config from "jsconfig.json";
+import React from 'react';
+import Head from 'next/head';
+import config from 'jsconfig.json';
+import { useRouter } from 'next/router';
 
 function MetaHead() {
   let og_image = config.og_main;
-  // if (router.query.slide == 1) og_image = config.og_budget;
+  const router = useRouter();
+
+  if (router.query.title == 'น้ำท่วมถนน') og_image = config.og_flood;
+  if (router.query.title == 'พื้นที่สีเขียว') og_image = config.og_green;
+  if (router.query.title == 'มลพิษในคลอง') og_image = config.og_water;
+  if (router.query.title == 'ขยะมูลฝอย') og_image = config.og_waste;
+  if (router.query.title == 'ฝุ่นควันเกินมาตรฐาน') og_image = config.og_air;
+
   // if (router.query.slide == 8) og_image = config.og_responsibility;
 
   return (
