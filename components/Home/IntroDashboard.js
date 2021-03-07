@@ -38,6 +38,7 @@ export default function IntroDashboard() {
       color: '#476A8B',
     },
   ];
+  let web_url;
 
   if (router.query.title == 'น้ำท่วมถนน')
     web_url = config.web_url + '/dashboard/' + router.query.title;
