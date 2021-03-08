@@ -322,32 +322,32 @@ export default function BudgetPageThree(props) {
 
   return (
     <div
-      className="budget-page-three bg-black-default fixed z-10 inset-x-0 bottom-0 pointer-events-none text-white-default"
+      className="fixed inset-x-0 bottom-0 z-10 pointer-events-none budget-page-three bg-black-default text-white-default"
       style={{ top: "60px" }}
     >
-      <div className="container h-full mx-auto py-5 md:py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 h-full">
-          <div className="left lg:w-4/5 text-left md:text-center lg:text-left">
+      <div className="container h-full py-5 mx-auto md:py-14">
+        <div className="grid h-full grid-cols-1 gap-5 lg:grid-cols-2">
+          <div className="text-left left lg:w-4/5 md:text-center lg:text-left">
             <h3 className="d3">8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป</h3>
 
             <h2 className="d2">581,112,916,500 บาท</h2>
 
-            <h4 className="d4 mt-6 hidden lg:block">
+            <h4 className="hidden mt-6 d4 lg:block">
               งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?
             </h4>
 
             {(isMobile && active_index === 5) ||
             (!isMobile && active_index === 6) ? (
               <>
-                <h5 className="d5 mt-7 block lg:hidden">
+                <h5 className="block d5 mt-7 lg:hidden">
                   งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?
                 </h5>
 
                 <ul className="legends mt-7 md:mt-9">
                   {chart_legends.map((l) => (
-                    <li key={l.title} className="d5 mt-1 flex items-center">
+                    <li key={l.title} className="flex items-center mt-1 d5">
                       <div
-                        className="w-5 h-5 rounded mr-3 flex-none"
+                        className="flex-none w-5 h-5 mr-3 rounded"
                         style={{ background: l.color }}
                       ></div>
                       {l.title}
@@ -359,17 +359,17 @@ export default function BudgetPageThree(props) {
           </div>
 
           {!isMobile || active_index === 6 ? (
-            <div className="right flex items-center">
-              <div className="chart text-center grid grid-cols-8 gap-2 lg:gap-4 w-full lg:w-auto">
+            <div className="flex items-center right">
+              <div className="grid w-full grid-cols-8 gap-2 text-center chart lg:gap-4 lg:w-auto">
                 {chart_data.map((d) => (
                   <div key={d.year} className="bar">
                     <div
-                      className="box-wrap flex flex-col"
+                      className="flex flex-col box-wrap"
                       style={{
                         height: isTablet
                           ? "calc(100vh - 500px)"
                           : isMobileOnly
-                          ? "calc(100vh - 420px)"
+                          ? "calc(100vh - 440px)"
                           : "560px",
                       }}
                     >
@@ -389,7 +389,7 @@ export default function BudgetPageThree(props) {
                         >
                           {isMobile ? null : (
                             <div
-                              className="tooltip text-xs bg-white-default rounded-md py-2 px-4 absolute -top-10 left-2/4 transform -translate-x-2/4 mx-auto text-black-default z-10 shadow-md pointer-events-none"
+                              className="absolute z-10 px-4 py-2 mx-auto text-xs transform rounded-md shadow-md pointer-events-none tooltip bg-white-default -top-10 left-2/4 -translate-x-2/4 text-black-default"
                               style={{ minWidth: "176px" }}
                             >
                               ปี {d.year}
@@ -416,7 +416,7 @@ export default function BudgetPageThree(props) {
 
           {isMobile ? (
             <div
-              className="tooltip text-xs bg-white-default rounded-md p-2 mx-auto text-black-default shadow-md pointer-events-none text-center w-max max-w-full"
+              className="max-w-full p-2 mx-auto text-xs text-center rounded-md shadow-md pointer-events-none tooltip bg-white-default text-black-default w-max"
               style={{
                 minWidth: "176px",
                 height: "fit-content",

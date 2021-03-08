@@ -48,20 +48,20 @@ export default function ResponsibilityPageTwo(props) {
 
   return (
     <div
-      className="responsibility-page-two py-4 flex md:items-center text-center text-white-default fixed z-10 inset-0 pointer-events-none"
+      className="fixed inset-0 z-10 flex py-4 text-center pointer-events-none responsibility-page-two md:items-center text-white-default"
       style={{ top: "60px" }}
     >
       <div className="w-full">
         <div className="container mx-auto">
-          <h2 className="d2 mt-4 md:mt-0">กทม. มีหน้าที่ทำอะไร?</h2>
+          <h2 className="mt-4 d2 md:mt-0">กทม. มีหน้าที่ทำอะไร?</h2>
 
           {!isMobileOnly || active_index === 10 ? (
             <>
-              <h4 className="mt-4 md:mt-6 lg:mt-4 d4 text-xl lg:text-2xl">
+              <h4 className="mt-4 text-xl md:mt-6 lg:mt-4 d4 lg:text-2xl">
                 กทม. ไม่ใช่จังหวัด แต่เป็นองค์กรปกครองท้องถิ่นแบบพิเศษ
               </h4>
 
-              <p className="mt-4 md:mt-6 lg:mt-4 text-xl lg:text-2xl">
+              <p className="mt-4 text-xl md:mt-6 lg:mt-4 lg:text-2xl">
                 กทม. มีกฎหมายการบริหารเป็นของตนเอง ซึ่งจังหวัดอื่นไม่มี
                 (พรบ.ระเบียบริหาราชการกรุงเทพมหานคร พ.ศ. 2528)
                 และตามกฎหมายนี้ระบุไว้ว่า กทม.&nbsp;
@@ -75,12 +75,12 @@ export default function ResponsibilityPageTwo(props) {
         </div>
 
         {!isMobileOnly || active_index === 11 ? (
-          <div className="container mx-auto pointer-events-auto lg:pointer-events-none mt-4 md:mt-6 lg:mt-4 2xl:mt-14 w-screen pb-5 overflow-x-auto">
-            <div className="inline-flex lg:grid grid-cols-4 gap-3 mr-4">
+          <div className="container w-screen pb-5 mx-auto mt-4 overflow-x-auto pointer-events-auto lg:pointer-events-none md:mt-6 lg:mt-4 2xl:mt-14">
+            <div className="inline-flex grid-cols-4 lg:grid">
               {cards.map((c, c_index) => (
                 <div
                   key={c_index}
-                  className="p-4 text-left rounded-md box bg-blue-lightest text-black-default w-72 lg:w-auto flex-none"
+                  className="flex-none p-4 mr-3 text-left rounded-md box bg-blue-lightest text-black-default w-72 lg:w-auto"
                 >
                   <h5 className="d5">{c.title}</h5>
 
