@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
 import numeral from "numeral";
-import { isMobileOnly, isTablet } from "react-device-detect";
+import { isMobileOnly } from "react-device-detect";
 
-export default function BudgetPageTwo(props) {
-  const { active_index } = props;
-
+export default function BudgetPageTwo() {
   useEffect(() => {
     const data = [
       { year: 2555, value: 12338 },
@@ -134,29 +132,26 @@ export default function BudgetPageTwo(props) {
       .attr("r", 6)
       .style("fill", "white");
 
-    if (isMobileOnly) showValue();
+    showValue();
   }, []);
 
   const showValue = () => {
-    if (active_index === 3) {
-      d3.select(".line").style("stroke", "white");
-      d3.select(".x-axis").select("path").style("color", "#00C853");
-      d3.selectAll(".label-year").style("opacity", "0");
-      d3.selectAll(".label-value").style("opacity", "0");
-      d3.selectAll(".label-unit").style("opacity", "0");
-    }
-    if (active_index === 4) {
+    d3.select(".line").style("stroke", "white");
+    d3.select(".x-axis").select("path").style("color", "#00C853");
+    d3.selectAll(".label-year").style("opacity", "0");
+    d3.selectAll(".label-value").style("opacity", "0");
+    d3.selectAll(".label-unit").style("opacity", "0");
+    d3.selectAll(".label-year").style("transition", "0.4s");
+    d3.selectAll(".label-value").style("transition", "0.4s");
+    d3.selectAll(".label-unit").style("transition", "0.4s");
+    setTimeout(() => {
       d3.select(".line").style("stroke", "#00C853");
       d3.select(".x-axis").select("path").style("color", "white");
       d3.selectAll(".label-year").style("opacity", "1");
       d3.selectAll(".label-value").style("opacity", "1");
       d3.selectAll(".label-unit").style("opacity", "1");
-    }
+    }, 1200);
   };
-
-  useEffect(() => {
-    if (!isMobileOnly) showValue();
-  }, [active_index]);
 
   return (
     <div

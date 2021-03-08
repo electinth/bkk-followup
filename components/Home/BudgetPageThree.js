@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import numeral from "numeral";
 import _ from "lodash";
 import { isMobileOnly, isMobile, isTablet } from "react-device-detect";
 
 export default function BudgetPageThree(props) {
   const { active_index } = props;
+  const [show_legend, setShowLegend] = useState(false);
   const [hover_legend, setHoverLegend] = useState({});
   const chart_legends = [
     {
@@ -320,24 +321,30 @@ export default function BudgetPageThree(props) {
     return _.get(legend, "color");
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setShowLegend(true);
+    }, 1200);
+  }, []);
+
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-10 pointer-events-none budget-page-three bg-black-default text-white-default"
+      className="budget-page-three fixed inset-x-0 bottom-0 z-10 pointer-events-none bg-black-default text-white-default"
       style={{ top: "60px" }}
     >
-      <div className="container h-full py-5 mx-auto md:py-14">
+      <div className="container h-full mx-auto py-5">
         <div className="grid h-full grid-cols-1 gap-5 lg:grid-cols-2">
           <div className="text-left left lg:w-4/5 md:text-center lg:text-left">
             <h3 className="d3">8 ปีที่ผ่านมา กทม. ใช้งบประมาณไป</h3>
 
             <h2 className="d2">581,112,916,500 บาท</h2>
 
-            <h4 className="hidden mt-6 d4 lg:block">
+            <h4 className="hidden mt-6 d4 md:block">
               งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?
             </h4>
 
-            {(isMobile && active_index === 5) ||
-            (!isMobile && active_index === 6) ? (
+            {(isMobileOnly && active_index === 5) ||
+            (!isMobile && show_legend) ? (
               <>
                 <h5 className="block d5 mt-7 lg:hidden">
                   งบประมาณ กทม. ใช้ไปกับอะไรบ้าง?
@@ -358,7 +365,7 @@ export default function BudgetPageThree(props) {
             ) : null}
           </div>
 
-          {!isMobile || active_index === 6 ? (
+          {!isMobileOnly || active_index === 6 ? (
             <div className="flex items-center right">
               <div className="grid w-full grid-cols-8 gap-2 text-center chart lg:gap-4 lg:w-auto">
                 {chart_data.map((d) => (
@@ -387,7 +394,7 @@ export default function BudgetPageThree(props) {
                           }
                           onMouseLeave={() => setHoverLegend({})}
                         >
-                          {isMobile ? null : (
+                          {isMobileOnly ? null : (
                             <div
                               className="absolute z-10 px-4 py-2 mx-auto text-xs transform rounded-md shadow-md pointer-events-none tooltip bg-white-default -top-10 left-2/4 -translate-x-2/4 text-black-default"
                               style={{ minWidth: "176px" }}
@@ -414,7 +421,7 @@ export default function BudgetPageThree(props) {
             </div>
           ) : null}
 
-          {isMobile ? (
+          {isMobileOnly ? (
             <div
               className="max-w-full p-2 mx-auto text-xs text-center rounded-md shadow-md pointer-events-none tooltip bg-white-default text-black-default w-max"
               style={{
@@ -430,6 +437,38 @@ export default function BudgetPageThree(props) {
               {numeral(hover_legend.value / 1e7).format("0.00")} ล้านบาท (
               {numeral(hover_legend.percent).format("0.00")}
               %)
+            </div>
+          ) : null}
+
+          {isTablet ? (
+            <div className="grid grid-cols-2 gap-3">
+              <ul className="legends">
+                {chart_legends
+                  .filter((l, index) => index < 4)
+                  .map((l) => (
+                    <li key={l.title} className="flex items-center mt-1 d5">
+                      <div
+                        className="flex-none w-5 h-5 mr-3 rounded"
+                        style={{ background: l.color }}
+                      ></div>
+                      {l.title}
+                    </li>
+                  ))}
+              </ul>
+
+              <ul className="legends">
+                {chart_legends
+                  .filter((l, index) => index > 3)
+                  .map((l) => (
+                    <li key={l.title} className="flex items-center mt-1 d5">
+                      <div
+                        className="flex-none w-5 h-5 mr-3 rounded"
+                        style={{ background: l.color }}
+                      ></div>
+                      {l.title}
+                    </li>
+                  ))}
+              </ul>
             </div>
           ) : null}
         </div>

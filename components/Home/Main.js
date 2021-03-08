@@ -10,7 +10,7 @@ import {
   LineShareButton,
 } from "react-share";
 import config from "jsconfig.json";
-import { isMobile, isMobileOnly, isTablet } from "react-device-detect";
+import { isMobileOnly } from "react-device-detect";
 
 export default function Main(props) {
   const { swiper_ref } = props;
@@ -22,7 +22,12 @@ export default function Main(props) {
           <h1 className="leading-tight d1">
             BANGKOK
             <br />
-            <span className="text-green-default" style={{fontFamily: 'TheMATTER'}}>FOLLOW-UP</span>
+            <span
+              className="text-green-default"
+              style={{ fontFamily: "TheMATTER" }}
+            >
+              FOLLOW-UP
+            </span>
           </h1>
 
           <div className="right">
@@ -67,9 +72,7 @@ export default function Main(props) {
         <div className="grid grid-cols-1 gap-1 mt-0 lg:grid-cols-2 lg:gap-3 md:mt-10 2xl:mt-16">
           <div
             className="flex items-center justify-between p-3 rounded-md cursor-pointer explore-map bg-black-default lg:p-10 2xl:p-14"
-            onClick={() =>
-              swiper_ref.slideTo(isMobileOnly ? 18 : isTablet ? 15 : 14)
-            }
+            onClick={() => swiper_ref.slideTo(isMobileOnly ? 16 : 11)}
           >
             <div className="hidden text-white-default lg:block">
               <h3 className="d3">EXPLORE MAP</h3>
@@ -108,7 +111,7 @@ export default function Main(props) {
 
             <div
               className="flex items-center justify-between p-3 mt-1 rounded-md cursor-pointer lg:p-5 lg:mt-3 budget bg-blue-default"
-              onClick={() => swiper_ref.slideTo(isMobile ? 9 : 8)}
+              onClick={() => swiper_ref.slideTo(isMobileOnly ? 9 : 6)}
             >
               <h5 className="d5 text-white-default">กทม. มีหน้าที่ทำอะไร ?</h5>
 
@@ -121,7 +124,7 @@ export default function Main(props) {
 
             <div
               className="flex items-center justify-between p-3 mt-1 rounded-md cursor-pointer lg:p-5 lg:mt-3 budget bg-pink-default"
-              onClick={() => swiper_ref.slideTo(isMobileOnly ? 15 : 13)}
+              onClick={() => swiper_ref.slideTo(isMobileOnly ? 15 : 10)}
             >
               <h5 className="d5 text-white-default">
                 ชาวกทม. มีส่วนร่วม อย่างไรได้บ้าง

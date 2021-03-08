@@ -1,10 +1,17 @@
 import React from "react";
 import p_icon from "assets/images/p_icon.svg";
+import bkk_follow_up2 from "assets/images/bkk_follow_up2.gif";
 
 export default function ResponsibilityPageOne() {
   return (
-    <div className="responsibility-page-one flex items-center h-full text-center bg-blue-default text-white-default">
-      <div className="container max-w-xl mx-auto">
+    <div className="responsibility-page-one flex items-center h-full text-center bg-blue-default text-white-default relative">
+      <img
+        src={bkk_follow_up2}
+        alt={bkk_follow_up2}
+        className="absolute inset-0 object-cover w-full h-full"
+      />
+
+      <div className="container max-w-xl mx-auto relative z-10">
         <h2 className="d2">เข้าใจเพื่อมีส่วนร่วม</h2>
 
         <p className="mt-6 md:mt-10 text-xl lg:text-2xl leading-6">

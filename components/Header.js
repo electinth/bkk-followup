@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
-import elect_logo from 'assets/images/elect_logo.svg';
-import map_logo from 'assets/images/map_logo.svg';
-import stb_logo from 'assets/images/stb_logo.svg';
-import cu_thai_logo from 'assets/images/cu_thai_logo.svg';
-import hamburger from 'assets/images/hamburger.svg';
-import arrow_right_white from 'assets/images/arrow_right_white.svg';
-import close from 'assets/images/close.svg';
-import p_icon from 'assets/images/p_icon.svg';
-import fb_icon from 'assets/images/fb_icon.svg';
-import twitter_icon from 'assets/images/twitter_icon.svg';
-import { CSSTransition } from 'react-transition-group';
-import { isMobile, isMobileOnly, isTablet } from 'react-device-detect';
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import elect_logo from "assets/images/elect_logo.svg";
+import map_logo from "assets/images/map_logo.svg";
+import stb_logo from "assets/images/stb_logo.svg";
+import cu_thai_logo from "assets/images/cu_thai_logo.svg";
+import hamburger from "assets/images/hamburger.svg";
+import arrow_right_white from "assets/images/arrow_right_white.svg";
+import close from "assets/images/close.svg";
+import p_icon from "assets/images/p_icon.svg";
+import fb_icon from "assets/images/fb_icon.svg";
+import twitter_icon from "assets/images/twitter_icon.svg";
+import { CSSTransition } from "react-transition-group";
+import { isMobile, isMobileOnly } from "react-device-detect";
 
 export default function Header() {
   const router = useRouter();
@@ -27,7 +27,7 @@ export default function Header() {
     <div
       id="header"
       className="sticky z-20 flex items-center justify-between px-3 shadow-xl bg-white-default lg:px-5"
-      style={{ height: '60px' }}
+      style={{ height: "60px" }}
     >
       <div className="flex items-center left">
         <a
@@ -53,7 +53,7 @@ export default function Header() {
             BKK
             <span
               className="text-green-default"
-              style={{ fontFamily: 'TheMATTER' }}
+              style={{ fontFamily: "TheMATTER" }}
             >
               FOLLOW-UP
             </span>
@@ -62,7 +62,7 @@ export default function Header() {
       </div>
 
       <div className="relative z-10 flex items-center right">
-        <div className="hidden mr-4 d5 lg:block" style={{ fontSize: '16px' }}>
+        <div className="hidden mr-4 d5 lg:block" style={{ fontSize: "16px" }}>
           In collaboration with
         </div>
 
@@ -101,15 +101,15 @@ export default function Header() {
         <div
           className="fixed right-0 z-20 max-w-screen-lg overflow-y-auto shadow-xl modal bg-white-default"
           style={{
-            width: isMobile ? '100%' : 'auto',
-            top: isMobile ? '0' : '60px',
-            bottom: isMobileOnly ? '0' : 'unset',
-            maxHeight: isMobileOnly ? '100%' : 'calc(100vh - 60px)',
+            width: isMobile ? "100%" : "auto",
+            top: isMobile ? "0" : "60px",
+            bottom: isMobileOnly ? "0" : "unset",
+            maxHeight: isMobileOnly ? "100%" : "calc(100vh - 60px)",
           }}
         >
           <div
             className="flex items-center justify-between px-3 head bg-green-default lg:bg-white-default"
-            style={{ height: '60px' }}
+            style={{ height: "60px" }}
           >
             <h3 className="hidden d3 lg:block">MENU</h3>
 
@@ -147,7 +147,13 @@ export default function Header() {
               />
 
               <h4 className="block d4 md:hidden">
-                BKK<span className="text-green-default">FOLLOW-UP</span>
+                BKK
+                <span
+                  className="text-green-default"
+                  style={{ fontFamily: "TheMATTER" }}
+                >
+                  FOLLOW-UP
+                </span>
               </h4>
             </div>
 
@@ -160,9 +166,7 @@ export default function Header() {
                 <div className="z-30 grid grid-cols-1 gap-1 lg:grid-cols-2 lg:gap-3">
                   <div
                     className="flex items-center justify-between p-3 rounded-md cursor-pointer explore-map bg-black-default lg:p-6"
-                    onClick={() =>
-                      selectMenu(isMobileOnly ? 18 : isTablet ? 15 : 14)
-                    }
+                    onClick={() => selectMenu(isMobileOnly ? 16 : 11)}
                   >
                     <div className="hidden text-white-default lg:block">
                       <h3 className="d3">EXPLORE MAP</h3>
@@ -203,7 +207,7 @@ export default function Header() {
 
                     <div
                       className="flex items-center justify-between p-3 mt-1 rounded-md cursor-pointer lg:p-6 lg:mt-3 budget bg-blue-default"
-                      onClick={() => selectMenu(isMobile ? 9 : 8)}
+                      onClick={() => selectMenu(isMobileOnly ? 9 : 6)}
                     >
                       <h5 className="d5 text-white-default">
                         กทม. มีหน้าที่ทำอะไร ?
@@ -218,7 +222,7 @@ export default function Header() {
 
                     <div
                       className="flex items-center justify-between p-3 mt-1 rounded-md cursor-pointer lg:p-6 lg:mt-3 budget bg-pink-default"
-                      onClick={() => selectMenu(isMobileOnly ? 15 : 13)}
+                      onClick={() => selectMenu(isMobileOnly ? 15 : 10)}
                     >
                       <h5 className="d5 text-white-default">
                         ชาวกทม. มีส่วนร่วม อย่างไรได้บ้าง
@@ -361,10 +365,10 @@ export default function Header() {
           <div
             className="flex items-center justify-center p-2 callab-with lg:hidden"
             style={{
-              boxShadow: '0px 16px 48px rgba(0, 0, 0, 0.176)',
+              boxShadow: "0px 16px 48px rgba(0, 0, 0, 0.176)",
             }}
           >
-            <div className="mr-4 d5" style={{ fontSize: '14px' }}>
+            <div className="mr-4 d5" style={{ fontSize: "14px" }}>
               In collaboration with
             </div>
 

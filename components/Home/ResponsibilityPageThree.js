@@ -104,7 +104,7 @@ export default function ResponsibilityPageThree() {
     const scroll = document.querySelector(".scroll-list");
     setTimeout(() => {
       scroll.scrollLeft = scroll.scrollWidth;
-    }, 2000);
+    }, 1500);
   }, []);
 
   return (

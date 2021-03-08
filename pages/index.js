@@ -17,7 +17,7 @@ import SwiperCore, { Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import arrow_up_black from "assets/images/arrow_up_black.svg";
 import arrow_down_black from "assets/images/arrow_down_black.svg";
-import { isMobile, isMobileOnly, isTablet } from "react-device-detect";
+import { isMobileOnly } from "react-device-detect";
 
 SwiperCore.use([Mousewheel]);
 
@@ -103,15 +103,15 @@ export default function Home() {
 
         {/* BudgetPageTwo */}
         <SwiperSlide></SwiperSlide>
-        {isMobileOnly ? null : <SwiperSlide></SwiperSlide>}
+        {/* {isMobileOnly ? null : <SwiperSlide></SwiperSlide>} */}
 
         {/* BudgetPageThree */}
         <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
+        {isMobileOnly ? <SwiperSlide></SwiperSlide> : null}
 
         {/* BudgetPageFour */}
         <SwiperSlide></SwiperSlide>
-        {isMobile ? <SwiperSlide></SwiperSlide> : null}
+        {isMobileOnly ? <SwiperSlide></SwiperSlide> : null}
 
         <SwiperSlide>
           <ResponsibilityPageOne />
@@ -130,8 +130,6 @@ export default function Home() {
 
         {/* CitizenPageOne */}
         <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        {isMobileOnly ? <SwiperSlide></SwiperSlide> : null}
 
         {/* IntroDashboard */}
         <SwiperSlide></SwiperSlide>
@@ -149,16 +147,16 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobileOnly ? [4] : [3, 4]).includes(active_index)}
+        in={(isMobileOnly ? [4] : [3]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
       >
-        <BudgetPageTwo active_index={active_index} />
+        <BudgetPageTwo />
       </CSSTransition>
 
       <CSSTransition
-        in={[5, 6].includes(active_index)}
+        in={(isMobileOnly ? [5, 6] : [4]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -167,7 +165,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobile ? [7, 8] : [7]).includes(active_index)}
+        in={(isMobileOnly ? [7, 8] : [5]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -176,9 +174,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobileOnly ? [10, 11] : isTablet ? [10] : [9]).includes(
-          active_index
-        )}
+        in={(isMobileOnly ? [10, 11] : [7]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -187,9 +183,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobileOnly ? [12] : isTablet ? [11] : [10]).includes(
-          active_index
-        )}
+        in={(isMobileOnly ? [12] : [8]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -198,9 +192,7 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobileOnly ? [13, 14] : isTablet ? [12] : [11]).includes(
-          active_index
-        )}
+        in={(isMobileOnly ? [13, 14] : [9]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
@@ -209,23 +201,16 @@ export default function Home() {
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobileOnly
-          ? [15, 16, 17]
-          : isTablet
-          ? [13, 14]
-          : [12, 13]
-        ).includes(active_index)}
+        in={(isMobileOnly ? [15] : [10]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"
       >
-        <CitizenPageOne active_index={active_index} />
+        <CitizenPageOne />
       </CSSTransition>
 
       <CSSTransition
-        in={(isMobileOnly ? [18] : isTablet ? [15] : [14]).includes(
-          active_index
-        )}
+        in={(isMobileOnly ? [16] : [11]).includes(active_index)}
         timeout={400}
         unmountOnExit
         classNames="fade"

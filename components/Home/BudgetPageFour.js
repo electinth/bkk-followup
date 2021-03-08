@@ -1,33 +1,33 @@
-import React, { useState } from 'react';
-import _ from 'lodash';
-import numeral from 'numeral';
-import { isMobile, isMobileOnly, isTablet } from 'react-device-detect';
+import React, { useState } from "react";
+import _ from "lodash";
+import numeral from "numeral";
+import { isMobile, isMobileOnly, isTablet } from "react-device-detect";
 
 export default function BudgetPageFour(props) {
   const { active_index } = props;
   const [hover_legend, setHoverLegend] = useState(null);
   const chart_legends = [
     {
-      title: 'บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)',
-      color: '#00C853',
+      title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
+      color: "#00C853",
       value: 172034132397,
       percent: 29.6,
     },
     {
-      title: 'งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร',
-      color: '#CCF4DD',
+      title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
+      color: "#CCF4DD",
       value: 104449979000,
       percent: 18.0,
     },
     {
-      title: 'งานรักษาความสะอาด',
-      color: '#DAE1E8',
+      title: "งานรักษาความสะอาด",
+      color: "#DAE1E8",
       value: 94887660735,
       percent: 16.3,
     },
     {
-      title: 'อื่นๆ',
-      color: 'black',
+      title: "อื่นๆ",
+      color: "black",
       value: 412040688835,
       percent: 70.9,
     },
@@ -37,19 +37,19 @@ export default function BudgetPageFour(props) {
       year: 2555,
       values: [
         {
-          title: 'อื่นๆ',
+          title: "อื่นๆ",
           value: 49690262400,
         },
         {
-          title: 'งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร',
+          title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
           value: 11745330820,
         },
         {
-          title: 'งานรักษาความสะอาด',
+          title: "งานรักษาความสะอาด",
           value: 11000391100,
         },
         {
-          title: 'บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)',
+          title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
           value: 21207112200,
         },
       ],
@@ -58,19 +58,19 @@ export default function BudgetPageFour(props) {
       year: 2556,
       values: [
         {
-          title: 'อื่นๆ',
+          title: "อื่นๆ",
           value: 49435413000,
         },
         {
-          title: 'งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร',
+          title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
           value: 11511754000,
         },
         {
-          title: 'งานรักษาความสะอาด',
+          title: "งานรักษาความสะอาด",
           value: 12478124100,
         },
         {
-          title: 'บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)',
+          title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
           value: 17390182000,
         },
       ],
@@ -79,19 +79,19 @@ export default function BudgetPageFour(props) {
       year: 2557,
       values: [
         {
-          title: 'อื่นๆ',
+          title: "อื่นๆ",
           value: 48598911100,
         },
         {
-          title: 'งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร',
+          title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
           value: 11604899100,
         },
         {
-          title: 'งานรักษาความสะอาด',
+          title: "งานรักษาความสะอาด",
           value: 13328421600,
         },
         {
-          title: 'บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)',
+          title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
           value: 19619459600,
         },
       ],
@@ -100,19 +100,19 @@ export default function BudgetPageFour(props) {
       year: 2558,
       values: [
         {
-          title: 'อื่นๆ',
+          title: "อื่นๆ",
           value: 43352395700,
         },
         {
-          title: 'งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร',
+          title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
           value: 10721085000,
         },
         {
-          title: 'งานรักษาความสะอาด',
+          title: "งานรักษาความสะอาด",
           value: 12054632300,
         },
         {
-          title: 'บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)',
+          title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
           value: 15742040040,
         },
       ],
@@ -121,19 +121,19 @@ export default function BudgetPageFour(props) {
       year: 2559,
       values: [
         {
-          title: 'อื่นๆ',
+          title: "อื่นๆ",
           value: 46011061638,
         },
         {
-          title: 'งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร',
+          title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
           value: 12415062000,
         },
         {
-          title: 'งานรักษาความสะอาด',
+          title: "งานรักษาความสะอาด",
           value: 11946842700,
         },
         {
-          title: 'บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)',
+          title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
           value: 17711177438,
         },
       ],
@@ -142,19 +142,19 @@ export default function BudgetPageFour(props) {
       year: 2560,
       values: [
         {
-          title: 'อื่นๆ',
+          title: "อื่นๆ",
           value: 57343687300,
         },
         {
-          title: 'งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร',
+          title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
           value: 14743356700,
         },
         {
-          title: 'งานรักษาความสะอาด',
+          title: "งานรักษาความสะอาด",
           value: 10481866083,
         },
         {
-          title: 'บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)',
+          title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
           value: 26749192000,
         },
       ],
@@ -163,19 +163,19 @@ export default function BudgetPageFour(props) {
       year: 2561,
       values: [
         {
-          title: 'อื่นๆ',
+          title: "อื่นๆ",
           value: 58178763652,
         },
         {
-          title: 'งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร',
+          title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
           value: 15934089400,
         },
         {
-          title: 'งานรักษาความสะอาด',
+          title: "งานรักษาความสะอาด",
           value: 11869146200,
         },
         {
-          title: 'บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)',
+          title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
           value: 25877023400,
         },
       ],
@@ -184,26 +184,26 @@ export default function BudgetPageFour(props) {
       year: 2562,
       values: [
         {
-          title: 'อื่นๆ',
+          title: "อื่นๆ",
           value: 59430194045,
         },
         {
-          title: 'งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร',
+          title: "งานก่อสร้างโครงสร้างพื้นฐานและวิศวกรรมจราจร",
           value: 15774401980,
         },
         {
-          title: 'งานรักษาความสะอาด',
+          title: "งานรักษาความสะอาด",
           value: 11728236652,
         },
         {
-          title: 'บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)',
+          title: "บริหารทั่วไป (สำหรับการจัดการภายในและการวางแผน)",
           value: 27737945719,
         },
       ],
     },
   ];
   chart_data = _.map(chart_data, (d) => {
-    const sum = _.sumBy(d.values, 'value');
+    const sum = _.sumBy(d.values, "value");
     return {
       year: d.year,
       values: _.map(d.values, (v) => {
@@ -217,13 +217,13 @@ export default function BudgetPageFour(props) {
 
   const getColor = (title) => {
     const legend = chart_legends.find((l) => l.title === title);
-    return _.get(legend, 'color');
+    return _.get(legend, "color");
   };
 
   return (
     <div
       className="fixed inset-0 z-10 pointer-events-none budget-page-four bg-black-default text-white-default"
-      style={{ top: '60px' }}
+      style={{ top: "60px" }}
     >
       <div className="container h-full py-5 mx-auto md:py-14">
         <div className="grid h-full grid-cols-1 gap-5 lg:grid-cols-2">
@@ -240,11 +240,11 @@ export default function BudgetPageFour(props) {
                     className="flex items-center py-4 lg:py-5 px-4 lg:px-9 mb-0.5 rounded-md cursor-pointer pointer-events-none lg:pointer-events-auto"
                     style={{
                       background: l.color,
-                      color: l.title === 'อื่นๆ' ? 'white' : 'black',
+                      color: l.title === "อื่นๆ" ? "white" : "black",
                       border:
-                        l.title === 'อื่นๆ'
-                          ? '2px solid rgba(255, 255, 255, 0.9)'
-                          : 'none',
+                        l.title === "อื่นๆ"
+                          ? "2px solid rgba(255, 255, 255, 0.9)"
+                          : "none",
                     }}
                     onMouseOver={() => setHoverLegend(l.title)}
                     onMouseLeave={() => setHoverLegend(null)}
@@ -252,7 +252,7 @@ export default function BudgetPageFour(props) {
                     <div className="flex-1 title d5">{l.title}</div>
 
                     <h3 className="flex-none ml-3 text-right value">
-                      {numeral(l.value / 1e7).format('0,0')} ล้านบาท
+                      {numeral(l.value / 1e7).format("0,0")} ล้านบาท
                       <br />({l.percent}%)
                     </h3>
                   </li>
@@ -261,7 +261,7 @@ export default function BudgetPageFour(props) {
             ) : null}
           </div>
 
-          {!isMobile || active_index === 8 ? (
+          {!isMobileOnly || active_index === 8 ? (
             <>
               <div className="flex items-center right">
                 <div className="grid w-full grid-cols-8 gap-2 text-center chart lg:gap-4 lg:w-auto">
@@ -271,31 +271,31 @@ export default function BudgetPageFour(props) {
                         className="flex flex-col box-wrap"
                         style={{
                           height: isTablet
-                            ? 'calc(100vh - 500px)'
+                            ? "calc(100vh - 500px)"
                             : isMobileOnly
-                            ? 'calc(100vh - 455px)'
-                            : '560px',
+                            ? "calc(100vh - 455px)"
+                            : "560px",
                         }}
                       >
                         {d.values.map((v, index) => (
                           <div
                             key={index}
                             className={`box rounded-md mb-0.5 pt-1 ${
-                              hover_legend === v.title ? 'is-hover' : ''
+                              hover_legend === v.title ? "is-hover" : ""
                             }`}
                             style={{
-                              width: isMobile ? '100%' : '52px',
+                              width: isMobile ? "100%" : "52px",
                               height: `${v.percent}%`,
                               border:
-                                v.title === 'อื่นๆ'
-                                  ? '2px solid rgba(255, 255, 255, 0.9)'
-                                  : 'none',
+                                v.title === "อื่นๆ"
+                                  ? "2px solid rgba(255, 255, 255, 0.9)"
+                                  : "none",
                               background: getColor(v.title),
                             }}
                           >
-                            {v.title !== 'อื่นๆ' ? (
+                            {v.title !== "อื่นๆ" ? (
                               <h5 className="text-xs value text-black-default">
-                                {numeral(v.percent).format('0.00')}%
+                                {numeral(v.percent).format("0.00")}%
                               </h5>
                             ) : null}
                           </div>
@@ -303,7 +303,7 @@ export default function BudgetPageFour(props) {
                       </div>
 
                       <div className="year d5">
-                        '{d.year.toString().split('25')[1]}
+                        '{d.year.toString().split("25")[1]}
                       </div>
                     </div>
                   ))}
@@ -311,7 +311,7 @@ export default function BudgetPageFour(props) {
               </div>
 
               {isMobile ? (
-                <ul className="legends">
+                <ul className="legends md:mx-auto">
                   {chart_legends.map((l) => (
                     <li key={l.title} className="flex items-center mt-1 d5">
                       <div
@@ -319,9 +319,9 @@ export default function BudgetPageFour(props) {
                         style={{
                           background: l.color,
                           border:
-                            l.title === 'อื่นๆ'
-                              ? '2px solid rgba(255, 255, 255, 0.9)'
-                              : 'none',
+                            l.title === "อื่นๆ"
+                              ? "2px solid rgba(255, 255, 255, 0.9)"
+                              : "none",
                         }}
                       ></div>
                       {l.title}
