@@ -369,7 +369,7 @@ export default function BudgetPageThree(props) {
                         height: isTablet
                           ? "calc(100vh - 500px)"
                           : isMobileOnly
-                          ? "calc(100vh - 440px)"
+                          ? "calc(100vh - 455px)"
                           : "560px",
                       }}
                     >
