@@ -27,17 +27,17 @@ export default function Intro() {
       onClick={() => hideIntro(true)}
     >
       <img
-        className="object-cover fixed inset-0 h-full mx-auto opacity-60"
+        className="fixed inset-0 object-cover h-full mx-auto opacity-60"
         src={intro_bg}
         alt={intro_bg}
       />
 
       <div className="container relative z-10 mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-center text-white-default text-center lg:text-left">
-          <h1 className="leading-tight d1 mr-0 lg:mr-20 mb-5 lg:mb-0">
+        <div className="flex flex-col items-center justify-center text-center lg:flex-row text-white-default lg:text-left">
+          <h1 className="mb-5 mr-0 leading-tight d1 lg:mr-20 lg:mb-0">
             BANGKOK
             <br />
-            <span className="text-green-default">FOLLOW-UP</span>
+            <span className="text-green-default" style={{fontFamily: 'TheMATTER'}}>FOLLOW-UP</span>
           </h1>
 
           <div className="right">
@@ -47,7 +47,7 @@ export default function Intro() {
               ปัญหาที่กวนใจชาวกทม.
             </h3>
 
-            <div className="flex items-center justify-center lg:justify-start mt-8 lg:mt-4 social-wrap">
+            <div className="flex items-center justify-center mt-8 lg:justify-start lg:mt-4 social-wrap">
               <h4 className="d4">Share:</h4>
 
               <FacebookShareButton

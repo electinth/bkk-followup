@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { useRouter } from "next/router";
-import elect_logo from "assets/images/elect_logo.svg";
-import map_logo from "assets/images/map_logo.svg";
-import stb_logo from "assets/images/stb_logo.svg";
-import cu_thai_logo from "assets/images/cu_thai_logo.svg";
-import hamburger from "assets/images/hamburger.svg";
-import arrow_right_white from "assets/images/arrow_right_white.svg";
-import close from "assets/images/close.svg";
-import p_icon from "assets/images/p_icon.svg";
-import fb_icon from "assets/images/fb_icon.svg";
-import twitter_icon from "assets/images/twitter_icon.svg";
-import { CSSTransition } from "react-transition-group";
-import { isMobile, isMobileOnly, isTablet } from "react-device-detect";
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import elect_logo from 'assets/images/elect_logo.svg';
+import map_logo from 'assets/images/map_logo.svg';
+import stb_logo from 'assets/images/stb_logo.svg';
+import cu_thai_logo from 'assets/images/cu_thai_logo.svg';
+import hamburger from 'assets/images/hamburger.svg';
+import arrow_right_white from 'assets/images/arrow_right_white.svg';
+import close from 'assets/images/close.svg';
+import p_icon from 'assets/images/p_icon.svg';
+import fb_icon from 'assets/images/fb_icon.svg';
+import twitter_icon from 'assets/images/twitter_icon.svg';
+import { CSSTransition } from 'react-transition-group';
+import { isMobile, isMobileOnly, isTablet } from 'react-device-detect';
 
 export default function Header() {
   const router = useRouter();
@@ -27,7 +27,7 @@ export default function Header() {
     <div
       id="header"
       className="sticky z-20 flex items-center justify-between px-3 shadow-xl bg-white-default lg:px-5"
-      style={{ height: "60px" }}
+      style={{ height: '60px' }}
     >
       <div className="flex items-center left">
         <a
@@ -43,27 +43,46 @@ export default function Header() {
           />
         </a>
 
-        <div className="hidden md:flex items-center justify-center md:absolute lg:relative inset-x-0">
+        <div
+          className="inset-x-0 items-center justify-center hidden cursor-pointer md:flex md:absolute lg:relative"
+          onClick={() => window.location.reload()}
+        >
           <img src={map_logo} alt={map_logo} />
 
-          <h5 className="d5 ml-2">
-            BKK<span className="text-green-default">FOLLOW-UP</span>
+          <h5 className="ml-2 d5">
+            BKK
+            <span
+              className="text-green-default"
+              style={{ fontFamily: 'TheMATTER' }}
+            >
+              FOLLOW-UP
+            </span>
           </h5>
         </div>
       </div>
 
-      <div className="flex items-center right relative z-10">
-        <div className="hidden mr-4 d5 lg:block" style={{ fontSize: "16px" }}>
+      <div className="relative z-10 flex items-center right">
+        <div className="hidden mr-4 d5 lg:block" style={{ fontSize: '16px' }}>
           In collaboration with
         </div>
 
-        <img src={stb_logo} alt={stb_logo} className="hidden mr-3 lg:block" />
+        <a
+          href="http://www.kpi.ac.th/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden mr-3 lg:block"
+        >
+          <img src={stb_logo} alt={stb_logo} />
+        </a>
 
-        <img
-          src={cu_thai_logo}
-          alt={cu_thai_logo}
+        <a
+          href="https://www.polsci.chula.ac.th/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden mr-8 lg:block"
-        />
+        >
+          <img src={cu_thai_logo} alt={cu_thai_logo} />
+        </a>
 
         <img
           src={hamburger}
@@ -82,15 +101,15 @@ export default function Header() {
         <div
           className="fixed right-0 z-20 max-w-screen-lg overflow-y-auto shadow-xl modal bg-white-default"
           style={{
-            width: isMobile ? "100%" : "auto",
-            top: isMobile ? "0" : "60px",
-            bottom: isMobileOnly ? "0" : "unset",
-            maxHeight: isMobileOnly ? "100%" : "calc(100vh - 60px)",
+            width: isMobile ? '100%' : 'auto',
+            top: isMobile ? '0' : '60px',
+            bottom: isMobileOnly ? '0' : 'unset',
+            maxHeight: isMobileOnly ? '100%' : 'calc(100vh - 60px)',
           }}
         >
           <div
             className="flex items-center justify-between px-3 head bg-green-default lg:bg-white-default"
-            style={{ height: "60px" }}
+            style={{ height: '60px' }}
           >
             <h3 className="hidden d3 lg:block">MENU</h3>
 
@@ -117,7 +136,10 @@ export default function Header() {
           </div>
 
           <div className="p-3 md:p-5 lg:p-3 content">
-            <div className="flex items-center justify-center">
+            <div
+              className="flex items-center justify-center cursor-pointer"
+              onClick={() => window.location.reload()}
+            >
               <img
                 src={map_logo}
                 alt={map_logo}
@@ -129,7 +151,7 @@ export default function Header() {
               </h4>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-0 md:gap-5 lg:gap-0">
+            <div className="grid grid-cols-1 gap-0 md:grid-cols-2 lg:grid-cols-1 md:gap-5 lg:gap-0">
               <div>
                 <hr className="block my-4 md:hidden" />
 
@@ -339,16 +361,29 @@ export default function Header() {
           <div
             className="flex items-center justify-center p-2 callab-with lg:hidden"
             style={{
-              boxShadow: "0px 16px 48px rgba(0, 0, 0, 0.176)",
+              boxShadow: '0px 16px 48px rgba(0, 0, 0, 0.176)',
             }}
           >
-            <div className="mr-4 d5" style={{ fontSize: "14px" }}>
+            <div className="mr-4 d5" style={{ fontSize: '14px' }}>
               In collaboration with
             </div>
 
-            <img src={stb_logo} alt={stb_logo} className="mr-4" />
+            <a
+              href="http://www.kpi.ac.th/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mr-4"
+            >
+              <img src={stb_logo} alt={stb_logo} />
+            </a>
 
-            <img src={cu_thai_logo} alt={cu_thai_logo} className="mr-4" />
+            <a
+              href="https://www.polsci.chula.ac.th/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={cu_thai_logo} alt={cu_thai_logo} />
+            </a>
           </div>
         </div>
       </CSSTransition>
