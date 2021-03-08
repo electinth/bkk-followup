@@ -1,6 +1,6 @@
 import React from 'react';
 import * as d3 from 'd3';
-import { isMobileOnly } from 'react-device-detect';
+import { isMobileOnly, isMobile } from 'react-device-detect';
 import noData from 'assets/images/no_data.svg';
 
 const info_map = ({ selected_theme }) => {
@@ -72,7 +72,7 @@ const info_map = ({ selected_theme }) => {
   };
 
   setTimeout(() => {
-    if (!isMobileOnly) {
+    if (!isMobile) {
       d3.selectAll('.circle0')
         .append('circle')
         .attr('class', 'info-circle0')
@@ -81,7 +81,7 @@ const info_map = ({ selected_theme }) => {
         .attr('cy', 20)
         .style('fill', selected_theme.color);
     }
-    if (!isMobileOnly) {
+    if (!isMobile) {
       d3.selectAll('.circle2')
         .append('circle')
         .attr('class', 'info-circle')
@@ -120,7 +120,7 @@ const info_map = ({ selected_theme }) => {
             <p className="pl-3 mt-1 leading-4 p2">{new_line(info.des)}</p>
           </div>
         ))
-      ) : !isMobileOnly ? (
+      ) : !isMobile ? (
         <div id="flood-wrapper" className="flex w-full">
           <div className="flex flex-col items-center flex-1" id="dot1">
             {dots1.map((dot, index) => (
@@ -185,6 +185,45 @@ const info_map = ({ selected_theme }) => {
               </p>
             </div>
           </div>
+        </div>
+      ) : (
+        ''
+      )}
+      {isMobile && selected_theme.name === 'น้ำท่วมถนน' ? (
+        <div className="flex items-center p2">
+          <div className="mr-2">น้อย</div>
+          <div className="flex items-center justify-end flex-1 mx-1">
+            <img
+              src={noData}
+              alt="noData"
+              style={{ height: isMobileOnly ? '15px' : '19px' }}
+            />
+          </div>
+          <span
+            className="mx-1 rounded-full dot"
+            style={{
+              height: isMobileOnly ? '10px' : '15px',
+              width: isMobileOnly ? '10px' : '15px',
+              backgroundColor: '#ABCCFF',
+            }}
+          />
+          <span
+            className="mx-1 rounded-full dot"
+            style={{
+              height: isMobileOnly ? '20px' : '25px',
+              width: isMobileOnly ? '20px' : '25px',
+              backgroundColor: '#609EFF',
+            }}
+          />
+          <span
+            className="mx-1 rounded-full dot"
+            style={{
+              height: isMobileOnly ? '30px' : '40px',
+              width: isMobileOnly ? '30px' : '40px',
+              backgroundColor: '#1570FF',
+            }}
+          />
+          <div className="ml-2">มาก</div>
         </div>
       ) : (
         ''
