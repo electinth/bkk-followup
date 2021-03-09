@@ -1,26 +1,26 @@
-import React from "react";
-import p_icon from "assets/images/p_icon.svg";
-import bkk_follow_up2 from "assets/images/bkk_follow_up2.gif";
+import React from 'react';
+import p_icon from 'assets/images/p_icon.svg';
+// import bkk_follow_up2 from 'assets/images/bkk_follow_up2.gif';
 
 export default function ResponsibilityPageOne() {
   return (
-    <div className="responsibility-page-one flex items-center h-full text-center bg-blue-default text-white-default relative">
-      <img
+    <div className="relative flex items-center h-full text-center responsibility-page-one bg-blue-default text-white-default">
+      {/* <img
         src={bkk_follow_up2}
         alt={bkk_follow_up2}
         className="absolute inset-0 object-cover w-full h-full"
-      />
+      /> */}
 
-      <div className="container max-w-xl mx-auto relative z-10">
+      <div className="container relative z-10 max-w-xl mx-auto">
         <h2 className="d2">เข้าใจเพื่อมีส่วนร่วม</h2>
 
-        <p className="mt-6 md:mt-10 text-xl lg:text-2xl leading-6">
+        <p className="mt-6 text-xl leading-6 md:mt-10 lg:text-2xl">
           การบริหารงานเพื่อให้ตอบสนองต่อความต้องการของ
           ประชาชนจึงถือเป็นโจทย์สำคัญสำหรับว่าที่ผู้ว่าฯ และสภา กทม.
           ชุดถัดไปที่ควรจะมีการเลือกตั้งเกิดขึ้นในเร็ววัน
         </p>
 
-        <p className="mt-4 md:mt-10 text-xl lg:text-2xl leading-6">
+        <p className="mt-4 text-xl leading-6 md:mt-10 lg:text-2xl">
           เราเลยอยากชวนประชาชน ว่าที่ผู้ว่าฯ และสภา กทม.
           มาร่วมทำความเข้าใจอำนาจหน้าที่ การบริหารงบประมาณ
           และสถานการณ์ปัญหาด้านต่างๆ ผ่านชุดข้อมูลย้อนหลัง (พ.ศ. 2555-2562)
@@ -31,7 +31,7 @@ export default function ResponsibilityPageOne() {
           href="https://elect.in.th/bkk-admin/"
           target="_blank"
           rel="noopener noreferrer"
-          className="content flex items-center justify-center w-full md:w-max p-2 mx-auto mt-6 md:mt-10 rounded-md shadow-xl bg-white-default"
+          className="flex items-center justify-center w-full p-2 mx-auto mt-6 rounded-md shadow-xl content md:w-max md:mt-10 bg-white-default"
         >
           <img width={30} src={p_icon} alt={p_icon} />
 
