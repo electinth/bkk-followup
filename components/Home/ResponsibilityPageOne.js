@@ -1,17 +1,18 @@
 import React from 'react';
 import p_icon from 'assets/images/p_icon.svg';
-// import bkk_follow_up2 from 'assets/images/bkk_follow_up2.gif';
+import bkk_follow_up2 from 'assets/images/bkk_follow_up2.gif';
 
 export default function ResponsibilityPageOne() {
   return (
     <div className="relative flex items-center h-full text-center responsibility-page-one bg-blue-default text-white-default">
-      {/* <img
+      <img
         src={bkk_follow_up2}
         alt={bkk_follow_up2}
-        className="absolute inset-0 object-cover w-full h-full"
-      /> */}
+        style={{filter: 'brightness(0.3)'}}
+        className="absolute inset-0 object-cover w-full h-full opacity-90"
+      />
 
-      <div className="container relative z-10 max-w-xl mx-auto">
+      <div className="container relative z-10 flex flex-col items-center justify-center h-full max-w-full ">
         <h2 className="d2">เข้าใจเพื่อมีส่วนร่วม</h2>
 
         <p className="mt-6 text-xl leading-6 md:mt-10 lg:text-2xl">

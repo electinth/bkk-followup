@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import intro_bg from "assets/images/intro-bg.png";
-import fb_share from "assets/images/fb_share.svg";
-import twitter_share from "assets/images/twitter_share.svg";
-import line_share from "assets/images/line_share.svg";
+import React, { useState, useEffect } from 'react';
+import intro_bg from 'assets/images/intro-bg.png';
+import fb_share from 'assets/images/fb_share.svg';
+import twitter_share from 'assets/images/twitter_share.svg';
+import line_share from 'assets/images/line_share.svg';
 import {
   FacebookShareButton,
   TwitterShareButton,
   LineShareButton,
-} from "react-share";
-import config from "jsconfig.json";
+} from 'react-share';
+import config from 'jsconfig.json';
 
 export default function Intro() {
   const [hide_intro, hideIntro] = useState(false);
@@ -22,7 +22,7 @@ export default function Intro() {
   return (
     <div
       className={`intro-page fixed z-30 inset-0 bg-black-default flex items-center ${
-        hide_intro ? "hide-intro" : ""
+        hide_intro ? 'hide-intro' : ''
       }`}
       onClick={() => hideIntro(true)}
     >
@@ -37,7 +37,12 @@ export default function Intro() {
           <h1 className="mb-5 mr-0 leading-tight d1 lg:mr-20 lg:mb-0">
             BANGKOK
             <br />
-            <span className="text-green-default" style={{fontFamily: 'TheMATTER'}}>FOLLOW-UP</span>
+            <span
+              className="text-green-default"
+              style={{ fontFamily: 'TheMATTER' }}
+            >
+              FOLLOW-UP
+            </span>
           </h1>
 
           <div className="right">
