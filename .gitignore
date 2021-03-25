@@ -75,12 +75,9 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-# Next.js build output
+# Next.js build / generate output
 .next
-
-# Nuxt.js build / generate output
-.nuxt
-dist
+out
 
 # Gatsby files
 .cache/
@@ -102,5 +99,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-bkk-election
