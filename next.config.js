@@ -1,4 +1,4 @@
-const withImages = require('next-images');
+const withImages = require("next-images");
 module.exports = withImages({
   // target: "serverless",
   // async rewrites() {
@@ -9,8 +9,8 @@ module.exports = withImages({
   //     },
   //   ];
   // // },
-  basePath: '/bkk-election',
-  distDir: 'bkk-election',
+  basePath: "/bkk-election",
+  distDir: "bkk-election",
   webpack(config, options) {
     return config;
   },

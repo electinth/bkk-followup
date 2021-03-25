@@ -749,7 +749,7 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjIw
 /***/ "CIJa":
 /***/ (function(module, exports) {
 
-module.exports = "/bkk-election/_next/static/images/stb_logo-10b4ecd96bcf3b4bebedbd655426cfd5.svg";
+module.exports = "/_next/static/images/stb_logo-10b4ecd96bcf3b4bebedbd655426cfd5.svg";
 
 /***/ }),
 
@@ -5098,7 +5098,7 @@ module.exports = JSON.parse("{\"value\":8,\"valuePerYear\":{\"2555\":14,\"2556\"
 /***/ "OKyH":
 /***/ (function(module, exports) {
 
-module.exports = "/bkk-election/_next/static/images/map_logo-ab46dcc47d065384633be5ec5df1bbe3.svg";
+module.exports = "/_next/static/images/map_logo-ab46dcc47d065384633be5ec5df1bbe3.svg";
 
 /***/ }),
 
@@ -5505,7 +5505,7 @@ module.exports = JSON.parse("{\"value\":14.4,\"valuePerYear\":{\"2555\":14.9,\"2
 /***/ "ZSGm":
 /***/ (function(module, exports) {
 
-module.exports = "/bkk-election/_next/static/images/cu_thai_logo-29a9fb25d5d7e3837e625ac2ae16aa73.svg";
+module.exports = "/_next/static/images/cu_thai_logo-29a9fb25d5d7e3837e625ac2ae16aa73.svg";
 
 /***/ }),
 
@@ -6611,7 +6611,7 @@ module.exports = JSON.parse("{\"value\":7,\"valuePerYear\":{\"2555\":null,\"2556
 /***/ "j/al":
 /***/ (function(module, exports) {
 
-module.exports = "/bkk-election/_next/static/images/intro-bg-4bf87892f96fc07b959aa29453b72c7b.png";
+module.exports = "/_next/static/images/intro-bg-4bf87892f96fc07b959aa29453b72c7b.png";
 
 /***/ }),
 
