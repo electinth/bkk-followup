@@ -78,6 +78,7 @@ typings/
 # Next.js build / generate output
 .next
 out
+bkk-election
 
 # Gatsby files
 .cache/
