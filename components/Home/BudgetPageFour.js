@@ -273,16 +273,15 @@ export default function BudgetPageFour(props) {
                           height: isTablet
                             ? "calc(100vh - 500px)"
                             : isMobileOnly
-                            ? "calc(100vh - 455px)"
-                            : "560px",
+                              ? "calc(100vh - 455px)"
+                              : "560px",
                         }}
                       >
                         {d.values.map((v, index) => (
                           <div
                             key={index}
-                            className={`box rounded-md mb-0.5 pt-1 ${
-                              hover_legend === v.title ? "is-hover" : ""
-                            }`}
+                            className={`box rounded-md mb-0.5 pt-1 ${hover_legend === v.title ? "is-hover" : ""
+                              }`}
                             style={{
                               width: isMobile ? "100%" : "52px",
                               height: `${v.percent}%`,
@@ -293,11 +292,9 @@ export default function BudgetPageFour(props) {
                               background: getColor(v.title),
                             }}
                           >
-                            {v.title !== "อื่นๆ" ? (
-                              <h5 className="text-xs value text-black-default">
-                                {numeral(v.percent).format("0.00")}%
-                              </h5>
-                            ) : null}
+                            <h5 className="text-xs value text-black-default">
+                              {numeral(v.percent).format("0.00")}%
+                            </h5>
                           </div>
                         ))}
                       </div>

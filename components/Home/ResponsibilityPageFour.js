@@ -14,7 +14,6 @@ export default function ResponsibilityPageFour(props) {
         "รักษาการให้เป็นไปตามข้อบัญญัติ กทม.",
         "บริหารภายในหน่วยงาน กทม.",
         "แต่งตั้งหรือถอดถอนรองผู้ว่า และตำแหน่งข้าราชการการเมืองอื่น ๆ",
-        "สั่งการราชการของ กทม.",
       ],
     },
     {
@@ -37,11 +36,11 @@ export default function ResponsibilityPageFour(props) {
 
   return (
     <div
-      className="responsibility-page-four flex items-center bg-black-default text-white-default fixed z-10 inset-0 pointer-events-none"
+      className="fixed inset-0 z-10 flex items-center pointer-events-none responsibility-page-four bg-black-default text-white-default"
       style={{ top: "60px" }}
     >
       <div className="container max-w-4xl mx-auto">
-        <h2 className="leading-tight text-center d2 hidden lg:block">
+        <h2 className="hidden leading-tight text-center d2 lg:block">
           บทบาทและอำนาจหน้าที่ของ กทม.
         </h2>
 
@@ -49,7 +48,7 @@ export default function ResponsibilityPageFour(props) {
           บทบาทและอำนาจหน้าที่ของ กทม.
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4 md:mt-10 lg:mt-4 2xl:mt-14">
+        <div className="grid grid-cols-1 gap-5 mt-4 md:grid-cols-2 md:mt-10 lg:mt-4 2xl:mt-14">
           {cards.map((d, d_index) => (
             <div
               key={d_index}
@@ -74,7 +73,7 @@ export default function ResponsibilityPageFour(props) {
           ))}
         </div>
 
-        <p className="text-xl text-center mt-4 md:mt-10 lg:mt-4 2xl:mt-20 hidden md:block">
+        <p className="hidden mt-4 text-xl text-center md:mt-10 lg:mt-4 2xl:mt-20 md:block">
           <b>
             ที่มา: • อรทัย ก๊กผล. (2547). สารานุกรมการปกครองท้องถิ่นไทย หมวดที่
             3 พัฒนาการและรูปแบบการปกครองท้องถิ่นไทย ลำดับที่ 5 เรื่อง

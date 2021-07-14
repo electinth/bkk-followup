@@ -30,7 +30,7 @@ const timeLine = ({
       setInterval(() => {
         SET_SELECTED_INDEX(index++);
         if (index === years.length) SET_PLAYING(false);
-      }, 1000)
+      }, 1300)
     );
   };
 
