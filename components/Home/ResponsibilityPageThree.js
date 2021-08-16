@@ -7,21 +7,25 @@ export default function ResponsibilityPageThree() {
       year: 2516,
       name: "ชำนาญ ยุวบูรณ์",
       appoint: true,
+      image: require("assets/images/01_ชำนาญ_ยุวบูรณ์.png"),
     },
     {
       year: 2516,
       name: "อรรถ วิสูตรโยธาภิบาล",
       appoint: true,
+      image: require("assets/images/02_อรรถ_วิสูตรโยธาภิบาล.png"),
     },
     {
       year: 2517,
       name: "ศิริ สันติบุตร",
       appoint: true,
+      image: require("assets/images/03_ศิริ.png"),
     },
     {
       year: 2518,
       name: "สาย หุตะเจริญ",
       appoint: true,
+      image: require("assets/images/สาย.png"),
     },
     {
       year: 2518,
@@ -32,21 +36,25 @@ export default function ResponsibilityPageThree() {
       year: 2520,
       name: "ชลอ ธรรมศิริ",
       appoint: true,
+      image: require("assets/images/06_ชลอ_ธรรมศิริ.png"),
     },
     {
       year: 2522,
       name: "เชาวน์วัศ สุดลาภา",
       appoint: true,
+      image: require("assets/images/07_เชาวน์วัศ_สุดลาภา.png"),
     },
     {
       year: 2524,
       name: "พลเรือเอก เทียม มกรานนท์",
       appoint: true,
+      image: require("assets/images/เทียม.png"),
     },
     {
       year: 2527,
       name: "อาษา เมฆสวรรค์",
       appoint: true,
+      image: require("assets/images/09_อาษา_เมฆสวรรค์.png"),
     },
     {
       year: 2528,
@@ -97,6 +105,7 @@ export default function ResponsibilityPageThree() {
       year: 2559,
       name: "พลตำรวจเอก อัศวิน ขวัญเมือง",
       appoint: true,
+      image: require("assets/images/อัศวิน.png"),
     },
   ];
 
@@ -109,12 +118,12 @@ export default function ResponsibilityPageThree() {
 
   return (
     <div
-      className="responsibility-page-three fixed inset-0 z-10 flex items-center text-center pointer-events-none text-white-default py-14"
+      className="fixed inset-0 z-10 flex items-center text-center pointer-events-none responsibility-page-three text-white-default py-14"
       style={{ top: "60px" }}
     >
-      <div className="w-full h-full flex flex-col justify-between">
+      <div className="flex flex-col justify-between w-full h-full">
         <div className="container mx-auto">
-          <h2 className="leading-snug d2 hidden lg:block">
+          <h2 className="hidden leading-snug d2 lg:block">
             กทม. มีทั้ง
             <span className="text-blue-default">ผู้ว่าราชการกรุงเทพมหานคร</span>
             เป็นผู้บริหาร และ
@@ -123,7 +132,7 @@ export default function ResponsibilityPageThree() {
             โดยจะมาจากการเลือกตั้งโดยตรงของประชาชน ทุกๆ 4 ปี
           </h2>
 
-          <h4 className="leading-snug d4 block lg:hidden">
+          <h4 className="block leading-snug d4 lg:hidden">
             กทม. มีทั้ง
             <span className="text-blue-default">ผู้ว่าราชการกรุงเทพมหานคร</span>
             เป็นผู้บริหาร และ
@@ -133,7 +142,7 @@ export default function ResponsibilityPageThree() {
           </h4>
         </div>
 
-        <div className="flex w-full pb-5 pl-4 mt-10 lg:mt-20 overflow-x-auto pointer-events-auto scroll-list">
+        <div className="flex w-full pb-5 pl-4 mt-10 overflow-x-auto pointer-events-auto lg:mt-20 scroll-list">
           {data.map((d, index) => (
             <div key={index} className="pr-4 item">
               {d.image ? (
@@ -142,7 +151,7 @@ export default function ResponsibilityPageThree() {
                   style={{ height: "120px", width: "120px" }}
                 >
                   <img
-                    className="w-full h-full  object-cover"
+                    className="object-cover w-full h-full"
                     src={d.image}
                     alt={d.image}
                   />
@@ -157,7 +166,7 @@ export default function ResponsibilityPageThree() {
                     style={{ height: "42px", width: "42px" }}
                   >
                     <img
-                      className="w-full h-full object-cover"
+                      className="object-cover w-full h-full"
                       src={image_placeholder}
                       alt={image_placeholder}
                     />
