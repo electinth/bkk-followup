@@ -7,11 +7,11 @@ const donut_chart = ({ selected_theme, percent }) => {
     let width = 140,
       height = 140;
     let svg = d3
-        .select('#donut-chart')
-        .append('svg')
-        .attr('class', 'svg-donut-chart')
-        .attr('width', width)
-        .attr('height', height),
+      .select('#donut-chart')
+      .append('svg')
+      .attr('class', 'svg-donut-chart')
+      .attr('width', width)
+      .attr('height', height),
       radius = Math.min(width, height) / 2,
       g = svg
         .append('g')
@@ -20,7 +20,7 @@ const donut_chart = ({ selected_theme, percent }) => {
 
     var color = d3.scaleOrdinal([selected_theme.color, '#CFD8DC']);
 
-    // Generate the pie
+
     var pie = d3.pie().sort(null);
 
     // Generate the arcs
